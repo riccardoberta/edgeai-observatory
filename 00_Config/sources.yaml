@@ -1,0 +1,131 @@
+# EdgeAI Observatory — Monitored Sources Configuration
+#
+# This file is the single source of truth for what the Observatory monitors.
+# Edit it directly to add, remove, or disable sources — no need to touch
+# project instructions. Each entry should be self-explanatory; "status:
+# active" sources are checked during weekly/monthly monitoring cycles,
+# "status: paused" ones are kept for reference but skipped.
+
+digital_libraries:
+  - name: arXiv
+    url: https://arxiv.org
+    categories: [cs.LG, cs.AR, cs.DC, eess.SP]
+    access: open
+    status: active
+    notes: "Primary source for preprints; check daily/weekly listings on relevant categories."
+
+  - name: IEEE Xplore
+    url: https://ieeexplore.ieee.org
+    access: institutional
+    access_notes: "Reachable via University of Genoa (unige.it) institutional access. Use the Claude in Chrome extension on Ricky's browser while he is on the campus network/VPN/proxy to navigate and extract paper text directly."
+    status: active
+
+  - name: ACM Digital Library
+    url: https://dl.acm.org
+    access: institutional
+    access_notes: "Same as IEEE Xplore — use Claude in Chrome while on unige.it institutional access."
+    status: active
+
+  - name: Google Scholar
+    url: https://scholar.google.com
+    access: open (aggregator, links may lead to paywalled publishers)
+    access_notes: "No official API — use Claude in Chrome to run searches and read result pages. Useful as a cross-publisher aggregator: finds papers not indexed on arXiv, surfaces citation counts to gauge influence, and often links directly to a free PDF (publisher page, author repository, or institutional repo) even for papers behind a paywall elsewhere. Use sparingly and avoid rapid automated querying, since Google Scholar's terms discourage scripted scraping."
+    status: active
+
+conferences:
+  - name: MLSys
+    url: https://mlsys.org
+    frequency: annual
+    status: active
+  - name: NeurIPS
+    url: https://neurips.cc
+    frequency: annual
+    status: active
+  - name: ICML
+    url: https://icml.cc
+    frequency: annual
+    status: active
+  - name: ICLR
+    url: https://iclr.cc
+    frequency: annual
+    status: active
+  - name: DAC (Design Automation Conference)
+    url: https://www.dac.com
+    frequency: annual
+    status: active
+  - name: DATE (Design, Automation & Test in Europe)
+    url: https://www.date-conference.com
+    frequency: annual
+    status: active
+  - name: SenSys (ACM Conference on Embedded Networked Sensor Systems)
+    url: https://sensys.acm.org
+    frequency: annual
+    status: active
+  - name: IPSN (Information Processing in Sensor Networks)
+    url: https://ipsn.acm.org
+    frequency: annual
+    status: active
+  - name: TinyML Research Symposium
+    url: https://www.tinyml.org/research-symposium
+    frequency: annual
+    status: active
+
+software_projects:
+  - name: TensorFlow Lite Micro
+    url: https://github.com/tensorflow/tflite-micro
+    status: active
+  - name: CMSIS-NN
+    url: https://github.com/ARM-software/CMSIS-NN
+    status: active
+  - name: Apache TVM / microTVM
+    url: https://github.com/apache/tvm
+    status: active
+  - name: MLIR
+    url: https://mlir.llvm.org
+    status: active
+  - name: ONNX Runtime
+    url: https://github.com/microsoft/onnxruntime
+    status: active
+  - name: Edge Impulse
+    url: https://www.edgeimpulse.com
+    status: active
+
+hardware_vendors:
+  - name: Arm (Cortex-M / Ethos NPU)
+    url: https://www.arm.com
+    status: active
+  - name: STMicroelectronics (STM32 / ST Edge AI)
+    url: https://www.st.com
+    status: active
+  - name: Qualcomm (edge AI chips)
+    url: https://www.qualcomm.com
+    status: active
+  - name: NVIDIA (Jetson)
+    url: https://developer.nvidia.com/embedded-computing
+    status: active
+  - name: Syntiant
+    url: https://www.syntiant.com
+    status: active
+  - name: GreenWaves Technologies (GAP processors)
+    url: https://greenwaves-technologies.com
+    status: active
+
+benchmarks:
+  - name: MLPerf Tiny
+    url: https://mlcommons.org/benchmarks/inference-tiny/
+    status: active
+  - name: MLPerf Inference
+    url: https://mlcommons.org/benchmarks/inference-datacenter/
+    status: active
+
+datasets:
+  - name: Speech Commands
+    url: https://arxiv.org/abs/1804.03209
+    status: active
+  - name: Visual Wake Words
+    url: https://arxiv.org/abs/1906.05721
+    status: active
+
+# To add a new source: copy an existing entry under the right category,
+# fill in name/url/status, and add access_notes if it requires
+# institutional access or special handling.

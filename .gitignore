@@ -1,0 +1,7 @@
+# macOS
+.DS_Store
+
+# Obsidian local workspace/UI state (not part of the knowledge content)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
