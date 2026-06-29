@@ -14,6 +14,18 @@ This is not a paper archive. It is the lab's long-term research memory on EdgeAI
 
 `03_Digests/` contains the weekly digests and monthly reports, archived over time so the evolution of the field can be reconstructed.
 
+## Static site
+
+The Observatory is also published as a browsable static site (MkDocs Material), auto-deployed to GitHub Pages on every push to `main` via `.github/workflows/docs.yml`. The `[[wikilink]]` syntax used throughout the source files stays untouched — `tools/build_docs.py` renders it into plain relative links into a generated `docs/` folder right before `mkdocs build` runs (both locally and in CI); neither `docs/` nor `site/` are committed.
+
+To preview locally:
+
+```
+pip install -r requirements-docs.txt
+python3 tools/build_docs.py
+mkdocs serve
+```
+
 ## Principles
 
 Every claim must be traceable to its original source. No hallucinated information. Quality over quantity: a few well-curated concepts are worth more than a long list of disconnected papers. Over time, the goal is to answer questions like "which groups lead a given area," "which algorithms are becoming obsolete," "which topics are good thesis material" — not just "what does this paper say."

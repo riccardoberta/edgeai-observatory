@@ -1,0 +1,55 @@
+site_name: EdgeAI Observatory
+site_description: Long-term research knowledge system for the EdgeAI literature — concepts, papers, and digests.
+site_url: https://riccardoberta.github.io/edgeai-observatory/
+repo_url: https://github.com/riccardoberta/edgeai-observatory
+repo_name: riccardoberta/edgeai-observatory
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.action.edit
+    - content.code.copy
+
+markdown_extensions:
+  - tables
+  - admonition
+  - footnotes
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
+# No explicit nav: section on purpose. The Observatory grows weekly
+# (new papers, concepts, digests), so navigation is auto-generated from
+# the docs/ directory tree and stays in sync without manual edits here.
+#
+# [[Wikilink]] support: handled by tools/build_docs.py, which renders the
+# source markdown (00_Taxonomy/, 01_Knowledge_Base/, 02_Papers/,
+# 03_Digests/, README.md) into docs/ with [[Name]] links rewritten to plain
+# relative markdown links, before mkdocs ever runs. Run it before every
+# `mkdocs build` / `mkdocs serve` (the GitHub Actions workflow does this
+# automatically). We use this instead of a wikilink plugin (e.g.
+# mkdocs-ezlinks-plugin) because the current release (0.1.14) resolves
+# link targets correctly but emits a broken, lowercased href for every
+# link — see tools/build_docs.py docstring for details.
