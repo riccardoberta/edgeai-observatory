@@ -2,9 +2,11 @@
 
 ## Evolution of the concept
 
-Hinton, Vinyals, and Dean (2015) introduce the idea that the "soft" probabilities produced by a large model (teacher) carry more information than hard labels alone, and that this information ("dark knowledge") can be transferred to a small model (student) via a temperature-scaled softmax loss. Unlike pruning and quantization, distillation does not compress an existing model but transfers knowledge to a new architecture, making it complementary to the other compression techniques.
+The core idea predates deep learning's current wave: Bucilă, Caruana, and Niculescu-Mizil's "Model Compression" (KDD 2006) already showed that a large, complex ensemble's predictions could be used to train a single, much smaller and faster model that approximates the ensemble's behavior. Hinton, Vinyals, and Dean (2015) reframe and popularize this idea for deep networks, introducing the temperature-scaled softmax loss to transfer the "soft" probabilities of a large model (teacher) — carrying more information than hard labels alone ("dark knowledge") — to a small model (student). Unlike pruning and quantization, distillation does not compress an existing model but transfers knowledge to a new architecture, making it complementary to the other compression techniques.
 
 ## Key papers
+
+[[2006_Bucila_ModelCompression]] — original demonstration that a large ensemble's predictions can train a single compact model that mimics its behavior, predating and foreshadowing modern knowledge distillation.
 
 [[2015_Hinton_DistillingKnowledge]] — original formulation of the distillation loss and the dark-knowledge concept.
 

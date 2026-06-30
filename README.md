@@ -1,6 +1,8 @@
 # EdgeAI Observatory
 
-This is not a paper archive. It is the lab's long-term research memory on EdgeAI: it organizes knowledge around **concepts**, not documents, and supports research, teaching, thesis supervision, and scientific writing.
+The lab's long-term research memory and scientific intelligence layer on EdgeAI. It organizes knowledge around **concepts** rather than documents — the concept graph, not the paper list, is what the Observatory grows and queries over time. Papers feed the concepts: each one is processed into structured knowledge and routed into the ideas it advances, the open problems it touches, and the research directions it opens.
+
+Beyond tracking what individual papers say, the Observatory aims to surface patterns across the field: which research directions are emerging, which problems remain unsolved, which ideas contradict each other, which topics are becoming saturated, and which represent good thesis opportunities. It supports research, teaching, thesis supervision, and scientific writing, with the goal of becoming, over one or two years, a genuine scientific memory for the lab.
 
 ## Structure
 
@@ -8,11 +10,11 @@ This is not a paper archive. It is the lab's long-term research memory on EdgeAI
 
 `00_Config/sources.yaml` is the configuration file listing every monitored source (digital libraries, conferences, software projects, hardware vendors, benchmarks, datasets). Edit it directly to add, remove, or pause a source — monitoring cycles read from this file instead of a hardcoded list.
 
-`01_Knowledge_Base/` is the heart of the system. Each file represents a concept (e.g. Quantization, Pruning, NAS) and collects: how the idea evolved, which papers define or advance it, which problems remain open, which research or thesis directions it suggests. Papers are not the center: they are references that feed the concepts.
+`01_Knowledge_Base/` is the heart of the system. Each file represents a concept (e.g. Quantization, Pruning, NAS) and collects: how the idea evolved, which papers define or advance it, which problems remain open, which research or thesis directions it suggests.
 
 `02_Papers/` contains the deep-analysis records of individual selected papers, with all the required fields (problem, contribution, methodology, validation, strengths and weaknesses, reproducibility, code, datasets, impact). Each record links to the corresponding concepts in `01_Knowledge_Base/`.
 
-`03_Digests/` contains the weekly digests and monthly reports, archived over time so the evolution of the field can be reconstructed.
+`03_Digests/` contains the weekly digests (`Weekly/`) and monthly reports (`Monthly/`), archived over time so the evolution of the field can be reconstructed.
 
 ## Static site
 

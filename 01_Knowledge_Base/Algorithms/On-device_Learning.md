@@ -8,6 +8,8 @@ Early TinyML work focused almost entirely on inference: train in the cloud, depl
 
 [[2022_Lin_OnDeviceTraining256KB]] — algorithm-system co-design (Quantization-Aware Scaling + Sparse Update + a dedicated Tiny Training Engine) enabling on-device transfer learning within 256 KB of memory, validated on real microcontroller hardware.
 
+[[2020_Cai_TinyTL]] — identifies activations, not weights, as the real memory bottleneck for on-device training, and freezes the backbone while learning only a small memory-efficient bias/lite-residual module, cutting training memory up to 12.9x; an important precursor to the sparse-update line of work in [[2022_Lin_OnDeviceTraining256KB]].
+
 ## Open problems
 
 How to make on-device learning robust to non-stationary, continuously drifting data without unbounded memory growth (the intersection with [[Continual_Learning]]). How to extend memory-budgeted training beyond vision transfer learning to other modalities (audio, time series, biosignals). How to combine on-device training with federated aggregation ([[Federated_Learning]]) without compounding the memory and communication costs.

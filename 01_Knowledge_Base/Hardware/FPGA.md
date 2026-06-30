@@ -2,9 +2,11 @@
 
 ## Evolution of the concept
 
-FPGA-based EdgeAI acceleration grew out of the observation that reconfigurable hardware could instantiate many small, fully-parallel, per-layer compute structures rather than relying on a single reused generic processing unit as GPUs and CPUs do. FINN was a pioneering framework demonstrating that pairing aggressive network quantization (down to binary precision) with a streaming, per-layer-customized dataflow architecture could yield extremely high throughput-per-watt for image classification, directly linking the [[Quantization]] research direction to a concrete, automated hardware-generation pipeline. The framework has since evolved (FINN-R) to support a wider range of quantization levels and target platforms, from embedded devices up to cloud FPGAs.
+FPGA-based EdgeAI acceleration grew out of the observation that reconfigurable hardware could instantiate many small, fully-parallel, per-layer compute structures rather than relying on a single reused generic processing unit as GPUs and CPUs do. Zhang et al.'s "Optimizing FPGA-based Accelerator Design for Deep Convolutional Neural Networks" (FPGA 2015, ACM/SIGDA) was an early, influential formalization of this idea: it applies a roofline-model-based analysis to systematically navigate the loop-tiling and loop-unrolling design space of a CNN accelerator, rather than relying on ad-hoc design choices, directly anticipating the more aggressive precision-driven design-space exploration FINN later builds on. FINN was a pioneering framework demonstrating that pairing aggressive network quantization (down to binary precision) with a streaming, per-layer-customized dataflow architecture could yield extremely high throughput-per-watt for image classification, directly linking the [[Quantization]] research direction to a concrete, automated hardware-generation pipeline. The framework has since evolved (FINN-R) to support a wider range of quantization levels and target platforms, from embedded devices up to cloud FPGAs.
 
 ## Key papers
+
+[[2015_Zhang_FPGAAcceleratorDesign]] — roofline-model-guided design-space exploration for CNN accelerator loop tiling/unrolling on FPGA, an early systematic alternative to ad-hoc accelerator design.
 
 [[2017_Umuroglu_FINN]] — framework for generating fast, scalable, per-layer streaming FPGA accelerators for binarized/quantized neural networks.
 

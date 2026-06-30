@@ -8,6 +8,8 @@ TVM (Chen et al., 2018) was created to overcome the limits of hand-written libra
 
 [[2018_Chen_TVM]] — end-to-end compiler with auto-tuning, performance comparable to hand-written libraries on CPU/GPU/FPGA without manual effort.
 
+[[2018_Chen_AutoTVM]] — the learned cost-model-guided auto-tuning method underlying TVM's per-operator code generation; the specific mechanism that lets TVM match hand-written kernels without manual tuning.
+
 ## Open problems
 
 How well TVM's auto-tuning scales to microcontrollers with limited profiling resources. Reducing the cost of auto-tuning search to make it practical without large compute clusters.

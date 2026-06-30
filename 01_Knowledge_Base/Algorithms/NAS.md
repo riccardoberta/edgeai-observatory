@@ -2,9 +2,11 @@
 
 ## Evolution of the concept
 
-Before automated architecture search, efficiency was achieved through manual design: MobileNet (Howard et al., 2017) introduces depthwise-separable convolutions and two global multipliers (width, resolution) as manual "knobs" for the accuracy/cost trade-off. The next step is to automate this search: Once-for-All (Cai et al., 2019) decouples training (done only once) from the search for the architecture specific to each hardware target, drastically reducing the cost of multi-platform hardware-aware NAS.
+The field takes its name from Zoph and Le's "Neural Architecture Search with Reinforcement Learning" (ICLR 2017), which trains a recurrent-network controller with reinforcement learning to generate architecture descriptions, optimizing the controller against the validation accuracy of the architectures it proposes. In parallel, before automated search became affordable for resource-constrained targets, efficiency was achieved through manual design: MobileNet (Howard et al., 2017) introduces depthwise-separable convolutions and two global multipliers (width, resolution) as manual "knobs" for the accuracy/cost trade-off. The next step is to automate this search for efficient models specifically: Once-for-All (Cai et al., 2019) decouples training (done only once) from the search for the architecture specific to each hardware target, drastically reducing the cost of multi-platform hardware-aware NAS.
 
 ## Key papers
+
+[[2017_Zoph_NeuralArchitectureSearchRL]] — the founding NAS paper; an RNN controller trained with reinforcement learning to generate and optimize network architectures.
 
 [[2017_Howard_MobileNets]] — efficient-by-design architecture with manual hyperparameters, basis for much subsequent research.
 

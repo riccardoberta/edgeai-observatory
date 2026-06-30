@@ -2,9 +2,11 @@
 
 ## Evolution of the concept
 
-Human Activity Recognition (HAR) from mobile and wearable sensor data (accelerometer, gyroscope) moved from hand-engineered features and classical ML toward deep learning architectures (CNNs, RNNs/LSTMs, hybrids), substantially improving recognition accuracy. The central open challenge for EdgeAI is that this accuracy gain must be delivered within the tight compute, memory, and power budgets of mobile and wearable hardware. More recently, the field has begun exploring cross-modal foundation-model approaches (e.g. tokenizing activity sensory signals alongside EEG/ECG) and self-supervised pretraining on very large unlabeled wearable datasets, which raises a new open question of how to compress such foundation models down to something deployable on-device.
+Human Activity Recognition (HAR) from mobile and wearable sensor data (accelerometer, gyroscope) moved from hand-engineered features and classical ML toward deep learning architectures (CNNs, RNNs/LSTMs, hybrids), substantially improving recognition accuracy. Ordóñez and Roggen's "Deep Convolutional and LSTM Recurrent Neural Networks for Multimodal Wearable Activity Recognition" (Sensors, MDPI, 2016) is one of the foundational papers in this shift: it introduces DeepConvLSTM, a generic CNN+LSTM architecture that performs sensor fusion naturally across modalities and explicitly models the temporal dynamics of activity, without requiring hand-engineered features — establishing the architecture family later HAR work (and the systematic review below) builds on. The central open challenge for EdgeAI is that this accuracy gain must be delivered within the tight compute, memory, and power budgets of mobile and wearable hardware. More recently, the field has begun exploring cross-modal foundation-model approaches (e.g. tokenizing activity sensory signals alongside EEG/ECG) and self-supervised pretraining on very large unlabeled wearable datasets, which raises a new open question of how to compress such foundation models down to something deployable on-device.
 
 ## Key papers
+
+[[2016_Ordonez_DeepConvLSTM]] — DeepConvLSTM, a generic CNN+LSTM architecture for multimodal wearable HAR with natural sensor fusion and explicit temporal modeling, foundational for the architecture family later surveyed below.
 
 [[2022_Zhang_DeepLearningHARWearableSensors]] — systematic review categorizing deep learning architectures for wearables-based HAR and their resource-constraint trade-offs.
 

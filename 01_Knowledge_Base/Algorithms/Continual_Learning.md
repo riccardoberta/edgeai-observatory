@@ -8,6 +8,8 @@ Neural networks trained sequentially on new tasks tend to overwrite what they le
 
 [[2017_Kirkpatrick_OvercomingCatastrophicForgetting]] — Elastic Weight Consolidation, a Fisher-Information-based regularization method that mitigates catastrophic forgetting without retaining old data.
 
+[[2017_Rebuffi_iCaRL]] — class-incremental learning that combines a small exemplar memory with knowledge distillation, learning the data representation and the classifier jointly rather than assuming a fixed feature extractor; a complementary, memory-based (rather than purely regularization-based) approach to the same forgetting problem EWC addresses.
+
 ## Open problems
 
 Detecting task boundaries automatically in continuous, drifting data streams (rather than assuming known task switches, as classic EWC does). Making importance-estimation methods (Fisher-based or otherwise) cheap enough to fit the memory budgets of MCU-class on-device learning. Avoiding "EWC drift" / degraded protection over very long sequences of tasks.

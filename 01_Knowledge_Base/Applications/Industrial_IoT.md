@@ -2,9 +2,11 @@
 
 ## Evolution of the concept
 
-Industrial IoT applications of EdgeAI center on monitoring industrial assets in environments where continuous cloud connectivity is unreliable or unavailable (extreme heat, vibration, restricted physical access), and where labeled failure data is typically scarce. The field has moved toward unsupervised anomaly detection methods that can be trained directly on resource-constrained edge hardware without requiring curated failure examples, demonstrating that not just inference but the training phase itself can be pushed to extremely low-cost microcontrollers via Tiny-MLOps methodologies. This is a direct, concrete instance of the broader [[On-device_Learning]] research direction applied to a real industrial use case.
+Industrial IoT applications of EdgeAI center on monitoring industrial assets in environments where continuous cloud connectivity is unreliable or unavailable (extreme heat, vibration, restricted physical access), and where labeled failure data is typically scarce. A key enabler for acoustic-based anomaly detection specifically was the release of the MIMII dataset (Purohit et al., DCASE 2019 Workshop) — normal and anomalous operating sounds recorded from real industrial machines (valves, pumps, fans, slide rails) — which gave the field a shared, realistic benchmark for unsupervised sound-based anomaly detection instead of ad-hoc, non-comparable private recordings. The field has moved toward unsupervised anomaly detection methods that can be trained directly on resource-constrained edge hardware without requiring curated failure examples, demonstrating that not just inference but the training phase itself can be pushed to extremely low-cost microcontrollers via Tiny-MLOps methodologies. This is a direct, concrete instance of the broader [[On-device_Learning]] research direction applied to a real industrial use case.
 
 ## Key papers
+
+[[2019_Purohit_MIMIIDataset]] — public dataset of normal/anomalous sounds from real industrial machines (valves, pumps, fans, slide rails), establishing a shared benchmark for unsupervised industrial acoustic anomaly detection.
 
 [[2023_Antonini_TinyMLAnomalyDetectionIndustrial]] — end-to-end Tiny-MLOps anomaly detection system performing unsupervised on-device training (isolation forest) on an ESP32 microcontroller for extreme industrial environments.
 

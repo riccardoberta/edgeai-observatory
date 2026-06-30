@@ -8,6 +8,8 @@ McMahan et al. (2017) introduce Federated Averaging (FedAvg): each device runs a
 
 [[2017_McMahan_FederatedAveraging]] — the FedAvg algorithm, the first practical solution for training on decentralized, heterogeneous data.
 
+[[2016_Konecny_FederatedLearningCommunicationEfficiency]] — proposes structured and sketched updates (low-rank/random-mask restrictions, and quantization/random-rotation/subsampling compression) to cut the uplink communication cost of FedAvg-style training, directly anticipating the bandwidth concerns that motivate TinyFed6G's update compression below.
+
 [[2026_Jain_TinyFed6G]] — hierarchical FL framework for MCU-class TinyML clients, combining device-profile-driven model assignment, dual-mode train/infer execution, and semantic compression of quantized updates; reports large communication and energy savings over FedAvg/FedPer/FedRep in simulation.
 
 ## Open problems

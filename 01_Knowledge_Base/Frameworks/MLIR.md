@@ -2,11 +2,13 @@
 
 ## Evolution of the concept
 
-Lattner et al. (2020) introduce MLIR (Multi-Level Intermediate Representation) to address the fragmentation of ML compiler stacks: instead of every framework/hardware-target combination building its own ad-hoc intermediate representation, MLIR provides a common, extensible infrastructure ("dialects") where abstraction levels — from high-level tensor graphs down to hardware-specific instructions — can coexist and be progressively lowered through shared tooling. It has since become a substrate underneath several ML deployment efforts relevant to EdgeAI, including parts of the TensorFlow compiler stack and the ONNX-MLIR project for compiling ONNX models.
+MLIR's lineage traces directly back to Lattner and Adve's "LLVM: A Compilation Framework for Lifelong Program Analysis & Transformation" (CGO 2004, IEEE), which established the single-static-assignment intermediate representation and modular pass-based infrastructure that made LLVM the dominant general-purpose compiler backend; Chris Lattner, LLVM's original author, later co-created MLIR to solve the analogous fragmentation problem one level up, for ML-specific compiler stacks. Lattner et al. (2020) introduce MLIR (Multi-Level Intermediate Representation) to address the fragmentation of ML compiler stacks: instead of every framework/hardware-target combination building its own ad-hoc intermediate representation, MLIR provides a common, extensible infrastructure ("dialects") where abstraction levels — from high-level tensor graphs down to hardware-specific instructions — can coexist and be progressively lowered through shared tooling. It has since become a substrate underneath several ML deployment efforts relevant to EdgeAI, including parts of the TensorFlow compiler stack and the ONNX-MLIR project for compiling ONNX models.
 
 ## Key papers
 
 [[2020_Lattner_MLIR]] — the original infrastructure paper defining MLIR's dialect mechanism and its motivation in the context of compiler fragmentation and the "end of Moore's Law."
+
+[[2004_Lattner_LLVM]] — the foundational general-purpose compiler infrastructure (SSA-based IR, modular optimization passes) whose design philosophy MLIR extends to ML-specific, multi-level intermediate representations.
 
 ## Open problems
 
