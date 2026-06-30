@@ -10,7 +10,7 @@ Cortex-M cores (Arm) are the most widely used hardware target for TinyML: low-po
 
 [[2021_David_TensorFlowLiteMicro]] — an inference runtime designed for the memory constraints of these cores.
 
-[[ARM_Helium_MVE_ReferenceBook]] — official technical reference for the Helium vector-instruction extension on Cortex-M55/M85, the hardware capability named as an open problem below since CMSIS-NN/TFLM coverage of it remains limited.
+[[2021_Marsh_HeliumMVEReferenceBook]] — official technical reference for the Helium vector-instruction extension on Cortex-M55/M85, the hardware capability named as an open problem below since CMSIS-NN/TFLM coverage of it remains limited.
 
 [[2024_Deutel_OnDeviceTrainingQuantizedCortexM]] — fully quantized on-device training with dynamic partial gradient updates, demonstrated across Cortex-M0+, M4, and M7.
 
