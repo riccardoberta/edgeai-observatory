@@ -2,7 +2,7 @@
 
 ## Evolution of the concept
 
-Cortex-M cores (Arm) are the most widely used hardware target for TinyML: low-power microcontrollers, with no dedicated hardware for neural computation, with only a few tens/hundreds of KB of RAM. The entire software ecosystem for this target developed in response to these constraints: CMSIS-NN for optimized kernels, TensorFlow Lite Micro as a runtime with static memory allocation.
+Cortex-M cores (Arm) are the most widely used hardware target for TinyML: low-power microcontrollers, with no dedicated hardware for neural computation, with only a few tens/hundreds of KB of RAM. The entire software ecosystem for this target developed in response to these constraints: CMSIS-NN for optimized kernels, TensorFlow Lite Micro as a runtime with static memory allocation. A 2024 study (Deutel et al.) pushes the Cortex-M envelope beyond inference-only deployment, showing that fully quantized training — not just inference — is feasible directly on Cortex-M0+/M4/M7 hardware via a dynamic partial-gradient-update scheme, extending what these cores can do in place without offloading to a server.
 
 ## Key papers
 
@@ -11,6 +11,8 @@ Cortex-M cores (Arm) are the most widely used hardware target for TinyML: low-po
 [[2021_David_TensorFlowLiteMicro]] — an inference runtime designed for the memory constraints of these cores.
 
 [[ARM_Helium_MVE_ReferenceBook]] — official technical reference for the Helium vector-instruction extension on Cortex-M55/M85, the hardware capability named as an open problem below since CMSIS-NN/TFLM coverage of it remains limited.
+
+[[2024_Deutel_OnDeviceTrainingQuantizedCortexM]] — fully quantized on-device training with dynamic partial gradient updates, demonstrated across Cortex-M0+, M4, and M7.
 
 ## Open problems
 

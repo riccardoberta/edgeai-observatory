@@ -2,7 +2,7 @@
 
 ## Evolution of the concept
 
-The idea arises from the need to run inference on hardware without efficient floating-point units. The foundational work by Jacob et al. (2017) defines the 8-bit affine quantization scheme and quantization-aware training, which later became the standard adopted by TensorFlow Lite and CMSIS-NN. Even before that, Hubara et al. (NeurIPS 2016) had already shown that networks could be trained with weights and activations constrained to a single bit, proving the extreme end of the precision spectrum was reachable. From here the line of research branched toward more aggressive precisions (4-bit, binary/ternary) and toward layer-by-layer mixed precision.
+The idea arises from the need to run inference on hardware without efficient floating-point units. The foundational work by Jacob et al. (2017) defines the 8-bit affine quantization scheme and quantization-aware training, which later became the standard adopted by TensorFlow Lite and CMSIS-NN. Even before that, Hubara et al. (NeurIPS 2016) had already shown that networks could be trained with weights and activations constrained to a single bit, proving the extreme end of the precision spectrum was reachable. From here the line of research branched toward more aggressive precisions (4-bit, binary/ternary) and toward layer-by-layer mixed precision. With the rise of large language models, the 2023-2024 wave of quantization research shifted toward post-training, calibration-light methods for compressing LLMs to INT4/INT3 for edge/on-device deployment: AWQ (Lin et al., MLSys 2024 Best Paper) protects a small set of activation-salient weight channels from quantization error, avoiding the backpropagation-based calibration required by earlier methods, and ships with a paired inference engine (TinyChat) that realizes measured speedups on edge GPUs.
 
 ## Key papers
 
@@ -11,6 +11,8 @@ The idea arises from the need to run inference on hardware without efficient flo
 [[2016_Han_DeepCompression]] — trained quantization as the second stage of a compression pipeline, demonstrating complementarity with pruning and entropy coding.
 
 [[2016_Hubara_BinarizedNeuralNetworks]] — trains both weights and activations constrained to +1/-1, establishing binary precision as the extreme end of the quantization spectrum and a direct precursor to the ternary/sub-8-bit schemes named as an open problem below.
+
+[[2024_Lin_AWQ]] — activation-aware salient-channel protection for post-training LLM quantization, with a paired edge-GPU inference engine; representative of the 2023-2024 shift toward quantizing large language models for edge deployment rather than only CNNs.
 
 ## Open problems
 

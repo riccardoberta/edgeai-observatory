@@ -2,13 +2,15 @@
 
 ## Evolution of the concept
 
-The kernel-design technique CMSIS-NN relies on — expressing convolution as a matrix-matrix product (im2col-style unrolling) so it can run on optimized BLAS/SIMD routines instead of naive nested loops — traces back to Chellapilla, Puri, and Simard's "High Performance Convolutional Neural Networks for Document Processing" (IWFHR 2006), which first showed unrolled-convolution-via-BLAS giving a 2.4-3.0x speedup over direct convolution. CMSIS-NN (Lai et al., 2018, Arm) applies the same underlying principle, adapted to Cortex-M's 16-bit SIMD instructions and 8-bit quantized data following the affine scheme compatible with TensorFlow, to make neural inference practical on cores with no dedicated hardware for neural computation. It quickly became the de facto standard for Cortex-M, later integrated as the kernel backend of TensorFlow Lite Micro.
+The kernel-design technique CMSIS-NN relies on — expressing convolution as a matrix-matrix product (im2col-style unrolling) so it can run on optimized BLAS/SIMD routines instead of naive nested loops — traces back to Chellapilla, Puri, and Simard's "High Performance Convolutional Neural Networks for Document Processing" (IWFHR 2006), which first showed unrolled-convolution-via-BLAS giving a 2.4-3.0x speedup over direct convolution. CMSIS-NN (Lai et al., 2018, Arm) applies the same underlying principle, adapted to Cortex-M's 16-bit SIMD instructions and 8-bit quantized data following the affine scheme compatible with TensorFlow, to make neural inference practical on cores with no dedicated hardware for neural computation. It quickly became the de facto standard for Cortex-M, later integrated as the kernel backend of TensorFlow Lite Micro. A 2025 survey (Abushahla et al.) situates CMSIS-NN within the broader, more fragmented 2023-2025 landscape of MCU quantization platforms — alongside RISC-V-based and hybrid/NPU-enabled MCU software stacks — noting that the kernel library itself has remained comparatively stable while most recent progress has come from the algorithmic (quantization-method) side rather than from further low-level kernel innovation.
 
 ## Key papers
 
 [[2006_Chellapilla_HighPerformanceCNNDocumentProcessing]] — first demonstration that unrolling convolution into a matrix-matrix product and running it through optimized BLAS routines beats direct/naive convolution; the general technique CMSIS-NN's GEMM-based kernels build on.
 
 [[2018_Lai_CMSIS-NN]] — optimized kernels for Cortex-M, 4.6x throughput and 4.9x energy efficiency over an unoptimized baseline.
+
+[[2025_Abushahla_QuantizationMicrocontrollersSurvey]] — survey connecting quantization methods to MCU hardware/software platforms (including CMSIS-NN-class kernel libraries), useful as an up-to-date reference for how CMSIS-NN sits relative to RISC-V and NPU-enabled alternatives.
 
 ## Open problems
 
