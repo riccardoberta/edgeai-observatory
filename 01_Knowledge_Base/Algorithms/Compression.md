@@ -36,6 +36,10 @@ Before pruning/quantization pipelines, Denil et al.'s "Predicting Parameters in 
 
 [[2025_Zeng_TinyNeXt]] — redesigns self-attention to cut memory-bound operations directly, rather than only reducing parameter count or FLOPs, paired with a hybrid CNN/transformer macro architecture.
 
+[[2026_Sen_NVFP4QuantizationEdgeAI]] — reports consistent ~4× static model-size and ~7× runtime activation-storage reduction from NVFP4 across six CNN backbones, with the trade-off explicitly characterized against accuracy.
+
+[[2026_Garavagno_HWNASUltraLowPower]] — bounds RAM/Flash/MAC of the searched CNN directly in the NAS objective, producing architectures sized for 20-40 KiB RAM targets rather than compressing a pre-existing model post hoc.
+
 ## Open problems
 
 Transferring the pipeline to modern architectures (Transformers, already-compact networks like MobileNet) where the margins for "free" compression are smaller than on AlexNet/VGG.

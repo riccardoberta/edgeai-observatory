@@ -30,6 +30,8 @@ The idea arises from the need to run inference on hardware without efficient flo
 
 [[2026_Jain_TinyFed6G]] — assigns differently-quantized model variants to federated-learning devices according to each device's real-time resource profile.
 
+[[2026_Sen_NVFP4QuantizationEdgeAI]] — characterizes NVFP4 (hierarchical FP4/FP8/FP32 block-and-tensor scaling) for edge deployment, with a closed-form bits-per-input model and a no-retrain vs. retrain comparison against conventional FP4.
+
 ## Open problems
 
 Extension to sub-8-bit precision while keeping implementation simplicity and hardware support. Automating the choice of which layers to quantize aggressively. Data-free quantization, useful when the original training set of the model is not available.

@@ -12,6 +12,8 @@ Human Activity Recognition (HAR) from mobile and wearable sensor data (accelerom
 
 [[2024_Lattanzi_TransformersTinyHAR]] — hardware-budget-constrained empirical comparison showing transformers lose up to 14% accuracy versus CNN/LSTM baselines once genuinely constrained to tiny-wearable RAM budgets.
 
+[[2026_Darvishi_EmbeddedMLPipelines]] — tutorial/systems synthesis (not an empirical study) using a 2-second, 3-axis accelerometer window reduced to RMS/spectral features as its running inertial-recognition example; useful as a teaching reference for the feature-extraction and validation pitfalls specific to wearable HAR pipelines, not as a benchmark source.
+
 ## Open problems
 
 How do the most accurate wearable HAR architectures perform when actually deployed on Cortex-M-class hardware under realistic power budgets, rather than evaluated only for offline accuracy? How much does self-supervised pretraining on large-scale unlabeled wearable data change the accuracy-versus-resource trade-off, and can the resulting models be compressed enough for on-device deployment?

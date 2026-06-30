@@ -18,6 +18,10 @@ Cortex-M cores (Arm) are the most widely used hardware target for TinyML: low-po
 
 [[2026_Jain_TinyFed6G]] — federated learning across a tier of Cortex-M/RISC-V TinyML devices, with per-device quantized model variants assigned according to each device's resource profile.
 
+[[2026_Garavagno_HWNASUltraLowPower]] — hardware-aware NAS measured on real STM32 L0/L1/L4 hardware (20-40 KiB RAM class), reporting measured inference latency on each target.
+
+[[2026_Sen_NVFP4QuantizationEdgeAI]] — quantization scheme whose ~7× activation-memory reduction is directly relevant to Cortex-M's tight SRAM budget, though evaluated algorithmically rather than on real Cortex-M hardware.
+
 ## Open problems
 
 Exploiting the new Helium (MVE) vector instructions on Cortex-M55/M85, still poorly covered in the literature. Efficient support for architectures other than classic CNNs (e.g. lightweight attention).

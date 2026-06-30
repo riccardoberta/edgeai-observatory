@@ -18,6 +18,8 @@ The field takes its name from Zoph and Le's "Neural Architecture Search with Rei
 
 [[2025_KumarM_MARVEL]] — automates the path from a high-level DNN model description to a model-class-aware RISC-V ISA extension and compiler support, treating accelerator-extension design itself as a searchable/generatable space rather than a hand-crafted one.
 
+[[2026_Garavagno_HWNASUltraLowPower]] — derivative-free HW-NAS targeting the ultra-low-power tier (20-40 KiB RAM) below most prior HW-NAS work, with a search-host RAM constraint that makes the search itself runnable on constrained hardware (including a Raspberry Pi 4); directly addresses this entry's "extreme memory constraints" open problem.
+
 ## Open problems
 
 Extending the once-for-all paradigm to microcontrollers with extreme memory constraints, not just latency. Generalizing latency/accuracy predictors to hardware never seen during the predictors' own training.
