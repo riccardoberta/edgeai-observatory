@@ -5,6 +5,11 @@
 # project instructions. Each entry should be self-explanatory; "status:
 # active" sources are checked during weekly/monthly monitoring cycles,
 # "status: paused" ones are kept for reference but skipped.
+#
+# last_checked: the date (YYYY-MM-DD) this source last actually contributed
+# to a weekly digest or monthly report — not just "in scope." Set to null
+# when there is no record of it ever being checked; do not guess a date.
+# Update it whenever a digest/report cites this source.
 
 digital_libraries:
   - name: arXiv
@@ -13,118 +18,147 @@ digital_libraries:
     access: open
     status: active
     notes: "Primary source for preprints; check daily/weekly listings on relevant categories."
+    last_checked: 2026-06-29
 
   - name: IEEE Xplore
     url: https://ieeexplore.ieee.org
     access: institutional
     access_notes: "Reachable via University of Genoa (unige.it) institutional access. Use the Claude in Chrome extension on Ricky's browser while he is on the campus network/VPN/proxy to navigate and extract paper text directly."
     status: active
+    last_checked: null
 
   - name: ACM Digital Library
     url: https://dl.acm.org
     access: institutional
     access_notes: "Same as IEEE Xplore — use Claude in Chrome while on unige.it institutional access."
     status: active
+    last_checked: null
 
   - name: Google Scholar
     url: https://scholar.google.com
     access: open (aggregator, links may lead to paywalled publishers)
     access_notes: "No official API — use Claude in Chrome to run searches and read result pages. Useful as a cross-publisher aggregator: finds papers not indexed on arXiv, surfaces citation counts to gauge influence, and often links directly to a free PDF (publisher page, author repository, or institutional repo) even for papers behind a paywall elsewhere. Use sparingly and avoid rapid automated querying, since Google Scholar's terms discourage scripted scraping."
     status: active
+    last_checked: null
 
 conferences:
   - name: MLSys
     url: https://mlsys.org
     frequency: annual
     status: active
+    last_checked: null
   - name: NeurIPS
     url: https://neurips.cc
     frequency: annual
     status: active
+    last_checked: null
   - name: ICML
     url: https://icml.cc
     frequency: annual
     status: active
+    last_checked: null
   - name: ICLR
     url: https://iclr.cc
     frequency: annual
     status: active
+    last_checked: null
   - name: DAC (Design Automation Conference)
     url: https://www.dac.com
     frequency: annual
     status: active
+    last_checked: null
   - name: DATE (Design, Automation & Test in Europe)
     url: https://www.date-conference.com
     frequency: annual
     status: active
+    last_checked: null
   - name: SenSys (ACM Conference on Embedded Networked Sensor Systems)
     url: https://sensys.acm.org
     frequency: annual
     status: active
+    last_checked: null
   - name: IPSN (Information Processing in Sensor Networks)
     url: https://ipsn.acm.org
     frequency: annual
     status: active
+    last_checked: null
   - name: TinyML Research Symposium
     url: https://www.tinyml.org/research-symposium
     frequency: annual
     status: active
+    last_checked: null
 
 software_projects:
   - name: TensorFlow Lite Micro
     url: https://github.com/tensorflow/tflite-micro
     status: active
+    last_checked: null
   - name: CMSIS-NN
     url: https://github.com/ARM-software/CMSIS-NN
     status: active
+    last_checked: null
   - name: Apache TVM / microTVM
     url: https://github.com/apache/tvm
     status: active
+    last_checked: 2026-06-30
   - name: MLIR
     url: https://mlir.llvm.org
     status: active
+    last_checked: null
   - name: ONNX Runtime
     url: https://github.com/microsoft/onnxruntime
     status: active
+    last_checked: null
   - name: Edge Impulse
     url: https://www.edgeimpulse.com
     status: active
+    last_checked: null
 
 hardware_vendors:
   - name: Arm (Cortex-M / Ethos NPU)
     url: https://www.arm.com
     status: active
+    last_checked: null
   - name: STMicroelectronics (STM32 / ST Edge AI)
     url: https://www.st.com
     status: active
+    last_checked: 2026-06-30
   - name: Qualcomm (edge AI chips)
     url: https://www.qualcomm.com
     status: active
+    last_checked: null
   - name: NVIDIA (Jetson)
     url: https://developer.nvidia.com/embedded-computing
     status: active
+    last_checked: null
   - name: Syntiant
     url: https://www.syntiant.com
     status: active
+    last_checked: null
   - name: GreenWaves Technologies (GAP processors)
     url: https://greenwaves-technologies.com
     status: active
+    last_checked: null
 
 benchmarks:
   - name: MLPerf Tiny
     url: https://mlcommons.org/benchmarks/inference-tiny/
     status: active
+    last_checked: null
   - name: MLPerf Inference
     url: https://mlcommons.org/benchmarks/inference-datacenter/
     status: active
+    last_checked: null
 
 datasets:
   - name: Speech Commands
     url: https://arxiv.org/abs/1804.03209
     status: active
+    last_checked: null
   - name: Visual Wake Words
     url: https://arxiv.org/abs/1906.05721
     status: active
+    last_checked: null
 
 # To add a new source: copy an existing entry under the right category,
 # fill in name/url/status, and add access_notes if it requires
