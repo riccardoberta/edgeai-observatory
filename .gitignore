@@ -12,3 +12,4 @@
 /site/
 docs_old_symlinks/
 site_old_*/
+*.tmp.gone
