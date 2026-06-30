@@ -1,5 +1,7 @@
 # EdgeAI Observatory
 
+[riccardoberta.github.io/edgeai-observatory](https://riccardoberta.github.io/edgeai-observatory/)
+
 A long-term research memory and scientific intelligence layer for the EdgeAI literature. It is not a literature-review tool: a review summarizes papers, while the Observatory is built to identify patterns, connect ideas across papers, track how the field evolves, and help generate new research directions.
 
 It organizes knowledge around **concepts** rather than documents — the concept graph, not the paper list, is what the Observatory grows and queries over time. Papers feed the concepts: each one is processed into structured knowledge and routed into the ideas it advances, the open problems it touches, and the research directions it opens.
