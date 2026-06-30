@@ -42,7 +42,7 @@ As a benchmark/survey paper rather than a novel architecture or algorithm contri
 
 ## Limitations
 
-Cortex-A SoCs and their AI accelerators are commercial, often partially closed products, so the benchmark cannot fully attribute observed performance differences to specific microarchitectural causes (unlike the more controlled internal characterization possible for a single accelerator family, as in our [[NPU]] entry); focuses on vision-oriented workloads typical of smartphone use cases, so coverage of other modalities (audio, biosignals) relevant to our [[Applications]] taxonomy is limited.
+Cortex-A SoCs and their AI accelerators are commercial, often partially closed products, so the benchmark cannot fully attribute observed performance differences to specific microarchitectural causes (unlike the more controlled internal characterization possible for a single accelerator family, as in our [[NPU]] entry); focuses on vision-oriented workloads typical of smartphone use cases, so coverage of other modalities (audio, biosignals) relevant to our Applications taxonomy is limited.
 
 ## Open questions
 
@@ -54,7 +54,7 @@ A modern re-run of this benchmark methodology on current-generation Cortex-A mob
 
 ## Relevance to our research
 
-Foundational reference for the [[Cortex-A]] branch of our [[Hardware]] taxonomy, providing the application-processor-class counterpart to the microcontroller-class [[Cortex-M]] entry, and a bridge to the broader question of how cross-platform frameworks ([[ONNX_Runtime]], [[microTVM_TVM]]) perform on real heterogeneous mobile hardware.
+Foundational reference for the [[Cortex-A]] branch of our Hardware taxonomy, providing the application-processor-class counterpart to the microcontroller-class [[Cortex-M]] entry, and a bridge to the broader question of how cross-platform frameworks ([[ONNX_Runtime]], [[microTVM_TVM]]) perform on real heterogeneous mobile hardware.
 
 ## Possible thesis topics
 

@@ -52,7 +52,7 @@ How does the framework behave with real, physically heterogeneous MCU fleets rat
 
 ## Possible extensions
 
-Physical deployment on a small testbed of Cortex-M4/RISC-V boards to validate the simulated energy and latency figures; integration of differential privacy or secure aggregation with a quantified cost-benefit trade-off; extension beyond keyword spotting (Speech Commands) to other [[Applications]] domains such as Human Activity Recognition or biosignals, where non-IID skew across users is also a central problem.
+Physical deployment on a small testbed of Cortex-M4/RISC-V boards to validate the simulated energy and latency figures; integration of differential privacy or secure aggregation with a quantified cost-benefit trade-off; extension beyond keyword spotting (Speech Commands) to other Applications domains such as Human Activity Recognition or biosignals, where non-IID skew across users is also a central problem.
 
 ## Relevance to our research
 

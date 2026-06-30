@@ -54,7 +54,7 @@ A concrete benchmark comparing an MLIR-based deployment path (e.g. via ONNX-MLIR
 
 ## Relevance to our research
 
-Background/infrastructure reference for the [[MLIR]] concept: relevant whenever evaluating or building a deployment toolchain for EdgeAI models, since several frameworks in our [[Frameworks]] taxonomy branch (TVM, ONNX Runtime via ONNX-MLIR) are built on or interoperate with MLIR.
+Background/infrastructure reference for the [[MLIR]] concept: relevant whenever evaluating or building a deployment toolchain for EdgeAI models, since several frameworks in our Frameworks taxonomy branch (TVM, ONNX Runtime via ONNX-MLIR) are built on or interoperate with MLIR.
 
 ## Possible thesis topics
 

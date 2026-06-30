@@ -34,7 +34,7 @@ Distinct from hardware-aware NAS approaches that search the network architecture
 
 ## Strengths
 
-Directly addresses a real practical pain point (manual co-design effort) in a domain — ultra-low-power always-on audio sensing — that is central to several entries in our [[Applications]] taxonomy (Keyword Spotting); automation of the joint search reduces dependence on hard-to-find expert co-design skills.
+Directly addresses a real practical pain point (manual co-design effort) in a domain — ultra-low-power always-on audio sensing — that is central to several entries in our Applications taxonomy (Keyword Spotting); automation of the joint search reduces dependence on hard-to-find expert co-design skills.
 
 ## Weaknesses
 
@@ -46,7 +46,7 @@ As with most automated co-design frameworks, the quality of the discovered solut
 
 ## Open questions
 
-How does HANNAH's joint search compare, in solution quality and search cost, to a two-stage approach (hardware-aware NAS over a fixed accelerator family, as in [[2019_Cai_OnceForAll]], followed by light accelerator tuning)? Can the same joint-search philosophy be applied beyond DSP-class audio accelerators to other [[Hardware]] categories (e.g. NPU, FPGA)?
+How does HANNAH's joint search compare, in solution quality and search cost, to a two-stage approach (hardware-aware NAS over a fixed accelerator family, as in [[2019_Cai_OnceForAll]], followed by light accelerator tuning)? Can the same joint-search philosophy be applied beyond DSP-class audio accelerators to other Hardware categories (e.g. NPU, FPGA)?
 
 ## Possible extensions
 
@@ -54,7 +54,7 @@ Extending HANNAH's joint network/accelerator search methodology to a different m
 
 ## Relevance to our research
 
-Primary reference for the [[DSP]] branch of our [[Hardware]] taxonomy, with a direct link to [[Keyword_Spotting]] and to the broader [[NAS]] research direction, since it generalizes hardware-aware NAS to jointly search the accelerator as well as the network.
+Primary reference for the [[DSP]] branch of our Hardware taxonomy, with a direct link to [[Keyword_Spotting]] and to the broader [[NAS]] research direction, since it generalizes hardware-aware NAS to jointly search the accelerator as well as the network.
 
 ## Possible thesis topics
 

@@ -14,6 +14,8 @@ TFLM (David et al., 2021) arises from the observation that existing inference fr
 
 [[2025_Hasanpour_EdgeMark]] — automation and benchmarking system enabling reproducible cross-tool comparison of TFLM against other embedded AI tools.
 
+[[2026_Jain_TinyFed6G]] — uses TFLM-class deployment as the on-device execution layer for federated-learning devices running differently-quantized model variants.
+
 ## Open problems
 
 Performance gap between the generic interpreter (TFLM) and ad-hoc compiled code (microTVM) as model complexity grows. Native support for lightweight on-device fine-tuning, not currently central to the runtime's design.
@@ -28,4 +30,4 @@ Experimental comparison between TFLM and microTVM on a common set of TinyML mode
 
 ## Links
 
-[[CMSIS-NN]], [[microTVM]], [[Cortex-M]], [[Keyword Spotting]]
+[[CMSIS-NN]], [[microTVM_TVM|microTVM]], [[Cortex-M]], [[Keyword Spotting]]

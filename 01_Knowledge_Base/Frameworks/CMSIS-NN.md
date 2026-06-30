@@ -12,6 +12,8 @@ The kernel-design technique CMSIS-NN relies on — expressing convolution as a m
 
 [[2025_Abushahla_QuantizationMicrocontrollersSurvey]] — survey connecting quantization methods to MCU hardware/software platforms (including CMSIS-NN-class kernel libraries), useful as an up-to-date reference for how CMSIS-NN sits relative to RISC-V and NPU-enabled alternatives.
 
+[[2026_Jain_TinyFed6G]] — uses CMSIS-NN-class kernels as the on-device inference layer for Cortex-M devices participating in federated learning.
+
 ## Open problems
 
 Generalizing the "hand-optimized kernel" approach toward automatic generation via compiler (TVM) without losing performance. Extension to more recent Cortex-M cores with Helium (MVE) vector instructions, not covered by the original paper.

@@ -50,7 +50,7 @@ How does ONNX Runtime's mobile/edge execution-provider performance compare empir
 
 ## Possible extensions
 
-A controlled benchmark of the same EdgeAI model (e.g. a small CNN for Vision or Keyword Spotting) deployed via ONNX Runtime (mobile/NNAPI provider), TensorFlow Lite Micro, and microTVM on equivalent Cortex-A/Cortex-M hardware, to give the Observatory's [[Frameworks]] taxonomy branch a grounded comparison.
+A controlled benchmark of the same EdgeAI model (e.g. a small CNN for Vision or Keyword Spotting) deployed via ONNX Runtime (mobile/NNAPI provider), TensorFlow Lite Micro, and microTVM on equivalent Cortex-A/Cortex-M hardware, to give the Observatory's Frameworks taxonomy branch a grounded comparison.
 
 ## Relevance to our research
 
@@ -62,7 +62,7 @@ Comparative benchmark of ONNX Runtime vs. TVM/microTVM vs. native vendor SDKs fo
 
 ## Possible collaborations
 
-Hardware vendors implementing ONNX Runtime execution providers for edge NPUs (overlaps with the [[Hardware]] taxonomy branch); groups working on cross-framework model interoperability.
+Hardware vendors implementing ONNX Runtime execution providers for edge NPUs (overlaps with the Hardware taxonomy branch); groups working on cross-framework model interoperability.
 
 ## Links to related papers
 

@@ -14,6 +14,8 @@ TVM (Chen et al., 2018) was created to overcome the limits of hand-written libra
 
 [[2024_Hamdi_MATCH]] — model-based hardware abstraction for agile retargeting of TVM-based tiling/loop-ordering optimization across heterogeneous MCU/accelerator combinations.
 
+[[2020_Lattner_MLIR]] — the extensible compiler-infrastructure (dialects, progressive lowering) that TVM-adjacent toolchains, including ONNX-MLIR, build on or interoperate with.
+
 ## Open problems
 
 How well TVM's auto-tuning scales to microcontrollers with limited profiling resources. Reducing the cost of auto-tuning search to make it practical without large compute clusters.

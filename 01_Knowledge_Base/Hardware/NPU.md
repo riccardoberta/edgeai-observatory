@@ -14,6 +14,12 @@ Neural processing units (NPUs) emerged as fixed-function, ASIC-class accelerator
 
 [[2025_Bamberg_eIQNeutron]] — NPU/compiler co-design using constrained-programming-based scheduling, reaching 1.8x average (4x peak) speedup over a comparable embedded NPU/compiler stack.
 
+[[2019_Ignatov_AIBenchmarkSmartphones]] — vendor-neutral benchmark suite covering mobile NPUs/AI accelerators across major commercial Cortex-A SoCs, giving an apples-to-apples view that complements single-vendor characterization studies.
+
+[[2025_Chen_HeteroInfer]] — heterogeneous GPU+NPU parallel execution for on-device LLM inference, splitting compute-bound prefill and bandwidth-bound decode phases across both accelerators on shared SoC memory.
+
+[[2026_Absar_HexagonMLIR]] — MLIR-based compilation stack targeting Hexagon NPUs, reusing MLIR's dialect/lowering infrastructure instead of a bespoke NPU toolchain.
+
 ## Open problems
 
 How well do learned latency/energy estimators generalize to non-CNN architectures (small transformers, RNNs) now common in TinyML research? How do Edge TPU's microarchitectural bottlenecks compare to other NPU families (ARM Ethos, CEVA NeuPro) on the same model set — is there a generalizable theory of NPU bottlenecks, or is it largely vendor-specific?

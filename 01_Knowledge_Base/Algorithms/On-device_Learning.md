@@ -12,6 +12,14 @@ Early TinyML work focused almost entirely on inference: train in the cloud, depl
 
 [[2024_Kwon_TinyTrain]] — task-adaptive sparse-update selection combined with meta-learning pre-training to jointly address compute/memory and data-scarcity constraints, validated on real edge hardware under few-shot conditions.
 
+[[2024_Deutel_OnDeviceTrainingQuantizedCortexM]] — keeps the entire training loop (forward, backward, weight update) in a fully quantized integer representation with dynamic partial-gradient updates, demonstrated across Cortex-M0+/M4/M7.
+
+[[2021_David_TensorFlowLiteMicro]] — the inference runtime whose static-allocation, no-OS-dependency design underlies many on-device training implementations targeting the same microcontroller-class hardware.
+
+[[2017_Kirkpatrick_OvercomingCatastrophicForgetting]] — Fisher-information-based weight-importance protection (EWC), directly relevant to keeping on-device learning stable under non-stationary data, as named in the open problems below.
+
+[[2025_Gao_TinyMLBearingFaultDiagnosis]] — transfer learning with limited target-domain labels, optimized and deployed directly on an ESP32-S3 microcontroller for industrial fault diagnosis.
+
 ## Open problems
 
 How to make on-device learning robust to non-stationary, continuously drifting data without unbounded memory growth (the intersection with [[Continual_Learning]]). How to extend memory-budgeted training beyond vision transfer learning to other modalities (audio, time series, biosignals). How to combine on-device training with federated aggregation ([[Federated_Learning]]) without compounding the memory and communication costs.

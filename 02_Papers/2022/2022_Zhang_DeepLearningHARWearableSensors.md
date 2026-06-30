@@ -34,7 +34,7 @@ Complements broader EdgeAI surveys by focusing specifically on the wearable-sens
 
 ## Strengths
 
-Comprehensive, systematic coverage of a fast-moving sub-field; useful as an entry point and taxonomy for newcomers to wearable HAR; explicitly connects model architecture choices to deployment constraints relevant to this Observatory's [[Hardware]] taxonomy.
+Comprehensive, systematic coverage of a fast-moving sub-field; useful as an entry point and taxonomy for newcomers to wearable HAR; explicitly connects model architecture choices to deployment constraints relevant to this Observatory's Hardware taxonomy.
 
 ## Weaknesses
 
@@ -54,7 +54,7 @@ An updated review or benchmark incorporating self-supervised and foundation-mode
 
 ## Relevance to our research
 
-Foundational survey reference for the [[Human_Activity_Recognition]] branch of our [[Applications]] taxonomy, providing the architectural landscape against which specific deployed/optimized HAR models can be compared.
+Foundational survey reference for the [[Human_Activity_Recognition]] branch of our Applications taxonomy, providing the architectural landscape against which specific deployed/optimized HAR models can be compared.
 
 ## Possible thesis topics
 

@@ -14,6 +14,10 @@ Keyword spotting's modern deep-learning era starts with Sainath and Parada's "Co
 
 [[2025_Liang_IntelligentAudioSoC]] — dedicated keyword-spotting accelerator co-designed into an audio SoC, validated via a working FPGA-based prototype.
 
+[[2018_Flamand_GAP8]] — RISC-V multi-core cluster with a dedicated convolution engine and ultra-low-power always-on domain, a hardware platform well-suited to always-on keyword spotting.
+
+[[2022_Gerum_HANNAH]] — jointly searches network architecture and hardware accelerator configuration for always-on audio sensing, directly targeting keyword spotting as the motivating use case.
+
 ## Open problems
 
 Extending equivalent benchmarks to languages other than English with limited data-collection resources. Robustness of models under real acoustic conditions (background noise, distance from microphone), not fully represented by the dataset's recording conditions.

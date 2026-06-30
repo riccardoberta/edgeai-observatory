@@ -14,6 +14,8 @@ MLIR's lineage traces directly back to Lattner and Adve's "LLVM: A Compilation F
 
 [[2026_Absar_HexagonMLIR]] — open-source, MLIR-based AI compilation stack for Qualcomm's Hexagon NPUs, lowering Triton and PyTorch to NPU-specific code; a large industrial validation of MLIR as shared NPU-compilation infrastructure.
 
+[[2019_Microsoft_ONNXRuntime]] — separates the ONNX graph representation from hardware-specific execution providers, an architectural pattern that parallels MLIR's own separation of high-level graphs from progressively-lowered, hardware-specific dialects.
+
 ## Open problems
 
 How mature and performant are MLIR-based lowering paths specifically for ultra-constrained MCU and NPU targets, compared to more mature, narrower stacks like [[CMSIS-NN]] or [[microTVM_TVM]]'s own scheduling? Building a new dialect still requires significant compiler expertise, limiting how broadly the infrastructure-level benefits translate into easy wins for EdgeAI practitioners without compiler backgrounds.

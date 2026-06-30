@@ -2,7 +2,7 @@
 
 **Full citation:** Chen, T., Moreau, T., Jiang, Z., Zheng, L., Yan, E., Shen, H., Cowan, M., Wang, L., Hu, Y., Ceze, L., Guestrin, C., Krishnamurthy, A. (2018). TVM: An Automated End-to-End Optimizing Compiler for Deep Learning. *13th USENIX Symposium on Operating Systems Design and Implementation (OSDI 18)*, pp. 578–594. arXiv:1802.04799. https://arxiv.org/abs/1802.04799
 
-**Linked concepts:** [[TVM]], [[microTVM]]
+**Linked concepts:** [[microTVM_TVM]]
 
 ## Abstract summary
 

@@ -42,7 +42,7 @@ As a transformer-based foundation model, BIOT's compute and memory footprint is 
 
 ## Limitations
 
-The cross-data pretraining approach assumes access to multiple diverse biosignal datasets, which may not be available in narrower clinical or research settings; the paper evaluates fine-tuned downstream performance but does not benchmark inference cost on constrained edge hardware relevant to this Observatory's [[Hardware]] taxonomy.
+The cross-data pretraining approach assumes access to multiple diverse biosignal datasets, which may not be available in narrower clinical or research settings; the paper evaluates fine-tuned downstream performance but does not benchmark inference cost on constrained edge hardware relevant to this Observatory's Hardware taxonomy.
 
 ## Open questions
 
@@ -54,7 +54,7 @@ Applying [[Quantization]] and [[Distillation]] to a BIOT-style biosignal foundat
 
 ## Relevance to our research
 
-Foundational reference for the [[Biosignals]] branch of our [[Applications]] taxonomy, and a natural test case for whether large-model compression techniques developed elsewhere in this Observatory ([[Quantization]], [[Distillation]], [[Compression]]) can bring foundation-model-level biosignal performance to constrained edge hardware.
+Foundational reference for the [[Biosignals]] branch of our Applications taxonomy, and a natural test case for whether large-model compression techniques developed elsewhere in this Observatory ([[Quantization]], [[Distillation]], [[Compression]]) can bring foundation-model-level biosignal performance to constrained edge hardware.
 
 ## Possible thesis topics
 

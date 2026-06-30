@@ -54,7 +54,7 @@ Applying more advanced on-device training and compression techniques (as in [[20
 
 ## Relevance to our research
 
-Foundational reference for the [[Predictive_Maintenance]] branch of our [[Applications]] taxonomy, and a concrete example of accuracy-latency-power trade-off engineering directly relevant to this Observatory's broader interest in [[Compression]] and [[On-device_Learning]].
+Foundational reference for the [[Predictive_Maintenance]] branch of our Applications taxonomy, and a concrete example of accuracy-latency-power trade-off engineering directly relevant to this Observatory's broader interest in [[Compression]] and [[On-device_Learning]].
 
 ## Possible thesis topics
 

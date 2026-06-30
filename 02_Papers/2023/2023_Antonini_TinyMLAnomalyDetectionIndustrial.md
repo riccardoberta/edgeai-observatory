@@ -54,7 +54,7 @@ Combining this unsupervised on-device training approach with sparse-update or qu
 
 ## Relevance to our research
 
-Foundational reference for the [[Industrial_IoT]] branch of our [[Applications]] taxonomy, and a concrete bridge to [[On-device_Learning]], since it demonstrates genuine on-device training (not just inference) for a real industrial use case on extremely low-cost hardware.
+Foundational reference for the [[Industrial_IoT]] branch of our Applications taxonomy, and a concrete bridge to [[On-device_Learning]], since it demonstrates genuine on-device training (not just inference) for a real industrial use case on extremely low-cost hardware.
 
 ## Possible thesis topics
 

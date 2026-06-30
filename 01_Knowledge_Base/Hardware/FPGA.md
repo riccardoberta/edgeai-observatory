@@ -24,7 +24,7 @@ A throughput-per-watt benchmark comparing a FINN-generated FPGA accelerator agai
 
 ## Possible thesis topics
 
-Extending FINN's per-layer dataflow methodology to a non-vision EdgeAI task in our [[Applications]] taxonomy (Keyword Spotting, HAR); reconfigurability-versus-efficiency study comparing FPGA, NPU, and RISC-V accelerator substrates for the same task.
+Extending FINN's per-layer dataflow methodology to a non-vision EdgeAI task in our Applications taxonomy (Keyword Spotting, HAR); reconfigurability-versus-efficiency study comparing FPGA, NPU, and RISC-V accelerator substrates for the same task.
 
 ## Links
 

@@ -12,13 +12,15 @@ ARM Cortex-A is the application-processor core family that powers smartphones, t
 
 [[2025_Chen_HeteroInfer]] — phase-aware GPU/NPU heterogeneous-parallelism engine for mobile LLM inference, with a hardware characterization of compute/bandwidth bottlenecks underlying the design.
 
+[[2023_Park_MultiModeNPU]] — silicon-validated 4-nm mobile NPU paired with Cortex-A cores in flagship SoCs, using a unified multi-precision datapath to handle the workload diversity of real mobile AI applications.
+
 ## Open problems
 
 How much of the available Cortex-A-class heterogeneous compute (NPU/DSP/GPU) do general-purpose cross-platform runtimes ([[ONNX_Runtime]], TensorFlow Lite for mobile) actually exploit compared to vendor-specific delegates? How does energy efficiency on Cortex-A-class hardware compare, for the same model, to dedicated NPU/FPGA/RISC-V accelerator paths covered elsewhere in this taxonomy?
 
 ## Research ideas
 
-A current-generation replication of the AI Benchmark methodology extended to non-vision EdgeAI tasks (keyword spotting, HAR, biosignals) relevant to our [[Applications]] taxonomy, to test whether Cortex-A heterogeneous compute gains generalize beyond the vision workloads it was originally measured on.
+A current-generation replication of the AI Benchmark methodology extended to non-vision EdgeAI tasks (keyword spotting, HAR, biosignals) relevant to our Applications taxonomy, to test whether Cortex-A heterogeneous compute gains generalize beyond the vision workloads it was originally measured on.
 
 ## Possible thesis topics
 

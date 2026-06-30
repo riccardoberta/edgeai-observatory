@@ -14,6 +14,10 @@ The field takes its name from Zoph and Le's "Neural Architecture Search with Rei
 
 [[2024_Zhou_HGNAS]] — extends hardware-aware NAS to graph neural networks via a GNN-specific search space and hardware-cost predictor, addressing a structurally distinct and underexplored search domain.
 
+[[2022_Gerum_HANNAH]] — jointly searches network architecture and hardware accelerator configuration together, rather than optimizing the network first and the hardware afterward, for always-on audio sensing.
+
+[[2025_KumarM_MARVEL]] — automates the path from a high-level DNN model description to a model-class-aware RISC-V ISA extension and compiler support, treating accelerator-extension design itself as a searchable/generatable space rather than a hand-crafted one.
+
 ## Open problems
 
 Extending the once-for-all paradigm to microcontrollers with extreme memory constraints, not just latency. Generalizing latency/accuracy predictors to hardware never seen during the predictors' own training.

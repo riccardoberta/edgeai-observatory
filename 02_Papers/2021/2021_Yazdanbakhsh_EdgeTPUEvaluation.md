@@ -54,7 +54,7 @@ Extending the same large-scale empirical characterization methodology to non-CNN
 
 ## Relevance to our research
 
-Foundational empirical reference for the [[NPU]] branch of our [[Hardware]] taxonomy; directly useful for any [[NAS]] work that wants a fast, hardware-aware performance proxy instead of exhaustive on-device benchmarking.
+Foundational empirical reference for the [[NPU]] branch of our Hardware taxonomy; directly useful for any [[NAS]] work that wants a fast, hardware-aware performance proxy instead of exhaustive on-device benchmarking.
 
 ## Possible thesis topics
 

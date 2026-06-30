@@ -54,7 +54,7 @@ A benchmark comparing GAP-8-class fixed-function CNN acceleration against more r
 
 ## Relevance to our research
 
-Foundational reference for the [[RISC-V]] branch of our [[Hardware]] taxonomy and for the GreenWaves Technologies vendor entry in `00_Config/sources.yaml`; relevant to any work targeting open-ISA, always-on EdgeAI hardware as an alternative to ARM Cortex-M.
+Foundational reference for the [[RISC-V]] branch of our Hardware taxonomy and for the GreenWaves Technologies vendor entry in `00_Config/sources.yaml`; relevant to any work targeting open-ISA, always-on EdgeAI hardware as an alternative to ARM Cortex-M.
 
 ## Possible thesis topics
 

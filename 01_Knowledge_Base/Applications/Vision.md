@@ -12,6 +12,12 @@ The line of research starts well before edge constraints entered the picture: Kr
 
 [[2025_Zeng_TinyNeXt]] — hybrid CNN/transformer architecture with a memory-efficient self-attention mechanism, extending efficient-by-design principles from CNNs to transformers for TinyML.
 
+[[2018_Flamand_GAP8]] — RISC-V multi-core platform with a dedicated convolution engine, a hardware target for low-power always-on vision (CNN inference) at the edge.
+
+[[2019_Ignatov_AIBenchmarkSmartphones]] — cross-vendor benchmark of deep learning vision models across major mobile Cortex-A SoCs, the empirical counterpart to architecture-level efficient-vision research.
+
+[[2021_Yazdanbakhsh_EdgeTPUEvaluation]] — large-scale empirical sweep of CNN architectures on Edge TPU hardware, producing performance/energy estimators directly useful for efficient-vision-model design.
+
 ## Open problems
 
 How efficient does the depthwise-separable factorization remain on hardware very different from mobile CPU/GPU (e.g. microcontrollers without efficient SIMD support for depthwise operations).

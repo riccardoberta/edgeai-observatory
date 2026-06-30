@@ -58,7 +58,7 @@ Brings the Vision entry into the 2023-2026 window with a concrete answer to the 
 
 ## Possible thesis topics
 
-Benchmarking TinyNeXt against MobileNet-family architectures on real Cortex-M/NPU hardware for energy-per-inference at equal accuracy; extending TinyNeXt's hybrid macro design to non-classification vision tasks relevant to our [[Applications]] taxonomy.
+Benchmarking TinyNeXt against MobileNet-family architectures on real Cortex-M/NPU hardware for energy-per-inference at equal accuracy; extending TinyNeXt's hybrid macro design to non-classification vision tasks relevant to our Applications taxonomy.
 
 ## Possible collaborations
 

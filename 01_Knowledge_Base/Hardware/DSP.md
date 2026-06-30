@@ -24,7 +24,7 @@ Comparative study of joint network/accelerator co-search versus sequential hardw
 
 ## Possible thesis topics
 
-Applying HANNAH-style joint co-design to a non-audio always-on sensing task in our [[Applications]] taxonomy (e.g. biosignals or predictive maintenance vibration sensing); benchmarking DSP-class accelerators against NPU and Cortex-M+CMSIS-NN deployments for the same keyword-spotting task.
+Applying HANNAH-style joint co-design to a non-audio always-on sensing task in our Applications taxonomy (e.g. biosignals or predictive maintenance vibration sensing); benchmarking DSP-class accelerators against NPU and Cortex-M+CMSIS-NN deployments for the same keyword-spotting task.
 
 ## Links
 

@@ -42,7 +42,7 @@ Binarized networks suffer accuracy degradation on harder tasks compared to highe
 
 ## Limitations
 
-Targets FPGA fabric specifically, which has different cost, power, and reconfigurability trade-offs than ASIC NPUs or MCU-class CPUs covered elsewhere in our [[Hardware]] taxonomy; the original 2017 evaluation used benchmarks that are small by current standards, so direct comparison to modern EdgeAI workloads requires care.
+Targets FPGA fabric specifically, which has different cost, power, and reconfigurability trade-offs than ASIC NPUs or MCU-class CPUs covered elsewhere in our Hardware taxonomy; the original 2017 evaluation used benchmarks that are small by current standards, so direct comparison to modern EdgeAI workloads requires care.
 
 ## Open questions
 
@@ -54,7 +54,7 @@ Applying FINN-style streaming dataflow generation to a modern EdgeAI benchmark (
 
 ## Relevance to our research
 
-Foundational reference for the [[FPGA]] branch of our [[Hardware]] taxonomy, and a direct bridge to [[Quantization]]: it is one of the clearest demonstrations that aggressive quantization (down to binary) can be paired with a hardware design methodology that fully exploits it, rather than just reducing model size in isolation.
+Foundational reference for the [[FPGA]] branch of our Hardware taxonomy, and a direct bridge to [[Quantization]]: it is one of the clearest demonstrations that aggressive quantization (down to binary) can be paired with a hardware design methodology that fully exploits it, rather than just reducing model size in isolation.
 
 ## Possible thesis topics
 

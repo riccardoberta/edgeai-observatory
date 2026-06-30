@@ -14,6 +14,10 @@ Cortex-M cores (Arm) are the most widely used hardware target for TinyML: low-po
 
 [[2024_Deutel_OnDeviceTrainingQuantizedCortexM]] — fully quantized on-device training with dynamic partial gradient updates, demonstrated across Cortex-M0+, M4, and M7.
 
+[[2022_Lin_OnDeviceTraining256KB]] — quantization-aware scaling plus sparse gradient updates to make on-device training fit within 256 KB of memory, directly relevant to Cortex-M's tight SRAM budget.
+
+[[2026_Jain_TinyFed6G]] — federated learning across a tier of Cortex-M/RISC-V TinyML devices, with per-device quantized model variants assigned according to each device's resource profile.
+
 ## Open problems
 
 Exploiting the new Helium (MVE) vector instructions on Cortex-M55/M85, still poorly covered in the literature. Efficient support for architectures other than classic CNNs (e.g. lightweight attention).

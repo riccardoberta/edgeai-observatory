@@ -10,6 +10,8 @@ Industrial IoT applications of EdgeAI center on monitoring industrial assets in 
 
 [[2023_Antonini_TinyMLAnomalyDetectionIndustrial]] — end-to-end Tiny-MLOps anomaly detection system performing unsupervised on-device training (isolation forest) on an ESP32 microcontroller for extreme industrial environments.
 
+[[2024_delaFuente_ESN-PdM]] — dynamically routes predictive-maintenance inference between on-device, on-gateway, and cloud execution depending on accuracy/latency/battery needs, using TinyML optimization to make the edge tiers viable.
+
 ## Open problems
 
 How does fully on-device unsupervised training compare, in detection accuracy, to deep-learning-based anomaly detection methods deployed via inference-only edge pipelines? Can on-device training methodologies developed for general deep learning (sparse update, quantization-aware scaling) extend classical-ML on-device training (isolation forest) to lightweight deep anomaly-detection models on the same hardware class?
