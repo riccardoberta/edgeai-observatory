@@ -76,11 +76,13 @@ conferences:
     url: https://sensys.acm.org
     frequency: annual
     status: active
+    notes: "As of 2026, SenSys absorbed both IPSN and IoTDI and now runs as a single unified ACM/IEEE event co-located with CPS-IoT Week. SenSys 2026 was held 11–14 May 2026 in Saint-Malo. Monitor proceedings here rather than at the former IPSN/IoTDI URLs."
     last_checked: null
   - name: IPSN (Information Processing in Sensor Networks)
     url: https://ipsn.acm.org
     frequency: annual
-    status: active
+    status: paused
+    notes: "IPSN and IoTDI merged into SenSys as of 2026. Monitor SenSys instead; this entry is kept for historical reference only."
     last_checked: null
   - name: TinyML Research Symposium
     url: https://www.tinyml.org/research-symposium
