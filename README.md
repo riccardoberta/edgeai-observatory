@@ -22,7 +22,7 @@ Beyond tracking what individual papers say, the Observatory surfaces patterns ac
 
 ## Static site
 
-The Observatory is also published as a browsable static site (MkDocs Material), auto-deployed to GitHub Pages on every push to `main` via `.github/workflows/docs.yml`. The `[[wikilink]]` syntax used throughout the source files stays untouched — `tools/build_docs.py` renders it into plain relative links into a generated `docs/` folder right before `mkdocs build` runs (both locally and in CI); neither `docs/` nor `site/` are committed.
+The Observatory is also published as a browsable static site (MkDocs Material), auto-deployed to GitHub Pages on every push to `main` via `.github/workflows/docs.yml`. The Obsidian-style wikilink syntax used throughout the source files stays untouched — `tools/build_docs.py` renders it into plain relative links into a generated `docs/` folder right before `mkdocs build` runs (both locally and in CI); neither `docs/` nor `site/` are committed.
 
 To preview locally:
 
@@ -31,6 +31,21 @@ pip install -r requirements-docs.txt
 python3 tools/build_docs.py
 mkdocs serve
 ```
+
+## PDF export
+
+To create a polished offline PDF containing the full Observatory corpus
+(taxonomy, knowledge base, paper records, weekly digests, and monthly
+reports):
+
+```
+python -m pip install -r requirements-docs.txt
+python tools/export_pdf.py
+```
+
+The default output is `output/pdf/edgeai-observatory-export.pdf`. Use
+`python tools/export_pdf.py -o path/to/export.pdf` to choose another
+location.
 
 ## Principles
 

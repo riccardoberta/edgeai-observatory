@@ -1,6 +1,9 @@
 # macOS
 .DS_Store
 
+# Python
+__pycache__/
+
 # Obsidian local workspace/UI state (not part of the knowledge content)
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
@@ -13,3 +16,7 @@
 docs_old_symlinks/
 site_old_*/
 *.tmp.gone
+
+# Generated PDF exports
+/output/pdf/
+/tmp/pdfs/
