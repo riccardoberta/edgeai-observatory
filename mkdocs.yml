@@ -7,6 +7,8 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
+  custom_dir: 00_Config/mkdocs_overrides
+  favicon: assets/icons/favicon.svg
   palette:
     - scheme: default
       primary: indigo

@@ -22,6 +22,7 @@ import shutil
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = os.path.join(ROOT, "docs")
+STATIC_SITE = os.path.join(ROOT, "00_Config", "site")
 
 SOURCE_DIRS = ["00_Taxonomy", "01_Knowledge_Base", "02_Papers", "03_Digests"]
 
@@ -94,6 +95,24 @@ def rewrite_links(text, current_rel_path, index, unresolved):
     return WIKILINK_RE.sub(repl, text)
 
 
+def copy_static_site_files():
+    """Copy tracked MkDocs static files into the generated docs/ tree."""
+    if not os.path.isdir(STATIC_SITE):
+        return 0
+
+    copied = 0
+    for dirpath, _, filenames in os.walk(STATIC_SITE):
+        rel_dir = os.path.relpath(dirpath, STATIC_SITE)
+        out_dir = DOCS if rel_dir == "." else os.path.join(DOCS, rel_dir)
+        os.makedirs(out_dir, exist_ok=True)
+        for fname in filenames:
+            src = os.path.join(dirpath, fname)
+            dst = os.path.join(out_dir, fname)
+            shutil.copy2(src, dst)
+            copied += 1
+    return copied
+
+
 def main():
     # Note: deliberately not removing an existing docs/ tree first. The
     # rendered output is deterministic given the same sources (file set is
@@ -123,7 +142,11 @@ def main():
         with open(os.path.join(DOCS, "index.md"), "w", encoding="utf-8") as f:
             f.write(rewritten)
 
+    static_count = copy_static_site_files()
+
     print(f"Rendered {len(files)} files into docs/.")
+    if static_count:
+        print(f"Copied {static_count} static site files into docs/.")
     if unresolved:
         print(f"WARNING: {len(unresolved)} unresolved wikilinks:")
         for src, target in unresolved:

@@ -1,0 +1,33 @@
+{
+  "id": "/edgeai-observatory/",
+  "name": "EdgeAI Observatory",
+  "short_name": "EdgeAI",
+  "description": "Long-term research knowledge system for the EdgeAI literature.",
+  "start_url": "/edgeai-observatory/",
+  "scope": "/edgeai-observatory/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f8fafc",
+  "theme_color": "#3f51b5",
+  "categories": ["education", "productivity", "reference"],
+  "icons": [
+    {
+      "src": "assets/icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
