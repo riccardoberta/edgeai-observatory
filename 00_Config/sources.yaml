@@ -18,7 +18,7 @@ digital_libraries:
     access: open
     status: active
     notes: "Primary source for preprints; check daily/weekly listings on relevant categories."
-    last_checked: 2026-07-13
+    last_checked: 2026-07-19
 
   - name: IEEE Xplore
     url: https://ieeexplore.ieee.org
