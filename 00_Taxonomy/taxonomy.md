@@ -1,6 +1,6 @@
 # Taxonomy
 
-Living document. Any paper can belong to multiple categories. Sub-entries are added as new directions emerge, not by redesigning the structure every time.
+This is a living document. Papers may belong to multiple categories, and new subcategories are introduced as new research directions emerge
 
 ## Algorithms
 
@@ -12,7 +12,7 @@ Living document. Any paper can belong to multiple categories. Sub-entries are ad
 - Continual Learning
 - On-device Learning
 - Federated Learning
-- Mixture-of-Experts (MoE) & Edge LLM Serving (expert routing/caching/prefetching, heterogeneous CPU/GPU/NPU scheduling, quantization compilers for on-device LLM inference — formalized 2026-08-25, see Evolution notes)
+- Mixture-of-Experts (MoE) & Edge LLM Serving (expert routing/caching/prefetching, heterogeneous CPU/GPU/NPU scheduling, quantization compilers for on-device LLM inference)
 
 ## Frameworks
 
@@ -42,7 +42,7 @@ Living document. Any paper can belong to multiple categories. Sub-entries are ad
 
 ## Evolution notes
 
-(here we will note over time when a sub-category splits, merges with another, or becomes saturated)
+Here we will note over time when a sub-category splits, merges with another, or becomes saturated
 
 **2026-06-30 — Quantization/Compression: shift from CNN-era to LLM-era methods.** Since 2023-2024, new work in both [[Quantization]] and [[Compression]] has shifted from compressing CNNs (the AlexNet/VGG/MobileNet era) toward post-training, calibration-light compression of large language models for edge/on-device deployment — see [[2024_Lin_AWQ]], [[2024_Ashkboos_SliceGPT]], [[2024_Gu_MiniLLM]], synthesized in [[2025_Liu_ModelCompressionSurvey]]. Worth watching whether this becomes a distinct sub-category ("LLM edge compression") rather than a variant of the existing CNN-era techniques, since calibration cost and structured-vs-unstructured trade-offs differ from the AlexNet/VGG-era literature.
 
