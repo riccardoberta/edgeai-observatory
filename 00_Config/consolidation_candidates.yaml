@@ -1,0 +1,270 @@
+# EdgeAI Observatory — Consolidation Candidate Queue
+#
+# This is the ACTIVE working queue of research signals accumulated by the
+# Weekly and Monthly monitoring cycles that are being watched for possible
+# future promotion into the persistent Knowledge Base (01_Knowledge_Base/).
+#
+# This file is NOT a second Knowledge Base. It stays deliberately lightweight:
+# no numerical evidence scores, no long-form technical content — just enough
+# provenance (which digest, which papers, why) for the on-demand Knowledge
+# Base Consolidation task to review later.
+#
+# Ownership of this file:
+#   - Weekly Digest task:   may append evidence to an existing candidate,
+#                           create a new "watching" candidate, or promote a
+#                           candidate's status from "watching" to
+#                           "ready_for_review". Must NOT create or modify
+#                           anything under 01_Knowledge_Base/.
+#   - Monthly Report task:  same permissions as Weekly, plus merging
+#                           duplicate/synonymous candidates and creating
+#                           candidates visible only through cross-week
+#                           synthesis. Must NOT create or modify anything
+#                           under 01_Knowledge_Base/.
+#   - Knowledge Base Consolidation task (on-demand, explicit request only):
+#                           the ONLY task allowed to resolve a candidate
+#                           (promoted / merged / rejected) and move it to
+#                           00_Config/consolidation_history.yaml.
+#
+# Status values:
+#   watching          - an open signal, not yet mature enough for review.
+#   ready_for_review  - independent evidence has accumulated across multiple
+#                        observations; mature enough for an explicit,
+#                        human-triggered Knowledge Base Consolidation cycle
+#                        to decide its fate. This status does NOT itself
+#                        promote anything into the Knowledge Base.
+#
+# Bootstrapped 2026-09-02: the five candidates below were seeded from real,
+# already-existing Weekly Digest / Monthly Report / taxonomy evidence (no
+# consolidation cycle has run yet, so nothing has been promoted, merged, or
+# rejected so far — see consolidation_history.yaml). No candidate was
+# invented; each evidence entry references an actual Observatory file.
+
+candidates:
+
+  - id: edge-ai-hardware-physical-security
+    title: "Hardware / Physical Security of Edge AI Accelerators"
+
+    status: ready_for_review
+
+    first_seen: 2026-08-20
+    last_seen: 2026-09-02
+
+    possible_existing_concept: null
+
+    evidence:
+      - source: 03_Digests/Weekly/2026-08-20_weekly_digest.md
+        papers:
+          - "YAVIN: A Unified Architecture for Secure Edge Processing in Memory"
+        note: >
+          Extends TEE (trusted execution environment) trust into
+          processing-in-memory, with overhead numbers grounded in quantized
+          edge-LLM execution. Flagged in the digest as opening an "Edge AI
+          Security / Trusted Execution" taxonomy gap, anchored at that point
+          by only this one paper.
+
+      - source: 00_Taxonomy/taxonomy.md
+        note: >
+          The 2026-08-25 cross-cycle synthesis evolution note explicitly
+          names "Edge AI Security / Trusted Execution" as a taxonomy gap
+          anchored only by YAVIN, and deliberately leaves it unformalized
+          "revisit if a second independent paper appears."
+
+      - source: 03_Digests/Weekly/2026-09-02_weekly_digest.md
+        papers:
+          - "LLMscope: Extracting LLM Assets from Edge AI Chips via Optical Probing"
+        note: >
+          A second, independent security-focused paper three weeks later —
+          physical/optical extraction of model weights and activations from
+          edge accelerator silicon via shared buffer/subcircuit reuse.
+          Explicitly called out in the digest as "a new dimension for the
+          Observatory" and a taxonomy gap not yet represented in the
+          existing Algorithms/Frameworks/Hardware/Applications structure.
+
+    rationale: >
+      Two independent papers, three weeks apart, attack different attack
+      surfaces (architectural TEE/PIM trust boundary vs. physical/optical
+      extraction) but share the same underlying concern: edge AI
+      accelerator silicon has security properties that model-level or
+      cloud-side security research does not cover. The taxonomy's own
+      methodology (set 2026-08-25) treats a second independent paper as the
+      explicit trigger to revisit this gap — that trigger has now occurred.
+      Whether this becomes one Knowledge Base concept ("hardware security of
+      edge AI accelerators") or two (architectural trust vs. physical
+      extraction) is a judgment call reserved for explicit Knowledge Base
+      review, not for the Weekly/Monthly monitoring layer.
+
+    action_hint: review for possible new Knowledge Base concept (or two related concepts)
+
+  - id: edge-native-boundary-definition
+    title: "Defining the \"Edge-Native\" Boundary for MoE / Edge-LLM Serving"
+
+    status: ready_for_review
+
+    first_seen: 2026-07-19
+    last_seen: 2026-08-31
+
+    possible_existing_concept: null
+
+    evidence:
+      - source: 03_Digests/Weekly/2026-07-19_weekly_digest.md
+        papers:
+          - "PolyQ: Codesigning End-to-End Quantization Framework for Scalable Edge CPU LLM Inference"
+          - "HeteroMosaic: Exposing and Exploiting Heterogeneous Execution Opportunities for Energy-Efficient Edge LLM Inference"
+        note: >
+          Both papers apply genuinely novel systems ideas to laptop /
+          workstation/edge-GPU-class hardware rather than the Observatory's
+          core MCU/RISC-V/NPU tier — an early instance of the "how edge is
+          edge" tension.
+
+      - source: 03_Digests/Weekly/2026-08-13_weekly_digest.md
+        papers:
+          - "APEX: Adaptive Expert Prefetching for Memory-Efficient Edge MoE Inference"
+          - "EdgeXpert: An Edge Device for Memory-Efficient LLM Inference with Mixture-of-Experts and Speculative Decoding"
+          - "UnionSparse: An Index-Efficient Sparsity Framework for Low-Bit Sparse LLM Inference on Edge"
+        note: >
+          A third cluster of "edge" MoE/LLM-serving papers targeting the
+          same heavier-than-MCU hardware class, reinforcing the recurring
+          tension rather than resolving it.
+
+      - source: 03_Digests/Weekly/2026-08-23_weekly_digest.md
+        papers:
+          - "FreeToken: Efficient Edge-Native MoE Serving with Bandwidth-Adaptive Execution"
+        note: >
+          Digest explicitly poses the question "Where does 'edge-native LLM
+          serving' stop being edge?" — FreeToken's smallest target is an
+          8GB laptop GPU, well above MCU/NPU-class embedded hardware.
+
+      - source: 00_Taxonomy/taxonomy.md
+        note: >
+          The 2026-08-25 cross-cycle synthesis names this "a recurring 'how
+          edge is edge' tension" as one of three patterns visible only
+          across multiple digests, not from any single one.
+
+      - source: 03_Digests/Monthly/2026-08_monthly_report.md
+        note: >
+          Names "a rigorous definition of the 'edge-native' boundary" as a
+          ready-for-deeper-investment research direction, proposing MLPerf
+          Tiny's device classes vs. MLPerf Inference's edge category as a
+          possible quantitative anchor. Notes this is now a recurring
+          tension across three consecutive weekly digests plus the
+          taxonomy's own synthesis.
+
+    rationale: >
+      A stable, repeatedly articulated open research question — not a
+      single technique or paper — recurring across at least four weekly
+      digests and named explicitly in both the taxonomy's cross-cycle
+      synthesis and the August monthly report, each time with a concrete
+      proposal for how it might be formalized (a quantitative boundary
+      anchored to existing MLPerf device-class definitions). This is
+      exactly the kind of "meaningful relationship / open problem" signal
+      the Observatory's consolidation workflow is meant to catch before it
+      is forgotten. Loosely related to the (taxonomy-only, not yet a
+      Knowledge Base concept file) "Mixture-of-Experts (MoE) & Edge LLM
+      Serving" branch under Algorithms.
+
+    action_hint: review for possible new Knowledge Base concept capturing the open boundary question itself (not any single serving technique)
+
+  - id: mcu-npu-measurement-infrastructure
+    title: "Standardized Measurement Infrastructure for MCU/NPU-Class Edge Inference"
+
+    status: watching
+
+    first_seen: 2026-08-31
+    last_seen: 2026-08-31
+
+    possible_existing_concept: null
+
+    evidence:
+      - source: 03_Digests/Weekly/2026-08-31_weekly_digest.md
+        note: >
+          Source digest for Hydra (open, phase-aware Jetson AGX measurement
+          framework) and the Apple Neural Engine measurement study, both
+          cited by the August monthly report as the basis for this
+          direction.
+
+      - source: 03_Digests/Monthly/2026-08_monthly_report.md
+        note: >
+          Names "a standardized, open measurement methodology for MCU/NPU-
+          class inference, not just Jetson/Apple-silicon-class" as a ready-
+          for-deeper-investment research direction: Hydra and the ANE study
+          both build rigorous, open, reproducible characterization
+          infrastructure, but neither has an analogue at the Cortex-M /
+          microcontroller-NPU tier the Observatory's core taxonomy centers
+          on.
+
+    rationale: >
+      A genuine systems/benchmark-gap signal identified through monthly
+      synthesis of two measurement-focused papers, but so far only
+      articulated in a single monthly cycle with no independent weekly-level
+      corroboration yet at the MCU/NPU tier itself. Worth watching for a
+      second independent instance (e.g. an actual MCU/Ethos-U/RISC-V-NPU
+      measurement paper) before treating it as mature enough for review.
+
+    action_hint: monitor for a second, MCU/NPU-tier-specific paper before review
+
+  - id: neuromorphic-event-driven-asic-hardware-gap
+    title: "Event-Driven / Neuromorphic ASIC Accelerators (Hardware Taxonomy Gap)"
+
+    status: watching
+
+    first_seen: 2026-08-23
+    last_seen: 2026-08-23
+
+    possible_existing_concept: null
+
+    evidence:
+      - source: 03_Digests/Weekly/2026-08-23_weekly_digest.md
+        papers:
+          - "ETHEREAL: A 25.6-μs/inf. Low-latency Event-driven Graph-neural-network Processor for High-resolution Vision at the Edge"
+        note: >
+          First full custom-ASIC (real silicon, not FPGA emulation)
+          event-driven GNN processor recorded by the Observatory; does not
+          map cleanly onto the existing Hardware branch (Cortex-M, Cortex-A,
+          RISC-V, DSP, FPGA, NPU).
+
+      - source: 00_Taxonomy/taxonomy.md
+        note: >
+          The 2026-08-25 synthesis explicitly flags that custom event-
+          driven/neuromorphic accelerator ASICs "don't map onto the
+          existing Hardware branch... at all," and deliberately leaves the
+          gap unformalized pending a second independent paper (same
+          revisit rule applied to the security gap above).
+
+    rationale: >
+      Single-paper signal so far, explicitly flagged by the taxonomy's own
+      methodology as needing a second independent anchor before
+      formalization. Kept in "watching" per that same rule; not yet
+      "ready_for_review".
+
+    action_hint: monitor; promote to ready_for_review only if a second independent event-driven/neuromorphic ASIC paper appears
+
+  - id: in-memory-computing-emerging-nvm-hardware-gap
+    title: "In-Memory Computing with Emerging Non-Volatile Memory (Hardware Taxonomy Gap)"
+
+    status: watching
+
+    first_seen: 2026-09-02
+    last_seen: 2026-09-02
+
+    possible_existing_concept: null
+
+    evidence:
+      - source: 03_Digests/Weekly/2026-09-02_weekly_digest.md
+        papers:
+          - "FALCON: Fault-Tolerant Magnetic Tunnel Junction-Based In-Memory Stochastic Architecture for Reliability-Critical Edge AI Applications"
+        note: >
+          Magnetic Tunnel Junction (MTJ) in-memory computing combined with
+          stochastic computing for noise/variation tolerance, validated in
+          14nm FinFET. Digest explicitly flags this as not mapping cleanly
+          onto the current Hardware taxonomy and suggests "in-memory
+          computing / emerging non-volatile memory" as a possible new
+          Hardware branch entry, rather than adopting it unilaterally.
+
+    rationale: >
+      A single paper so far, self-flagged by the digest itself as a
+      possible reusable taxonomy branch rather than a one-off result. Kept
+      at "watching" pending a second independent paper in this space,
+      consistent with the conservative bar applied to the other hardware-
+      taxonomy-gap candidates above.
+
+    action_hint: monitor for a second in-memory-computing / emerging-NVM paper before review

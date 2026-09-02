@@ -1,0 +1,25 @@
+# EdgeAI Observatory — Consolidation History
+#
+# Durable record of resolved editorial decisions made by the on-demand
+# Knowledge Base Consolidation task. Every entry here started life in
+# 00_Config/consolidation_candidates.yaml and was moved here once the
+# Consolidation task closed it with one of:
+#
+#   promoted  - became a new 01_Knowledge_Base/ concept.
+#   merged    - folded into an existing 01_Knowledge_Base/ concept.
+#   rejected  - reviewed and deliberately not added to the Knowledge Base.
+#
+# Closed entries preserve their full accumulated evidence (first_seen,
+# last_seen, evidence, rationale) exactly as it stood in the active queue,
+# plus a `decision` block recording what was decided, when, and why.
+#
+# This file is written to ONLY by the Knowledge Base Consolidation task.
+# The Weekly and Monthly tasks read consolidation_candidates.yaml but never
+# write to this file.
+#
+# As of 2026-09-02 (bootstrap of the consolidation workflow): no Knowledge
+# Base Consolidation cycle has run yet, so this file is intentionally empty.
+# It will start accumulating entries the first time Ricky explicitly runs
+# the "EdgeAI Observatory Knowledge Base Consolidation" task.
+
+history: []
