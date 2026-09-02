@@ -2,7 +2,7 @@
 
 ## Evolution of the concept
 
-The idea arises from the need to run inference on hardware without efficient floating-point units. The foundational work by Jacob et al. (2017) defines the 8-bit affine quantization scheme and quantization-aware training, which later became the standard adopted by TensorFlow Lite and CMSIS-NN. Even before that, Hubara et al. (NeurIPS 2016) had already shown that networks could be trained with weights and activations constrained to a single bit, proving the extreme end of the precision spectrum was reachable. From here the line of research branched toward more aggressive precisions (4-bit, binary/ternary) and toward layer-by-layer mixed precision. With the rise of large language models, the 2023-2024 wave of quantization research shifted toward post-training, calibration-light methods for compressing LLMs to INT4/INT3 for edge/on-device deployment: AWQ (Lin et al., MLSys 2024 Best Paper) protects a small set of activation-salient weight channels from quantization error, avoiding the backpropagation-based calibration required by earlier methods, and ships with a paired inference engine (TinyChat) that realizes measured speedups on edge GPUs.
+The idea arises from the need to run inference on hardware without efficient floating-point units. The foundational work by Jacob et al. (2017) defines the 8-bit affine quantization scheme and quantization-aware training, which later became the standard adopted by TensorFlow Lite and CMSIS-NN. Even before that, Hubara et al. (NeurIPS 2016) had already shown that networks could be trained with weights and activations constrained to a single bit, proving the extreme end of the precision spectrum was reachable. From here the line of research branched toward more aggressive precisions (4-bit, binary/ternary) and toward layer-by-layer mixed precision. With the rise of large language models, the 2023-2024 wave of quantization research shifted toward post-training, calibration-light methods for compressing LLMs to INT4/INT3 for edge/on-device deployment: AWQ (Lin et al., MLSys 2024 Best Paper) protects a small set of activation-salient weight channels from quantization error, avoiding the backpropagation-based calibration required by earlier methods, and ships with a paired inference engine (TinyChat) that realizes measured speedups on edge GPUs. A 2025 MDPI Electronics review (Kang) takes stock of this now-fragmented landscape, situating post-training quantization alongside compiler optimizations and hardware-software co-design as three interlocking (not independent) levers for edge-inference acceleration, and names runtime adaptability and hardware-aware scheduling — rather than further static compression — as the field's next open challenge.
 
 ## Key papers
 
@@ -31,6 +31,8 @@ The idea arises from the need to run inference on hardware without efficient flo
 [[2026_Jain_TinyFed6G]] — assigns differently-quantized model variants to federated-learning devices according to each device's real-time resource profile.
 
 [[2026_Sen_NVFP4QuantizationEdgeAI]] — characterizes NVFP4 (hierarchical FP4/FP8/FP32 block-and-tensor scaling) for edge deployment, with a closed-form bits-per-input model and a no-retrain vs. retrain comparison against conventional FP4.
+
+[[2025_Kang_EdgeIntelligenceReview]] — 2025 review synthesizing the fragmented edge-inference-optimization literature (model compression including PTQ, compiler optimizations, hardware-software co-design) into one categorization by architectural target and adaptation mechanism.
 
 ## Open problems
 

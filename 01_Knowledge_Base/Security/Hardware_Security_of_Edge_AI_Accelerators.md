@@ -12,11 +12,15 @@ The two anchor papers address different threat models that share a common concer
 
 These two papers are grouped under one concept, with two named variants, rather than split into separate concepts, because the underlying concern is the same (confidentiality of model state on edge accelerator hardware) and because the natural next research question directly connects them (see Open problems below) — splitting now would separate two halves of what is really one question. Revisit this decision and consider forking into two concepts (e.g., "Trusted Execution / Confidential Computing for Edge AI" vs. "Physical & Side-Channel Attacks on Edge AI Accelerators") if the literature in either direction grows enough that they stop informing each other directly.
 
+A 2026 historical-backfill pass added a third, earlier reference point that predates and structurally frames both 2026 anchors: Dubey et al.'s 2022 ACM JETC survey of physical (power/EM) side-channel attacks and countermeasures for ML hardware. This is a genuinely distinct threat model from both existing variants — not bus-level eavesdropping (YAVIN) and not optical/laser probing (LLMscope) — and its existence as a longer-established, peer-reviewed literature underscores that this concept's two 2026 anchors are instances of a broader physical-security problem for ML accelerators that research has been tracking since at least the early 2020s.
+
 ## Variants
 
 **Architectural trust-boundary extension (trusted execution / confidential computing).** Extends a TEE's cryptographic trust boundary to cover previously-untrusted components (e.g., PIM-capable memory) so that computation can happen on encrypted-then-decrypted data without ever leaving the trust boundary. Anchor: [[2026_Fang_YAVIN]].
 
 **Physical / side-channel extraction.** Exploits physical properties of accelerator silicon (e.g., buffer and subcircuit reuse across logical addresses) to read out model assets directly from the physical substrate during execution, bypassing any purely logical/cryptographic trust boundary. Anchor: [[2026_Mehta_LLMscope]].
+
+**Power/EM side-channel leakage.** Exploits power consumption or electromagnetic emissions during computation to infer model weights, activations, or inference state, a longer-established threat model distinct from both bus-eavesdropping and optical/laser probing — addressed via masking-style countermeasures rather than trust-boundary extension or physical shielding alone. Anchor: [[2022_Dubey_GuardingMLHardwareSideChannel]].
 
 ## Open problems
 
@@ -31,6 +35,8 @@ Does either threat model's severity vary systematically across accelerator class
 [[2026_Fang_YAVIN]] — unified trusted computing base extending TEE trust into processing-in-memory; first PIM implementations of LightSaber KEM (post-quantum) and ASCON-128; overhead measured on quantized edge-class LLM execution.
 
 [[2026_Mehta_LLMscope]] — laser voltage imaging attack recovering LLM weights, activations, and inference state from an FPGA-based edge accelerator by exploiting buffer/subcircuit reuse; full recovery demonstrated; recovery cost scales linearly with asset size.
+
+[[2022_Dubey_GuardingMLHardwareSideChannel]] — survey of physical (power/EM) side-channel attacks and countermeasures for ML hardware, a third, earlier-established threat model distinct from bus-eavesdropping and optical-probing; ACM JETC.
 
 ## Research ideas
 
