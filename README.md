@@ -1,6 +1,6 @@
 # EdgeAI Observatory
 
-[Browse the site](https://riccardoberta.github.io/edgeai-observatory/) · [Ask the Observatory](https://riccardoberta.github.io/edgeai-observatory/ask/)
+[Browse the site](https://riccardoberta.github.io/edgeai-observatory/) · [Ask the Observatory](https://riccardoberta.github.io/edgeai-observatory/ask/) · [Read the Textbook](https://riccardoberta.github.io/edgeai-observatory/book/)
 
 A long-term research knowledge system for the EdgeAI / TinyML literature, built to behave like a research analyst for the lab rather than a folder of PDFs. It is not a literature-review tool: a review summarizes papers, while the Observatory is built to identify patterns, connect ideas across papers, track how the field evolves, and help generate new research directions.
 
@@ -10,11 +10,13 @@ Beyond tracking what individual papers say, the Observatory surfaces patterns ac
 
 ## Interact with the Observatory
 
-There are two ways to use the Observatory, both reading from the same corpus:
+There are three ways to use the Observatory, all reading from the same corpus:
 
 **[Browse the site](https://riccardoberta.github.io/edgeai-observatory/)** — the full taxonomy, knowledge base, paper records, and digests as a searchable static site, rebuilt on every push to `main`.
 
 **[Ask the Observatory](https://riccardoberta.github.io/edgeai-observatory/ask/)** — a Claude-powered page for natural-language questions ("what's emerging in on-device learning for Cortex-M?", "which papers contradict each other on X?"). It answers only from the indexed corpus — papers, knowledge base entries, digests, and taxonomy — and every answer cites the source records it drew on, each linked back to the corresponding page on the site above. The corpus behind it is kept current automatically by the monitoring pipeline below. It's a private link shared with the research group; if someone new needs access, share it from the page's share menu.
+
+**[Read the Textbook](https://riccardoberta.github.io/edgeai-observatory/book/)** — "Edge AI: Principles and Practice," a Master's/PhD-level reference volume generated from the Knowledge Base, organized as chapters mirroring the taxonomy (Algorithms, Frameworks, Hardware, Applications, Benchmarks & Datasets, Security). Unlike the two pages above it isn't queried live — it's prose, written once and then revised — so it is only as current as the last Knowledge Base Consolidation cycle that updated it; see below.
 
 ## Structure
 
@@ -67,7 +69,9 @@ literature / ecosystem signals
 
 In short: monitoring and synthesis (Weekly, Monthly) are about *noticing* — they can accumulate and organize evidence, but never decide on their own that something belongs in the Knowledge Base. Promotion is a separate, explicit, human-triggered editorial act, reserved for the Consolidation layer.
 
-Every layer that writes a new or updated file also syncs it into the live database behind [Ask the Observatory](https://claude.ai/code/artifact/c054e12a-e683-4b5e-b233-a4317e7b1545), so the interactive interface stays current without a manual step. Each task only writes data — none of them ever rebuild or republish that page.
+Every layer that writes a new or updated file also syncs it into the live database behind [Ask the Observatory](https://riccardoberta.github.io/edgeai-observatory/ask/), so the interactive interface stays current without a manual step. Each task only writes data — none of them ever rebuild or republish that page.
+
+**Consolidation cycles also revise the Textbook.** Unlike Ask the Observatory, [the Textbook](https://riccardoberta.github.io/edgeai-observatory/book/) is prose, not a live query surface — it doesn't update itself when a Knowledge Base file changes. Whenever a Knowledge Base Consolidation cycle promotes, merges, or otherwise changes a concept, its corresponding chapter (and any cross-references to it in other chapters) should be revised and the page republished as part of that same cycle, so the Textbook never drifts far out of sync with the Knowledge Base it's generated from.
 
 ## Static site
 
