@@ -1,6 +1,6 @@
 # EdgeAI Observatory
 
-[Browse the site](https://riccardoberta.github.io/edgeai-observatory/) · [Ask the Observatory](https://claude.ai/code/artifact/c054e12a-e683-4b5e-b233-a4317e7b1545)
+[Browse the site](https://riccardoberta.github.io/edgeai-observatory/) · [Ask the Observatory](https://riccardoberta.github.io/edgeai-observatory/ask/)
 
 A long-term research knowledge system for the EdgeAI / TinyML literature, built to behave like a research analyst for the lab rather than a folder of PDFs. It is not a literature-review tool: a review summarizes papers, while the Observatory is built to identify patterns, connect ideas across papers, track how the field evolves, and help generate new research directions.
 
@@ -14,7 +14,7 @@ There are two ways to use the Observatory, both reading from the same corpus:
 
 **[Browse the site](https://riccardoberta.github.io/edgeai-observatory/)** — the full taxonomy, knowledge base, paper records, and digests as a searchable static site, rebuilt on every push to `main`.
 
-**[Ask the Observatory](https://claude.ai/code/artifact/c054e12a-e683-4b5e-b233-a4317e7b1545)** — a Claude-powered page for natural-language questions ("what's emerging in on-device learning for Cortex-M?", "which papers contradict each other on X?"). It answers only from the indexed corpus — papers, knowledge base entries, digests, and taxonomy — and every answer cites the source records it drew on, each linked back to the corresponding page on the site above. The corpus behind it is kept current automatically by the monitoring pipeline below. It's a private link shared with the research group; if someone new needs access, share it from the page's share menu.
+**[Ask the Observatory](https://riccardoberta.github.io/edgeai-observatory/ask/)** — a Claude-powered page for natural-language questions ("what's emerging in on-device learning for Cortex-M?", "which papers contradict each other on X?"). It answers only from the indexed corpus — papers, knowledge base entries, digests, and taxonomy — and every answer cites the source records it drew on, each linked back to the corresponding page on the site above. The corpus behind it is kept current automatically by the monitoring pipeline below. It's a private link shared with the research group; if someone new needs access, share it from the page's share menu.
 
 ## Structure
 
