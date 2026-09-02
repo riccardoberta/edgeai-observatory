@@ -1,12 +1,20 @@
 # EdgeAI Observatory
 
-[riccardoberta.github.io/edgeai-observatory](https://riccardoberta.github.io/edgeai-observatory/)
+[Browse the site](https://riccardoberta.github.io/edgeai-observatory/) · [Ask the Observatory](https://claude.ai/code/artifact/c054e12a-e683-4b5e-b233-a4317e7b1545)
 
-A long-term research memory and scientific intelligence layer for the EdgeAI literature. It is not a literature-review tool: a review summarizes papers, while the Observatory is built to identify patterns, connect ideas across papers, track how the field evolves, and help generate new research directions.
+A long-term research knowledge system for the EdgeAI / TinyML literature, built to behave like a research analyst for the lab rather than a folder of PDFs. It is not a literature-review tool: a review summarizes papers, while the Observatory is built to identify patterns, connect ideas across papers, track how the field evolves, and help generate new research directions.
 
 It organizes knowledge around **concepts** rather than documents — the concept graph, not the paper list, is what the Observatory grows and queries over time. Papers feed the concepts: each one is processed into structured knowledge and routed into the ideas it advances, the open problems it touches, and the research directions it opens.
 
 Beyond tracking what individual papers say, the Observatory surfaces patterns across the field: which research directions are emerging, which problems remain unsolved, which ideas contradict each other, which topics are becoming saturated, and which represent good thesis opportunities. It supports research, teaching, thesis supervision, and scientific writing, with the goal of becoming, over one or two years, a genuine, evolving scientific memory for anyone working on EdgeAI.
+
+## Interact with the Observatory
+
+There are two ways to use the Observatory, both reading from the same corpus:
+
+**[Browse the site](https://riccardoberta.github.io/edgeai-observatory/)** — the full taxonomy, knowledge base, paper records, and digests as a searchable static site, rebuilt on every push to `main`.
+
+**[Ask the Observatory](https://claude.ai/code/artifact/c054e12a-e683-4b5e-b233-a4317e7b1545)** — a Claude-powered page for natural-language questions ("what's emerging in on-device learning for Cortex-M?", "which papers contradict each other on X?"). It answers only from the indexed corpus — papers, knowledge base entries, digests, and taxonomy — and every answer cites the source records it drew on, each linked back to the corresponding page on the site above. The corpus behind it is kept current automatically by the monitoring pipeline below. It's a private link shared with the research group; if someone new needs access, share it from the page's share menu.
 
 ## Structure
 
@@ -58,6 +66,8 @@ literature / ecosystem signals
 **Knowledge Base Consolidation** (`edgeai-observatory-knowledge-base-consolidation`, on-demand only — never scheduled) is the only layer allowed to touch `01_Knowledge_Base/`. Run it explicitly whenever you want accumulated monitoring evidence turned into curated persistent knowledge. It reviews `ready_for_review` candidates (and recent digests, as a backstop), decides for each one whether to merge it into an existing concept, promote it as a new concept, keep watching, or reject it, verifies claims against primary sources before writing anything, and closes each decision into `00_Config/consolidation_history.yaml` with a dated rationale. Every cycle is logged in `03_Digests/Consolidation/YYYY-MM-DD_kb_consolidation.md` — a durable record of not just *what* changed in the Knowledge Base, but *why*, and what was deliberately left as an open signal instead.
 
 In short: monitoring and synthesis (Weekly, Monthly) are about *noticing* — they can accumulate and organize evidence, but never decide on their own that something belongs in the Knowledge Base. Promotion is a separate, explicit, human-triggered editorial act, reserved for the Consolidation layer.
+
+Every layer that writes a new or updated file also syncs it into the live database behind [Ask the Observatory](https://claude.ai/code/artifact/c054e12a-e683-4b5e-b233-a4317e7b1545), so the interactive interface stays current without a manual step. Each task only writes data — none of them ever rebuild or republish that page.
 
 ## Static site
 
