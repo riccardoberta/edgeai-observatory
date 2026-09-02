@@ -22,22 +22,43 @@ digital_libraries:
 
   - name: IEEE Xplore
     url: https://ieeexplore.ieee.org
-    access: institutional
-    access_notes: "Reachable via University of Genoa (unige.it) institutional access. Use the Claude in Chrome extension on Ricky's browser while he is on the campus network/VPN/proxy to navigate and extract paper text directly. Note (2026-09-02): search-result listing pages do not expose reliable per-item indexing/publication dates, so results should not be scored as 'new this week' without opening the individual record."
+    access: institutional (discovery via WebSearch needs no login; full text needs unige.it)
+    access_notes: "Primary discovery method (2026-09-02, works unattended, no login needed): WebSearch with `site:ieeexplore.ieee.org <query>`. Confirmed to reliably surface titles, venues, dates, and often a synthesized abstract-level snippet without any institutional session — this is what makes IEEE coverage usable in the unattended Weekly/Monthly runs, where a live logged-in browser is never available. `web_fetch` on individual ieeexplore.ieee.org URLs returns an empty client-rendered shell (paywalled, no server-rendered abstract) — do not rely on it. For full text or a deeper read (e.g. before writing a `02_Papers/` deep-analysis record), use the Claude in Chrome extension on Ricky's browser while he is on the unige.it campus network/VPN/proxy; this stays an on-demand, Ricky-present step, not part of the unattended pipeline. Note: search-result listing pages do not expose reliable per-item indexing/publication dates, so date-filter results by opening the individual record, not the listing page."
     status: active
     last_checked: 2026-09-02
 
   - name: ACM Digital Library
     url: https://dl.acm.org
-    access: institutional
-    access_notes: "Same as IEEE Xplore — use Claude in Chrome while on unige.it institutional access. Note (2026-09-02): blocked by a bot/security-verification interstitial on this cycle's attempt; retry next cycle."
+    access: institutional (discovery via WebSearch needs no login; full text needs unige.it)
+    access_notes: "Same pattern as IEEE Xplore: WebSearch with `site:dl.acm.org <query>` is the primary, unattended-safe discovery method (confirmed working 2026-09-02, also surfaces IEEE-co-published venues like IEEE/ACM Transactions on Networking). Claude in Chrome + unige.it institutional access remains the on-demand path for full text / deep-analysis records. Direct `web_fetch` has previously hit a bot/security-verification interstitial — don't rely on it either."
     status: active
-    last_checked: null
+    last_checked: 2026-09-02
+
+  - name: MDPI
+    url: https://www.mdpi.com
+    access: open
+    access_notes: "Fully open access — confirmed 2026-09-02 that `web_fetch` retrieves full article text directly, no login or Chrome needed, same as arXiv. Relevant journals for this Observatory: Sensors, Electronics, Information, Applied Sciences, Future Internet. Use WebSearch with `site:mdpi.com <query>` for discovery, then `web_fetch` the resulting article URL directly for full text (works even for 02_Papers/-grade deep analysis, not just title/abstract-level digest entries)."
+    status: active
+    last_checked: 2026-09-02
+
+  - name: Elsevier (ScienceDirect)
+    url: https://www.sciencedirect.com
+    access: mostly institutional (discovery via WebSearch needs no login; some articles fully open access)
+    access_notes: "WebSearch with `site:sciencedirect.com <query>` works unattended and no login needed (confirmed 2026-09-02) for discovery — titles, journal/venue, and often a synthesized snippet. Most articles are paywalled (`web_fetch` on the article page will likely return an empty or truncated shell); check each result for an open-access badge before assuming full text is reachable without unige.it access. For paywalled full text, same on-demand Claude in Chrome + unige.it pattern as IEEE/ACM."
+    status: active
+    last_checked: 2026-09-02
+
+  - name: Springer (SpringerLink)
+    url: https://link.springer.com
+    access: mostly institutional (discovery via WebSearch needs no login; some articles/chapters fully open access)
+    access_notes: "Same pattern as Elsevier: WebSearch with `site:link.springer.com <query>` works unattended for discovery (confirmed 2026-09-02); many results are book chapters (Springer's `/chapter/` URLs) rather than journal articles, worth noting when citing. Most content is paywalled; open-access articles/chapters exist and are worth a direct `web_fetch` attempt, but institutional access via Claude in Chrome + unige.it is the reliable fallback for full text."
+    status: active
+    last_checked: 2026-09-02
 
   - name: Google Scholar
     url: https://scholar.google.com
     access: open (aggregator, links may lead to paywalled publishers)
-    access_notes: "No official API — use Claude in Chrome to run searches and read result pages. Useful as a cross-publisher aggregator: finds papers not indexed on arXiv, surfaces citation counts to gauge influence, and often links directly to a free PDF (publisher page, author repository, or institutional repo) even for papers behind a paywall elsewhere. Use sparingly and avoid rapid automated querying, since Google Scholar's terms discourage scripted scraping. Confirmed working unige.it full-text links ('Testo completo su UNIGE') as of 2026-09-02."
+    access_notes: "No official API — use Claude in Chrome to run searches and read result pages. Useful as a cross-publisher aggregator: finds papers not indexed on arXiv, surfaces citation counts to gauge influence, and often links directly to a free PDF (publisher page, author repository, or institutional repo) even for papers behind a paywall elsewhere. Use sparingly and avoid rapid automated querying, since Google Scholar's terms discourage scripted scraping. Confirmed working unige.it full-text links ('Testo completo su UNIGE') as of 2026-09-02. Kept as a supplementary, on-demand cross-check (still Chrome-dependent) — WebSearch with `site:` filters across the digital libraries above is now the primary, unattended-safe discovery method, Scholar adds citation-count/influence signal on top of that."
     status: active
     last_checked: 2026-09-02
 
