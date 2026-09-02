@@ -2,6 +2,8 @@
 
 **Full citation:** Li, J., Fan, K., Lai, S., Lv, L., Xu, J., Tang, J., Liu, A., Song, H.H., Yue, Y., Liu, Y., Zhuang, H. (2024). TS-ACL: A Time Series Analytic Continual Learning Framework for Privacy-preserving and Class-incremental Pattern Recognition. arXiv:2410.15954. https://arxiv.org/abs/2410.15954 (arXiv preprint; peer-reviewed venue not confirmed at time of writing)
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2410.15954)
+
 **Linked concepts:** [[Continual_Learning]]
 
 ## Abstract summary

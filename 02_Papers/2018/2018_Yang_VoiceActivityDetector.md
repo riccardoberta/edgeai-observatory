@@ -2,6 +2,8 @@
 
 **Full citation:** Yang, M., Yeh, C.H., Zhou, J., Cerqueira, J.P., Lazar, A.A., Seok, M. (2018). A 1μW Voice Activity Detector Using Analog Feature Extraction and Digital Deep Neural Network. *IEEE International Solid-State Circuits Conference (ISSCC 2018)*. https://ieeexplore.ieee.org/document/8310326/
 
+**PDF:** [IEEE Xplore](https://ieeexplore.ieee.org/document/8310326/)
+
 **Linked concepts:** [[DSP]]
 
 ## Abstract summary

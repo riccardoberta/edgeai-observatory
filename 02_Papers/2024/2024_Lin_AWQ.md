@@ -2,6 +2,8 @@
 
 **Full citation:** Lin, J., Tang, J., Tang, H., Yang, S., Chen, W.-M., Wang, W.-C., Xiao, G., Dang, X., Gan, C., Han, S. (2024). AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration. Proceedings of MLSys 2024 (Best Paper Award). https://arxiv.org/abs/2306.00978
 
+**PDF:** [arXiv PDF](https://arxiv.org/abs/2306.00978)
+
 **Linked concepts:** [[Quantization]]
 
 ## Abstract summary

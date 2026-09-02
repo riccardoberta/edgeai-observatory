@@ -2,6 +2,8 @@
 
 **Full citation:** Umuroglu, Y., Fraser, N. J., Gambardella, G., Blott, M., Leong, P., Jahre, M., Vissers, K. (2017). FINN: A Framework for Fast, Scalable Binarized Neural Network Inference. *Proceedings of the 2017 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays (FPGA '17)*. arXiv:1612.07119. https://arxiv.org/abs/1612.07119
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/1612.07119)
+
 **Linked concepts:** [[FPGA]], [[Quantization]]
 
 ## Abstract summary

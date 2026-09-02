@@ -2,6 +2,8 @@
 
 **Full citation:** Oh, H., Jang, S., Chen, H., Nam, K., Yun, S., Masukawa, R., Imani, M. (2026). PolyQ: Codesigning End-to-End Quantization Framework for Scalable Edge CPU LLM Inference. arXiv:2607.14618 [cs.LG, cs.AR, cs.OS]. Submitted 16 Jul 2026. Accepted to ICCAD 2026. DOI: 10.48550/arXiv.2607.14618.
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2607.14618)
+
 **Linked concepts:** [[Quantization]]; also part of [[Mixture-of-Experts (MoE) & Edge LLM Serving]] — PolyQ targets dense-model CPU inference specifically rather than MoE routing, but shares the cluster's edge-LLM-deployment framing.
 
 ## Abstract summary

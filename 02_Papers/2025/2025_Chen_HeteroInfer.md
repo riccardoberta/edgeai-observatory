@@ -2,6 +2,8 @@
 
 **Full citation:** Chen, L., Feng, D., Feng, E., Wang, Y., Zhao, R., Xia, Y., Xu, P., Chen, H. (2025). Characterizing Mobile SoC for Accelerating Heterogeneous LLM Inference. Proceedings of the ACM SIGOPS 31st Symposium on Operating Systems Principles (SOSP '25). arXiv:2501.14794. https://arxiv.org/abs/2501.14794
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2501.14794)
+
 **Linked concepts:** [[Cortex-A]], [[NPU]]
 
 ## Abstract summary

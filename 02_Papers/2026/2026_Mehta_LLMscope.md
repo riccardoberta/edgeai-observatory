@@ -2,6 +2,8 @@
 
 **Full citation:** Mehta, D., Dukette, L., Folan, W., Kochol, O., Solomon, N., Tajik, S., Ganji, F. (2026). LLMscope: Extracting LLM Assets from Edge AI Chips via Optical Probing. arXiv:2608.25321 [cs.CR, cs.AI]. Submitted 26 Aug 2026. License CC BY-NC-ND 4.0. DOI: 10.48550/arXiv.2608.25321.
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2608.25321)
+
 **Linked concepts:** anchor paper (alongside [[2026_Fang_YAVIN]]) for the new [[Hardware Security of Edge AI Accelerators]] concept, created in the 2026-09-02 Knowledge Base Consolidation cycle. Touches [[FPGA]] as the accelerator class attacked in the validation experiment.
 
 ## Abstract summary

@@ -2,6 +2,8 @@
 
 **Full citation:** Carnelos, M., Pasti, F., Bellotto, N. (2024). MicroFlow: An Efficient Rust-Based Inference Engine for TinyML. arXiv:2409.19432. https://arxiv.org/abs/2409.19432
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2409.19432)
+
 **Linked concepts:** [[TensorFlow_Lite_Micro]]
 
 ## Abstract summary

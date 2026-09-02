@@ -2,6 +2,8 @@
 
 **Full citation:** Absar, M.J., Baskaran, M., Sharma, A., Bhandari, A., Aggarwal, A., Rangasamy, A., Das, D., Hosseini, F., Slama, F., Brumar, I., Verma, J., Bindumadhavan, K., Kothari, M., Gupta, M., Kolachana, R., Lethin, R., Narang, S., Ladwa, S.M., Jain, S., Dalvi, S.S., Rahman, T., Komatireddy, V.R.R., Pandya, V.V., Shi, X., Zipper, Z. (2026). Hexagon-MLIR: An AI Compilation Stack For Qualcomm's Neural Processing Units (NPUs). arXiv:2602.19762. https://arxiv.org/abs/2602.19762
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2602.19762)
+
 **Linked concepts:** [[MLIR]], [[NPU]]
 
 ## Abstract summary

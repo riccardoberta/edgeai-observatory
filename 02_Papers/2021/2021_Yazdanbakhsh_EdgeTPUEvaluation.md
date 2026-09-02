@@ -2,6 +2,8 @@
 
 **Full citation:** Yazdanbakhsh, A., Seshadri, K., Akin, B., Laudon, J., Narayanaswami, R. (2021). An Evaluation of Edge TPU Accelerators for Convolutional Neural Networks. arXiv:2102.10423. https://arxiv.org/abs/2102.10423
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2102.10423)
+
 **Linked concepts:** [[NPU]], [[Vision]]
 
 ## Abstract summary

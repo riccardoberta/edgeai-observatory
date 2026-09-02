@@ -2,6 +2,8 @@
 
 **Full citation:** Zeng, F., Li, H., Guan, J., Fan, R., Wu, T., Wang, X., Rui, L. (2025). An Efficient Hybrid Vision Transformer for TinyML Applications. Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV 2025), 19914-19924.
 
+**PDF:** [CVF Open Access (PDF)](https://openaccess.thecvf.com/content/ICCV2025/papers/Zeng_An_Efficient_Hybrid_Vision_Transformer_for_TinyML_Applications_ICCV_2025_paper.pdf)
+
 **Linked concepts:** [[Vision]], [[Compression]]
 
 ## Abstract summary

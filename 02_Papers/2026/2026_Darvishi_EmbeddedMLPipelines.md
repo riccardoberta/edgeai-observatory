@@ -2,6 +2,8 @@
 
 **Full citation:** Darvishi, M. (2026). Embedded Machine Learning for Microcontroller-Class Edge Devices: Data, Feature, Evaluation, and Deployment Pipelines. arXiv:2606.18122 [cs.LG, cs.AI, cs.AR, eess.AS, eess.SP]. Submitted 16 June 2026. 6 pages, 3 figures, 4 tables. DOI: 10.48550/arXiv.2606.18122.
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2606.18122)
+
 **Access note:** Full text retrieved via Google's PDF viewer (docs.google.com/viewer) after the arXiv HTML conversion was unavailable for this submission and direct PDF fetches were rate-limited; the rendered text was read directly from the viewer, not transcribed from a screenshot.
 
 **Linked concepts:** [[Human_Activity_Recognition]], [[Biosignals]], [[Cortex-M]]

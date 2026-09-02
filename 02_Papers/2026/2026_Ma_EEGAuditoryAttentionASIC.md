@@ -2,6 +2,8 @@
 
 **Full citation:** Ma, Q., George, R., Scholze, S., Constantin, J., Reichenbach, T., Mayr, C. (2026). A Resource-Efficient CNN-Based EEG Auditory Attention Decoding ASIC. arXiv:2608.20198 [cs.AR, eess.SP]. Submitted 20 Aug 2026. Accepted for presentation at the 2026 IEEE Biomedical Circuits and Systems Conference (BioCAS 2026). DOI: 10.48550/arXiv.2608.20198.
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2608.20198)
+
 **Linked concepts:** [[Biosignals]], [[Quantization]]
 
 **Verification note:** this record is built from the arXiv abstract page only. Two attempts to fetch the full-text HTML version were blocked by an in-session web-fetch rate limit; the accuracy, dataset, and baseline-comparison figures below are therefore explicitly marked as unverified pending a full-PDF read, consistent with the Observatory's "no hallucinated information" principle. Ricky should re-run this fetch (or open the PDF directly) before citing this paper's accuracy numbers in a survey or thesis.

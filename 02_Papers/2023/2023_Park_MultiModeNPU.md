@@ -2,6 +2,8 @@
 
 **Full citation:** Park, J.-S., Park, C., Kwon, S., Jeon, T., Kang, Y., Lee, H., Lee, D., Kim, J., Kim, H.-S., Lee, Y., et al. (2023). A Multi-Mode 8K-MAC HW-Utilization-Aware Neural Processing Unit With a Unified Multi-Precision Datapath in 4-nm Flagship Mobile SoC. IEEE Journal of Solid-State Circuits, 58(1), 189-202. https://ieeexplore.ieee.org/document/9916240
 
+**PDF:** [IEEE Xplore](https://ieeexplore.ieee.org/document/9916240)
+
 **Linked concepts:** [[NPU]], [[Cortex-A]]
 
 ## Abstract summary

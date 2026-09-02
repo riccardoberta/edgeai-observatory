@@ -2,6 +2,8 @@
 
 **Full citation:** Yang, C., Westover, M. B., Sun, J. (2023). BIOT: Cross-data Biosignal Learning in the Wild. arXiv:2305.10351. https://arxiv.org/abs/2305.10351
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2305.10351)
+
 **Linked concepts:** [[Biosignals]], [[Compression]]
 
 ## Abstract summary

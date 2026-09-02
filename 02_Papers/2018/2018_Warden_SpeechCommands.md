@@ -2,6 +2,8 @@
 
 **Full citation:** Warden, P. (2018). Speech Commands: A Dataset for Limited-Vocabulary Speech Recognition. arXiv:1804.03209. https://arxiv.org/abs/1804.03209
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/1804.03209)
+
 **Linked concepts:** [[Keyword Spotting]]
 
 ## Abstract summary

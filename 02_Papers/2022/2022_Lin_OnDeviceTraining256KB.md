@@ -2,6 +2,8 @@
 
 **Full citation:** Lin, J., Zhu, L., Chen, W.-M., Wang, W.-C., Gan, C., Han, S. (2022). On-Device Training Under 256KB Memory. *Advances in Neural Information Processing Systems (NeurIPS) 35*. arXiv:2206.15472. https://arxiv.org/abs/2206.15472
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2206.15472)
+
 **Linked concepts:** [[On-device_Learning]], [[Quantization]], [[Cortex-M]]
 
 ## Abstract summary

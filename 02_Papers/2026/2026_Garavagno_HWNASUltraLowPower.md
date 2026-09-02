@@ -2,6 +2,8 @@
 
 **Full citation:** Garavagno, A. M., Ragusa, E., Frisoli, A., Gastaldo, P. (2026). An affordable hardware-aware neural architecture search for deploying convolutional neural networks on ultra-low-power computing platforms. arXiv:2606.16290 [cs.LG]. Submitted 15 June 2026. Accepted for publication in *IEEE Sensors Letters*; final publication at https://doi.org/10.1109/LSENS.2024.3387056. Code: https://github.com/AndreaMattiaGaravagno/NanoNAS. Funded by the Italian PNRR project "LEARN."
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2606.16290)
+
 **Linked concepts:** [[NAS]], [[Cortex-M]], [[Compression]]
 
 ## Abstract summary

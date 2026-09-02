@@ -2,6 +2,8 @@
 
 **Full citation:** Lai, L., Suda, N., Chandra, V. (2018). CMSIS-NN: Efficient Neural Network Kernels for Arm Cortex-M CPUs. arXiv:1801.06601. https://arxiv.org/abs/1801.06601
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/1801.06601)
+
 **Linked concepts:** [[CMSIS-NN]], [[Cortex-M]]
 
 ## Abstract summary

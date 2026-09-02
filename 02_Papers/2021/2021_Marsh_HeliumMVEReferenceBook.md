@@ -2,6 +2,8 @@
 
 **Full citation:** Marsh, J. Arm Helium Technology: M-Profile Vector Extension (MVE) for Arm Cortex-M Processors. Reference Book, Arm Education, February 2021. ISBN 9781911531241. (Vendor/educational source; no deep-analysis record previously existed.) https://armkeil.blob.core.windows.net/developer/Files/pdf/ebook/arm-helium-technology-mve.pdf
 
+**PDF:** [armkeil.blob.core.windows.net](https://armkeil.blob.core.windows.net/developer/Files/pdf/ebook/arm-helium-technology-mve.pdf)
+
 **Linked concepts:** [[Cortex-M]]
 
 ## Abstract summary

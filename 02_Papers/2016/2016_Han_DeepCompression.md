@@ -2,6 +2,8 @@
 
 **Full citation:** Han, S., Mao, H., Dally, W.J. (2016). Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding. *4th International Conference on Learning Representations (ICLR 2016)*. arXiv:1510.00149. https://arxiv.org/abs/1510.00149
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/1510.00149)
+
 **Linked concepts:** [[Pruning]], [[Quantization]], [[Compression]]
 
 ## Abstract summary

@@ -2,6 +2,8 @@
 
 **Full citation:** Jain, V., Gupta, A., Verma, P., Gill, S. S. (2026). TinyFed6G: Federated Learning With TinyML for Resource-Constrained Intelligence in 6G Edge Networks. *IEEE Wireless Communications*, Vol. 33, Issue 2, pp. 25–31. DOI: 10.1109/MWC.2025.3649785. Published 15 January 2026. https://ieeexplore.ieee.org/document/11354150
 
+**PDF:** [DOI](https://doi.org/10.1109/MWC.2025.3649785)
+
 **Access note:** Retrieved in full text via institutional access (University of Genoa, unige.it) through the Claude in Chrome extension — first successful test of the IEEE Xplore institutional-access workflow described in `00_Config/sources.yaml`.
 
 **Linked concepts:** [[Federated_Learning]], [[Quantization]], [[TensorFlow_Lite_Micro]], [[CMSIS-NN]], [[Cortex-M]]

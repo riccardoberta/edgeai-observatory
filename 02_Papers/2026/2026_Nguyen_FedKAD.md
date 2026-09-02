@@ -2,6 +2,8 @@
 
 **Full citation:** Nguyen, T.-A., Bui, V.-P., Le, A. T., Ta, K. H., Le, M. T., Zhang, J. A., Huang, X. (2026). Federated Low-Rank Koopman Learning for Multivariate Time-Series Anomaly Detection in IoT Systems. arXiv:2607.08978 [cs.LG, eess.SP]. Submitted 9 Jul 2026. License CC BY 4.0. DOI: 10.48550/arXiv.2607.08978.
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2607.08978)
+
 **Linked concepts:** [[Federated Learning]], [[Industrial IoT]], [[Predictive Maintenance]]
 
 ## Abstract summary

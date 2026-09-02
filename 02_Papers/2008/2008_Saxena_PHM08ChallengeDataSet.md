@@ -2,6 +2,8 @@
 
 **Full citation:** Saxena, A., Goebel, K. (2008). PHM08 Challenge Data Set. *NASA Prognostics Data Repository, NASA Ames Research Center*. https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/
 
+**PDF:** [www.nasa.gov](https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/)
+
 **Linked concepts:** [[Predictive_Maintenance]]
 
 ## Abstract summary

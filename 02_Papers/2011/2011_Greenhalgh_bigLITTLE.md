@@ -2,6 +2,8 @@
 
 **Full citation:** Greenhalgh, P. (2011). big.LITTLE Processing with ARM Cortex-A15 & Cortex-A7. *ARM White Paper*. (Vendor source.) https://research.ijcaonline.org/volume119/number1/pxc3903106.pdf
 
+**PDF:** [research.ijcaonline.org](https://research.ijcaonline.org/volume119/number1/pxc3903106.pdf)
+
 **Linked concepts:** [[Cortex-A]]
 
 ## Abstract summary

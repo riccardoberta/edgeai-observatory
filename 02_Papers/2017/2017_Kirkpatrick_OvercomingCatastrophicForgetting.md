@@ -2,6 +2,8 @@
 
 **Full citation:** Kirkpatrick, J., Pascanu, R., Rabinowitz, N., Veness, J., Desjardins, G., Rusu, A. A., Milan, K., Quan, J., Ramalho, T., Grabska-Barwinska, A., Hassabis, D., Clopath, C., Kumaran, D., Hadsell, R. (2017). Overcoming Catastrophic Forgetting in Neural Networks. *Proceedings of the National Academy of Sciences (PNAS)*, 114(13), 3521–3526. arXiv:1612.00796. https://arxiv.org/abs/1612.00796
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/1612.00796)
+
 **Linked concepts:** [[Continual_Learning]], [[On-device_Learning]]
 
 ## Abstract summary

@@ -2,6 +2,8 @@
 
 **Full citation:** Hasanpour, M.A., Kirkegaard, M., Fafoutis, X. (2025). EdgeMark: An automation and benchmarking system for embedded artificial intelligence tools. Journal of Systems Architecture. https://arxiv.org/abs/2502.01700
 
+**PDF:** [arXiv PDF](https://arxiv.org/abs/2502.01700)
+
 **Linked concepts:** [[TensorFlow_Lite_Micro]]
 
 ## Abstract summary

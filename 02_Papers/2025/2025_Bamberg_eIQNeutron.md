@@ -2,6 +2,8 @@
 
 **Full citation:** Bamberg, L., Minnella, F., Bosio, R., Ottati, F., Wang, Y., Lee, J., Lavagno, L., Fuks, A. (2025). eIQ Neutron: Redefining Edge-AI Inference with Integrated NPU and Compiler Innovations. arXiv:2509.14388 (submitted to IEEE Transactions on Computers). https://arxiv.org/abs/2509.14388
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2509.14388)
+
 **Linked concepts:** [[NPU]]
 
 ## Abstract summary

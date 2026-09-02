@@ -2,6 +2,8 @@
 
 **Full citation:** Ahn, H., Chen, T., Alnaasan, N., Shafi, A., Abduljabbar, M., Subramoni, H., Panda, D.K. (2023). Performance Characterization of using Quantization for DNN Inference on Edge Devices: Extended Version. arXiv:2303.05016. https://arxiv.org/abs/2303.05016
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2303.05016)
+
 **Linked concepts:** [[ONNX_Runtime]]
 
 ## Abstract summary

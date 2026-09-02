@@ -2,6 +2,8 @@
 
 **Full citation:** Antonini, M., Pincheira, M., Vecchio, M., Antonelli, F. (2023). An Adaptable and Unsupervised TinyML Anomaly Detection System for Extreme Industrial Environments. *Sensors*, 23(4), 2344. DOI: 10.3390/s23042344
 
+**PDF:** [DOI](https://doi.org/10.3390/s23042344)
+
 **Linked concepts:** [[Industrial_IoT]], [[Compression]]
 
 ## Abstract summary

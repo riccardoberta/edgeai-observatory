@@ -2,6 +2,8 @@
 
 **Full citation:** Flamand, E., Rossi, D., Conti, F., Loi, I., Pullini, A., Rotenberg, F., Benini, L. (2018). GAP-8: A RISC-V SoC for AI at the Edge of the IoT. *2018 IEEE 29th International Conference on Application-specific Systems, Architectures and Processors (ASAP)*, Milano, Italy. DOI/IEEE Xplore: https://ieeexplore.ieee.org/document/8445101
 
+**PDF:** [IEEE Xplore](https://ieeexplore.ieee.org/document/8445101)
+
 **Linked concepts:** [[RISC-V]], [[Vision]], [[Keyword_Spotting]]
 
 ## Abstract summary

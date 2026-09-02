@@ -2,6 +2,8 @@
 
 **Full citation:** Fang, S., Tegge, W. C., Faruque, M. O., Zhou, P., Hoque, E., Jones, A. K. (2026). YAVIN: A Unified Architecture for Secure Edge Processing in Memory. arXiv:2608.13496 [cs.AR]. Submitted 13 Aug 2026. License CC BY 4.0. DOI: 10.48550/arXiv.2608.13496.
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2608.13496)
+
 **Linked concepts:** [[Hardware Security of Edge AI Accelerators]] — anchor paper (architectural trust-boundary-extension variant), created 2026-09-02 by the Knowledge Base Consolidation cycle, resolving what was previously the "Edge AI Security / Trusted Execution" taxonomy gap flagged in the 2026-08-20 weekly digest (distinct from the "Mixture-of-Experts (MoE) & Edge LLM Serving" node; YAVIN evaluates on quantized edge LLMs but its contribution is security architecture, not serving/scheduling). Loosely touches [[Quantization]] via its evaluation on INT8/INT32 quantized edge-class LLMs.
 
 ## Abstract summary

@@ -13,7 +13,7 @@ Act as an expert EdgeAI researcher and review the Knowledge Base (01_Knowledge_B
 
 1. For each concept file, check whether the "Evolution of the concept," "Open problems," "Research ideas," and "Possible thesis topics" sections still reflect the current state of the field. Update entries that are outdated, vague, or now superseded, and add new concept files if a genuinely distinct, stable research area has emerged that doesn't fit the existing taxonomy.
 2. Check whether there are important foundational or highly-cited papers relevant to any concept that are not yet cited in its "Key papers" section, and add them where genuinely warranted (quality over quantity — don't pad).
-3. For every paper you newly cite in the KB, create its full deep-analysis record under 02_Papers/ (following the existing template) and link it from the KB via [[paper_id]] — never leave an inline citation without a corresponding record.
+3. For every paper you newly cite in the KB, create its full deep-analysis record under 02_Papers/ (following the existing template) and link it from the KB via [[paper_id]] — never leave an inline citation without a corresponding record. Every record must include a **PDF:** field (a markdown link to the source paper, right after **Full citation:**) — prefer the arXiv PDF when an arXiv ID exists, else a DOI link, else the best official source link found while researching. Never fabricate this link; say so explicitly if none can be found.
 4. Do not hallucinate citations, dates, or results — every claim must be traceable to a real, verifiable source.
 5. At the end, give me a short summary of what changed: which concepts were updated, which new papers/records were added, and any new concept files created.
 ```

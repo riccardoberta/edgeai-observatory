@@ -2,6 +2,8 @@
 
 **Full citation:** Cai, H., Gan, C., Wang, T., Zhang, Z., Han, S. (2019). Once-for-All: Train One Network and Specialize it for Efficient Deployment. arXiv:1908.09791. https://arxiv.org/abs/1908.09791
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/1908.09791)
+
 **Linked concepts:** [[NAS]]
 
 ## Abstract summary

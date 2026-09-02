@@ -2,6 +2,8 @@
 
 **Full citation:** Gu, Y., Dong, L., Wei, F., Huang, M. (2024). MiniLLM: Knowledge Distillation of Large Language Models. Proceedings of ICLR 2024. https://arxiv.org/abs/2306.08543
 
+**PDF:** [arXiv PDF](https://arxiv.org/abs/2306.08543)
+
 **Linked concepts:** [[Distillation]]
 
 ## Abstract summary

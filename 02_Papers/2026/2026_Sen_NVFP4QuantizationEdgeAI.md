@@ -2,6 +2,8 @@
 
 **Full citation:** Sen, O., Kamineni, V. N., Lobo, D., Bhunia, S., Ewetz, R., Chatterjee, B. (2026). Characterizing the Impact of NVFP4 Quantization for Low-Power Edge AI Deployment. arXiv:2606.06527 [cs.AR, cs.LG]. Department of Electrical and Computer Engineering, University of Florida, Gainesville, USA. Submitted 3 June 2026 (v1), revised through v3, 10 June 2026. 7 pages. DOI: 10.48550/arXiv.2606.06527.
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2606.06527)
+
 **Linked concepts:** [[Quantization]], [[Compression]], [[Cortex-M]]
 
 ## Abstract summary

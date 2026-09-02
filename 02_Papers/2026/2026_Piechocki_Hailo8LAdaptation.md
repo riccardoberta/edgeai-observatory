@@ -2,6 +2,8 @@
 
 **Full citation:** Piechocki, M., Capotondi, A., Kraft, M. (2026). Empowering On-Device Model Adaptation with an Edge AI Inference Accelerator. arXiv:2607.18101 [cs.LG, cs.AR, cs.CV]. Submitted 20 Jul 2026. Accepted at the ITEM Workshop, ECML-PKDD 2026 (to appear in the joint post-workshop proceedings). ACM classes I.2.5, C.4. License CC BY 4.0. Code: https://github.com/MatPiech/accelerator-training. DOI: 10.48550/arXiv.2607.18101.
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2607.18101)
+
 **Linked concepts:** [[On-device Learning]], [[Quantization]]
 
 ## Abstract summary

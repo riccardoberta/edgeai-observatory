@@ -2,6 +2,8 @@
 
 **Full citation:** de la Fuente, R., Radrigan, L., Morales, A. S. (2024). Enhancing Predictive Maintenance in Mining Mobile Machinery through a TinyML-enabled Hierarchical Inference Network. arXiv:2411.07168. https://arxiv.org/abs/2411.07168 (submitted to IEEE)
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2411.07168)
+
 **Linked concepts:** [[Predictive_Maintenance]], [[Compression]], [[Industrial_IoT]]
 
 ## Abstract summary

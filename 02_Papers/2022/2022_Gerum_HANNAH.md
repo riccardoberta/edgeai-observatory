@@ -2,6 +2,8 @@
 
 **Full citation:** Gerum, C., Frischknecht, A., Hald, T., Palomero Bernardo, P., Lübeck, K., Bringmann, O. (2022). Hardware Accelerator and Neural Network Co-Optimization for Ultra-Low-Power Audio Processing Devices. arXiv:2209.03807. https://arxiv.org/abs/2209.03807
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2209.03807)
+
 **Linked concepts:** [[DSP]], [[Keyword_Spotting]], [[NAS]]
 
 ## Abstract summary

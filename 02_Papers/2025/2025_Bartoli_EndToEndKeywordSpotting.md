@@ -2,6 +2,8 @@
 
 **Full citation:** Bartoli, P., Bondini, T., Veronesi, C., Giudici, A., Antonello, N., Zappa, F. (2025). End-to-End Efficiency in Keyword Spotting: A System-Level Approach for Embedded Microcontrollers. arXiv:2509.07051. https://arxiv.org/abs/2509.07051
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2509.07051)
+
 **Linked concepts:** [[DSP]], [[Keyword_Spotting]]
 
 ## Abstract summary

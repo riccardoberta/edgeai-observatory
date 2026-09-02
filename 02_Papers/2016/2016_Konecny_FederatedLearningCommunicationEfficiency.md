@@ -2,6 +2,8 @@
 
 **Full citation:** Konečný, J., McMahan, H.B., Yu, F.X., Richtárik, P., Suresh, A.T., Bacon, D. (2016). Federated Learning: Strategies for Improving Communication Efficiency. *NeurIPS 2016 Workshop on Private Multi-Party Machine Learning*. https://research.google/pubs/federated-learning-strategies-for-improving-communication-efficiency/
 
+**PDF:** [research.google](https://research.google/pubs/federated-learning-strategies-for-improving-communication-efficiency/)
+
 **Linked concepts:** [[Federated_Learning]]
 
 ## Abstract summary

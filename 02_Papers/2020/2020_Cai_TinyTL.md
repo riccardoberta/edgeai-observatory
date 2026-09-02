@@ -2,6 +2,8 @@
 
 **Full citation:** Cai, H., Gan, C., Zhu, L., Han, S. (2020). TinyTL: Reduce Memory, Not Parameters for Efficient On-Device Learning. *Advances in Neural Information Processing Systems 33 (NeurIPS 2020)*. https://proceedings.neurips.cc/paper/2020/hash/81f7acabd411274fcf65ce2070ed568a-Abstract.html
 
+**PDF:** [NeurIPS Proceedings (PDF)](https://proceedings.neurips.cc/paper/2020/hash/81f7acabd411274fcf65ce2070ed568a-Abstract.html)
+
 **Linked concepts:** [[On-device_Learning]], [[Compression]]
 
 ## Abstract summary

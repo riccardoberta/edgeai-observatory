@@ -2,6 +2,8 @@
 
 **Full citation:** Chellapilla, K., Puri, S., Simard, P. (2006). High Performance Convolutional Neural Networks for Document Processing. *Tenth International Workshop on Frontiers in Handwriting Recognition (IWFHR 2006)*. https://hal.science/inria-00112631
 
+**PDF:** [hal.science](https://hal.science/inria-00112631)
+
 **Linked concepts:** [[CMSIS-NN]]
 
 ## Abstract summary

@@ -2,6 +2,8 @@
 
 **Full citation:** Chen, T., Du, Z., Sun, N., Wang, J., Wu, C., Chen, Y., Temam, O. (2014). DianNao: A Small-Footprint High-Throughput Accelerator for Ubiquitous Machine-Learning. *Proceedings of the 19th International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS 2014)*. https://dl.acm.org/doi/10.1145/2541940.2541967
 
+**PDF:** [ACM Digital Library](https://dl.acm.org/doi/10.1145/2541940.2541967)
+
 **Linked concepts:** [[NPU]]
 
 ## Abstract summary

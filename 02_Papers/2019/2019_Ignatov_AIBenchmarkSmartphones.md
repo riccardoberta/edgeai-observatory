@@ -2,6 +2,8 @@
 
 **Full citation:** Ignatov, A., Timofte, R., Kulik, A., Yang, S., Wang, K., Baum, F., Wu, M., Xu, L., Van Gool, L. (2019). AI Benchmark: All About Deep Learning on Smartphones in 2019. arXiv:1910.06663. https://arxiv.org/abs/1910.06663
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/1910.06663)
+
 **Linked concepts:** [[Cortex-A]], [[Vision]], [[NPU]]
 
 ## Abstract summary

@@ -2,6 +2,8 @@
 
 **Full citation:** Ordóñez, F.J., Roggen, D. (2016). Deep Convolutional and LSTM Recurrent Neural Networks for Multimodal Wearable Activity Recognition. *Sensors* 16(1):115. https://doi.org/10.3390/s16010115
 
+**PDF:** [DOI](https://doi.org/10.3390/s16010115)
+
 **Linked concepts:** [[Human_Activity_Recognition]]
 
 ## Abstract summary

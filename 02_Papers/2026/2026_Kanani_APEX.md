@@ -2,6 +2,8 @@
 
 **Full citation:** Kanani, A., Badawi, L., Ogras, U. Y. (2026). APEX: Adaptive Expert Prefetching for Memory-Efficient Edge MoE Inference. arXiv:2608.11688 [cs.AR, cs.AI, cs.LG]. Submitted 12 Aug 2026. Accepted at IEEE/ACM ESWEEK (CODES) 2026; official version to appear in IEEE TCAD. License CC BY-NC-ND 4.0. DOI: 10.48550/arXiv.2608.11688.
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2608.11688)
+
 **Linked concepts:** core member of [[Mixture-of-Experts (MoE) & Edge LLM Serving]]; adjacent to [[Compression]].
 
 ## Abstract summary

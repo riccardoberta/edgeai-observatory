@@ -2,6 +2,8 @@
 
 **Full citation:** Lattanzi, E., Calisti, L., Contoli, C. (2024). Are Transformers a Useful Tool for Tiny devices in Human Activity Recognition? Proceedings of the 2024 8th International Conference on Advances in Artificial Intelligence (ICAAI '24). https://doi.org/10.1145/3704137.3704171
 
+**PDF:** [DOI](https://doi.org/10.1145/3704137.3704171)
+
 **Linked concepts:** [[Human_Activity_Recognition]], [[Compression]]
 
 ## Abstract summary

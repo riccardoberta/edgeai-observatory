@@ -2,6 +2,8 @@
 
 **Full citation:** Das, D., Mannarswamy, S. (2023). ML-driven Hardware Cost Model for MLIR. Proceedings of ICLR 2023. https://arxiv.org/abs/2302.11405
 
+**PDF:** [arXiv PDF](https://arxiv.org/abs/2302.11405)
+
 **Linked concepts:** [[MLIR]]
 
 ## Abstract summary

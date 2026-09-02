@@ -2,6 +2,8 @@
 
 **Full citation:** Liu, C., Jobst, M., Guo, L., Shi, X., Partzsch, J., Mayr, C. (2023). Deploying Machine Learning Models to Ahead-of-Time Runtime on Edge Using MicroTVM. Proceedings of the 2023 Workshop on Compilers, Deployment, and Tooling for Edge AI (CODAI '23). https://arxiv.org/abs/2304.04842
 
+**PDF:** [arXiv PDF](https://arxiv.org/abs/2304.04842)
+
 **Linked concepts:** [[microTVM_TVM]]
 
 ## Abstract summary

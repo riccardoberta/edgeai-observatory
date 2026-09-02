@@ -2,6 +2,8 @@
 
 **Full citation:** Denil, M., Shakibi, B., Dinh, L., Ranzato, M., de Freitas, N. (2013). Predicting Parameters in Deep Learning. *Advances in Neural Information Processing Systems 26 (NeurIPS 2013)*. https://proceedings.neurips.cc/paper_files/paper/2013/file/7fec306d1e665bc9c748b5d2b99a6e97-Paper.pdf
 
+**PDF:** [NeurIPS Proceedings (PDF)](https://proceedings.neurips.cc/paper_files/paper/2013/file/7fec306d1e665bc9c748b5d2b99a6e97-Paper.pdf)
+
 **Linked concepts:** [[Compression]]
 
 ## Abstract summary

@@ -2,6 +2,8 @@
 
 **Full citation:** Abushahla, H.A., Varam, D., Panopio, A.J.N., AlHajri, M.I. (2025). Neural Network Quantization for Microcontrollers: A Comprehensive Survey of Methods, Platforms, and Applications. arXiv:2508.15008. https://arxiv.org/abs/2508.15008
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2508.15008)
+
 **Linked concepts:** [[CMSIS-NN]], [[Quantization]]
 
 ## Abstract summary

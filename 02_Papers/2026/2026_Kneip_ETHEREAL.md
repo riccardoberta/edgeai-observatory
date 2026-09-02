@@ -2,6 +2,8 @@
 
 **Full citation:** Kneip, A., Lefebvre, M., Gehrig, D., Catalán Pastor, V., Scaramuzza, D., Verhelst, M., Frenkel, C. (2026). ETHEREAL: A 25.6-μs/inf. Low-latency Event-driven Graph-neural-network Processor for High-resolution Vision at the Edge. arXiv:2608.17787 [cs.AR, cs.CV]. Delft University of Technology; KU Leuven; University of Zurich (Robotics and Perception Group); University of Pennsylvania. Submitted 18 Aug 2026 (v1). Submitted to IEEE Journal of Solid-State Circuits (JSSC). DOI: 10.48550/arXiv.2608.17787.
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2608.17787)
+
 **Linked concepts:** [[Vision]], [[Quantization]] (runtime-reconfigurable 4b/8b precision) — no clean match in the Hardware branch (Cortex-M/A, RISC-V, DSP, FPGA, NPU); this is a custom digital ASIC, flagged as a taxonomy gap below.
 
 ## Abstract summary

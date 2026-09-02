@@ -2,6 +2,8 @@
 
 **Full citation:** Bucilă, C., Caruana, R., Niculescu-Mizil, A. (2006). Model Compression. *Proceedings of the 12th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD 2006)*. https://dl.acm.org/doi/10.1145/1150402.1150464
 
+**PDF:** [ACM Digital Library](https://dl.acm.org/doi/10.1145/1150402.1150464)
+
 **Linked concepts:** [[Distillation]], [[Compression]]
 
 ## Abstract summary

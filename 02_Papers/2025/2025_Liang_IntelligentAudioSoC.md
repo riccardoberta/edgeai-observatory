@@ -2,6 +2,8 @@
 
 **Full citation:** Liang, H., Jia, D., Wang, Y., Huang, L., Zhong, S., Xiang, L., Huang, L., Yuan, T. (2025). Prototype: A Keyword Spotting-Based Intelligent Audio SoC for IoT. arXiv:2509.06964. https://arxiv.org/abs/2509.06964
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2509.06964)
+
 **Linked concepts:** [[DSP]], [[Keyword_Spotting]]
 
 ## Abstract summary

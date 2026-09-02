@@ -2,6 +2,8 @@
 
 **Full citation:** Zoph, B., Le, Q.V. (2017). Neural Architecture Search with Reinforcement Learning. *5th International Conference on Learning Representations (ICLR 2017)*. https://openreview.net/forum?id=r1Ue8Hcxg
 
+**PDF:** [openreview.net](https://openreview.net/forum?id=r1Ue8Hcxg)
+
 **Linked concepts:** [[NAS]]
 
 ## Abstract summary

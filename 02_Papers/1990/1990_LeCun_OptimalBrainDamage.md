@@ -2,6 +2,8 @@
 
 **Full citation:** LeCun, Y., Denker, J.S., Solla, S.A. (1990). Optimal Brain Damage. *Advances in Neural Information Processing Systems 2 (NeurIPS 1989/1990)*. https://proceedings.neurips.cc/paper/1989/file/6c9882bbac1c7093bd25041881277658-Paper.pdf
 
+**PDF:** [NeurIPS Proceedings (PDF)](https://proceedings.neurips.cc/paper/1989/file/6c9882bbac1c7093bd25041881277658-Paper.pdf)
+
 **Linked concepts:** [[Pruning]], [[Compression]]
 
 ## Abstract summary

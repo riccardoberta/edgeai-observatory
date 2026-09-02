@@ -2,6 +2,8 @@
 
 **Full citation:** Jacob, B., Kligys, S., Chen, B., Zhu, M., Tang, M., Howard, A., Adam, H., Kalenichenko, D. (2018). Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference. *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)*, pp. 2704–2713. arXiv:1712.05877. https://arxiv.org/abs/1712.05877
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/1712.05877)
+
 **Linked concepts:** [[Quantization]]
 
 ## Abstract summary

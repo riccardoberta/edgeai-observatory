@@ -2,6 +2,8 @@
 
 **Full citation:** Hinton, G., Vinyals, O., Dean, J. (2015). Distilling the Knowledge in a Neural Network. arXiv:1503.02531. https://arxiv.org/abs/1503.02531
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/1503.02531)
+
 **Linked concepts:** [[Distillation]]
 
 ## Abstract summary

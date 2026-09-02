@@ -2,6 +2,8 @@
 
 **Full citation:** Howard, A.G., Zhu, M., Chen, B., Kalenichenko, D., Wang, W., Weyand, T., Andreetto, M., Adam, H. (2017). MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications. arXiv:1704.04861. https://arxiv.org/abs/1704.04861
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/1704.04861)
+
 **Linked concepts:** [[Vision]], [[NAS]] (reference architecture for later search-based work)
 
 ## Abstract summary

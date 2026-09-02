@@ -2,6 +2,8 @@
 
 **Full citation:** Zhang, S., Li, Y., Zhang, S., Shahabi, F., Xia, S., Deng, Y., Alshurafa, N. (2022). Deep Learning in Human Activity Recognition with Wearable Sensors: A Review on Advances. arXiv:2111.00418. https://arxiv.org/abs/2111.00418
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2111.00418)
+
 **Linked concepts:** [[Human_Activity_Recognition]], [[Quantization]], [[Compression]]
 
 ## Abstract summary

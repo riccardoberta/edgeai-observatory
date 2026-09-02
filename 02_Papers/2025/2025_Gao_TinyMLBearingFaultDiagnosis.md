@@ -2,6 +2,8 @@
 
 **Full citation:** Gao, Z., Jiang, Z., Dong, Z., et al. (2025). An edge-deployable TinyML approach enhanced by transfer learning for efficient bearing fault diagnosis. Science China Technological Sciences, 68, Article 2220401. https://doi.org/10.1007/s11431-025-3072-9
 
+**PDF:** [DOI](https://doi.org/10.1007/s11431-025-3072-9)
+
 *(Note: the full author list beyond the first three names could not be independently confirmed from publicly available sources at time of writing; cited here as "et al." accordingly.)*
 
 **Linked concepts:** [[Predictive_Maintenance]], [[On-device_Learning]]

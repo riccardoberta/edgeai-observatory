@@ -2,6 +2,8 @@
 
 **Full citation:** Chen, T., Zheng, L., Yan, E., Jiang, Z., Moreau, T., Ceze, L., Guestrin, C., Krishnamurthy, A. (2018). Learning to Optimize Tensor Programs. *Advances in Neural Information Processing Systems 31 (NeurIPS 2018)*. https://proceedings.neurips.cc/paper_files/paper/2018/file/8b5700012be65c9da25f49408d959ca0-Paper.pdf
 
+**PDF:** [NeurIPS Proceedings (PDF)](https://proceedings.neurips.cc/paper_files/paper/2018/file/8b5700012be65c9da25f49408d959ca0-Paper.pdf)
+
 **Linked concepts:** [[microTVM_TVM]]
 
 ## Abstract summary

@@ -2,6 +2,8 @@
 
 **Full citation:** Hubara, I., Courbariaux, M., Soudry, D., El-Yaniv, R., Bengio, Y. (2016). Binarized Neural Networks. *Advances in Neural Information Processing Systems 29 (NeurIPS 2016)*. https://dl.acm.org/doi/10.5555/3157382.3157557
 
+**PDF:** [ACM Digital Library](https://dl.acm.org/doi/10.5555/3157382.3157557)
+
 **Linked concepts:** [[Quantization]], [[Compression]]
 
 ## Abstract summary

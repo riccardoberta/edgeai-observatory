@@ -2,6 +2,8 @@
 
 **Full citation:** Deutel, M., Hannig, F., Mutschler, C., Teich, J. (2024). On-Device Training of Fully Quantized Deep Neural Networks on Cortex-M Microcontrollers. IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems, 44(4), 1250-1261. arXiv:2407.10734. https://arxiv.org/abs/2407.10734
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2407.10734)
+
 **Linked concepts:** [[Cortex-M]], [[On-device_Learning]], [[Quantization]]
 
 ## Abstract summary

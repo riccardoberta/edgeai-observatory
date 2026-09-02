@@ -2,6 +2,8 @@
 
 **Full citation:** Zhan, J.-Y., Yu, A.-T., Jiang, W., Yang, Y.-J., Xie, X.-N., Chang, Z.-W., Yang, J.-H. (2023). FPGA-based acceleration for binary neural networks in edge computing. Journal of Electronic Science and Technology, 21(2), 100204. https://doi.org/10.1016/j.jnlest.2023.100204
 
+**PDF:** [DOI](https://doi.org/10.1016/j.jnlest.2023.100204)
+
 **Linked concepts:** [[FPGA]], [[Quantization]]
 
 ## Abstract summary

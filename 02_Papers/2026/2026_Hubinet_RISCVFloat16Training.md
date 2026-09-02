@@ -2,6 +2,8 @@
 
 **Full citation:** Hubinet, B., Moellic, P.-A., Savry, O., Potin, O., Rigaud, J.-B. (2026). Hardware-Software Co-Design for Float16 On-Device Training on RISC-V Single-Core. arXiv:2607.21130 [cs.AR, cs.AI]. Submitted 23 Jul 2026. Accepted to IEEE PRIME 2026. Affiliations per the 2026-07 monthly report: CEA-Leti / Mines Saint-Étienne. DOI: 10.48550/arXiv.2607.21130.
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2607.21130)
+
 **Linked concepts:** [[RISC-V]], [[On-device Learning]], [[Quantization]] (float16 as a precision-reduction technique for training, not inference)
 
 **Verification note:** every web-fetch attempt to independently retrieve this paper's arXiv page (five attempts across this session) was blocked by an in-session rate limit that did not affect most other papers fetched in the same session. This record is therefore built entirely from the 2026-07-26 weekly digest's own full-text-verified summary (that digest's sourcing note states papers were read at the abstract level from arXiv, consistent with its stated methodology) and the 2026-07 monthly report's cross-references, rather than an independent re-verification in this pass. Ricky should re-run the arXiv fetch (or open the PDF directly) before citing the specific figures below in a survey or thesis.

@@ -2,6 +2,8 @@
 
 **Full citation:** Lattner, C., Adve, V. (2004). LLVM: A Compilation Framework for Lifelong Program Analysis & Transformation. *Proceedings of the 2004 International Symposium on Code Generation and Optimization (CGO 2004)*. DOI: 10.1109/CGO.2004.1281665. https://doi.org/10.1109/CGO.2004.1281665
 
+**PDF:** [DOI](https://doi.org/10.1109/CGO.2004.1281665)
+
 **Linked concepts:** [[MLIR]]
 
 ## Abstract summary

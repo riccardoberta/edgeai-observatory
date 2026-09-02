@@ -2,6 +2,8 @@
 
 **Full citation:** Han, S., Pool, J., Tran, J., Dally, W.J. (2015). Learning both Weights and Connections for Efficient Neural Networks. *Advances in Neural Information Processing Systems 28 (NeurIPS 2015)*. https://proceedings.neurips.cc/paper/2015/file/ae0eb3eed39d2bcef4622b2499a05fe6-Paper.pdf
 
+**PDF:** [NeurIPS Proceedings (PDF)](https://proceedings.neurips.cc/paper/2015/file/ae0eb3eed39d2bcef4622b2499a05fe6-Paper.pdf)
+
 **Linked concepts:** [[Pruning]], [[Compression]]
 
 ## Abstract summary

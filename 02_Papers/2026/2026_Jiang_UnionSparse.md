@@ -2,6 +2,8 @@
 
 **Full citation:** Jiang, T., Gu, H., Wang, T., Cheng, Q., Zheng, Z., Tang, C., Su, Q., Lou, W., Gong, L., Wang, C., Li, X., Zhou, X. (2026). UnionSparse: An Index-Efficient Sparsity Framework for Low-Bit Sparse LLM Inference on Edge. arXiv:2608.09291 [cs.DC]. Submitted 10 Aug 2026. Accepted via the ESWEEK 2026 Journal Track; to appear in IEEE TCAD. 14 pages, 19 figures. Code: https://github.com/Victor-Alen/UnionSparse. DOI: 10.48550/arXiv.2608.09291.
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2608.09291)
+
 **Linked concepts:** [[Compression]], [[Quantization]]; core member of [[Mixture-of-Experts (MoE) & Edge LLM Serving]] (note: UnionSparse targets general sparse LLM inference, not specifically MoE routing — grouped with the cluster because it shares the edge-LLM-memory-bottleneck problem framing, per the 2026-08-13 digest).
 
 ## Abstract summary

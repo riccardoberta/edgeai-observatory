@@ -2,6 +2,8 @@
 
 **Full citation:** Liu, D., Zhu, Y., Liu, Z., Liu, Y., Han, C., Tian, J., Li, R., Yi, W. (2025). A survey of model compression techniques: past, present, and future. Frontiers in Robotics and AI. DOI: 10.3389/frobt.2025.1518965
 
+**PDF:** [DOI](https://doi.org/10.3389/frobt.2025.1518965)
+
 **Linked concepts:** [[Compression]]
 
 ## Abstract summary

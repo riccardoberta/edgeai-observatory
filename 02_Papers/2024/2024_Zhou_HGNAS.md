@@ -2,6 +2,8 @@
 
 **Full citation:** Zhou, A., Yang, J., Qi, Y., Qiao, T., Shi, Y., Duan, C., Zhao, W., Hu, C. (2024). HGNAS: Hardware-Aware Graph Neural Architecture Search for Edge Devices. IEEE Transactions on Computers, 73(12), 2693-2707. https://arxiv.org/abs/2408.12840
 
+**PDF:** [arXiv PDF](https://arxiv.org/abs/2408.12840)
+
 **Linked concepts:** [[NAS]]
 
 ## Abstract summary

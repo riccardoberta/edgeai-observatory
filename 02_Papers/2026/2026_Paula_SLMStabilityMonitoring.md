@@ -2,6 +2,8 @@
 
 **Full citation:** Paula, T. S., Kupssinskü, L. S., Barros, R. C. (2026). Continual Learning for Sequential Personalization of Small Language Models: A Stability Monitoring Analysis. arXiv:2606.27634 [cs.LG]. MALTA (Machine Learning Theory and Applications Lab), PUCRS, Porto Alegre, Brazil; Kunumi Institute, Brazil. Submitted 26 Jun 2026. License CC BY 4.0. DOI: 10.48550/arXiv.2606.27634.
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2606.27634)
+
 **Linked concepts:** [[Continual Learning]], [[On-device Learning]]
 
 **Verification note:** the full-text HTML fetch for this paper was truncated by the fetch tool partway through Section 5 (Main Results), before reaching the specific correlation statistics and per-model KL-divergence figures. The abstract, introduction, and full methodology (Sections 1–4, including the TRACE task selection and stability-metric definitions) were independently verified from the full text. The specific numbers below attributed to the 2026-07-05 weekly digest (Pearson r, the KL "failure zone," and per-model KL peaks) were reported by that digest's own full-text read and are carried forward here as digest-sourced rather than independently re-verified in this pass — re-check before citing in a survey or thesis.

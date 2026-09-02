@@ -2,6 +2,8 @@
 
 **Full citation:** Asanović, K., Patterson, D.A. (2014). Instruction Sets Should Be Free: The Case For RISC-V. *UC Berkeley Technical Report UCB/EECS-2014-146*. https://www2.eecs.berkeley.edu/Pubs/TechRpts/2014/EECS-2014-146.pdf
 
+**PDF:** [www2.eecs.berkeley.edu](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2014/EECS-2014-146.pdf)
+
 **Linked concepts:** [[RISC-V]]
 
 ## Abstract summary

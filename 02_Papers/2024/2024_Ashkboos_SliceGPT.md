@@ -2,6 +2,8 @@
 
 **Full citation:** Ashkboos, S., Croci, M.L., Gennari do Nascimento, M., Hoefler, T., Hensman, J. (2024). SliceGPT: Compress Large Language Models by Deleting Rows and Columns. Proceedings of ICLR 2024. https://arxiv.org/abs/2401.15024
 
+**PDF:** [arXiv PDF](https://arxiv.org/abs/2401.15024)
+
 **Linked concepts:** [[Pruning]]
 
 ## Abstract summary

@@ -2,6 +2,8 @@
 
 **Full citation:** Lattner, C., Amini, M., Bondhugula, U., Cohen, A., Davis, A., Pienaar, J., Riddle, R., Shpeisman, T., Vasilache, N., Zinenko, O. (2020). MLIR: A Compiler Infrastructure for the End of Moore's Law. arXiv:2002.11054. https://arxiv.org/abs/2002.11054
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2002.11054)
+
 **Linked concepts:** [[MLIR]], [[microTVM_TVM]]
 
 ## Abstract summary

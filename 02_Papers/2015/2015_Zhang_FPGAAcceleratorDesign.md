@@ -2,6 +2,8 @@
 
 **Full citation:** Zhang, C., Li, P., Sun, G., Guan, Y., Xiao, B., Cong, J. (2015). Optimizing FPGA-based Accelerator Design for Deep Convolutional Neural Networks. *Proceedings of the 2015 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays (FPGA 2015)*. https://dl.acm.org/doi/10.1145/2684746.2689060
 
+**PDF:** [ACM Digital Library](https://dl.acm.org/doi/10.1145/2684746.2689060)
+
 **Linked concepts:** [[FPGA]]
 
 ## Abstract summary

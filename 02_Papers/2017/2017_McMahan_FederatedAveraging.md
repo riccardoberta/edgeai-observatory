@@ -2,6 +2,8 @@
 
 **Full citation:** McMahan, B., Moore, E., Ramage, D., Hampson, S., Agüera y Arcas, B. (2017). Communication-Efficient Learning of Deep Networks from Decentralized Data. *Proceedings of the 20th International Conference on Artificial Intelligence and Statistics (AISTATS)*, PMLR 54, pp. 1273–1282. arXiv:1602.05629. https://arxiv.org/abs/1602.05629
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/1602.05629)
+
 **Linked concepts:** [[Federated Learning]]
 
 ## Abstract summary

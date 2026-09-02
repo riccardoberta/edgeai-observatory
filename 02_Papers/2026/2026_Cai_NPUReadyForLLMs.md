@@ -2,6 +2,8 @@
 
 **Full citation:** Cai, G., Tian, R., Yang, L., Ren, Z., Yuan, J., Li, L., Wang, J. (2026). Is Your NPU Ready for LLMs? Dissecting the Hidden Efficiency Bottlenecks in Mobile LLM Inference. arXiv:2607.05475 [cs.AR, cs.AI]. Submitted 6 Jul 2026. DOI: 10.48550/arXiv.2607.05475.
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2607.05475)
+
 **Linked concepts:** [[NPU]], [[Quantization]] — also part of [[Mixture-of-Experts (MoE) & Edge LLM Serving]]; this paper is the diagnostic foundation HeteroMosaic explicitly builds on.
 
 ## Abstract summary

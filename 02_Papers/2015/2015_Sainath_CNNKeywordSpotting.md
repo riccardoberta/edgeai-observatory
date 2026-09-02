@@ -2,6 +2,8 @@
 
 **Full citation:** Sainath, T.N., Parada, C. (2015). Convolutional Neural Networks for Small-footprint Keyword Spotting. *Proceedings of Interspeech 2015*, 1478-1482. DOI: 10.21437/Interspeech.2015-352. https://www.isca-archive.org/interspeech_2015/sainath15b_interspeech.html
 
+**PDF:** [DOI](https://doi.org/10.21437/Interspeech.2015-352)
+
 **Linked concepts:** [[Keyword_Spotting]]
 
 ## Abstract summary

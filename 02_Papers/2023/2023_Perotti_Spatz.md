@@ -2,6 +2,8 @@
 
 **Full citation:** Perotti, M., Riedel, S., Cavalcante, M., Benini, L. (2023). Spatz: Clustering Compact RISC-V-Based Vector Units to Maximize Computing Efficiency. arXiv:2309.10137 (IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems). https://arxiv.org/abs/2309.10137
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2309.10137)
+
 **Linked concepts:** [[RISC-V]]
 
 ## Abstract summary

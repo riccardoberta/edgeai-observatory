@@ -2,6 +2,8 @@
 
 **Full citation:** Purohit, H., Tanabe, R., Ichige, K., Endo, T., Nikaido, Y., Suefusa, K., Kawaguchi, Y. (2019). MIMII Dataset: Sound Dataset for Malfunctioning Industrial Machine Investigation and Inspection. *Proceedings of the 4th Workshop on Detection and Classification of Acoustic Scenes and Events (DCASE 2019)*. https://dcase.community/workshop2019/ ; dataset: https://zenodo.org/records/3384388
 
+**PDF:** [DCASE Workshop](https://dcase.community/workshop2019/)
+
 **Linked concepts:** [[Industrial_IoT]]
 
 ## Abstract summary

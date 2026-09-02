@@ -2,6 +2,8 @@
 
 **Full citation:** Hannun, A.Y., Rajpurkar, P., Haghpanahi, M., Tison, G.H., Bourn, C., Turakhia, M.P., Ng, A.Y. (2019). Cardiologist-level arrhythmia detection and classification in ambulatory electrocardiograms using a deep neural network. *Nature Medicine* 25, 65-69. https://www.nature.com/articles/s41591-018-0268-3
 
+**PDF:** [www.nature.com](https://www.nature.com/articles/s41591-018-0268-3)
+
 **Linked concepts:** [[Biosignals]]
 
 ## Abstract summary

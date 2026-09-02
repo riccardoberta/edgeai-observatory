@@ -2,6 +2,8 @@
 
 **Full citation:** Banbury, C., Reddi, V.J., Torelli, P., Holleman, J., Jeffries, N., et al. (2021). MLPerf Tiny Benchmark. *Advances in Neural Information Processing Systems 34 (NeurIPS 2021), Datasets and Benchmarks Track*. https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/file/da4fb5c6e93e74d3df8527599fa62642-Paper-round1.pdf
 
+**PDF:** [NeurIPS Proceedings (PDF)](https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/file/da4fb5c6e93e74d3df8527599fa62642-Paper-round1.pdf)
+
 **Linked concepts:** [[TensorFlow_Lite_Micro]], [[Quantization]], [[Compression]]
 
 ## Abstract summary

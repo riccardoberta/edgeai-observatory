@@ -2,6 +2,8 @@
 
 **Full citation:** David, R., Duke, J., Jain, A., Janapa Reddi, V., Jeffries, N., Li, J., Kreeger, N., Nappier, I., Natraj, M., Wang, T., Warden, P., Rhodes, R. (2021). TensorFlow Lite Micro: Embedded Machine Learning for TinyML Systems. *Proceedings of Machine Learning and Systems (MLSys)*, 3, pp. 800–811. arXiv:2010.08678. https://arxiv.org/abs/2010.08678
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2010.08678)
+
 **Linked concepts:** [[TensorFlow Lite Micro]], [[On-device Learning]]
 
 ## Abstract summary

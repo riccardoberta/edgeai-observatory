@@ -2,6 +2,8 @@
 
 **Full citation:** Yan, F., Koch, A., Sinnen, O. (2024). A survey on FPGA-based accelerator for ML models. arXiv:2412.15666. https://arxiv.org/abs/2412.15666
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2412.15666)
+
 **Linked concepts:** [[FPGA]]
 
 ## Abstract summary

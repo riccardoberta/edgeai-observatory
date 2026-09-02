@@ -2,6 +2,8 @@
 
 **Full citation:** Rebuffi, S.A., Kolesnikov, A., Sperl, G., Lampert, C.H. (2017). iCaRL: Incremental Classifier and Representation Learning. *IEEE Conference on Computer Vision and Pattern Recognition (CVPR 2017)*. https://openaccess.thecvf.com/content_cvpr_2017/html/Rebuffi_iCaRL_Incremental_Classifier_CVPR_2017_paper.html
 
+**PDF:** [openaccess.thecvf.com](https://openaccess.thecvf.com/content_cvpr_2017/html/Rebuffi_iCaRL_Incremental_Classifier_CVPR_2017_paper.html)
+
 **Linked concepts:** [[Continual_Learning]]
 
 ## Abstract summary

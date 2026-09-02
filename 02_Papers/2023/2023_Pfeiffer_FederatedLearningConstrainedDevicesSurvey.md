@@ -2,6 +2,8 @@
 
 **Full citation:** Pfeiffer, K., Rapp, M., Khalili, R., Henkel, J. (2023). Federated Learning for Computationally-Constrained Heterogeneous Devices: A Survey. ACM Computing Surveys, 55(14s), Article 334. https://doi.org/10.1145/3596907
 
+**PDF:** [DOI](https://doi.org/10.1145/3596907)
+
 **Linked concepts:** [[Federated_Learning]]
 
 ## Abstract summary

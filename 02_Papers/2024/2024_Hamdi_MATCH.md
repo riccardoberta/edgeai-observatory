@@ -2,6 +2,8 @@
 
 **Full citation:** Hamdi, M.A., Daghero, F., Sarda, G.M., Van Delm, J., Symons, A., Benini, L., Verhelst, M., Jahier Pagliari, D., Burrello, A. (2024). MATCH: Model-Aware TVM-based Compilation for Heterogeneous Edge Devices. arXiv:2410.08855. https://arxiv.org/abs/2410.08855
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2410.08855)
+
 **Linked concepts:** [[microTVM_TVM]]
 
 ## Abstract summary

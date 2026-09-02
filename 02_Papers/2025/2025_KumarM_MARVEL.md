@@ -2,6 +2,8 @@
 
 **Full citation:** Kumar M, A., O'Mahoney, C., Werle, P.K., Shanker, S., Nikolopoulos, D.S., Ji, B., Vandierendonck, H., John, D. (2025). MARVEL: An End-to-End Framework for Generating Model-Class Aware Custom RISC-V Extensions for Lightweight AI. arXiv:2508.01800 (to appear in IEEE Open Journal of Circuits and Systems). https://arxiv.org/abs/2508.01800
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2508.01800)
+
 **Linked concepts:** [[RISC-V]], [[NAS]]
 
 ## Abstract summary

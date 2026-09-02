@@ -2,6 +2,8 @@
 
 **Full citation:** Kwon, Y.D., Li, R., Venieris, S.I., Chauhan, J., Lane, N.D., Mascolo, C. (2024). TinyTrain: Resource-Aware Task-Adaptive Sparse Training of DNNs at the Data-Scarce Edge. Proceedings of ICML 2024. https://arxiv.org/abs/2307.09988
 
+**PDF:** [arXiv PDF](https://arxiv.org/abs/2307.09988)
+
 **Linked concepts:** [[On-device_Learning]]
 
 ## Abstract summary

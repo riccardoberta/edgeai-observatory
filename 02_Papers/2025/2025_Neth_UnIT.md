@@ -2,6 +2,8 @@
 
 **Full citation:** Neth, A., Kaur, S., Khan, M. N. H., Biswas, S., Salekin, A., Islam, B. (2025). UnIT: Scalable Unstructured Inference-Time Pruning for MAC-efficient Neural Inference on MCUs. arXiv:2507.07885 [cs.LG]. Worcester Polytechnic Institute; Syracuse University; Arizona State University. Submitted July 2025 (arXiv ID indicates 2025, not 2026 — the paper was picked up in the Observatory's 2026-07-05 weekly digest as recent, relevant work rather than being freshly posted that week; filed here under `02_Papers/2025/` by actual submission year). DOI: 10.48550/arXiv.2507.07885.
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2507.07885)
+
 **Linked concepts:** [[Pruning]], [[Cortex-M]]
 
 ## Abstract summary

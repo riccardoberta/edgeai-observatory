@@ -2,6 +2,8 @@
 
 **Full citation:** Chen, P., Yang, X. (2026). Lonic: Algorithm-Hardware Co-Design for Energy-Efficient Fully Local Online SNN Training with INT4 Precision. arXiv:2608.12500 [cs.AR]. Submitted 12 Aug 2026. Accepted at ICCAD 2026. License CC BY 4.0. Code: https://github.com/peilin-chen/Lonic. DOI: 10.48550/arXiv.2608.12500.
 
+**PDF:** [arXiv PDF](https://arxiv.org/pdf/2608.12500)
+
 **Linked concepts:** [[On-device Learning]], [[Quantization]]
 
 ## Abstract summary
