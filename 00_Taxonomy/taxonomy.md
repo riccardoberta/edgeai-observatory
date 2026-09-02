@@ -21,6 +21,8 @@ This is a living document. Papers may belong to multiple categories, and new sub
 - microTVM / TVM
 - MLIR
 - ONNX Runtime
+- ExecuTorch (PyTorch-native, microcontroller-to-SoC deployment)
+- Edge Impulse (MLOps platform layer above the runtimes above)
 
 ## Hardware
 
@@ -30,6 +32,7 @@ This is a living document. Papers may belong to multiple categories, and new sub
 - DSP
 - FPGA
 - NPU
+- Event-Driven / Neuromorphic Accelerators (event-graph-neural-network hardware for sparse, asynchronous sensor streams — vision and audio)
 
 ## Applications
 
@@ -39,6 +42,11 @@ This is a living document. Papers may belong to multiple categories, and new sub
 - Biosignals
 - Industrial IoT
 - Predictive Maintenance
+
+## Benchmarks & Datasets
+
+- MLPerf Tiny
+- TinyML Reference Datasets (Speech Commands, Visual Wake Words)
 
 ## Security
 
@@ -73,3 +81,11 @@ Deliberately *not* formalized in this pass: the "Edge AI Security / Trusted Exec
 The backlog itself is now cleared: all 13 papers flagged as deep-analysis candidates across the 2026-07-05 through 2026-08-20 weekly digests have `02_Papers/` records as of this pass — [[2025_Neth_UnIT]], [[2026_Paula_SLMStabilityMonitoring]], [[2026_Nguyen_FedKAD]], [[2026_Cai_NPUReadyForLLMs]], [[2026_Oh_PolyQ]], [[2026_Jun_HeteroMosaic]], [[2026_Hubinet_RISCVFloat16Training]], [[2026_Piechocki_Hailo8LAdaptation]], [[2026_Kanani_APEX]], [[2026_Ha_EdgeXpert]], [[2026_Jiang_UnionSparse]], [[2026_Chen_Lonic]], [[2026_Fang_YAVIN]] — alongside the three from the 2026-08-23 cycle recorded earlier the same day. One caveat: the RISC-V float16 training record could not be independently re-verified from source in this pass (a persistent web-fetch rate limit on that specific URL survived five retries across the session) and is built from the weekly digest's own full-text-verified summary rather than this session's direct read — flagged in that record itself, worth a follow-up re-fetch.
 
 **2026-09-02 — First Knowledge Base Consolidation cycle: Security branch formalized, MoE/Edge-LLM-Serving concept page created.** The on-demand Knowledge Base Consolidation task ran for the first time this cycle, reviewing the two `ready_for_review` candidates in `00_Config/consolidation_candidates.yaml`. Both were promoted/merged into new persistent Knowledge Base concepts, verified against primary arXiv sources: (1) a new top-level **Security** taxonomy branch was created, with **Hardware / Physical Security of Edge AI Accelerators** as its first entry — grounded by two independent anchor papers three weeks apart, [[2026_Fang_YAVIN]] (architectural TEE/PIM trust-boundary extension) and [[2026_Mehta_LLMscope]] (physical/optical extraction attack), now recorded together as one concept with two named variants at `01_Knowledge_Base/Security/Hardware_Security_of_Edge_AI_Accelerators.md`. (2) The **Mixture-of-Experts (MoE) & Edge LLM Serving** taxonomy entry, added here on 2026-08-25 but never given a corresponding `01_Knowledge_Base/` concept page, now has one at `01_Knowledge_Base/Algorithms/MoE_Edge_LLM_Serving.md` — this closes a taxonomy/Knowledge-Base inconsistency this session found while reviewing the candidate queue. The recurring "how edge is edge" boundary question (previously only named in digests and this taxonomy file) is now documented as that concept's central open problem rather than left implicit. Full decisions, evidence, and rationale are recorded in `00_Config/consolidation_history.yaml` and `03_Digests/Consolidation/2026-09-02_kb_consolidation.md`. The three remaining `watching` candidates (MCU/NPU measurement infrastructure; event-driven/neuromorphic ASIC hardware gap; in-memory-computing/emerging-NVM hardware gap) were reviewed but left open — each still has only one anchor paper, short of the two-independent-papers bar this taxonomy has applied consistently since 2026-08-25.
+
+**2026-09-02 — Deliberate coverage-gap-closing pass (same day, following the consolidation cycle above): three new taxonomy nodes, two new branches, eight new paper records.** In response to Ricky asking whether the KB's coverage of EdgeAI was sufficient and then directing gaps to be closed, this Observatory ran a targeted research pass (not tied to the weekly/monthly cycle) rather than mechanically promoting every open item. Real, verified papers were located via arXiv/web search for each candidate gap; nothing was formalized without genuine primary-source evidence, and honesty about remaining uncertainty was preferred over forced closure.
+
+*Formalized as new taxonomy nodes:* **Event-Driven / Neuromorphic Accelerators** (Hardware) — cleared this taxonomy's two-independent-anchor bar: [[2024_Yang_EvGNN]] and [[2026_Kneip_ETHEREAL]] (same TU Delft-centered cluster, FPGA-to-ASIC lineage) plus [[2026_Jeziorek_EventAudioGNNKWS]] (a fully independent AGH Kraków/CEA-List/Keio group, applying the same event-graph-neural-network hardware paradigm to audio rather than vision) — the second, unrelated group's convergence on the same paradigm is the deciding evidence. This also corrected a standing error: the ETHEREAL record's prior-art discussion had provisionally attributed FPGA-generation prior work to "T. Liu et al."; direct verification identified the real paper as [[2024_Yang_EvGNN]], by an overlapping author subset (Kneip, Frenkel) — ETHEREAL is that cluster's own later ASIC-generation successor, not a response to unrelated work. **ExecuTorch** and **Edge Impulse** (Frameworks) — both real, well-documented, actively-used projects with primary-source papers ([[2026_Nachin_ExecuTorch]], Meta; [[2022_Hymel_EdgeImpulse]]) that were missing despite PyTorch-native deployment and MLOps-platform tooling being clearly real parts of the field; Edge Impulse in particular had been an actively-monitored `00_Config/sources.yaml` software project since the Observatory's founding with no corresponding Knowledge Base page. A new top-level **Benchmarks & Datasets** branch, with [[MLPerf_Tiny]] and [[TinyML_Reference_Datasets]] concepts organizing existing records ([[2021_Banbury_MLPerfTiny]], [[2018_Warden_SpeechCommands]]) that previously had no taxonomy home of their own, despite "Benchmarks" and "Datasets" being two of the four monitoring categories in this Observatory's founding instructions.
+
+*Deliberately left open rather than force-closed:* the **in-memory computing / emerging NVM** hardware gap gained its first real recorded paper ([[2026_Razi_FALCON]]), but the two other candidate second-anchor papers found in this pass (an April 2026 MTJ logic-in-memory paper and a DAC 2025 ReRAM paper) share authors with FALCON — a real, active single research program (three papers in 18 months) rather than independent corroboration. Kept as a recorded paper and a `watching` consolidation candidate, not promoted to a formal node, pending a genuinely independent group. The **MCU/NPU-tier standardized measurement infrastructure** gap gained two solid, real paper records ([[2026_Taherin_Hydra]], [[2026_Bryngelson_AppleNeuralEngine]]) — both are rigorous, longitudinal, open measurement infrastructure — but both remain at the Jetson-AGX/Apple-silicon tier; no MCU/Ethos-U/RISC-V-NPU-tier analogue was found, so the specific gap named by the August 2026 monthly report remains genuinely unresolved. A new **Edge GPU / Jetson-class hardware** candidate was opened (anchor: [[2025_Chakraborty_ProfilingJetsonVisionInference]]) rather than formalized, since only one paper was verified in this pass; a second Jetson-tier characterization paper would clear the bar. **Robotics/autonomous-systems edge AI** was identified as a plausible Applications gap during the initial coverage review but no credible anchor paper was located in this pass — left unactioned rather than filled with a weak placeholder.
+
+Full evidence trail in `00_Config/consolidation_history.yaml` (promoted: neuromorphic/event-driven) and `00_Config/consolidation_candidates.yaml` (still watching: in-memory computing/NVM, MCU/NPU measurement infrastructure, Edge GPU/Jetson tier).

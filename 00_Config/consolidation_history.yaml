@@ -181,3 +181,76 @@ history:
         the edge-native boundary question was written up as its central,
         still-open problem (not yet resolved into a quantitative criterion
         by any tracked paper, so not promoted to its own concept).
+
+  - id: neuromorphic-event-driven-asic-hardware-gap
+    title: "Event-Driven / Neuromorphic ASIC Accelerators (Hardware Taxonomy Gap)"
+
+    first_seen: 2026-08-23
+    last_seen: 2026-09-02
+
+    possible_existing_concept: null
+
+    evidence:
+      - source: 03_Digests/Weekly/2026-08-23_weekly_digest.md
+        papers:
+          - "ETHEREAL: A 25.6-μs/inf. Low-latency Event-driven Graph-neural-network Processor for High-resolution Vision at the Edge"
+        note: >
+          First full custom-ASIC (real silicon, not FPGA emulation)
+          event-driven GNN processor recorded by the Observatory; does not
+          map cleanly onto the existing Hardware branch (Cortex-M, Cortex-A,
+          RISC-V, DSP, FPGA, NPU).
+
+      - source: 00_Taxonomy/taxonomy.md
+        note: >
+          The 2026-08-25 synthesis explicitly flags that custom event-
+          driven/neuromorphic accelerator ASICs "don't map onto the
+          existing Hardware branch... at all," and deliberately leaves the
+          gap unformalized pending a second independent paper.
+
+      - source: 02_Papers/2026/2026_Jeziorek_EventAudioGNNKWS.md
+        papers:
+          - "Hardware-accelerated graph neural networks: an alternative approach for neuromorphic event-based audio classification and keyword spotting on SoC FPGA"
+        note: >
+          Located and recorded 2026-09-02 during a deliberate coverage-gap-
+          closing pass: a fully independent research group (AGH University
+          of Krakow, CEA-List, Keio University — no author overlap with the
+          TU Delft-centered ETHEREAL/EvGNN cluster) applying the same
+          event-driven graph-neural-network hardware paradigm to
+          neuromorphic audio rather than vision. Clears the two-independent-
+          anchor bar this taxonomy has applied consistently since
+          2026-08-25.
+
+      - source: 02_Papers/2024/2024_Yang_EvGNN.md
+        note: >
+          Also recorded 2026-09-02: the FPGA-generation predecessor to
+          ETHEREAL, by the same core author subset (Kneip, Frenkel).
+          Verifying this paper directly corrected a standing error in the
+          ETHEREAL record, which had provisionally attributed this prior
+          art to an unverified "T. Liu et al." from an earlier digest's
+          Google Scholar cross-check.
+
+    rationale: >
+      What began as a single-paper signal (ETHEREAL) explicitly flagged as
+      needing independent corroboration is now backed by a second,
+      genuinely unrelated research group (Jeziorek et al.) applying the
+      same architectural paradigm to a different sensing modality — the
+      strongest available evidence that event-driven graph-neural-network
+      hardware is a real, generalizable direction rather than one lab's
+      specialization.
+
+    action_hint: superseded by promotion below
+
+    decision:
+      date: 2026-09-02
+      outcome: promoted
+      target: "[[Event-Driven_Neuromorphic_Accelerators]]"
+      note: >
+        Promoted to a new Knowledge Base concept at
+        01_Knowledge_Base/Hardware/Event-Driven_Neuromorphic_Accelerators.md
+        and a new Hardware taxonomy entry, anchored by three papers verified
+        against primary arXiv sources (2404.19489, 2608.17787, 2602.16442):
+        EvGNN (2024, FPGA, vision), ETHEREAL (2026, ASIC, vision — same
+        cluster's later successor), and Jeziorek et al. (2026, FPGA, audio
+        — the independent second group). The ETHEREAL record's prior-art
+        discussion was corrected in the same pass to properly cite EvGNN
+        instead of the unverified "T. Liu et al." attribution.

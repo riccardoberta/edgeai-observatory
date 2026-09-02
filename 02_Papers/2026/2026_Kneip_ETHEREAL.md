@@ -4,7 +4,7 @@
 
 **PDF:** [arXiv PDF](https://arxiv.org/pdf/2608.17787)
 
-**Linked concepts:** [[Vision]], [[Quantization]] (runtime-reconfigurable 4b/8b precision) — no clean match in the Hardware branch (Cortex-M/A, RISC-V, DSP, FPGA, NPU); this is a custom digital ASIC, flagged as a taxonomy gap below.
+**Linked concepts:** [[Event-Driven_Neuromorphic_Accelerators]], [[Vision]], [[Quantization]] (runtime-reconfigurable 4b/8b precision)
 
 ## Abstract summary
 
@@ -32,7 +32,7 @@ Measured on fabricated silicon (process node not confirmed in the abstract-level
 
 ## Comparison with the state of the art
 
-Prior EV-GNN accelerators are FPGA-based and limited to toy, low-resolution (≤128×128 pixel) setups; ETHEREAL is presented as the first design to scale to high-resolution (≥640×480) EV-GNN workloads, and the first ASIC implementation with measured (rather than emulated) results. A Google Scholar cross-check run for the 2026-08-23 weekly digest independently surfaced a contemporaneous FPGA-based event-driven GNN accelerator for edge vision (T. Liu et al., ~April 2026, 1 citation at the time) as related prior art — meaning ETHEREAL is not the first attempt at EV-GNN hardware altogether, but its combination of high resolution and real silicon measurement appears to be a genuinely stronger reproducibility and efficiency claim than that prior work. A direct, matched-condition comparison against T. Liu et al. was not found in the abstract-level/partial full-text material gathered here.
+Prior EV-GNN accelerators are FPGA-based and limited to toy, low-resolution (≤128×128 pixel) setups; ETHEREAL is presented as the first design to scale to high-resolution (≥640×480) EV-GNN workloads, and the first ASIC implementation with measured (rather than emulated) results. **Correction (2026-09-02):** the 2026-08-23 digest's cross-check had provisionally attributed this prior art to "T. Liu et al." — direct verification during this Observatory's 2026-09-02 gap-closing pass identified the actual paper as [[2024_Yang_EvGNN]] (Yang, Kneip, Frenkel; TU Delft, 2024), an FPGA-based event-driven GNN accelerator for edge vision by an overlapping author subset (Kneip and Frenkel co-author both papers) — not an independent third-party result. ETHEREAL is this same research cluster's later, ASIC-generation successor to its own earlier FPGA-generation design, not a response to unrelated prior art. A direct, matched-condition comparison against EvGNN was not found in the abstract-level/partial full-text material gathered here.
 
 ## Strengths
 
@@ -56,7 +56,7 @@ Apply the split 2D/3D spatiotemporal event-caching mechanism to other sparse asy
 
 ## Relevance to our research
 
-Directly extends the Observatory's [[Vision]] branch with a new, silicon-validated hardware class (EV-GNN processors) at the intersection of neuromorphic sensing and graph neural computation — a corner not previously represented in `02_Papers/`. Also touches [[Quantization]] via its runtime-reconfigurable 4b/8b precision. Notably, ETHEREAL does not map cleanly onto any existing Hardware-branch node (Cortex-M, Cortex-A, RISC-V, DSP, FPGA, NPU) — it is a custom digital ASIC for a specific sensing/algorithm pairing, which is worth considering alongside the MoE and Edge-AI-Security taxonomy gaps already flagged in recent digests (see the taxonomy Evolution note added 2026-08-25).
+Directly extends the Observatory's [[Vision]] branch with a new, silicon-validated hardware class (EV-GNN processors) at the intersection of neuromorphic sensing and graph neural computation. Also touches [[Quantization]] via its runtime-reconfigurable 4b/8b precision. **Update (2026-09-02):** ETHEREAL is now the founding anchor of the formalized [[Event-Driven_Neuromorphic_Accelerators]] Hardware taxonomy node, alongside its own lineage predecessor [[2024_Yang_EvGNN]] and an independently-verified second research group's paper, [[2026_Jeziorek_EventAudioGNNKWS]] (audio domain) — resolving the taxonomy gap this record originally flagged.
 
 ## Possible thesis topics
 
@@ -68,4 +68,4 @@ The ETHEREAL author team directly: TU Delft / KU Leuven digital-circuits groups 
 
 ## Links to related papers
 
-None yet in `02_Papers/` on graph neural networks or event-based vision — this is the Observatory's first deep-analysis record touching event-driven sensing hardware. A future record on the T. Liu et al. FPGA-based EV-GNN accelerator (~April 2026), surfaced via the 2026-08-23 digest's Google Scholar cross-check, would make a natural companion/comparison entry.
+[[2024_Yang_EvGNN]] (this same research cluster's earlier FPGA-generation EV-GNN accelerator, corrected 2026-09-02 from the digest's provisional "T. Liu et al." attribution); [[2026_Jeziorek_EventAudioGNNKWS]] (an independent group's application of the same event-graph-neural-network hardware paradigm to neuromorphic audio, the second anchor that formalized the [[Event-Driven_Neuromorphic_Accelerators]] concept).

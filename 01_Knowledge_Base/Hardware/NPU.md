@@ -20,6 +20,8 @@ Neural processing units (NPUs) emerged as fixed-function, ASIC-class accelerator
 
 [[2026_Absar_HexagonMLIR]] — MLIR-based compilation stack targeting Hexagon NPUs, reusing MLIR's dialect/lowering infrastructure instead of a bespoke NPU toolchain.
 
+[[2026_Bryngelson_AppleNeuralEngine]] — reverse-engineered architecture, programming model, and measured roofline (compute ceiling, bandwidth ceiling, dispatch-latency floor, energy efficiency) of Apple's Neural Engine across the A11-A18/M1-M5 chip families, since Apple publishes no official specification.
+
 ## Open problems
 
 How well do learned latency/energy estimators generalize to non-CNN architectures (small transformers, RNNs) now common in TinyML research? How do Edge TPU's microarchitectural bottlenecks compare to other NPU families (ARM Ethos, CEVA NeuPro) on the same model set — is there a generalizable theory of NPU bottlenecks, or is it largely vendor-specific?

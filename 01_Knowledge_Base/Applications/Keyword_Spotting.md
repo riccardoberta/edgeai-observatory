@@ -18,9 +18,11 @@ Keyword spotting's modern deep-learning era starts with Sainath and Parada's "Co
 
 [[2022_Gerum_HANNAH]] — jointly searches network architecture and hardware accelerator configuration for always-on audio sensing, directly targeting keyword spotting as the motivating use case.
 
+[[2026_Jeziorek_EventAudioGNNKWS]] — a structurally different, neuromorphic-sensor-based approach: event-driven graph neural network hardware (SoC FPGA) for keyword spotting from an artificial-cochlea event stream rather than conventional microphone+MFCC input, reaching 95% word-end detection accuracy at 10.53µs latency and 1.18W.
+
 ## Open problems
 
-Extending equivalent benchmarks to languages other than English with limited data-collection resources. Robustness of models under real acoustic conditions (background noise, distance from microphone), not fully represented by the dataset's recording conditions.
+Extending equivalent benchmarks to languages other than English with limited data-collection resources. Robustness of models under real acoustic conditions (background noise, distance from microphone), not fully represented by the dataset's recording conditions. How does the neuromorphic event-based pipeline ([[2026_Jeziorek_EventAudioGNNKWS]]) compare in accuracy, latency, and energy to the conventional MFCC/CNN pipeline on equivalent hardware — an open cross-pipeline comparison neither side has run yet.
 
 ## Research ideas
 

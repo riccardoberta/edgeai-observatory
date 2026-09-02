@@ -69,6 +69,22 @@ candidates:
           microcontroller-NPU tier the Observatory's core taxonomy centers
           on.
 
+      - source: 02_Papers/2026/2026_Taherin_Hydra.md
+        note: >
+          Full deep-analysis record created 2026-09-02 during a deliberate
+          coverage-gap-closing pass — confirms Hydra covers Jetson AGX
+          Xavier/Orin/Thor only (workstation/embedded-GPU tier), not
+          MCU/NPU-class hardware.
+
+      - source: 02_Papers/2026/2026_Bryngelson_AppleNeuralEngine.md
+        note: >
+          Full deep-analysis record also created 2026-09-02 — confirms the
+          ANE study covers the A11-A18/M1-M5 Apple-silicon family, again
+          not MCU/NPU-class hardware. Both papers are now rigorously
+          recorded, but the specific MCU/Ethos-U/RISC-V-NPU-tier gap this
+          candidate names remains genuinely unresolved — no paper at that
+          tier was found in this pass.
+
     rationale: >
       A genuine systems/benchmark-gap signal identified through monthly
       synthesis of two measurement-focused papers, but so far only
@@ -78,42 +94,6 @@ candidates:
       measurement paper) before treating it as mature enough for review.
 
     action_hint: monitor for a second, MCU/NPU-tier-specific paper before review
-
-  - id: neuromorphic-event-driven-asic-hardware-gap
-    title: "Event-Driven / Neuromorphic ASIC Accelerators (Hardware Taxonomy Gap)"
-
-    status: watching
-
-    first_seen: 2026-08-23
-    last_seen: 2026-08-23
-
-    possible_existing_concept: null
-
-    evidence:
-      - source: 03_Digests/Weekly/2026-08-23_weekly_digest.md
-        papers:
-          - "ETHEREAL: A 25.6-μs/inf. Low-latency Event-driven Graph-neural-network Processor for High-resolution Vision at the Edge"
-        note: >
-          First full custom-ASIC (real silicon, not FPGA emulation)
-          event-driven GNN processor recorded by the Observatory; does not
-          map cleanly onto the existing Hardware branch (Cortex-M, Cortex-A,
-          RISC-V, DSP, FPGA, NPU).
-
-      - source: 00_Taxonomy/taxonomy.md
-        note: >
-          The 2026-08-25 synthesis explicitly flags that custom event-
-          driven/neuromorphic accelerator ASICs "don't map onto the
-          existing Hardware branch... at all," and deliberately leaves the
-          gap unformalized pending a second independent paper (same
-          revisit rule applied to the security gap above).
-
-    rationale: >
-      Single-paper signal so far, explicitly flagged by the taxonomy's own
-      methodology as needing a second independent anchor before
-      formalization. Kept in "watching" per that same rule; not yet
-      "ready_for_review".
-
-    action_hint: monitor; promote to ready_for_review only if a second independent event-driven/neuromorphic ASIC paper appears
 
   - id: in-memory-computing-emerging-nvm-hardware-gap
     title: "In-Memory Computing with Emerging Non-Volatile Memory (Hardware Taxonomy Gap)"
@@ -137,11 +117,56 @@ candidates:
           computing / emerging non-volatile memory" as a possible new
           Hardware branch entry, rather than adopting it unilaterally.
 
-    rationale: >
-      A single paper so far, self-flagged by the digest itself as a
-      possible reusable taxonomy branch rather than a one-off result. Kept
-      at "watching" pending a second independent paper in this space,
-      consistent with the conservative bar applied to the other hardware-
-      taxonomy-gap candidates above.
+      - source: 02_Papers/2026/2026_Razi_FALCON.md
+        note: >
+          Full deep-analysis record created 2026-09-02 during a deliberate
+          coverage-gap-closing pass. Two candidate second-anchor papers
+          were located (an April 2026 MTJ logic-in-memory parallelism
+          paper, arXiv:2604.23146, and a DAC 2025 ReRAM stochastic-
+          computing paper) but both share authors with FALCON (Razi,
+          Moghadam, Aygun, Najafi, and overlapping collaborators) — a
+          real, active single research program (three papers in ~18
+          months) rather than independent corroboration. Not recorded as
+          separate 02_Papers/ entries; noted here as evidence the space is
+          active, not as independent anchors.
 
-    action_hint: monitor for a second in-memory-computing / emerging-NVM paper before review
+    rationale: >
+      A single genuinely independent research program so far, though a
+      real and active one. Kept at "watching" pending a paper from an
+      unrelated group, consistent with the conservative bar applied to the
+      other hardware-taxonomy-gap candidates.
+
+    action_hint: monitor for an in-memory-computing / emerging-NVM paper from a research group unrelated to Razi/Moghadam/Aygun/Najafi/Riedel/de Lima/Castrillon/Khan before review
+
+  - id: mcu-npu-tier-edge-gpu-hardware-gap
+    title: "Edge GPU / Jetson-Class Hardware (Hardware Taxonomy Gap)"
+
+    status: watching
+
+    first_seen: 2026-09-02
+    last_seen: 2026-09-02
+
+    possible_existing_concept: null
+
+    evidence:
+      - source: 02_Papers/2025/2025_Chakraborty_ProfilingJetsonVisionInference.md
+        papers:
+          - "Profiling Concurrent Vision Inference Workloads on NVIDIA Jetson -- Extended"
+        note: >
+          Identified during a 2026-09-02 coverage-gap-closing pass: NVIDIA
+          is an actively-monitored hardware vendor in
+          00_Config/sources.yaml, but the Hardware taxonomy branch has no
+          node for edge-GPU-class accelerators (Cortex-M, Cortex-A,
+          RISC-V, DSP, FPGA, NPU cover no GPU tier). This paper is a
+          genuine, real microarchitecture-level characterization of Jetson
+          edge GPUs under concurrent vision inference (Ghent
+          University/imec), the first anchor for this candidate.
+
+    rationale: >
+      A single paper so far. Given a well-established, unambiguously real
+      hardware category (unlike more speculative emerging-hardware gaps),
+      the bar is the same two-independent-anchor convention applied
+      elsewhere in Hardware — kept "watching" pending a second,
+      independent Jetson/edge-GPU characterization paper.
+
+    action_hint: monitor for a second, independent edge-GPU/Jetson-class characterization paper before review

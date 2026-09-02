@@ -18,7 +18,7 @@ August 2026 added a memory-management sub-cluster specific to MoE routing: [[202
 
 **Does the cluster's serving infrastructure reach true MCU-class hardware at all?** Every paper in the cluster that reports a hardware floor (FreeToken's 8GB laptop GPU, PolyQ's mobile CPU, APEX/UnionSparse's unspecified "edge GPU") stops well above Cortex-M/RISC-V. Whether MoE inference — which fundamentally requires holding or fast-paging a large total parameter count even though only a small subset activates per token — is feasible at all under true MCU memory budgets is an open, largely unaddressed question distinct from the boundary-definition question above (a matter of hard feasibility rather than terminology).
 
-**Is this cluster distinct from the still-separate standardized-measurement-infrastructure gap?** Hydra (an open Jetson AGX measurement framework) and an Apple Neural Engine measurement study, both flagged in the August 2026 monthly report, extend the same "diagnose before you build" progression [[2026_Cai_NPUReadyForLLMs]] began — but target measurement/characterization infrastructure rather than serving systems, and neither has an MCU/NPU-tier analogue yet. This is tracked as a separate, still-`watching` consolidation candidate (`mcu-npu-measurement-infrastructure`) rather than folded into this concept, since it is about benchmarking methodology rather than serving mechanisms — revisit whether the two should be linked more explicitly if a paper bridges them.
+**Is this cluster distinct from the still-separate standardized-measurement-infrastructure gap?** [[2026_Taherin_Hydra]] (an open, phase-aware Jetson AGX Xavier/Orin/Thor measurement framework, now fully recorded as of the 2026-09-02 gap-closing pass) and [[2026_Bryngelson_AppleNeuralEngine]] (a reverse-engineered Apple Neural Engine architecture/performance study, also now recorded) extend the same "diagnose before you build" progression [[2026_Cai_NPUReadyForLLMs]] began — but target measurement/characterization infrastructure rather than serving systems, and neither has an MCU/NPU-tier analogue yet. This is tracked as a separate, still-`watching` consolidation candidate (`mcu-npu-measurement-infrastructure`) rather than folded into this concept, since it is about benchmarking methodology rather than serving mechanisms — revisit whether the two should be linked more explicitly if a paper bridges them.
 
 ## Key papers
 
@@ -35,6 +35,8 @@ August 2026 added a memory-management sub-cluster specific to MoE routing: [[202
 [[2026_Jiang_UnionSparse]] — names the Payload-to-Metadata Ratio (PMR) as a first-order design concern for combined sparse+quantized inference; Index-Efficient Bitmap Encoding and a small-batch-optimized SpMM kernel; open code.
 
 [[2026_Yang_FreeToken]] — edge-native MoE serving system continuously remapping computation across a personal machine's heterogeneous GPU/CPU/PCIe resources; the sharpest evidence yet for the "how edge is edge" open problem above; open release (flashml.ai).
+
+[[2026_Taherin_Hydra]] — phase-aware (prefill/decode) LLM inference characterization across three Jetson AGX generations, 13 models, and 5 execution formats; finds quantization does not predict power monotonically and backend structure changes where latency is introduced — measurement infrastructure this cluster's scheduling/co-design papers could adopt for evaluation.
 
 ## Research ideas
 

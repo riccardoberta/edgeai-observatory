@@ -4,7 +4,7 @@
 
 **PDF:** [NeurIPS Proceedings (PDF)](https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/file/da4fb5c6e93e74d3df8527599fa62642-Paper-round1.pdf)
 
-**Linked concepts:** [[TensorFlow_Lite_Micro]], [[Quantization]], [[Compression]]
+**Linked concepts:** [[MLPerf_Tiny]], [[TensorFlow_Lite_Micro]], [[Quantization]], [[Compression]]
 
 ## Abstract summary
 
