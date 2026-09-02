@@ -2,7 +2,7 @@
 
 **Full citation:** Ha, S., Seo, H., Jo, Y., Moon, Y., Yoo, H.-J. (2026). EdgeXpert: An Edge Device for Memory-Efficient LLM Inference with Mixture-of-Experts and Speculative Decoding. arXiv:2608.05303 [cs.AR, cs.CL, cs.LG]. Submitted 5 Aug 2026. Accepted at the 59th IEEE/ACM International Symposium on Microarchitecture (MICRO 2026). ACM classes C.1.3, B.7.1, I.2.7. DOI: 10.48550/arXiv.2608.05303.
 
-**Linked concepts:** core member of the "Mixture-of-Experts (MoE) & Edge LLM Serving" taxonomy cluster formalized 2026-08-25.
+**Linked concepts:** core member of [[Mixture-of-Experts (MoE) & Edge LLM Serving]].
 
 ## Abstract summary
 

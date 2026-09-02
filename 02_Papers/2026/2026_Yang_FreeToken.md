@@ -2,7 +2,7 @@
 
 **Full citation:** Yang, S., Fan, X., Pan, M., Xi, H., Wang, Z., Sun, S., Keutzer, K., Han, S., Zaharia, M., Xu, C., Stoica, I. (2026). FreeToken: Efficient Edge-Native MoE Serving with Bandwidth-Adaptive Execution. arXiv:2608.16157 [cs.DC]. Submitted 17 Aug 2026. System released at flashml.ai. DOI: 10.48550/arXiv.2608.16157.
 
-**Linked concepts:** none of the current taxonomy nodes map cleanly onto this paper — closest conceptual neighbors are [[Compression]] (FreeToken serves already-quantized MXFP4/NVFP4 experts but performs no compression itself) and [[NPU]]/edge-inference generally. This is the clearest current example of the "Edge LLM Serving / Local Inference Systems" taxonomy gap flagged in the 2026-08-13, 2026-08-20, and 2026-08-23 weekly digests; see the taxonomy Evolution note added 2026-08-25.
+**Linked concepts:** [[Mixture-of-Experts (MoE) & Edge LLM Serving]] — the sharpest single data point for that concept's central "how edge is edge" open problem (2026-09-02 Knowledge Base Consolidation cycle). Also touches [[Compression]] (FreeToken serves already-quantized MXFP4/NVFP4 experts but performs no compression itself) and [[NPU]]/edge-inference generally.
 
 ## Abstract summary
 

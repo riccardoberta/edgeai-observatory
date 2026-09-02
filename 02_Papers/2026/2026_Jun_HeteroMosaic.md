@@ -2,7 +2,7 @@
 
 **Full citation:** Jun, G. H., Pang, W., Richter, E., Saeedi, M., Amarnath, A., Ferrao, P., Chen, D. (2026). HeteroMosaic: Exposing and Exploiting Heterogeneous Execution Opportunities for Energy-Efficient Edge LLM Inference. arXiv:2607.12839 [cs.DC, cs.AR]. Submitted 14 Jul 2026; revised through v3, 16 Jul 2026. Accepted at the 59th IEEE/ACM International Symposium on Microarchitecture (MICRO 2026). License CC BY 4.0. DOI: 10.48550/arXiv.2607.12839.
 
-**Linked concepts:** [[NPU]]; also the core exemplar of the "Mixture-of-Experts (MoE) & Edge LLM Serving" taxonomy cluster formalized 2026-08-25 — HeteroMosaic is a scheduling/serving system, not an MoE-specific technique, but its heterogeneous-scheduling problem is shared with the cluster's MoE-memory papers.
+**Linked concepts:** [[NPU]]; also the core exemplar of [[Mixture-of-Experts (MoE) & Edge LLM Serving]] — HeteroMosaic is a scheduling/serving system, not an MoE-specific technique, but its heterogeneous-scheduling problem is shared with the cluster's MoE-memory papers.
 
 ## Abstract summary
 

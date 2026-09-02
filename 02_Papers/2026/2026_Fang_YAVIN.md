@@ -2,7 +2,7 @@
 
 **Full citation:** Fang, S., Tegge, W. C., Faruque, M. O., Zhou, P., Hoque, E., Jones, A. K. (2026). YAVIN: A Unified Architecture for Secure Edge Processing in Memory. arXiv:2608.13496 [cs.AR]. Submitted 13 Aug 2026. License CC BY 4.0. DOI: 10.48550/arXiv.2608.13496.
 
-**Linked concepts:** none of the current taxonomy nodes map cleanly onto this paper — it is the anchor data point for the still-open "Edge AI Security / Trusted Execution" taxonomy gap flagged in the 2026-08-20 weekly digest (distinct from the "Mixture-of-Experts (MoE) & Edge LLM Serving" node formalized 2026-08-25; YAVIN evaluates on quantized edge LLMs but its contribution is security architecture, not serving/scheduling). Loosely touches [[Quantization]] via its evaluation on INT8/INT32 quantized edge-class LLMs.
+**Linked concepts:** [[Hardware Security of Edge AI Accelerators]] — anchor paper (architectural trust-boundary-extension variant), created 2026-09-02 by the Knowledge Base Consolidation cycle, resolving what was previously the "Edge AI Security / Trusted Execution" taxonomy gap flagged in the 2026-08-20 weekly digest (distinct from the "Mixture-of-Experts (MoE) & Edge LLM Serving" node; YAVIN evaluates on quantized edge LLMs but its contribution is security architecture, not serving/scheduling). Loosely touches [[Quantization]] via its evaluation on INT8/INT32 quantized edge-class LLMs.
 
 ## Abstract summary
 
@@ -54,7 +54,7 @@ Measure the overhead curve across the full quantization spectrum (INT8/INT4/mixe
 
 ## Relevance to our research
 
-The clearest current anchor for the still-open "Edge AI Security / Trusted Execution" taxonomy gap flagged in the 2026-08-20 digest — secure/private on-device execution doesn't map onto any existing Algorithms/Frameworks/Hardware/Applications branch. Distinct from, but occasionally confused with, the "Mixture-of-Experts (MoE) & Edge LLM Serving" node formalized 2026-08-25 (YAVIN evaluates on quantized edge LLMs but its contribution is security, not serving). As on-device LLM privacy becomes a more visible concern, this may be the paper that eventually justifies formalizing that second taxonomy node too — flagged for Ricky's consideration, not created unilaterally here.
+One of the two founding anchors (with [[2026_Mehta_LLMscope]]) of the [[Hardware Security of Edge AI Accelerators]] concept, created 2026-09-02 — secure/private on-device execution doesn't map onto any existing Algorithms/Frameworks/Hardware/Applications branch, which is why it now has its own Security branch. Distinct from, but occasionally confused with, the "Mixture-of-Experts (MoE) & Edge LLM Serving" node (YAVIN evaluates on quantized edge LLMs but its contribution is security, not serving).
 
 ## Possible thesis topics
 
@@ -66,4 +66,4 @@ Alex K. Jones's group, given YAVIN's architectural security contribution — a n
 
 ## Links to related papers
 
-The Observatory's first `02_Papers/` record on trusted execution / confidential computing for edge AI — no existing entries to link to yet; this record is itself the founding data point for a possible future "Edge AI Security" cluster, paralleling how ETHEREAL founded the event-driven-ASIC gap and FreeToken sharpened the MoE-serving cluster.
+The Observatory's first `02_Papers/` record on trusted execution / confidential computing for edge AI. Paired with [[2026_Mehta_LLMscope]] (physical/optical extraction attack, recorded 2026-09-02) as the two founding anchors of the [[Hardware Security of Edge AI Accelerators]] concept — YAVIN is the defensive/architectural variant, LLMscope the offensive/physical variant.
