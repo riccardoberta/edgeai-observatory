@@ -18,28 +18,28 @@ digital_libraries:
     access: open
     status: active
     notes: "Primary source for preprints; check daily/weekly listings on relevant categories."
-    last_checked: 2026-08-31
+    last_checked: 2026-09-02
 
   - name: IEEE Xplore
     url: https://ieeexplore.ieee.org
     access: institutional
-    access_notes: "Reachable via University of Genoa (unige.it) institutional access. Use the Claude in Chrome extension on Ricky's browser while he is on the campus network/VPN/proxy to navigate and extract paper text directly."
+    access_notes: "Reachable via University of Genoa (unige.it) institutional access. Use the Claude in Chrome extension on Ricky's browser while he is on the campus network/VPN/proxy to navigate and extract paper text directly. Note (2026-09-02): search-result listing pages do not expose reliable per-item indexing/publication dates, so results should not be scored as 'new this week' without opening the individual record."
     status: active
-    last_checked: null
+    last_checked: 2026-09-02
 
   - name: ACM Digital Library
     url: https://dl.acm.org
     access: institutional
-    access_notes: "Same as IEEE Xplore — use Claude in Chrome while on unige.it institutional access."
+    access_notes: "Same as IEEE Xplore — use Claude in Chrome while on unige.it institutional access. Note (2026-09-02): blocked by a bot/security-verification interstitial on this cycle's attempt; retry next cycle."
     status: active
     last_checked: null
 
   - name: Google Scholar
     url: https://scholar.google.com
     access: open (aggregator, links may lead to paywalled publishers)
-    access_notes: "No official API — use Claude in Chrome to run searches and read result pages. Useful as a cross-publisher aggregator: finds papers not indexed on arXiv, surfaces citation counts to gauge influence, and often links directly to a free PDF (publisher page, author repository, or institutional repo) even for papers behind a paywall elsewhere. Use sparingly and avoid rapid automated querying, since Google Scholar's terms discourage scripted scraping."
+    access_notes: "No official API — use Claude in Chrome to run searches and read result pages. Useful as a cross-publisher aggregator: finds papers not indexed on arXiv, surfaces citation counts to gauge influence, and often links directly to a free PDF (publisher page, author repository, or institutional repo) even for papers behind a paywall elsewhere. Use sparingly and avoid rapid automated querying, since Google Scholar's terms discourage scripted scraping. Confirmed working unige.it full-text links ('Testo completo su UNIGE') as of 2026-09-02."
     status: active
-    last_checked: null
+    last_checked: 2026-09-02
 
 conferences:
   - name: MLSys
