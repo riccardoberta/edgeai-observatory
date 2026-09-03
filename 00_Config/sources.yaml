@@ -58,11 +58,79 @@ digital_libraries:
   - name: Google Scholar
     url: https://scholar.google.com
     access: open (aggregator, links may lead to paywalled publishers)
-    access_notes: "No official API — use Claude in Chrome to run searches and read result pages. Useful as a cross-publisher aggregator: finds papers not indexed on arXiv, surfaces citation counts to gauge influence, and often links directly to a free PDF (publisher page, author repository, or institutional repo) even for papers behind a paywall elsewhere. Use sparingly and avoid rapid automated querying, since Google Scholar's terms discourage scripted scraping. Confirmed working unige.it full-text links ('Testo completo su UNIGE') as of 2026-09-02. Kept as a supplementary, on-demand cross-check (still Chrome-dependent) — WebSearch with `site:` filters across the digital libraries above is now the primary, unattended-safe discovery method, Scholar adds citation-count/influence signal on top of that."
+    access_notes: "No official API — use Claude in Chrome to run searches and read result pages. Useful as a cross-publisher aggregator: finds papers not indexed on arXiv, surfaces citation counts to gauge influence, and often links directly to a free PDF (publisher page, author repository, or institutional repo) even for papers behind a paywall elsewhere. Use sparingly and avoid rapid automated querying, since Google Scholar's terms discourage scripted scraping. Confirmed working unige.it full-text links ('Testo completo su UNIGE') as of 2026-09-02. Kept as a supplementary, on-demand cross-check (still Chrome-dependent) — WebSearch with `site:` filters across the digital libraries above is now the primary, unattended-safe discovery method, Scholar adds citation-count/influence signal on top of that. Its author-search and per-profile 'sort by date' views are also the checking mechanism for the `research_groups_and_authors` watchlist below — see that section for why topic-only WebSearch isn't enough on its own."
     status: active
     last_checked: 2026-09-02
 
+# Author/lab-level watchlist — added 2026-09-03, complements the topic-keyword
+# discovery above rather than replacing it.
+#
+# Why this exists: WebSearch site: queries (the primary discovery method above)
+# rank by relevance to the query phrase, which structurally favors work that is
+# already well-cited and prominently indexed. It can miss papers from smaller
+# or newer groups, or papers using different terminology than the query,
+# regardless of the work's actual quality or relevance — including, as
+# discovered on 2026-09-03, several of Ricky's own papers (see the
+# 01_Knowledge_Base concept "Evolution of the concept" entries added that day
+# for the resulting historical-backfill pass). This list tracks specific
+# authors/groups whose work recurs heavily across this KB, checked directly by
+# name/profile instead of by topic phrase.
+#
+# Checking method: Google Scholar has no API and its terms discourage
+# scripted/automated querying (see the Google Scholar entry above), so these
+# are NOT part of the unattended weekly/monthly WebSearch pass. Check each
+# profile via Claude in Chrome as an explicit, on-demand step during a
+# monitoring cycle (open the scholar_url, sort by date, read the newest few
+# entries). A zero-scraping complement: each author/lab's Scholar profile page
+# has a "Follow" button offering email alerts for new articles — set up once
+# by hand (Ricky, on his own Scholar-linked inbox), after which new items
+# arrive as email and can be read directly during the weekly cycle instead of
+# requiring a live browser check at all.
+research_groups_and_authors:
+  - name: Riccardo Berta / ELIOS Lab (University of Genoa, DITEN)
+    scholar_url: https://scholar.google.it/citations?user=Y9h_TMwAAAAJ&hl=it
+    why_tracked: "Ricky's own research group. The topic-only discovery process had missed several of its own directly relevant papers (found 2026-09-03) — this entry exists specifically to close that gap going forward."
+    status: active
+    last_checked: null
+  - name: Song Han / MIT HAN Lab
+    scholar_url: https://scholar.google.com/citations?user=E0iCaa4AAAAJ&hl=en
+    why_tracked: "Most recurring group in this KB's citation graph (MCUNet, TinyTL, AWQ, Once-for-All, and related on-device/quantization work) — a natural author-level anchor for the Algorithms branch."
+    status: active
+    last_checked: null
+  - name: Luca Benini (ETH Zürich / Università di Bologna)
+    scholar_url: https://scholar.google.com/citations?user=8riq3sYAAAAJ&hl=en
+    why_tracked: "PULP platform lineage (GAP-8, Spatz, MATCH) recurs throughout the Hardware and Frameworks branches of this KB."
+    status: active
+    last_checked: null
+  - name: Pete Warden (TensorFlow Lite Micro / Speech Commands)
+    scholar_url: https://scholar.google.com/citations?user=VOWP8TUAAAAJ&hl=en
+    why_tracked: "Originated TFLM and the Speech Commands dataset, both foundational references this KB cites repeatedly."
+    status: active
+    last_checked: null
+  - name: Tianqi Chen (Apache TVM / microTVM, CMU)
+    scholar_url: https://scholar.google.com/citations?user=7nlvOMQAAAAJ&hl=en
+    why_tracked: "Original TVM/microTVM author; relevant to the Frameworks branch and the compiler-related open problems tracked there (e.g. TensorFlow_Lite_Micro's interpreter-vs-compiled-code gap)."
+    status: active
+    last_checked: null
+
+  # To add an author/group: find their Google Scholar profile URL, add an
+  # entry with a one-line why_tracked justification grounded in actual
+  # recurrence in this KB (not just general fame), and leave last_checked
+  # null until it has actually been checked in a monitoring cycle.
+
 conferences:
+  # Checking method (added 2026-09-03): entries below previously had no actual
+  # monitoring mechanism — last_checked was null on every one because nothing
+  # had ever queried them; the URLs were listed for reference only. Proceedings
+  # for these venues are not something to browse from the conference homepage
+  # directly (often paywalled, javascript-heavy, or organized by session
+  # rather than by paper list). The practical check is WebSearch with
+  # `site:dblp.org <conference name> <year>` (DBLP indexes accepted papers
+  # promptly and its listing pages are plain HTML) or `site:openreview.net
+  # <conference name> <year>` for ICLR/NeurIPS/ICML specifically, since those
+  # three publish via OpenReview. Expect a lag of weeks to months between an
+  # event's dates and its proceedings being fully indexed — check against the
+  # conference's own dates, not against when it was last monitored.
   - name: MLSys
     url: https://mlsys.org
     frequency: annual
