@@ -68,4 +68,4 @@ Groups working on differentiable and hardware-aware NAS, and on efficient search
 
 ## Links to related papers
 
-[[2017_Howard_MobileNets]]
+[[2017_Howard_MobileNets]], [[2019_Elsken_NASSurvey]], [[2022_ChittyVenkata_NASHardwarePerspectiveSurvey]]
