@@ -2,9 +2,11 @@
 
 ## Evolution of the concept
 
-Cortex-M cores (Arm) are the most widely used hardware target for TinyML: low-power microcontrollers, with no dedicated hardware for neural computation, with only a few tens/hundreds of KB of RAM. The entire software ecosystem for this target developed in response to these constraints: CMSIS-NN for optimized kernels, TensorFlow Lite Micro as a runtime with static memory allocation. A 2024 study (Deutel et al.) pushes the Cortex-M envelope beyond inference-only deployment, showing that fully quantized training — not just inference — is feasible directly on Cortex-M0+/M4/M7 hardware via a dynamic partial-gradient-update scheme, extending what these cores can do in place without offloading to a server.
+Cortex-M cores (Arm) are the most widely used hardware target for TinyML: low-power microcontrollers, with no dedicated hardware for neural computation, with only a few tens/hundreds of KB of RAM. The entire software ecosystem for this target developed in response to these constraints: CMSIS-NN for optimized kernels, TensorFlow Lite Micro as a runtime with static memory allocation. A 2024 study (Deutel et al.) pushes the Cortex-M envelope beyond inference-only deployment, showing that fully quantized training — not just inference — is feasible directly on Cortex-M0+/M4/M7 hardware via a dynamic partial-gradient-update scheme, extending what these cores can do in place without offloading to a server. A 2026-09-03 exhaustive Scholar audit closed a significant gap: MCUNet (Lin, Chen, Lin, Gan, Han, NeurIPS 2020, 1000+ citations, spotlight) jointly co-designs a neural architecture search method (TinyNAS, which first fits the search space to the resource budget before searching within it) with a code-generation inference engine (TinyEngine), together demonstrating ImageNet-scale classification directly on MCU-class hardware — a capability previously assumed out of reach, and the direct architectural ancestor of this concept's own on-device-training anchor ([[2022_Lin_OnDeviceTraining256KB]], the same MIT Han Lab lineage's MCUNetV3).
 
 ## Key papers
+
+[[2020_Lin_MCUNet]] — joint TinyNAS/TinyEngine architecture-search-plus-inference-engine co-design enabling ImageNet-scale classification on genuine MCU-class hardware; 1000+ citations, foundational to this concept's own on-device-training lineage.
 
 [[2018_Lai_CMSIS-NN]] — kernels optimized for Cortex-M's SIMD instructions.
 
