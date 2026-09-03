@@ -24,6 +24,8 @@ The field takes its name from Zoph and Le's "Neural Architecture Search with Rei
 
 [[2026_Garavagno_HWNASUltraLowPower]] — derivative-free HW-NAS targeting the ultra-low-power tier (20-40 KiB RAM) below most prior HW-NAS work, with a search-host RAM constraint that makes the search itself runnable on constrained hardware (including a Raspberry Pi 4); directly addresses this entry's "extreme memory constraints" open problem.
 
+[[2021_Banbury_MicroNets]] — differentiable NAS incorporating MCU SRAM/Flash/latency constraints directly into the search objective, deployed end-to-end via MicroTVM; highly cited (500+), added 2026-09-03 via the [[microTVM_TVM]] concept and cross-linked here.
+
 ## Open problems
 
 Extending the once-for-all paradigm to microcontrollers with extreme memory constraints, not just latency. Generalizing latency/accuracy predictors to hardware never seen during the predictors' own training.

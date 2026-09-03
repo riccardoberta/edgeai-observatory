@@ -2,7 +2,7 @@
 
 ## Evolution of the concept
 
-TVM (Chen et al., 2018) was created to overcome the limits of hand-written libraries for every model/hardware combination (such as CMSIS-NN): it separates the representation of the computational graph from low-level code generation and uses auto-tuning guided by learnable cost models to automatically find the most efficient implementation for each operator and hardware target. microTVM is its evolution designed for microcontrollers. Recent work has pushed microTVM toward more concrete, practical deployment: Liu et al. (CODAI 2023) demonstrate an ahead-of-time compilation pipeline that generates bare-metal C code and offloads compute-intensive operators to a dedicated accelerator via TVM's Universal Modular Accelerator (UMA) interface, while MATCH (Hamdi et al., 2024) tackles the engineering cost of retargeting TVM-based deployment to a new MCU/accelerator combination by introducing a customizable, model-based hardware abstraction for tiling and loop-ordering decisions, reducing what was previously substantial manual re-engineering effort.
+TVM (Chen et al., 2018) was created to overcome the limits of hand-written libraries for every model/hardware combination (such as CMSIS-NN): it separates the representation of the computational graph from low-level code generation and uses auto-tuning guided by learnable cost models to automatically find the most efficient implementation for each operator and hardware target. microTVM is its evolution designed for microcontrollers. Recent work has pushed microTVM toward more concrete, practical deployment: Liu et al. (CODAI 2023) demonstrate an ahead-of-time compilation pipeline that generates bare-metal C code and offloads compute-intensive operators to a dedicated accelerator via TVM's Universal Modular Accelerator (UMA) interface, while MATCH (Hamdi et al., 2024) tackles the engineering cost of retargeting TVM-based deployment to a new MCU/accelerator combination by introducing a customizable, model-based hardware abstraction for tiling and loop-ordering decisions, reducing what was previously substantial manual re-engineering effort. A 2026-09-03 exhaustive Scholar audit added MicroNets (Banbury, Zhou, Fedorov et al., MLSys 2021, 500+ citations), a highly-cited example already realizing this concept's own research idea in practice: differentiable NAS that incorporates MCU SRAM/Flash/latency constraints directly into the search objective, with the resulting architectures deployed end-to-end via MicroTVM's automatic code generation — a concrete bridge between this concept and [[NAS]].
 
 ## Key papers
 
@@ -15,6 +15,8 @@ TVM (Chen et al., 2018) was created to overcome the limits of hand-written libra
 [[2024_Hamdi_MATCH]] — model-based hardware abstraction for agile retargeting of TVM-based tiling/loop-ordering optimization across heterogeneous MCU/accelerator combinations.
 
 [[2020_Lattner_MLIR]] — the extensible compiler-infrastructure (dialects, progressive lowering) that TVM-adjacent toolchains, including ONNX-MLIR, build on or interoperate with.
+
+[[2021_Banbury_MicroNets]] — constraint-aware differentiable NAS producing MCU-deployable architectures, deployed end-to-end via MicroTVM's automatic code generation; a highly-cited NAS/microTVM bridge.
 
 ## Open problems
 

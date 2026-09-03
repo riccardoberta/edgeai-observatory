@@ -1,6 +1,8 @@
 # Edge Impulse: An MLOps Platform for Tiny Machine Learning
 
-**Full citation:** Hymel, S., Banbury, C., Situnayake, D., Elium, A., Ward, C., Kelcey, M., Baaijens, M., Majchrzycki, M., Plunkett, J., Tischler, D., Grande, A., Warden, P., Reece, S., Kravec, K., Kelly, S., et al. (2022). Edge Impulse: An MLOps Platform for Tiny Machine Learning. arXiv:2212.03332 [cs.LG]. Edge Impulse Inc.; Google; Harvard University. Submitted 6 Dec 2022. DOI: 10.48550/arXiv.2212.03332.
+**Full citation:** Hymel, S., Banbury, C., Situnayake, D., Elium, A., Ward, C., Kelcey, M., Baaijens, M., Majchrzycki, M., Plunkett, J., Tischler, D., Grande, A., Warden, P., Reece, S., Kravec, K., Kelly, S., et al. (2023). Edge Impulse: An MLOps Platform for Tiny Machine Learning. Proceedings of Machine Learning and Systems 5 (MLSys 2023). Earlier preprint: arXiv:2212.03332 [cs.LG] (2022).
+
+**Verification note (2026-09-03):** A 2026-09-03 exhaustive Scholar audit found this record's citation pointed only to the arXiv preprint; corrected to the peer-reviewed MLSys 2023 publication (271+ citations), the same underlying paper.
 
 **PDF:** [arXiv PDF](https://arxiv.org/pdf/2212.03332)
 
