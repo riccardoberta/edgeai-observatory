@@ -14,6 +14,8 @@ These two papers are grouped under one concept, with two named variants, rather 
 
 A 2026 historical-backfill pass added a third, earlier reference point that predates and structurally frames both 2026 anchors: Dubey et al.'s 2022 ACM JETC survey of physical (power/EM) side-channel attacks and countermeasures for ML hardware. This is a genuinely distinct threat model from both existing variants — not bus-level eavesdropping (YAVIN) and not optical/laser probing (LLMscope) — and its existence as a longer-established, peer-reviewed literature underscores that this concept's two 2026 anchors are instances of a broader physical-security problem for ML accelerators that research has been tracking since at least the early 2020s.
 
+A 2026-09-03 exhaustive Scholar audit found that this concept's physical-extraction variant was missing its own founding paper: Batina, Bhasin, Jap, and Picek's "CSI NN" (USENIX Security 2019, 450+ citations) is the original demonstration that a neural network's full architecture can be reverse-engineered purely from electromagnetic side-channel measurements during inference — the direct methodological ancestor of LLMscope's weight/activation extraction, and a paper LLMscope itself implicitly builds on without this concept previously citing it. The same audit added a fourth, closely related but distinct threat model this concept had not yet named: architecture/hyperparameter extraction from a specific, commercially deployed accelerator. Kurian, Dubey, Yaman, and Aysu's TPUXtract (IACR TCHES 2025) is the first successful model-extraction attack on the real, commercially available Google Edge TPU, using an online template-building EM-extraction methodology to reach 99.91% accuracy — including on previously unseen architectures — closing the gap between CSI NN's foundational threat model and its applicability to real, deployed edge accelerator silicon.
+
 ## Variants
 
 **Architectural trust-boundary extension (trusted execution / confidential computing).** Extends a TEE's cryptographic trust boundary to cover previously-untrusted components (e.g., PIM-capable memory) so that computation can happen on encrypted-then-decrypted data without ever leaving the trust boundary. Anchor: [[2026_Fang_YAVIN]].
@@ -21,6 +23,8 @@ A 2026 historical-backfill pass added a third, earlier reference point that pred
 **Physical / side-channel extraction.** Exploits physical properties of accelerator silicon (e.g., buffer and subcircuit reuse across logical addresses) to read out model assets directly from the physical substrate during execution, bypassing any purely logical/cryptographic trust boundary. Anchor: [[2026_Mehta_LLMscope]].
 
 **Power/EM side-channel leakage.** Exploits power consumption or electromagnetic emissions during computation to infer model weights, activations, or inference state, a longer-established threat model distinct from both bus-eavesdropping and optical/laser probing — addressed via masking-style countermeasures rather than trust-boundary extension or physical shielding alone. Anchor: [[2022_Dubey_GuardingMLHardwareSideChannel]].
+
+**Architecture / hyperparameter extraction via EM side channel.** Reconstructs a model's architecture (layer types, counts, sizes, activation functions) — not its weights or activations — purely from electromagnetic emanations during inference, without any logical access to the device. The founding paradigm behind the physical-extraction variant above; extended to a real commercial edge accelerator (Google Edge TPU) by TPUXtract. Anchors: [[2019_Batina_CSINN]] (founding paper), [[2025_Kurian_TPUXtract]] (real-hardware, unseen-architecture generalization).
 
 ## Open problems
 
@@ -37,6 +41,10 @@ Does either threat model's severity vary systematically across accelerator class
 [[2026_Mehta_LLMscope]] — laser voltage imaging attack recovering LLM weights, activations, and inference state from an FPGA-based edge accelerator by exploiting buffer/subcircuit reuse; full recovery demonstrated; recovery cost scales linearly with asset size.
 
 [[2022_Dubey_GuardingMLHardwareSideChannel]] — survey of physical (power/EM) side-channel attacks and countermeasures for ML hardware, a third, earlier-established threat model distinct from bus-eavesdropping and optical-probing; ACM JETC.
+
+[[2019_Batina_CSINN]] — the founding EM-side-channel architecture-reverse-engineering paper (450+ citations), the direct methodological ancestor of this concept's physical-extraction variant.
+
+[[2025_Kurian_TPUXtract]] — first successful model extraction attack on the real, commercial Google Edge TPU, 99.91% accuracy including on previously unseen architectures.
 
 ## Research ideas
 
