@@ -14,7 +14,7 @@ These two papers approach the space from different angles that already suggest u
 
 ## Key papers
 
-[[2026_Giorgetti_VQAEdge]] — practical tutorial and proof-of-concept system for lightweight multimodal VQA on STM32MP2 (NPU-accelerated), chained into a full spoken-question/spoken-answer generative pipeline (speech-to-text, VQA, small language model, text-to-speech); real on-device latency/power/memory measurements for all four stages; released code and trained models. Co-authored by this Observatory's own Riccardo Berta.
+[[2026_Giorgetti_VQAEdge]] — practical tutorial and proof-of-concept system for lightweight multimodal VQA on STM32MP2 (NPU-accelerated), chained into a full spoken-question/spoken-answer generative pipeline (speech-to-text, VQA, small language model, text-to-speech); real on-device latency/power/memory measurements for all four stages; released code and trained models. Co-authored within this Observatory's own research group (DITEN, University of Genoa).
 
 [[2026_Abdulkadhim_LEAF]] — LLM Edge Assessment Framework: a five-pillar (Circular Economy Score, Joules/Token, Tokens/Second, semantic-accuracy score, end-to-end latency) benchmarking methodology for generative AI at the edge, validated across five hardware classes; finds that repurposed legacy consumer hardware can outperform modern purpose-built edge system-on-chips on energy-per-task efficiency.
 

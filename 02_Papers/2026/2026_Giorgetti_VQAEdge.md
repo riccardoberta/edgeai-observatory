@@ -6,7 +6,7 @@
 
 **Linked concepts:** [[Generative_EdgeAI]] — founding anchor (alongside [[2026_Abdulkadhim_LEAF]]), created 2026-09-04. Also touches [[Distillation]] (knowledge distillation is the core training method for the VQA student models), [[Vision]] (MobileNet V3 Large backbone, VQAv2 dataset), and [[NPU]] (STM32MP2's embedded NPU is the deployment target and the paper reports a measured NPU/CPU speedup).
 
-**Note on authorship:** co-authored by Riccardo Berta (DITEN, University of Genoa) — this Observatory's own research group.
+**Note on authorship:** co-authored within this Observatory's own research group (DITEN, University of Genoa).
 
 ## Abstract summary
 
@@ -38,7 +38,7 @@ Explicitly not targeting SOTA VQA accuracy — positioned against prior edge-VQA
 
 ## Strengths
 
-A genuinely reproducible artifact (code, trained models, and step-by-step instructions on GitHub) rather than only a results paper — directly actionable for thesis/teaching use. Real, non-simulated on-device measurements across latency, power, and memory for all four pipeline stages, not just the novel VQA component. Honest framing throughout: explicitly states the pipeline is not accuracy-tuned end to end and that the goal is feasibility demonstration, not SOTA. Directly co-authored within this Observatory's own research group (Riccardo Berta, DITEN, Genoa), making the released code and models a low-friction extension point for future thesis work.
+A genuinely reproducible artifact (code, trained models, and step-by-step instructions on GitHub) rather than only a results paper — directly actionable for thesis/teaching use. Real, non-simulated on-device measurements across latency, power, and memory for all four pipeline stages, not just the novel VQA component. Honest framing throughout: explicitly states the pipeline is not accuracy-tuned end to end and that the goal is feasibility demonstration, not SOTA. Directly co-authored within this Observatory's own research group (DITEN, Genoa), making the released code and models a low-friction extension point for future thesis work.
 
 ## Weaknesses
 
@@ -58,7 +58,7 @@ Evaluate the full generative pipeline's end-to-end response quality (not just pe
 
 ## Relevance to our research
 
-Directly authored within this group (Riccardo Berta, DITEN); founding anchor, alongside [[2026_Abdulkadhim_LEAF]], of the new [[Generative_EdgeAI]] concept under Applications — the first papers in this Observatory's KB addressing multimodal/generative AI (as opposed to discriminative/classification workloads) deployed specifically on constrained edge hardware. Bridges [[Distillation]] (the training method used), [[Vision]] (VQA's visual backbone and dataset), and [[NPU]] (the deployment target and measured NPU speedup) — and is a natural link into [[MoE_Edge_LLM_Serving]] (Algorithms) since both concern LLMs at the edge, though that cluster focuses on *serving/scheduling* infrastructure for larger dense/MoE LLMs on laptop/workstation-class hardware, while this paper's LM stage (Gemma 3 270M via ollama on an MPU) sits at a genuinely smaller, MCU/MPU-adjacent scale.
+Directly authored within this group (DITEN); founding anchor, alongside [[2026_Abdulkadhim_LEAF]], of the new [[Generative_EdgeAI]] concept under Applications — the first papers in this Observatory's KB addressing multimodal/generative AI (as opposed to discriminative/classification workloads) deployed specifically on constrained edge hardware. Bridges [[Distillation]] (the training method used), [[Vision]] (VQA's visual backbone and dataset), and [[NPU]] (the deployment target and measured NPU speedup) — and is a natural link into [[MoE_Edge_LLM_Serving]] (Algorithms) since both concern LLMs at the edge, though that cluster focuses on *serving/scheduling* infrastructure for larger dense/MoE LLMs on laptop/workstation-class hardware, while this paper's LM stage (Gemma 3 270M via ollama on an MPU) sits at a genuinely smaller, MCU/MPU-adjacent scale.
 
 ## Possible thesis topics
 
