@@ -1,8 +1,16 @@
-# Human Activity Recognition
+# Human Activity Recognition (HAR)
+
+HAR classifies a person's physical activity — walking, running, sitting, falling, and similar — from wearable sensor data, typically an accelerometer and/or gyroscope stream. The central open challenge for EdgeAI is delivering good accuracy within the tight compute, memory, and power budgets of mobile and wearable hardware.
 
 ## Evolution of the concept
 
-Human Activity Recognition (HAR) from mobile and wearable sensor data (accelerometer, gyroscope) moved from hand-engineered features and classical ML toward deep learning architectures (CNNs, RNNs/LSTMs, hybrids), substantially improving recognition accuracy. Ordóñez and Roggen's "Deep Convolutional and LSTM Recurrent Neural Networks for Multimodal Wearable Activity Recognition" (Sensors, MDPI, 2016) is one of the foundational papers in this shift: it introduces DeepConvLSTM, a generic CNN+LSTM architecture that performs sensor fusion naturally across modalities and explicitly models the temporal dynamics of activity, without requiring hand-engineered features — establishing the architecture family later HAR work (and the systematic review below) builds on. The central open challenge for EdgeAI is that this accuracy gain must be delivered within the tight compute, memory, and power budgets of mobile and wearable hardware. More recently, the field has begun exploring cross-modal foundation-model approaches (e.g. tokenizing activity sensory signals alongside EEG/ECG) and self-supervised pretraining on very large unlabeled wearable datasets, which raises a new open question of how to compress such foundation models down to something deployable on-device. A 2024 study (Lattanzi et al.) directly tests one assumption behind this transformer-adoption trend on the tiniest deployment tier: under a realistic tiny-wearable RAM budget, the most capable deployable transformer variant achieves up to 14% lower accuracy than CNN/LSTM baselines, showing that transformers' theoretical time-series advantages do not automatically transfer once genuinely constrained to tiny-device memory. A second, complementary 2024 study (Moreira, MDPI Mathematics) supplies exactly the deployment-realistic validation this concept's own open problems ask for: a HAR model deployed and validated in real time on a genuine commercial low-power microcontroller kit (B-L475E-IOT01A), reaching 90% overall accuracy for dynamic activities but with honestly reported, lower recall for static-activity discrimination (sitting vs. standing) — a concrete failure mode that offline-accuracy-only benchmarks tend not to surface. A 2026-09-03 exhaustive Scholar audit added two further anchors. Ronao and Cho's "Human Activity Recognition with Smartphone Sensors Using Deep Learning Neural Networks" (Expert Systems with Applications, 2016, 1600+ citations) is one of the field's most-cited early results, establishing CNNs as automatic feature extractors for smartphone-sensor HAR in place of hand-engineered features — foundational context this concept's systematic review builds on but had not itself cited. On the compression side, Contoli and Lattanzi's "A Study on the Application of TensorFlow Compression Techniques to Human Activity Recognition" (IEEE Access, 2023) systematically compares quantization strategies across CNN, LSTM, and CNN-LSTM HAR architectures — a direct empirical precursor, by the same lead author, to this concept's existing tiny-transformer comparison ([[2024_Lattanzi_TransformersTinyHAR]]).
+HAR moved from hand-engineered features and classical machine learning toward deep-learning architectures (CNNs, RNNs/LSTMs, and hybrids), substantially improving recognition accuracy. Ronao and Cho ("Human Activity Recognition with Smartphone Sensors Using Deep Learning Neural Networks", 2016) is one of the field's most-cited early results, establishing CNNs as automatic feature extractors for smartphone-sensor HAR in place of hand-engineered features. Ordóñez and Roggen ("Deep Convolutional and LSTM Recurrent Neural Networks for Multimodal Wearable Activity Recognition", 2016) push the architecture further with DeepConvLSTM, a generic CNN+LSTM design that performs sensor fusion naturally across modalities and explicitly models the temporal dynamics of activity, without requiring hand-engineered features — establishing the architecture family later HAR work builds on.
+
+More recently, the field has begun exploring cross-modal foundation-model approaches (tokenizing activity sensor signals alongside EEG/ECG, see [[Biosignals]]) and self-supervised pretraining on very large unlabeled wearable datasets, raising the question of how to compress such foundation models down to something deployable on-device.
+
+On the compression side, Contoli and Lattanzi ("A Study on the Application of TensorFlow Compression Techniques to Human Activity Recognition", 2023) systematically compare quantization strategies (dynamic-range, full-integer, cascading) across CNN, LSTM, and CNN-LSTM HAR architectures. A follow-up study by the same lead author (Lattanzi et al., 2024) directly tests one assumption behind the broader transformer-adoption trend on the tiniest deployment tier: under a realistic tiny-wearable RAM budget, the most capable deployable transformer variant achieves up to 14% lower accuracy than CNN/LSTM baselines, showing that transformers' theoretical time-series advantages do not automatically transfer once genuinely constrained to tiny-device memory.
+
+A complementary study (Moreira, 2024) supplies exactly the deployment-realistic validation this concept's open problems below ask for: a HAR model deployed and validated in real time on a genuine commercial low-power microcontroller kit (B-L475E-IOT01A), reaching 90% overall accuracy for dynamic activities but with honestly reported, lower recall for static-activity discrimination (sitting vs. standing) — a concrete failure mode that offline-accuracy-only benchmarks tend not to surface.
 
 ## Key papers
 
@@ -12,13 +20,13 @@ Human Activity Recognition (HAR) from mobile and wearable sensor data (accelerom
 
 [[2024_Lattanzi_TransformersTinyHAR]] — hardware-budget-constrained empirical comparison showing transformers lose up to 14% accuracy versus CNN/LSTM baselines once genuinely constrained to tiny-wearable RAM budgets.
 
-[[2024_Moreira_HighPerformanceHAR]] — real-time HAR deployed and validated on a genuine commercial low-power microcontroller kit (B-L475E-IOT01A), 90% overall accuracy, with honestly reported lower recall for static-activity discrimination.
+[[2024_Moreira_HighPerformanceHAR]] — real-time HAR deployed and validated on a genuine commercial low-power microcontroller kit, reaching 90% overall accuracy, with honestly reported lower recall for static-activity discrimination.
 
-[[2026_Darvishi_EmbeddedMLPipelines]] — tutorial/systems synthesis (not an empirical study) using a 2-second, 3-axis accelerometer window reduced to RMS/spectral features as its running inertial-recognition example; useful as a teaching reference for the feature-extraction and validation pitfalls specific to wearable HAR pipelines, not as a benchmark source.
+[[2026_Darvishi_EmbeddedMLPipelines]] — a tutorial/systems synthesis (not an empirical study) using a 2-second, 3-axis accelerometer window reduced to root-mean-square and spectral features as its running example; useful as a teaching reference for the feature-extraction and validation pitfalls specific to wearable HAR pipelines, not as a benchmark source.
 
 [[2016_Ronao_HARSmartphoneSensorsDeepLearning]] — one of the field's most-cited early deep-learning HAR papers, establishing CNNs as automatic feature extractors for smartphone-sensor activity recognition.
 
-[[2023_Contoli_TensorFlowCompressionHAR]] — systematic comparison of TensorFlow Lite compression techniques (dynamic-range, full-integer quantization, cascading) across CNN/LSTM/CNN-LSTM HAR architectures; direct precursor to this concept's tiny-transformer comparison.
+[[2023_Contoli_TensorFlowCompressionHAR]] — systematic comparison of TensorFlow Lite compression techniques across CNN/LSTM/CNN-LSTM HAR architectures; direct precursor to the tiny-transformer comparison above.
 
 ## Open problems
 
@@ -26,11 +34,11 @@ How do the most accurate wearable HAR architectures perform when actually deploy
 
 ## Research ideas
 
-Benchmarking the architecture families surveyed in the review on real Cortex-M/Cortex-A hardware for energy-per-inference and latency, to ground qualitative comparisons in deployment-realistic numbers; compressing a cross-modal biosignal/activity foundation model (e.g. BIOT-style) for wearable-class hardware.
+Benchmarking the architecture families above on real Cortex-M/Cortex-A hardware for energy-per-inference and latency, to ground qualitative comparisons in deployment-realistic numbers. Compressing a cross-modal biosignal/activity foundation model (BIOT-style, see [[Biosignals]]) for wearable-class hardware.
 
 ## Possible thesis topics
 
-On-device benchmark of CNN versus RNN/LSTM versus hybrid HAR architectures for energy-per-inference on wearable-class hardware; compressing a self-supervised wearable HAR foundation model for microcontroller deployment.
+An on-device benchmark of CNN versus RNN/LSTM versus hybrid HAR architectures for energy-per-inference on wearable-class hardware. Compressing a self-supervised wearable HAR foundation model for microcontroller deployment.
 
 ## Links
 

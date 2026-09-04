@@ -1,24 +1,30 @@
-# FPGA
+# FPGA (Field-Programmable Gate Array)
+
+An FPGA is a chip whose hardware logic can be reconfigured after manufacturing, used to build custom, application-specific accelerators without designing a fixed chip. FPGA-based EdgeAI acceleration grew out of the observation that reconfigurable hardware can instantiate many small, fully parallel, per-layer compute structures, rather than relying on a single reused generic processing unit as GPUs and CPUs do.
 
 ## Evolution of the concept
 
-FPGA-based EdgeAI acceleration grew out of the observation that reconfigurable hardware could instantiate many small, fully-parallel, per-layer compute structures rather than relying on a single reused generic processing unit as GPUs and CPUs do. Zhang et al.'s "Optimizing FPGA-based Accelerator Design for Deep Convolutional Neural Networks" (FPGA 2015, ACM/SIGDA) was an early, influential formalization of this idea: it applies a roofline-model-based analysis to systematically navigate the loop-tiling and loop-unrolling design space of a CNN accelerator, rather than relying on ad-hoc design choices, directly anticipating the more aggressive precision-driven design-space exploration FINN later builds on. FINN was a pioneering framework demonstrating that pairing aggressive network quantization (down to binary precision) with a streaming, per-layer-customized dataflow architecture could yield extremely high throughput-per-watt for image classification, directly linking the [[Quantization]] research direction to a concrete, automated hardware-generation pipeline. The framework has since evolved (FINN-R) to support a wider range of quantization levels and target platforms, from embedded devices up to cloud FPGAs. Two recent works update the picture from different angles: Zhan et al. (2023) systematically review and experimentally compare the fragmented landscape of FPGA-based binary-neural-network accelerator designs rather than proposing a single new framework, giving the binary-precision corner of this space a structured reference point; and Yan, Koch, and Sinnen's 2024 quantitative survey of 287 papers across the field's leading FPGA conferences finds inference acceleration dominating over training (81% vs. 13%) and CNNs still dominant but with clear growth in GNN-targeted accelerator research. A 2026-09-03 exhaustive Scholar audit added an earlier, more comprehensive predecessor to the Yan et al. survey: Shawahna, Sait, and El-Maleh's "FPGA-Based Accelerators of Deep Learning Networks for Learning and Classification: A Review" (IEEE Access, 2018, 700+ citations) reviews the field's design-technique landscape (both training and inference) at a scope broader than Yan et al.'s conference-publication-trend focus, giving this concept a natural earlier baseline for six-year trend comparison.
+Zhang et al.'s "Optimizing FPGA-based Accelerator Design for Deep Convolutional Neural Networks" (2015) was an early, influential formalization of this idea: it applies a roofline-model-based analysis (a way of predicting whether a computation is limited by compute speed or by memory bandwidth) to systematically navigate the loop-tiling and loop-unrolling design space of a CNN accelerator, rather than relying on ad hoc design choices — directly anticipating the more aggressive, precision-driven design-space exploration FINN later builds on.
+
+FINN (Umuroğlu et al., 2017) was a pioneering framework demonstrating that pairing aggressive network quantization (down to binary precision) with a streaming, per-layer-customized dataflow architecture could yield extremely high throughput-per-watt for image classification, directly linking [[Quantization]] to a concrete, automated hardware-generation pipeline. The framework has since evolved (FINN-R) to support a wider range of quantization levels and target platforms, from embedded devices up to cloud FPGAs.
+
+Two more recent works update the picture from different angles. Zhan et al. (2023) systematically review and experimentally compare the fragmented landscape of FPGA-based binary-neural-network accelerator designs, rather than proposing a single new framework, giving the binary-precision corner of this space a structured reference point. Shawahna, Sait, and El-Maleh (2018) review the field's design-technique landscape more broadly, spanning both training and inference; Yan, Koch, and Sinnen's later quantitative survey (2024) of 287 papers across the field's leading FPGA conferences finds inference acceleration dominating over training (81% versus 13%) and CNNs still dominant but with clear growth in graph-neural-network-targeted accelerator research — the two surveys together give roughly a six-year trend comparison for the field.
 
 ## Key papers
 
-[[2015_Zhang_FPGAAcceleratorDesign]] — roofline-model-guided design-space exploration for CNN accelerator loop tiling/unrolling on FPGA, an early systematic alternative to ad-hoc accelerator design.
+[[2015_Zhang_FPGAAcceleratorDesign]] — roofline-model-guided design-space exploration for CNN accelerator loop tiling/unrolling on FPGA, an early systematic alternative to ad hoc accelerator design.
 
 [[2017_Umuroglu_FINN]] — framework for generating fast, scalable, per-layer streaming FPGA accelerators for binarized/quantized neural networks.
 
 [[2023_Zhan_FPGABinaryNN]] — structured review and experimental comparison of FPGA-based binary neural network accelerator designs for edge computing.
 
-[[2024_Yan_FPGASurvey]] — quantitative survey of 287 FPGA accelerator papers, finding inference/training imbalance (81%/13%) and CNN dominance with rising GNN-targeted research.
+[[2024_Yan_FPGASurvey]] — quantitative survey of 287 FPGA accelerator papers, finding inference/training imbalance (81%/13%) and CNN dominance with rising graph-neural-network-targeted research.
 
-[[2018_Shawahna_FPGAAcceleratorsReview]] — comprehensive, highly-cited (700+) review of FPGA DNN accelerator design techniques spanning training and inference, an earlier and broader baseline than the 2024 Yan et al. survey.
+[[2018_Shawahna_FPGAAcceleratorsReview]] — comprehensive, highly-cited review of FPGA deep-learning accelerator design techniques spanning training and inference, an earlier and broader baseline than the 2024 Yan et al. survey.
 
 ## Open problems
 
-How does FINN-style per-layer dataflow customization compare to NPU/ASIC fixed-function accelerators on modern EdgeAI benchmarks, in throughput-per-watt and resource cost? Can the design-space exploration approach extend efficiently to non-CNN architectures (e.g. small transformers) relevant to current TinyML research?
+How does FINN-style per-layer dataflow customization compare to NPU/ASIC fixed-function accelerators on modern EdgeAI benchmarks, in throughput-per-watt and resource cost? Can the design-space-exploration approach extend efficiently to non-CNN architectures, such as small transformers, relevant to current TinyML research?
 
 ## Research ideas
 
@@ -26,7 +32,7 @@ A throughput-per-watt benchmark comparing a FINN-generated FPGA accelerator agai
 
 ## Possible thesis topics
 
-Extending FINN's per-layer dataflow methodology to a non-vision EdgeAI task in our Applications taxonomy (Keyword Spotting, HAR); reconfigurability-versus-efficiency study comparing FPGA, NPU, and RISC-V accelerator substrates for the same task.
+Extending FINN's per-layer dataflow methodology to a non-vision EdgeAI task, such as Keyword Spotting or Human Activity Recognition. A reconfigurability-versus-efficiency study comparing FPGA, NPU, and RISC-V accelerator substrates for the same task.
 
 ## Links
 

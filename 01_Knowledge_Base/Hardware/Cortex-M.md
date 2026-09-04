@@ -1,14 +1,18 @@
 # Cortex-M
 
+Arm Cortex-M cores are the most widely used hardware target for TinyML: low-power microcontrollers with no dedicated hardware for neural computation and only a few tens or hundreds of kilobytes of RAM.
+
 ## Evolution of the concept
 
-Cortex-M cores (Arm) are the most widely used hardware target for TinyML: low-power microcontrollers, with no dedicated hardware for neural computation, with only a few tens/hundreds of KB of RAM. The entire software ecosystem for this target developed in response to these constraints: CMSIS-NN for optimized kernels, TensorFlow Lite Micro as a runtime with static memory allocation. A 2024 study (Deutel et al.) pushes the Cortex-M envelope beyond inference-only deployment, showing that fully quantized training — not just inference — is feasible directly on Cortex-M0+/M4/M7 hardware via a dynamic partial-gradient-update scheme, extending what these cores can do in place without offloading to a server. A 2026-09-03 exhaustive Scholar audit closed a significant gap: MCUNet (Lin, Chen, Lin, Gan, Han, NeurIPS 2020, 1000+ citations, spotlight) jointly co-designs a neural architecture search method (TinyNAS, which first fits the search space to the resource budget before searching within it) with a code-generation inference engine (TinyEngine), together demonstrating ImageNet-scale classification directly on MCU-class hardware — a capability previously assumed out of reach, and the direct architectural ancestor of this concept's own on-device-training anchor ([[2022_Lin_OnDeviceTraining256KB]], the same MIT Han Lab lineage's MCUNetV3).
+The entire software ecosystem for this target developed in response to its constraints: [[CMSIS-NN]] for optimized kernels, [[TensorFlow_Lite_Micro]] as a runtime with static memory allocation. MCUNet (Lin, Chen, Lin, Gan, and Han, 2020) jointly co-designs a Neural Architecture Search method (TinyNAS, which first fits the search space to the resource budget before searching within it) with a code-generation inference engine (TinyEngine), together demonstrating ImageNet-scale classification directly on microcontroller-class hardware — a capability previously assumed out of reach, and the direct architectural ancestor of this concept's own on-device-training work below (from the same MIT research lineage).
+
+Deutel et al. (2024) push the Cortex-M envelope beyond inference-only deployment, showing that fully quantized *training* — not just inference — is feasible directly on Cortex-M0+/M4/M7 hardware via a dynamic partial-gradient-update scheme, extending what these cores can do in place without offloading to a server (see also [[On-device_Learning]]).
 
 ## Key papers
 
-[[2020_Lin_MCUNet]] — joint TinyNAS/TinyEngine architecture-search-plus-inference-engine co-design enabling ImageNet-scale classification on genuine MCU-class hardware; 1000+ citations, foundational to this concept's own on-device-training lineage.
+[[2020_Lin_MCUNet]] — joint architecture-search-plus-inference-engine co-design (TinyNAS + TinyEngine) enabling ImageNet-scale classification on genuine microcontroller-class hardware; foundational to this concept's own on-device-training lineage.
 
-[[2018_Lai_CMSIS-NN]] — kernels optimized for Cortex-M's SIMD instructions.
+[[2018_Lai_CMSIS-NN]] — kernels optimized for Cortex-M's SIMD (single-instruction-multiple-data) instructions.
 
 [[2021_David_TensorFlowLiteMicro]] — an inference runtime designed for the memory constraints of these cores.
 
@@ -20,17 +24,17 @@ Cortex-M cores (Arm) are the most widely used hardware target for TinyML: low-po
 
 [[2026_Jain_TinyFed6G]] — federated learning across a tier of Cortex-M/RISC-V TinyML devices, with per-device quantized model variants assigned according to each device's resource profile.
 
-[[2026_Garavagno_HWNASUltraLowPower]] — hardware-aware NAS measured on real STM32 L0/L1/L4 hardware (20-40 KiB RAM class), reporting measured inference latency on each target.
+[[2026_Garavagno_HWNASUltraLowPower]] — hardware-aware NAS measured on real STM32 L0/L1/L4 hardware (20–40 KiB RAM class), reporting measured inference latency on each target.
 
-[[2026_Sen_NVFP4QuantizationEdgeAI]] — quantization scheme whose ~7× activation-memory reduction is directly relevant to Cortex-M's tight SRAM budget, though evaluated algorithmically rather than on real Cortex-M hardware.
+[[2026_Sen_NVFP4QuantizationEdgeAI]] — quantization scheme whose ~7x activation-memory reduction is directly relevant to Cortex-M's tight SRAM budget, though evaluated algorithmically rather than on real Cortex-M hardware.
 
 ## Open problems
 
-Exploiting the new Helium (MVE) vector instructions on Cortex-M55/M85, still poorly covered in the literature. Efficient support for architectures other than classic CNNs (e.g. lightweight attention).
+Exploiting the new Helium (MVE) vector instructions on Cortex-M55/M85, still poorly covered in the literature. Efficient support for architectures other than classic CNNs — for example lightweight attention.
 
 ## Research ideas
 
-Study of the real efficiency of depthwise-separable convolutions (MobileNet) on Cortex-M with CMSIS-NN; evaluation of how well quantization gains transfer to these cores compared to RISC-V without dedicated SIMD support.
+A study of the real efficiency of depthwise-separable convolutions (as in MobileNet) on Cortex-M with CMSIS-NN. An evaluation of how well quantization gains transfer to these cores compared to RISC-V without dedicated SIMD support.
 
 ## Possible thesis topics
 
@@ -38,4 +42,4 @@ Benchmarking new architectures (NAS-derived, distilled) on real Cortex-M hardwar
 
 ## Links
 
-[[CMSIS-NN]], [[TensorFlow Lite Micro]], [[microTVM_TVM]]
+[[CMSIS-NN]], [[TensorFlow_Lite_Micro]], [[microTVM_TVM]]
