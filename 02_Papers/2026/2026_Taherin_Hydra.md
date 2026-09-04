@@ -4,7 +4,7 @@
 
 **PDF:** [arXiv PDF](https://arxiv.org/pdf/2608.25053)
 
-**Linked concepts:** [[Mixture-of-Experts (MoE) & Edge LLM Serving]], [[Quantization]]
+**Linked concepts:** [[MoE_Edge_LLM_Serving|Mixture-of-Experts (MoE) & Edge LLM Serving]], [[Quantization]]
 
 ## Abstract summary
 
@@ -48,7 +48,7 @@ Findings are specific to the AGX Xavier/Orin/Thor generational lineage and the t
 
 ## Open questions
 
-Does a Hydra-style phase-aware, cross-backend, cross-generation measurement methodology transfer to MCU/Ethos-U/RISC-V-NPU-class hardware, where LLM inference is only beginning to appear (e.g. the [[Mixture-of-Experts (MoE) & Edge LLM Serving]] concept's cluster of laptop/edge-GPU-class papers)? Why does quantization fail to predict power monotonically — what is the underlying mechanism (memory-controller behavior, dynamic voltage/frequency scaling interaction) driving this?
+Does a Hydra-style phase-aware, cross-backend, cross-generation measurement methodology transfer to MCU/Ethos-U/RISC-V-NPU-class hardware, where LLM inference is only beginning to appear (e.g. the [[MoE_Edge_LLM_Serving|Mixture-of-Experts (MoE) & Edge LLM Serving]] concept's cluster of laptop/edge-GPU-class papers)? Why does quantization fail to predict power monotonically — what is the underlying mechanism (memory-controller behavior, dynamic voltage/frequency scaling interaction) driving this?
 
 ## Possible extensions
 
@@ -56,11 +56,11 @@ Applying the Hydra measurement schema to MCU/NPU-tier hardware to directly close
 
 ## Relevance to our research
 
-Directly relevant to the [[Mixture-of-Experts (MoE) & Edge LLM Serving]] concept's edge-LLM-deployment focus, providing rigorous, phase-aware measurement methodology that the concept's serving/scheduling papers (HeteroMosaic, PolyQ, APEX) could adopt for evaluation. Also the primary evidence, alongside [[2026_Bryngelson_AppleNeuralEngine]], for the Observatory's still-open "standardized MCU/NPU-tier measurement infrastructure" consolidation candidate — this paper and the ANE study both build rigorous measurement infrastructure, but neither has an analogue at the microcontroller/NPU tier.
+Directly relevant to the [[MoE_Edge_LLM_Serving|Mixture-of-Experts (MoE) & Edge LLM Serving]] concept's edge-LLM-deployment focus, providing rigorous, phase-aware measurement methodology that the concept's serving/scheduling papers (HeteroMosaic, PolyQ, APEX) could adopt for evaluation. Also the primary evidence, alongside [[2026_Bryngelson_AppleNeuralEngine]], for the Observatory's still-open "standardized MCU/NPU-tier measurement infrastructure" consolidation candidate — this paper and the ANE study both build rigorous measurement infrastructure, but neither has an analogue at the microcontroller/NPU tier.
 
 ## Possible thesis topics
 
-Building an MCU/NPU-tier analogue of Hydra's phase-aware, cross-backend measurement schema, directly targeting the standardized-measurement-infrastructure gap this Observatory has tracked since 2026-08-31 (PhD-scale; bridges Hardware and [[Mixture-of-Experts (MoE) & Edge LLM Serving]]). Investigating the causal mechanism behind quantization's non-monotonic effect on power draw across SoC generations (Master's/PhD).
+Building an MCU/NPU-tier analogue of Hydra's phase-aware, cross-backend measurement schema, directly targeting the standardized-measurement-infrastructure gap this Observatory has tracked since 2026-08-31 (PhD-scale; bridges Hardware and [[MoE_Edge_LLM_Serving|Mixture-of-Experts (MoE) & Edge LLM Serving]]). Investigating the causal mechanism behind quantization's non-monotonic effect on power draw across SoC generations (Master's/PhD).
 
 ## Possible collaborations
 

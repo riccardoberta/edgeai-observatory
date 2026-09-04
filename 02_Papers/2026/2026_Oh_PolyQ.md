@@ -4,7 +4,7 @@
 
 **PDF:** [arXiv PDF](https://arxiv.org/pdf/2607.14618)
 
-**Linked concepts:** [[Quantization]]; also part of [[Mixture-of-Experts (MoE) & Edge LLM Serving]] — PolyQ targets dense-model CPU inference specifically rather than MoE routing, but shares the cluster's edge-LLM-deployment framing.
+**Linked concepts:** [[Quantization]]; also part of [[MoE_Edge_LLM_Serving|Mixture-of-Experts (MoE) & Edge LLM Serving]] — PolyQ targets dense-model CPU inference specifically rather than MoE routing, but shares the cluster's edge-LLM-deployment framing.
 
 ## Abstract summary
 

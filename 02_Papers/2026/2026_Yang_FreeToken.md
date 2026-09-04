@@ -4,7 +4,7 @@
 
 **PDF:** [arXiv PDF](https://arxiv.org/pdf/2608.16157)
 
-**Linked concepts:** [[Mixture-of-Experts (MoE) & Edge LLM Serving]] — the sharpest single data point for that concept's central "how edge is edge" open problem (2026-09-02 Knowledge Base Consolidation cycle). Also touches [[Compression]] (FreeToken serves already-quantized MXFP4/NVFP4 experts but performs no compression itself) and [[NPU]]/edge-inference generally.
+**Linked concepts:** [[MoE_Edge_LLM_Serving|Mixture-of-Experts (MoE) & Edge LLM Serving]] — the sharpest single data point for that concept's central "how edge is edge" open problem (2026-09-02 Knowledge Base Consolidation cycle). Also touches [[Compression]] (FreeToken serves already-quantized MXFP4/NVFP4 experts but performs no compression itself) and [[NPU]]/edge-inference generally.
 
 ## Abstract summary
 

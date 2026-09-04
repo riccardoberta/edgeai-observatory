@@ -4,7 +4,7 @@
 
 **PDF/HTML:** [MDPI](https://www.mdpi.com/2504-4990/8/2/48)
 
-**Linked concepts:** [[Generative EdgeAI]] — founding anchor (alongside [[2026_Giorgetti_VQAEdge]]), created 2026-09-04. Also touches [[Quantization]] (all benchmarked models are 4-bit quantized via Ollama).
+**Linked concepts:** [[Generative_EdgeAI]] — founding anchor (alongside [[2026_Giorgetti_VQAEdge]]), created 2026-09-04. Also touches [[Quantization]] (all benchmarked models are 4-bit quantized via Ollama).
 
 **Verification note:** this record is built from the abstract and bibliographic metadata (MDPI's structured `dc.description`/`og:description` fields), not a full-text read of the paper — flagged per this Observatory's honesty-over-forced-completeness practice. The abstract is detailed enough to establish the paper's problem, method, and headline finding with confidence; a full-text pass would be needed before citing specific per-device numbers beyond what's summarized below.
 
@@ -58,7 +58,7 @@ Full-text verification pass to confirm model list, task set, and per-device numb
 
 ## Relevance to our research
 
-Founding anchor, alongside [[2026_Giorgetti_VQAEdge]], of the new [[Generative EdgeAI]] concept under Applications. Genuinely independent of the Giorgetti/Pau/Berta cluster (different institutions, different modality focus — pure-text LLM benchmarking here vs. multimodal VQA tutorial there, different methodology — systematic benchmarking framework vs. practical system tutorial) — this independence is what clears this Observatory's two-independent-anchor bar for formalizing a new taxonomy node, rather than treating Generative EdgeAI as a single research group's framing. Also a natural complement to [[MoE_Edge_LLM_Serving]]'s hardware-tier open question ("where does edge-native stop being edge") — LEAF's own hardware span (Pi 4/5, Jetson Nano, T400, GTX 1050 Ti) sits in a similar workstation/SBC/edge-GPU tier to that cluster's FreeToken/PolyQ/HeteroMosaic papers, and its sustainability framing (hardware lifecycle extension) adds a dimension — environmental/circularity — not yet present in that cluster's open problems.
+Founding anchor, alongside [[2026_Giorgetti_VQAEdge]], of the new [[Generative_EdgeAI]] concept under Applications. Genuinely independent of the Giorgetti/Pau/Berta cluster (different institutions, different modality focus — pure-text LLM benchmarking here vs. multimodal VQA tutorial there, different methodology — systematic benchmarking framework vs. practical system tutorial) — this independence is what clears this Observatory's two-independent-anchor bar for formalizing a new taxonomy node, rather than treating Generative EdgeAI as a single research group's framing. Also a natural complement to [[MoE_Edge_LLM_Serving]]'s hardware-tier open question ("where does edge-native stop being edge") — LEAF's own hardware span (Pi 4/5, Jetson Nano, T400, GTX 1050 Ti) sits in a similar workstation/SBC/edge-GPU tier to that cluster's FreeToken/PolyQ/HeteroMosaic papers, and its sustainability framing (hardware lifecycle extension) adds a dimension — environmental/circularity — not yet present in that cluster's open problems.
 
 ## Possible thesis topics
 
@@ -70,4 +70,4 @@ Not yet identified — authors' institutional affiliations not verified in this 
 
 ## Links to related papers
 
-Founding anchor of [[Generative EdgeAI]] together with [[2026_Giorgetti_VQAEdge]]. Already cited by at least one later 2026 MDPI paper on LLM inference benchmarking (Giedra et al.) — worth checking whether that paper belongs in this Observatory's KB too if the [[Generative EdgeAI]] concept grows.
+Founding anchor of [[Generative_EdgeAI]] together with [[2026_Giorgetti_VQAEdge]]. Already cited by at least one later 2026 MDPI paper on LLM inference benchmarking (Giedra et al.) — worth checking whether that paper belongs in this Observatory's KB too if the [[Generative_EdgeAI]] concept grows.

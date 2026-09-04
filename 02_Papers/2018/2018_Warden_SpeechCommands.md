@@ -4,7 +4,7 @@
 
 **PDF:** [arXiv PDF](https://arxiv.org/pdf/1804.03209)
 
-**Linked concepts:** [[Keyword Spotting]], [[TinyML_Reference_Datasets]]
+**Linked concepts:** [[Keyword_Spotting]], [[TinyML_Reference_Datasets]]
 
 ## Abstract summary
 

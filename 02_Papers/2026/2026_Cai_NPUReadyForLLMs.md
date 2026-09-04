@@ -4,7 +4,7 @@
 
 **PDF:** [arXiv PDF](https://arxiv.org/pdf/2607.05475)
 
-**Linked concepts:** [[NPU]], [[Quantization]] — also part of [[Mixture-of-Experts (MoE) & Edge LLM Serving]]; this paper is the diagnostic foundation HeteroMosaic explicitly builds on.
+**Linked concepts:** [[NPU]], [[Quantization]] — also part of [[MoE_Edge_LLM_Serving|Mixture-of-Experts (MoE) & Edge LLM Serving]]; this paper is the diagnostic foundation HeteroMosaic explicitly builds on.
 
 ## Abstract summary
 

@@ -4,7 +4,7 @@
 
 **PDF:** [arXiv PDF](https://arxiv.org/pdf/2010.08678)
 
-**Linked concepts:** [[TensorFlow Lite Micro]], [[On-device Learning]]
+**Linked concepts:** [[TensorFlow_Lite_Micro]], [[On-device_Learning]]
 
 ## Abstract summary
 

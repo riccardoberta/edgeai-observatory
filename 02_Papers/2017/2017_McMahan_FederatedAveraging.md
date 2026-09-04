@@ -4,7 +4,7 @@
 
 **PDF:** [arXiv PDF](https://arxiv.org/pdf/1602.05629)
 
-**Linked concepts:** [[Federated Learning]]
+**Linked concepts:** [[Federated_Learning]]
 
 ## Abstract summary
 

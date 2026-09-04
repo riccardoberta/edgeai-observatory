@@ -4,7 +4,7 @@
 
 **PDF:** [arXiv PDF](https://arxiv.org/pdf/2607.21130)
 
-**Linked concepts:** [[RISC-V]], [[On-device Learning]], [[Quantization]] (float16 as a precision-reduction technique for training, not inference)
+**Linked concepts:** [[RISC-V]], [[On-device_Learning]], [[Quantization]] (float16 as a precision-reduction technique for training, not inference)
 
 **Verification note:** every web-fetch attempt to independently retrieve this paper's arXiv page (five attempts across this session) was blocked by an in-session rate limit that did not affect most other papers fetched in the same session. This record is therefore built entirely from the 2026-07-26 weekly digest's own full-text-verified summary (that digest's sourcing note states papers were read at the abstract level from arXiv, consistent with its stated methodology) and the 2026-07 monthly report's cross-references, rather than an independent re-verification in this pass. Ricky should re-run the arXiv fetch (or open the PDF directly) before citing the specific figures below in a survey or thesis.
 
@@ -34,7 +34,7 @@ Float16 cuts training memory footprint by roughly 50% versus float32, with minim
 
 ## Comparison with the state of the art
 
-Low-precision training and layer-freezing are each individually established techniques (the Observatory already tracks TinyTL and TinyTrain in [[On-device Learning]], and float16/low-precision formats generally in [[Quantization]]); the paper's specific contribution, per the 2026-07-26 digest, is "a fully open-source float16 *training* path riding on standardized RISC-V float16 extensions, characterized end-to-end from ISA area overhead up to model accuracy on a single MCU-class core" — genuinely reproducible because it uses standardized ISA extensions and an existing open framework rather than proprietary hardware or a closed training stack.
+Low-precision training and layer-freezing are each individually established techniques (the Observatory already tracks TinyTL and TinyTrain in [[On-device_Learning]], and float16/low-precision formats generally in [[Quantization]]); the paper's specific contribution, per the 2026-07-26 digest, is "a fully open-source float16 *training* path riding on standardized RISC-V float16 extensions, characterized end-to-end from ISA area overhead up to model accuracy on a single MCU-class core" — genuinely reproducible because it uses standardized ISA extensions and an existing open framework rather than proprietary hardware or a closed training stack.
 
 ## Strengths
 
@@ -58,11 +58,11 @@ Directly re-verify this record's figures from the full PDF, given the fetch limi
 
 ## Relevance to our research
 
-A direct, high-priority fit for the Observatory's [[RISC-V]] and [[On-device Learning]] branches — open-source, MCU-class, and immediately actionable given the released AIfES-based infrastructure. Both the 2026-07-26 weekly digest and the July 2026 monthly report independently flagged this as the strongest deep-analysis candidate of its respective cycles; the monthly report specifically noted "open-source infrastructure already exists (AIfES-based), so this is unusually low-friction to start" for the Pareto-study thesis topic below.
+A direct, high-priority fit for the Observatory's [[RISC-V]] and [[On-device_Learning]] branches — open-source, MCU-class, and immediately actionable given the released AIfES-based infrastructure. Both the 2026-07-26 weekly digest and the July 2026 monthly report independently flagged this as the strongest deep-analysis candidate of its respective cycles; the monthly report specifically noted "open-source infrastructure already exists (AIfES-based), so this is unusually low-friction to start" for the Pareto-study thesis topic below.
 
 ## Possible thesis topics
 
-Float16 vs int8 on-device training on RISC-V: extend this paper by comparing its `Zfh`/`Zvfh` float16 training path against integer/quantized training (cf. Deutel 2024) on the same RISC-V core — which wins on the memory/accuracy/energy Pareto front for true MCU-class targets? (Master's/PhD; bridges [[RISC-V]], [[On-device Learning]], [[Quantization]] — explicitly flagged as the July 2026 monthly report's second-ranked research opportunity, "unusually low-friction to start" given the existing open AIfES infrastructure.)
+Float16 vs int8 on-device training on RISC-V: extend this paper by comparing its `Zfh`/`Zvfh` float16 training path against integer/quantized training (cf. Deutel 2024) on the same RISC-V core — which wins on the memory/accuracy/energy Pareto front for true MCU-class targets? (Master's/PhD; bridges [[RISC-V]], [[On-device_Learning]], [[Quantization]] — explicitly flagged as the July 2026 monthly report's second-ranked research opportunity, "unusually low-friction to start" given the existing open AIfES infrastructure.)
 
 ## Possible collaborations
 
@@ -70,4 +70,4 @@ The paper's own author group (Hubinet, Moellic, Savry, Potin, Rigaud — CEA-Let
 
 ## Links to related papers
 
-Extends the Observatory's existing [[On-device Learning]] records (TinyTL, TinyTrain) and connects to [[2024_Deutel_OnDeviceTrainingQuantizedCortexM]] as the natural comparison point for the float16-vs-int8 thesis topic above. Pairs conceptually with the Hailo-8L on-device adaptation paper (arXiv:2607.18101, `02_Papers/2026/2026_Piechocki_Hailo8LAdaptation.md`) from the same 2026-07-26 digest cycle — both reduce on-device training cost, one via low-precision training on the core, the other via offloaded frozen-backbone inference.
+Extends the Observatory's existing [[On-device_Learning]] records (TinyTL, TinyTrain) and connects to [[2024_Deutel_OnDeviceTrainingQuantizedCortexM]] as the natural comparison point for the float16-vs-int8 thesis topic above. Pairs conceptually with the Hailo-8L on-device adaptation paper (arXiv:2607.18101, `02_Papers/2026/2026_Piechocki_Hailo8LAdaptation.md`) from the same 2026-07-26 digest cycle — both reduce on-device training cost, one via low-precision training on the core, the other via offloaded frozen-backbone inference.

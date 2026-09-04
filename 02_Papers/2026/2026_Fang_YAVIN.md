@@ -4,7 +4,7 @@
 
 **PDF:** [arXiv PDF](https://arxiv.org/pdf/2608.13496)
 
-**Linked concepts:** [[Hardware Security of Edge AI Accelerators]] — anchor paper (architectural trust-boundary-extension variant), created 2026-09-02 by the Knowledge Base Consolidation cycle, resolving what was previously the "Edge AI Security / Trusted Execution" taxonomy gap flagged in the 2026-08-20 weekly digest (distinct from the "Mixture-of-Experts (MoE) & Edge LLM Serving" node; YAVIN evaluates on quantized edge LLMs but its contribution is security architecture, not serving/scheduling). Loosely touches [[Quantization]] via its evaluation on INT8/INT32 quantized edge-class LLMs.
+**Linked concepts:** [[Hardware_Security_of_Edge_AI_Accelerators]] — anchor paper (architectural trust-boundary-extension variant), created 2026-09-02 by the Knowledge Base Consolidation cycle, resolving what was previously the "Edge AI Security / Trusted Execution" taxonomy gap flagged in the 2026-08-20 weekly digest (distinct from the "Mixture-of-Experts (MoE) & Edge LLM Serving" node; YAVIN evaluates on quantized edge LLMs but its contribution is security architecture, not serving/scheduling). Loosely touches [[Quantization]] via its evaluation on INT8/INT32 quantized edge-class LLMs.
 
 ## Abstract summary
 
@@ -56,7 +56,7 @@ Measure the overhead curve across the full quantization spectrum (INT8/INT4/mixe
 
 ## Relevance to our research
 
-One of the two founding anchors (with [[2026_Mehta_LLMscope]]) of the [[Hardware Security of Edge AI Accelerators]] concept, created 2026-09-02 — secure/private on-device execution doesn't map onto any existing Algorithms/Frameworks/Hardware/Applications branch, which is why it now has its own Security branch. Distinct from, but occasionally confused with, the "Mixture-of-Experts (MoE) & Edge LLM Serving" node (YAVIN evaluates on quantized edge LLMs but its contribution is security, not serving).
+One of the two founding anchors (with [[2026_Mehta_LLMscope]]) of the [[Hardware_Security_of_Edge_AI_Accelerators]] concept, created 2026-09-02 — secure/private on-device execution doesn't map onto any existing Algorithms/Frameworks/Hardware/Applications branch, which is why it now has its own Security branch. Distinct from, but occasionally confused with, the "Mixture-of-Experts (MoE) & Edge LLM Serving" node (YAVIN evaluates on quantized edge LLMs but its contribution is security, not serving).
 
 ## Possible thesis topics
 
@@ -68,4 +68,4 @@ Alex K. Jones's group, given YAVIN's architectural security contribution — a n
 
 ## Links to related papers
 
-The Observatory's first `02_Papers/` record on trusted execution / confidential computing for edge AI. Paired with [[2026_Mehta_LLMscope]] (physical/optical extraction attack, recorded 2026-09-02) as the two founding anchors of the [[Hardware Security of Edge AI Accelerators]] concept — YAVIN is the defensive/architectural variant, LLMscope the offensive/physical variant.
+The Observatory's first `02_Papers/` record on trusted execution / confidential computing for edge AI. Paired with [[2026_Mehta_LLMscope]] (physical/optical extraction attack, recorded 2026-09-02) as the two founding anchors of the [[Hardware_Security_of_Edge_AI_Accelerators]] concept — YAVIN is the defensive/architectural variant, LLMscope the offensive/physical variant.

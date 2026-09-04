@@ -4,7 +4,7 @@
 
 **PDF:** [arXiv PDF](https://arxiv.org/pdf/2607.08978)
 
-**Linked concepts:** [[Federated Learning]], [[Industrial IoT]], [[Predictive Maintenance]]
+**Linked concepts:** [[Federated_Learning]], [[Industrial_IoT]], [[Predictive_Maintenance]]
 
 ## Abstract summary
 
@@ -32,7 +32,7 @@ FedKAD matches or improves detection performance relative to federated deep-lear
 
 ## Comparison with the state of the art
 
-The individual ingredients — Koopman operator learning, federated ADMM, and Stiefel-manifold optimization — are each independently known techniques; the paper's contribution is combining them into a communication- and compute-frugal federated anomaly detector with a formal convergence result under partial client participation, which the 2026-07-13 weekly digest characterized as "a clean counterpoint to the deep-learning default" the Observatory otherwise tracks for [[Industrial IoT]] anomaly detection. It also complements the 2026-07-05 digest's embedded-anomaly-detection survey, which explicitly flagged weak on-device concept-drift handling and poor cross-platform portability as open gaps in the field — gaps FedKAD does not claim to close.
+The individual ingredients — Koopman operator learning, federated ADMM, and Stiefel-manifold optimization — are each independently known techniques; the paper's contribution is combining them into a communication- and compute-frugal federated anomaly detector with a formal convergence result under partial client participation, which the 2026-07-13 weekly digest characterized as "a clean counterpoint to the deep-learning default" the Observatory otherwise tracks for [[Industrial_IoT]] anomaly detection. It also complements the 2026-07-05 digest's embedded-anomaly-detection survey, which explicitly flagged weak on-device concept-drift handling and poor cross-platform portability as open gaps in the field — gaps FedKAD does not claim to close.
 
 ## Strengths
 
@@ -56,7 +56,7 @@ Validate FedKAD-style Koopman anomaly detection on real MCU/edge hardware (Corte
 
 ## Relevance to our research
 
-A strong fit for the Observatory's [[Federated Learning]], [[Industrial IoT]], and [[Predictive Maintenance]] branches — the leading candidate the 2026-07-13 digest flagged for the intersection of all three. Directly extends [[Predictive Maintenance]] work with a communication-frugal alternative to the deep-learning anomaly-detection default.
+A strong fit for the Observatory's [[Federated_Learning]], [[Industrial_IoT]], and [[Predictive_Maintenance]] branches — the leading candidate the 2026-07-13 digest flagged for the intersection of all three. Directly extends [[Predictive_Maintenance]] work with a communication-frugal alternative to the deep-learning anomaly-detection default.
 
 ## Possible thesis topics
 

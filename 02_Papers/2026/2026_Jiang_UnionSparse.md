@@ -4,7 +4,7 @@
 
 **PDF:** [arXiv PDF](https://arxiv.org/pdf/2608.09291)
 
-**Linked concepts:** [[Compression]], [[Quantization]]; core member of [[Mixture-of-Experts (MoE) & Edge LLM Serving]] (note: UnionSparse targets general sparse LLM inference, not specifically MoE routing — grouped with the cluster because it shares the edge-LLM-memory-bottleneck problem framing, per the 2026-08-13 digest).
+**Linked concepts:** [[Compression]], [[Quantization]]; core member of [[MoE_Edge_LLM_Serving|Mixture-of-Experts (MoE) & Edge LLM Serving]] (note: UnionSparse targets general sparse LLM inference, not specifically MoE routing — grouped with the cluster because it shares the edge-LLM-memory-bottleneck problem framing, per the 2026-08-13 digest).
 
 ## Abstract summary
 

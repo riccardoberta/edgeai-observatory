@@ -4,7 +4,7 @@
 
 **PDF:** [arXiv PDF](https://arxiv.org/pdf/2608.25321)
 
-**Linked concepts:** anchor paper (alongside [[2026_Fang_YAVIN]]) for the new [[Hardware Security of Edge AI Accelerators]] concept, created in the 2026-09-02 Knowledge Base Consolidation cycle. Touches [[FPGA]] as the accelerator class attacked in the validation experiment.
+**Linked concepts:** anchor paper (alongside [[2026_Fang_YAVIN]]) for the new [[Hardware_Security_of_Edge_AI_Accelerators]] concept, created in the 2026-09-02 Knowledge Base Consolidation cycle. Touches [[FPGA]] as the accelerator class attacked in the validation experiment.
 
 ## Abstract summary
 
@@ -56,7 +56,7 @@ A systematic comparative study of which edge accelerator architectures are more 
 
 ## Relevance to our research
 
-The second independent anchor (after [[2026_Fang_YAVIN]]) for what is now the [[Hardware Security of Edge AI Accelerators]] concept, created in this cycle. Establishes that edge AI accelerator hardware security spans at least two distinct threat models — architectural trust-boundary gaps (YAVIN) and physical/side-channel extraction (LLMscope) — that the Observatory should track as a single emerging concern with two variants rather than two unrelated one-off results.
+The second independent anchor (after [[2026_Fang_YAVIN]]) for what is now the [[Hardware_Security_of_Edge_AI_Accelerators]] concept, created in this cycle. Establishes that edge AI accelerator hardware security spans at least two distinct threat models — architectural trust-boundary gaps (YAVIN) and physical/side-channel extraction (LLMscope) — that the Observatory should track as a single emerging concern with two variants rather than two unrelated one-off results.
 
 ## Possible thesis topics
 
@@ -68,4 +68,4 @@ Shahin Tajik's and Fatemeh Ganji's groups (WPI), given their established physica
 
 ## Links to related papers
 
-The second data point (after [[2026_Fang_YAVIN]]) in the Observatory's emerging hardware-security thread; together they ground the new [[Hardware Security of Edge AI Accelerators]] concept. No other `02_Papers/` records address physical/side-channel attacks on edge AI accelerator hardware to date.
+The second data point (after [[2026_Fang_YAVIN]]) in the Observatory's emerging hardware-security thread; together they ground the new [[Hardware_Security_of_Edge_AI_Accelerators]] concept. No other `02_Papers/` records address physical/side-channel attacks on edge AI accelerator hardware to date.

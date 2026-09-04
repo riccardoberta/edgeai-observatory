@@ -4,7 +4,7 @@
 
 **PDF:** [arXiv PDF](https://arxiv.org/pdf/2606.27634)
 
-**Linked concepts:** [[Continual Learning]], [[On-device Learning]]
+**Linked concepts:** [[Continual_Learning]], [[On-device_Learning]]
 
 **Verification note:** the full-text HTML fetch for this paper was truncated by the fetch tool partway through Section 5 (Main Results), before reaching the specific correlation statistics and per-model KL-divergence figures. The abstract, introduction, and full methodology (Sections 1–4, including the TRACE task selection and stability-metric definitions) were independently verified from the full text. The specific numbers below attributed to the 2026-07-05 weekly digest (Pearson r, the KL "failure zone," and per-model KL peaks) were reported by that digest's own full-text read and are carried forward here as digest-sourced rather than independently re-verified in this pass — re-check before citing in a survey or thesis.
 
@@ -58,7 +58,7 @@ Test whether the KL-divergence stability signal survives quantization and works 
 
 ## Relevance to our research
 
-A strong conceptual fit for the Observatory's [[Continual Learning]] and [[On-device Learning]] branches, and an early (June 2026) data point in what became, per the July 2026 monthly report, a broader on-device-training research arc spanning the rest of the summer (RISC-V float16 training, Hailo-8L accelerator repurposing, ECRAM continual learning). Directly connects the LLM-on-edge trend to the classic forgetting literature already tracked (Kirkpatrick EWC, iCaRL).
+A strong conceptual fit for the Observatory's [[Continual_Learning]] and [[On-device_Learning]] branches, and an early (June 2026) data point in what became, per the July 2026 monthly report, a broader on-device-training research arc spanning the rest of the summer (RISC-V float16 training, Hailo-8L accelerator repurposing, ECRAM continual learning). Directly connects the LLM-on-edge trend to the classic forgetting literature already tracked (Kirkpatrick EWC, iCaRL).
 
 ## Possible thesis topics
 

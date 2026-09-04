@@ -4,7 +4,7 @@
 
 **PDF:** [arXiv PDF](https://arxiv.org/pdf/2608.12500)
 
-**Linked concepts:** [[On-device Learning]], [[Quantization]]
+**Linked concepts:** [[On-device_Learning]], [[Quantization]]
 
 ## Abstract summary
 
@@ -56,11 +56,11 @@ Investigate whether Lonic's INT4 local-learning result generalizes beyond SNNs t
 
 ## Relevance to our research
 
-Directly actionable for the Observatory's [[On-device Learning]] and [[Quantization]] (INT4) branches — the 2026-08-20 digest's strongest deep-analysis candidate that week given its baseline breadth and code release.
+Directly actionable for the Observatory's [[On-device_Learning]] and [[Quantization]] (INT4) branches — the 2026-08-20 digest's strongest deep-analysis candidate that week given its baseline breadth and code release.
 
 ## Possible thesis topics
 
-Does INT4 local-learning generalize beyond SNNs? Investigate whether a comparable multiplier-free, prefix-accelerated dataflow would make INT4 (or lower) local on-device training viable for standard ANNs under the same energy budget (Master's/PhD, per the 2026-08-20 digest's explicit hook; bridges [[On-device Learning]] × [[Quantization]]).
+Does INT4 local-learning generalize beyond SNNs? Investigate whether a comparable multiplier-free, prefix-accelerated dataflow would make INT4 (or lower) local on-device training viable for standard ANNs under the same energy budget (Master's/PhD, per the 2026-08-20 digest's explicit hook; bridges [[On-device_Learning]] × [[Quantization]]).
 
 ## Possible collaborations
 
@@ -68,4 +68,4 @@ The Lonic author group (Chen, Yang) given the released, reproducible codebase �
 
 ## Links to related papers
 
-The Observatory's first `02_Papers/` record specifically on spiking-neural-network hardware; extends [[On-device Learning]] alongside the RISC-V float16 training and Hailo-8L adaptation records as a third, algorithmically distinct approach to efficient on-device training.
+The Observatory's first `02_Papers/` record specifically on spiking-neural-network hardware; extends [[On-device_Learning]] alongside the RISC-V float16 training and Hailo-8L adaptation records as a third, algorithmically distinct approach to efficient on-device training.

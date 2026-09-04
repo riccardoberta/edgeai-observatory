@@ -4,7 +4,7 @@
 
 **PDF:** [arXiv PDF](https://arxiv.org/pdf/2608.11688)
 
-**Linked concepts:** core member of [[Mixture-of-Experts (MoE) & Edge LLM Serving]]; adjacent to [[Compression]].
+**Linked concepts:** core member of [[MoE_Edge_LLM_Serving|Mixture-of-Experts (MoE) & Edge LLM Serving]]; adjacent to [[Compression]].
 
 ## Abstract summary
 

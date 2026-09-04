@@ -34,7 +34,7 @@ Significant reductions in inference latency and memory usage alongside substanti
 
 ## Comparison with the state of the art
 
-Distinguishes itself from single-technique edge-inference optimization (quantization alone, or sparse attention alone) by jointly and adaptively combining three complementary mechanisms, and is directly relevant to this Observatory's [[Mixture-of-Experts (MoE) & Edge LLM Serving]] cluster's central theme of scheduling/routing generative-model computation across heterogeneous edge resources — though this paper is implemented via ONNX Runtime rather than the custom runtimes most MoE-serving-cluster papers use.
+Distinguishes itself from single-technique edge-inference optimization (quantization alone, or sparse attention alone) by jointly and adaptively combining three complementary mechanisms, and is directly relevant to this Observatory's [[MoE_Edge_LLM_Serving|Mixture-of-Experts (MoE) & Edge LLM Serving]] cluster's central theme of scheduling/routing generative-model computation across heterogeneous edge resources — though this paper is implemented via ONNX Runtime rather than the custom runtimes most MoE-serving-cluster papers use.
 
 ## Strengths
 
@@ -58,7 +58,7 @@ Adapting the sensitivity-aware mixed-precision-quantization and hardware-adaptiv
 
 ## Relevance to our research
 
-Provides this Observatory's [[ONNX_Runtime]] concept with a concrete, recent (2025) example of ONNX Runtime used as the deployment substrate for adaptive, resource-aware inference of generative models on edge-GPU-class hardware, and connects to the [[Mixture-of-Experts (MoE) & Edge LLM Serving]] cluster's dynamic-expert-routing theme via an open-runtime (rather than proprietary) implementation path.
+Provides this Observatory's [[ONNX_Runtime]] concept with a concrete, recent (2025) example of ONNX Runtime used as the deployment substrate for adaptive, resource-aware inference of generative models on edge-GPU-class hardware, and connects to the [[MoE_Edge_LLM_Serving|Mixture-of-Experts (MoE) & Edge LLM Serving]] cluster's dynamic-expert-routing theme via an open-runtime (rather than proprietary) implementation path.
 
 ## Possible thesis topics
 

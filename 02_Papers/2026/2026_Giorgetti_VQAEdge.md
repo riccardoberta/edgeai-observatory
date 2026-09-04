@@ -4,7 +4,7 @@
 
 **PDF:** [lion20.org](https://www.lion20.org/papers/12.pdf)
 
-**Linked concepts:** [[Generative EdgeAI]] — founding anchor (alongside [[2026_Abdulkadhim_LEAF]]), created 2026-09-04. Also touches [[Distillation]] (knowledge distillation is the core training method for the VQA student models), [[Vision]] (MobileNet V3 Large backbone, VQAv2 dataset), and [[NPU]] (STM32MP2's embedded NPU is the deployment target and the paper reports a measured NPU/CPU speedup).
+**Linked concepts:** [[Generative_EdgeAI]] — founding anchor (alongside [[2026_Abdulkadhim_LEAF]]), created 2026-09-04. Also touches [[Distillation]] (knowledge distillation is the core training method for the VQA student models), [[Vision]] (MobileNet V3 Large backbone, VQAv2 dataset), and [[NPU]] (STM32MP2's embedded NPU is the deployment target and the paper reports a measured NPU/CPU speedup).
 
 **Note on authorship:** co-authored by Riccardo Berta (DITEN, University of Genoa) — this Observatory's own research group.
 
@@ -58,7 +58,7 @@ Evaluate the full generative pipeline's end-to-end response quality (not just pe
 
 ## Relevance to our research
 
-Directly authored within this group (Riccardo Berta, DITEN); founding anchor, alongside [[2026_Abdulkadhim_LEAF]], of the new [[Generative EdgeAI]] concept under Applications — the first papers in this Observatory's KB addressing multimodal/generative AI (as opposed to discriminative/classification workloads) deployed specifically on constrained edge hardware. Bridges [[Distillation]] (the training method used), [[Vision]] (VQA's visual backbone and dataset), and [[NPU]] (the deployment target and measured NPU speedup) — and is a natural link into [[MoE_Edge_LLM_Serving]] (Algorithms) since both concern LLMs at the edge, though that cluster focuses on *serving/scheduling* infrastructure for larger dense/MoE LLMs on laptop/workstation-class hardware, while this paper's LM stage (Gemma 3 270M via ollama on an MPU) sits at a genuinely smaller, MCU/MPU-adjacent scale.
+Directly authored within this group (Riccardo Berta, DITEN); founding anchor, alongside [[2026_Abdulkadhim_LEAF]], of the new [[Generative_EdgeAI]] concept under Applications — the first papers in this Observatory's KB addressing multimodal/generative AI (as opposed to discriminative/classification workloads) deployed specifically on constrained edge hardware. Bridges [[Distillation]] (the training method used), [[Vision]] (VQA's visual backbone and dataset), and [[NPU]] (the deployment target and measured NPU speedup) — and is a natural link into [[MoE_Edge_LLM_Serving]] (Algorithms) since both concern LLMs at the edge, though that cluster focuses on *serving/scheduling* infrastructure for larger dense/MoE LLMs on laptop/workstation-class hardware, while this paper's LM stage (Gemma 3 270M via ollama on an MPU) sits at a genuinely smaller, MCU/MPU-adjacent scale.
 
 ## Possible thesis topics
 
@@ -70,4 +70,4 @@ STMicroelectronics (Gloria Giorgetti, Danilo Pau) — already a direct co-author
 
 ## Links to related papers
 
-Founding anchor of [[Generative EdgeAI]] together with [[2026_Abdulkadhim_LEAF]] (an independently-authored LLM-edge-benchmarking framework, MDPI MAKE 2026) — the two papers approach the same emerging niche from different angles (a practical multimodal tutorial/system here vs. a systematic text-only LLM benchmarking methodology there), which is part of the evidence the niche is real rather than a single group's framing. Cites this Observatory-relevant prior work: Giorgetti & Pau's own 2025 review "Transitioning from TinyML to edge GenAI" (Big Data and Cognitive Computing) — not yet a separate KB record, worth adding if a dedicated survey-level record is wanted. Related-work chain also touches TinyVQA (Rashid et al., GAP8-deployed, KD+quantization) and MobiVQA (Cao et al., Jetson TX2/Pixel 3XL) as prior edge-VQA systems, neither yet recorded in this KB.
+Founding anchor of [[Generative_EdgeAI]] together with [[2026_Abdulkadhim_LEAF]] (an independently-authored LLM-edge-benchmarking framework, MDPI MAKE 2026) — the two papers approach the same emerging niche from different angles (a practical multimodal tutorial/system here vs. a systematic text-only LLM benchmarking methodology there), which is part of the evidence the niche is real rather than a single group's framing. Cites this Observatory-relevant prior work: Giorgetti & Pau's own 2025 review "Transitioning from TinyML to edge GenAI" (Big Data and Cognitive Computing) — not yet a separate KB record, worth adding if a dedicated survey-level record is wanted. Related-work chain also touches TinyVQA (Rashid et al., GAP8-deployed, KD+quantization) and MobiVQA (Cao et al., Jetson TX2/Pixel 3XL) as prior edge-VQA systems, neither yet recorded in this KB.

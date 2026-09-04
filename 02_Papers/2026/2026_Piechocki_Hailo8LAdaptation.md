@@ -4,7 +4,7 @@
 
 **PDF:** [arXiv PDF](https://arxiv.org/pdf/2607.18101)
 
-**Linked concepts:** [[On-device Learning]], [[Quantization]]
+**Linked concepts:** [[On-device_Learning]], [[Quantization]]
 
 ## Abstract summary
 
@@ -32,7 +32,7 @@ Up to 15.4× faster wall-clock training time versus the Raspberry Pi 5 CPU basel
 
 ## Comparison with the state of the art
 
-Frozen-backbone / head-only fine-tuning is an established pattern in [[On-device Learning]] (the Observatory already tracks TinyTL in this space); this paper's specific contribution is repurposing a strictly inference-oriented commercial accelerator (rather than a general-purpose or training-capable chip) as the feature-extraction engine, and characterizing the INT8 quantization-restoration step needed to keep the resulting features usable for downstream classification. Compared directly against a standard CPU-only training baseline (Raspberry Pi 5) rather than against other accelerator-based adaptation schemes, since — per the 2026-07-26 digest — this appears to be a first-of-its-kind demonstration for this specific accelerator-repurposing pattern.
+Frozen-backbone / head-only fine-tuning is an established pattern in [[On-device_Learning]] (the Observatory already tracks TinyTL in this space); this paper's specific contribution is repurposing a strictly inference-oriented commercial accelerator (rather than a general-purpose or training-capable chip) as the feature-extraction engine, and characterizing the INT8 quantization-restoration step needed to keep the resulting features usable for downstream classification. Compared directly against a standard CPU-only training baseline (Raspberry Pi 5) rather than against other accelerator-based adaptation schemes, since — per the 2026-07-26 digest — this appears to be a first-of-its-kind demonstration for this specific accelerator-repurposing pattern.
 
 ## Strengths
 
@@ -56,11 +56,11 @@ Generalize the "frozen backbone on the accelerator, head on the CPU" pattern bey
 
 ## Relevance to our research
 
-A strong, practically reproducible fit for the Observatory's [[On-device Learning]] and [[Quantization]] branches, and directly relevant to heterogeneous edge personalization work given its use of commercially available, accessible hardware. Part of the July 2026 monthly report's "freeze most of the network, cheaply update a small part" thread alongside the RISC-V float16 training paper and CLASP (ECRAM continual learning) — three papers sharing a common on-device-training design pattern despite differing implementation substrates.
+A strong, practically reproducible fit for the Observatory's [[On-device_Learning]] and [[Quantization]] branches, and directly relevant to heterogeneous edge personalization work given its use of commercially available, accessible hardware. Part of the July 2026 monthly report's "freeze most of the network, cheaply update a small part" thread alongside the RISC-V float16 training paper and CLASP (ECRAM continual learning) — three papers sharing a common on-device-training design pattern despite differing implementation substrates.
 
 ## Possible thesis topics
 
-Repurposing inference-only NPUs for training: generalize this paper's pattern beyond Hailo-8L to other inference-only edge accelerators (Ethos-U, Coral) and quantify how far the frozen-feature-extraction trick scales before quantization-restoration can no longer recover accuracy (Master's, per the 2026-07-26 digest's explicit hook; bridges [[On-device Learning]] × [[Quantization]]).
+Repurposing inference-only NPUs for training: generalize this paper's pattern beyond Hailo-8L to other inference-only edge accelerators (Ethos-U, Coral) and quantify how far the frozen-feature-extraction trick scales before quantization-restoration can no longer recover accuracy (Master's, per the 2026-07-26 digest's explicit hook; bridges [[On-device_Learning]] × [[Quantization]]).
 
 ## Possible collaborations
 
@@ -68,4 +68,4 @@ The paper's own group (Piechocki, Capotondi, Kraft) given the released, reproduc
 
 ## Links to related papers
 
-Pairs conceptually with the RISC-V float16 on-device training paper (arXiv:2607.21130) from the same 2026-07-26 digest cycle — both freeze most of the network and differ only in *where* the cheap-to-train part runs (accelerator-offloaded frozen backbone here; low-precision training on the core there). Extends the Observatory's existing [[On-device Learning]] entry TinyTL with a commercial-accelerator-repurposing variant of the frozen-backbone pattern.
+Pairs conceptually with the RISC-V float16 on-device training paper (arXiv:2607.21130) from the same 2026-07-26 digest cycle — both freeze most of the network and differ only in *where* the cheap-to-train part runs (accelerator-offloaded frozen backbone here; low-precision training on the core there). Extends the Observatory's existing [[On-device_Learning]] entry TinyTL with a commercial-accelerator-repurposing variant of the frozen-backbone pattern.

@@ -60,7 +60,7 @@ Adds a major, production-validated PyTorch-native framework to the Observatory's
 
 ## Possible thesis topics
 
-A controlled, Cortex-M-tier benchmark comparing ExecuTorch against [[TensorFlow_Lite_Micro]] and [[CMSIS-NN]] on the same model and hardware (Master's; extends the comparative-benchmark thesis idea already proposed for [[ONNX_Runtime]] to a third framework). Evaluating ExecuTorch's operator coverage and export fidelity for transformer/MoE architectures relevant to this Observatory's [[Mixture-of-Experts (MoE) & Edge LLM Serving]] concept.
+A controlled, Cortex-M-tier benchmark comparing ExecuTorch against [[TensorFlow_Lite_Micro]] and [[CMSIS-NN]] on the same model and hardware (Master's; extends the comparative-benchmark thesis idea already proposed for [[ONNX_Runtime]] to a third framework). Evaluating ExecuTorch's operator coverage and export fidelity for transformer/MoE architectures relevant to this Observatory's [[MoE_Edge_LLM_Serving|Mixture-of-Experts (MoE) & Edge LLM Serving]] concept.
 
 ## Possible collaborations
 
