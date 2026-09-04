@@ -6,7 +6,7 @@
 
 **Linked concepts:** [[Biosignals]], [[Quantization]]
 
-**Verification note:** this record is built from the arXiv abstract page only. Two attempts to fetch the full-text HTML version were blocked by an in-session web-fetch rate limit; the accuracy, dataset, and baseline-comparison figures below are therefore explicitly marked as unverified pending a full-PDF read, consistent with the Observatory's "no hallucinated information" principle. Ricky should re-run this fetch (or open the PDF directly) before citing this paper's accuracy numbers in a survey or thesis.
+**Verification note:** this record is built from the arXiv abstract page only. Two attempts to fetch the full-text HTML version were blocked by an in-session web-fetch rate limit; the accuracy, dataset, and baseline-comparison figures below are therefore explicitly marked as unverified pending a full-PDF read, consistent with the Observatory's "no hallucinated information" principle. This fetch should be re-run (or the PDF opened directly) before citing this paper's accuracy numbers in a survey or thesis.
 
 ## Abstract summary
 

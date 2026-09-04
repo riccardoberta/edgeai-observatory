@@ -56,7 +56,7 @@ Port the pipelined-loading and semantic-aware caching principles to a lower-tier
 
 ## Relevance to our research
 
-FreeToken is the sharpest evidence yet of a tension recurring across the Observatory's August 2026 digests: MICRO/ICCAD-caliber systems groups are applying genuinely novel bandwidth-adaptive scheduling ideas to hardware (laptop/workstation GPUs) that sits well above this lab's core MCU/NPU/[[RISC-V]] focus. It is the clearest single data point for the still-open "Edge LLM Serving / Local Inference Systems" taxonomy gap flagged in the 2026-08-13, 2026-08-20, and 2026-08-23 digests, alongside APEX, EdgeXpert, UnionSparse, PolyQ, and HeteroMosaic — see the taxonomy Evolution note added 2026-08-25, which recommends Ricky decide whether to formalize this taxonomy node now that six independent papers have converged on it.
+FreeToken is the sharpest evidence yet of a tension recurring across the Observatory's August 2026 digests: MICRO/ICCAD-caliber systems groups are applying genuinely novel bandwidth-adaptive scheduling ideas to hardware (laptop/workstation GPUs) that sits well above EliosLab's core MCU/NPU/[[RISC-V]] focus. It is the clearest single data point for the still-open "Edge LLM Serving / Local Inference Systems" taxonomy gap flagged in the 2026-08-13, 2026-08-20, and 2026-08-23 digests, alongside APEX, EdgeXpert, UnionSparse, PolyQ, and HeteroMosaic — see the taxonomy Evolution note added 2026-08-25, which recommends deciding whether to formalize this taxonomy node now that six independent papers have converged on it.
 
 ## Possible thesis topics
 

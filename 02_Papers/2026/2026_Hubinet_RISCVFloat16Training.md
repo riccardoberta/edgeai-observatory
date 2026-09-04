@@ -6,7 +6,7 @@
 
 **Linked concepts:** [[RISC-V]], [[On-device_Learning]], [[Quantization]] (float16 as a precision-reduction technique for training, not inference)
 
-**Verification note:** every web-fetch attempt to independently retrieve this paper's arXiv page (five attempts across this session) was blocked by an in-session rate limit that did not affect most other papers fetched in the same session. This record is therefore built entirely from the 2026-07-26 weekly digest's own full-text-verified summary (that digest's sourcing note states papers were read at the abstract level from arXiv, consistent with its stated methodology) and the 2026-07 monthly report's cross-references, rather than an independent re-verification in this pass. Ricky should re-run the arXiv fetch (or open the PDF directly) before citing the specific figures below in a survey or thesis.
+**Verification note:** every web-fetch attempt to independently retrieve this paper's arXiv page (five attempts across this session) was blocked by an in-session rate limit that did not affect most other papers fetched in the same session. This record is therefore built entirely from the 2026-07-26 weekly digest's own full-text-verified summary (that digest's sourcing note states papers were read at the abstract level from arXiv, consistent with its stated methodology) and the 2026-07 monthly report's cross-references, rather than an independent re-verification in this pass. This arXiv fetch should be re-run (or the PDF opened directly) before citing the specific figures below in a survey or thesis.
 
 ## Abstract summary (as reported by the source digest)
 
@@ -54,7 +54,7 @@ Which specific models and tasks does the "minimal model-quality degradation" cla
 
 ## Possible extensions
 
-Directly re-verify this record's figures from the full PDF, given the fetch limitations in this pass; extend Ricky's own AIfES-based infrastructure (already open-source per this paper) to compare `Zfh`/`Zvfh` float16 training against int8/quantized training on the same RISC-V core (the explicit 2026-07-26 and July-2026-monthly-report hook); fully characterize the `Zvfh` vector extension's hardware cost and training-time benefit, not just the outlined scalar (`Zfh`) case.
+Directly re-verify this record's figures from the full PDF, given the fetch limitations in this pass; extend EliosLab's AIfES-based infrastructure (already open-source per this paper) to compare `Zfh`/`Zvfh` float16 training against int8/quantized training on the same RISC-V core (the explicit 2026-07-26 and July-2026-monthly-report hook); fully characterize the `Zvfh` vector extension's hardware cost and training-time benefit, not just the outlined scalar (`Zfh`) case.
 
 ## Relevance to our research
 

@@ -1,5 +1,7 @@
 # EdgeAI Observatory
 
+A research project of [EliosLab](https://www.elios.unige.it/), University of Genoa.
+
 [Browse the site](https://riccardoberta.github.io/edgeai-observatory/) · [Ask the Observatory](https://riccardoberta.github.io/edgeai-observatory/ask/) · [Read the Textbook](https://riccardoberta.github.io/edgeai-observatory/book/)
 
 A long-term research knowledge system for the EdgeAI / TinyML literature, built to behave like a research analyst for the lab rather than a folder of PDFs. It is not a literature-review tool: a review summarizes papers, while the Observatory is built to identify patterns, connect ideas across papers, track how the field evolves, and help generate new research directions.
@@ -14,7 +16,7 @@ There are three ways to use the Observatory, all reading from the same corpus:
 
 **[Browse the site](https://riccardoberta.github.io/edgeai-observatory/)** — the full taxonomy, knowledge base, paper records, and digests as a searchable static site, rebuilt on every push to `main`.
 
-**[Ask the Observatory](https://riccardoberta.github.io/edgeai-observatory/ask/)** — a Claude-powered page for natural-language questions ("what's emerging in on-device learning for Cortex-M?", "which papers contradict each other on X?"). It answers only from the indexed corpus — papers, knowledge base entries, digests, and taxonomy — and every answer cites the source records it drew on, each linked back to the corresponding page on the site above. The corpus behind it is kept current automatically by the monitoring pipeline below. It's a private link shared with the research group; if someone new needs access, share it from the page's share menu.
+**[Ask the Observatory](https://riccardoberta.github.io/edgeai-observatory/ask/)** — a Claude-powered page for natural-language questions ("what's emerging in on-device learning for Cortex-M?", "which papers contradict each other on X?"). It answers only from the indexed corpus — papers, knowledge base entries, digests, and taxonomy — and every answer cites the source records it drew on, each linked back to the corresponding page on the site above. The corpus behind it is kept current automatically by the monitoring pipeline below. It's a private link shared within EliosLab; if someone new needs access, share it from the page's share menu.
 
 **[Read the Textbook](https://riccardoberta.github.io/edgeai-observatory/book/)** — "Edge AI: Principles and Practice," a Master's/PhD-level reference volume generated from the Knowledge Base, organized as chapters mirroring the taxonomy (Algorithms, Frameworks, Hardware, Applications, Benchmarks & Datasets, Security). Unlike the two pages above it isn't queried live — it's prose, written once and then revised — so it is only as current as the last Knowledge Base Consolidation cycle that updated it; see below.
 
@@ -50,7 +52,7 @@ literature / ecosystem signals
             v
      ready_for_review
             |
-    explicit Ricky request
+    explicit consolidation request
             |
             v
       CONSOLIDATION

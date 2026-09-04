@@ -4,6 +4,7 @@ site_url: https://riccardoberta.github.io/edgeai-observatory/
 repo_url: https://github.com/riccardoberta/edgeai-observatory
 repo_name: riccardoberta/edgeai-observatory
 edit_uri: edit/main/docs/
+copyright: 'A research project of <a href="https://www.elios.unige.it/">EliosLab</a>, University of Genoa'
 
 theme:
   name: material
