@@ -47,11 +47,27 @@ candidates:
     status: watching
 
     first_seen: 2026-08-31
-    last_seen: 2026-08-31
+    last_seen: 2026-09-13
 
     possible_existing_concept: null
 
     evidence:
+      - source: 03_Digests/Weekly/2026-09-13_weekly_digest.md
+        papers:
+          - "EPIC: An 1.34-TOPS/W, 16-GOPS/mm2 Digital In-Memory-Computing-Based AI Microcontroller Unit Supporting On-Chip Model Fine-Tuning for a TinyML Device"
+        note: >
+          Partial, not full, corroboration: EPIC (Lin, Moon, Huang, Seok;
+          Columbia; IEEE TCAS-I 2026) is a fabricated 28nm AI MCU reporting
+          rigorous, standard-benchmark (MLPerf Tiny) efficiency numbers for
+          both inference and on-chip fine-tuning, at exactly the MCU/NPU
+          tier this candidate names as missing. Kept short of promoting to
+          ready_for_review because EPIC is a single chip's own
+          self-reported benchmark result, not a reusable, open measurement
+          *methodology/framework* others can apply across different
+          MCU/NPU chips the way Hydra does for Jetson-class hardware --
+          the specific gap this candidate names. Still a meaningful signal
+          that MLPerf-Tiny-grounded rigor is starting to reach this tier.
+
       - source: 03_Digests/Weekly/2026-08-31_weekly_digest.md
         note: >
           Source digest for Hydra (open, phase-aware Jetson AGX measurement
@@ -170,3 +186,81 @@ candidates:
       independent Jetson/edge-GPU characterization paper.
 
     action_hint: monitor for a second, independent edge-GPU/Jetson-class characterization paper before review
+
+  - id: certified-selective-inference-imperfect-edge-accelerators
+    title: "Certified / Risk-Aware Selective Inference for Imperfect Physical Edge Accelerators"
+
+    status: watching
+
+    first_seen: 2026-09-06
+    last_seen: 2026-09-06
+
+    possible_existing_concept: null
+
+    evidence:
+      - source: 03_Digests/Weekly/2026-09-06_weekly_digest.md
+        papers:
+          - "RACE-AIMC: Selective Inference for Heterogeneous Analog In-Memory Accelerators at the Edge"
+        note: >
+          RACE-AIMC (Yousuf, Lueker-Boden) computes a mathematically exact,
+          per-chip upper bound on error rate for a pool of heterogeneous
+          physical analog in-memory accelerators, then runs only the single
+          best chip for a given energy budget with a fallback for low-
+          confidence inputs — turning "which imperfect chip do I trust"
+          into a certified statistical decision rather than a design
+          heuristic (ensemble-everything vs. trust-one-blindly). Distinct
+          from FALCON (arXiv:2609.00701, covered 2026-09-02) and its MTJ-
+          focused research line: RACE-AIMC does not commit to a specific
+          emerging-NVM device technology and addresses reliability via a
+          statistical certification framework rather than a fault-tolerant
+          architecture, so it is kept as its own candidate rather than
+          merged into in-memory-computing-emerging-nvm-hardware-gap.
+
+    rationale: >
+      A single paper so far, but a potentially reusable idea beyond this
+      specific accelerator class: per-unit statistical certification could
+      plausibly generalize to any edge deployment with device-to-device
+      variability (digital NPUs, MCU fleets with process variation/aging),
+      not just analog in-memory computing. Worth watching for a second,
+      independent paper — either another AIMC reliability paper or a
+      certified/selective-inference paper applied to a different edge
+      accelerator class — before treating this as a mature direction.
+
+    action_hint: monitor for a second, independent paper applying certified/risk-aware selective inference to imperfect edge accelerators (same or different hardware class) before review
+
+  - id: robotics-edge-ai-applications-gap
+    title: "Robotics / Autonomous-Systems Applications of EdgeAI (Applications Taxonomy Gap)"
+
+    status: watching
+
+    first_seen: 2026-09-13
+    last_seen: 2026-09-13
+
+    possible_existing_concept: null
+
+    evidence:
+      - source: 03_Digests/Weekly/2026-09-13_weekly_digest.md
+        papers:
+          - "APEX-RBD: Mixed-Precision Exploration Framework for Hardware-Efficient Robot Dynamics Accelerator Design"
+        note: >
+          00_Taxonomy/taxonomy.md's "Known gaps" section has long flagged
+          "Robotics / autonomous-systems applications of EdgeAI" as a
+          plausible Applications-branch gap with no credible anchor paper.
+          APEX-RBD (Liu, Fan, Ma, Liang, Hu, Xu, Zhang) applies mixed-
+          precision quantization exploration specifically to Rigid Body
+          Dynamics accelerators for resource-constrained robotic control,
+          the first paper this Observatory has found that combines an
+          established Algorithms-branch technique ([[Quantization]]) with
+          a robotics-specific hardware target under an edge/resource-
+          constrained framing. Treated as a first, single anchor rather
+          than already-corroborated.
+
+    rationale: >
+      A single paper so far, filling a gap the taxonomy has named for a
+      while but could not previously anchor. Consistent with the
+      Observatory's two-independent-anchor convention for new
+      Hardware/Applications taxonomy branches, kept at "watching" pending
+      a second, independent EdgeAI-robotics paper (any algorithmic or
+      hardware angle, not necessarily quantization or RBD specifically).
+
+    action_hint: monitor for a second, independent EdgeAI robotics/autonomous-systems paper before review; if found, consider formalizing "Robotics" as an Applications-branch concept per taxonomy.md's known-gaps note
