@@ -14,18 +14,19 @@
 digital_libraries:
   - name: arXiv
     url: https://arxiv.org
-    categories: [cs.LG, cs.AR, cs.DC, eess.SP]
+    categories: [cs.LG, cs.AR, cs.DC, cs.CV, cs.ET, cs.NE, cs.RO, cs.SD, eess.SP, eess.AS]
+    categories_note: "cs.CV, cs.ET, cs.NE, cs.RO, cs.SD and eess.AS added 2026-09-20: most digest picks since August were cross-listed there (efficient vision, emerging technologies / in-memory computing, spiking networks, on-robot deployment, keyword spotting) and would be missed by a listing check on the original four categories alone."
     access: open
     status: active
     notes: "Primary source for preprints; check daily/weekly listings on relevant categories."
-    last_checked: 2026-09-02
+    last_checked: 2026-09-20
 
   - name: IEEE Xplore
     url: https://ieeexplore.ieee.org
     access: institutional (discovery via WebSearch needs no login; full text needs unige.it)
     access_notes: "Primary discovery method (2026-09-02, works unattended, no login needed): WebSearch with `site:ieeexplore.ieee.org <query>`. Confirmed to reliably surface titles, venues, dates, and often a synthesized abstract-level snippet without any institutional session — this is what makes IEEE coverage usable in the unattended Weekly/Monthly runs, where a live logged-in browser is never available. `web_fetch` on individual ieeexplore.ieee.org URLs returns an empty client-rendered shell (paywalled, no server-rendered abstract) — do not rely on it. For full text or a deeper read (e.g. before writing a `02_Papers/` deep-analysis record), use the Claude in Chrome extension on a browser signed in on the unige.it campus network/VPN/proxy; this stays an on-demand, human-present step, not part of the unattended pipeline. Note: search-result listing pages do not expose reliable per-item indexing/publication dates, so date-filter results by opening the individual record, not the listing page."
     status: active
-    last_checked: 2026-09-02
+    last_checked: 2026-09-20
 
   - name: ACM Digital Library
     url: https://dl.acm.org
@@ -39,7 +40,7 @@ digital_libraries:
     access: open
     access_notes: "Fully open access — confirmed 2026-09-02 that `web_fetch` retrieves full article text directly, no login or Chrome needed, same as arXiv. Relevant journals for this Observatory: Sensors, Electronics, Information, Applied Sciences, Future Internet. Use WebSearch with `site:mdpi.com <query>` for discovery, then `web_fetch` the resulting article URL directly for full text (works even for 02_Papers/-grade deep analysis, not just title/abstract-level digest entries)."
     status: active
-    last_checked: 2026-09-02
+    last_checked: 2026-09-20
 
   - name: Elsevier (ScienceDirect)
     url: https://www.sciencedirect.com
@@ -92,7 +93,7 @@ digital_libraries:
       solves the "must be interactive" limitation above for topic-based
       coverage; extend the query list as the taxonomy grows.
     status: active
-    last_checked: 2026-09-02
+    last_checked: 2026-09-20
 
 conferences:
   # Checking method (added 2026-09-03): entries below previously had no actual

@@ -33,25 +33,49 @@
 #                        to decide its fate. This status does NOT itself
 #                        promote anything into the Knowledge Base.
 #
-# Bootstrapped 2026-09-02: the five candidates below were seeded from real,
-# already-existing Weekly Digest / Monthly Report / taxonomy evidence (no
-# consolidation cycle has run yet, so nothing has been promoted, merged, or
-# rejected so far — see consolidation_history.yaml). No candidate was
-# invented; each evidence entry references an actual Observatory file.
+# Bootstrapped 2026-09-02 from already-existing Weekly Digest / Monthly Report
+# / taxonomy evidence; resolved candidates move to consolidation_history.yaml.
+# No candidate is ever invented: each evidence entry references an actual
+# Observatory file. The "Known gaps" section of 00_Taxonomy/taxonomy.md must
+# always list exactly the candidates present here (same set, same count) —
+# tools/check_consistency.py warns when the two drift apart.
 
 candidates:
 
   - id: mcu-npu-measurement-infrastructure
     title: "Standardized Measurement Infrastructure for MCU/NPU-Class Edge Inference"
 
-    status: watching
+    status: ready_for_review
 
     first_seen: 2026-08-31
-    last_seen: 2026-09-13
+    last_seen: 2026-09-20
 
     possible_existing_concept: null
 
     evidence:
+      - source: 03_Digests/Weekly/2026-09-20_weekly_digest.md
+        papers:
+          - "Is INT8 Portable? A Cross-Platform Measurement Study of Quantized Inference on Embedded and Automotive Accelerators"
+          - "Deploying TinyML on Commercial Smart Glasses"
+        note: >
+          Two independent papers in one week, from unrelated groups. The
+          INT8-portability study (Shin; arXiv:2609.16085) is the first
+          paper found that offers a reusable, open, artifact-fixed
+          cross-chip measurement *methodology* (scripts + 32 reports
+          released) rather than a single chip's self-report -- exactly
+          the kind of thing EPIC lacked -- covering ARM/x86 CPUs, Jetson
+          Orin iGPU + NVDLA, and two vendor NPUs (Qualcomm Hexagon HTP,
+          DEEPX DX-M1). It still stops above the Cortex-M / Ethos-U /
+          RISC-V-NPU tier. The smart-glasses paper (Krumpl, Corti, Wang,
+          Saukh; TU Graz; EWSN 2026 EMERGE workshop) adds a complementary
+          MCU-tier (nRF52840, Cortex-M4) observation: MLPerf Tiny-style
+          bare-metal numbers do not transfer to a real wearable because
+          firmware co-residency and the sensor/JPEG pipeline set the
+          effective budget and end-to-end latency. Together they suggest
+          the concept may be better framed as "edge inference measurement
+          methodology and benchmark realism" spanning tiers, with the
+          MCU/NPU tier as its still-open sub-gap.
+
       - source: 03_Digests/Weekly/2026-09-13_weekly_digest.md
         papers:
           - "EPIC: An 1.34-TOPS/W, 16-GOPS/mm2 Digital In-Memory-Computing-Based AI Microcontroller Unit Supporting On-Chip Model Fine-Tuning for a TinyML Device"
@@ -102,14 +126,22 @@ candidates:
           tier was found in this pass.
 
     rationale: >
-      A genuine systems/benchmark-gap signal identified through monthly
-      synthesis of two measurement-focused papers, but so far only
-      articulated in a single monthly cycle with no independent weekly-level
-      corroboration yet at the MCU/NPU tier itself. Worth watching for a
-      second independent instance (e.g. an actual MCU/Ethos-U/RISC-V-NPU
-      measurement paper) before treating it as mature enough for review.
+      A genuine systems/benchmark-gap signal first identified through
+      monthly synthesis of two measurement-focused papers (Hydra, ANE
+      study), then partially corroborated at the MCU tier by EPIC
+      (2026-09-13), and now corroborated by two further independent
+      papers (2026-09-20): an open cross-platform INT8 measurement
+      methodology at the edge-accelerator tier and an MCU-tier
+      benchmark-realism study on a commercial wearable. Evidence now spans
+      three weekly digests, one monthly report, and five papers from five
+      unrelated groups. Promoted to ready_for_review on 2026-09-20. The
+      narrow "open methodology at the Cortex-M/Ethos-U/RISC-V-NPU tier"
+      gap is still not closed by any single paper; the reviewer should
+      decide whether to formalize the broader concept now (with that tier
+      as an explicit open sub-gap) or keep waiting for a tier-specific
+      anchor.
 
-    action_hint: monitor for a second, MCU/NPU-tier-specific paper before review
+    action_hint: review in the next Knowledge Base Consolidation cycle; decide between (a) a new Benchmarks_Datasets-branch concept on measurement methodology / benchmark realism for edge inference, with the MCU/NPU tier flagged as open, or (b) extending MLPerf_Tiny.md with a "known limitations / realism" section and keeping the tier-specific gap in taxonomy.md
 
   - id: in-memory-computing-emerging-nvm-hardware-gap
     title: "In-Memory Computing with Emerging Non-Volatile Memory (Hardware Taxonomy Gap)"
@@ -231,14 +263,39 @@ candidates:
   - id: robotics-edge-ai-applications-gap
     title: "Robotics / Autonomous-Systems Applications of EdgeAI (Applications Taxonomy Gap)"
 
-    status: watching
+    status: ready_for_review
 
     first_seen: 2026-09-13
-    last_seen: 2026-09-13
+    last_seen: 2026-09-20
 
     possible_existing_concept: null
 
     evidence:
+      - source: 03_Digests/Weekly/2026-09-20_weekly_digest.md
+        papers:
+          - "Predict Before You Deploy: Offline Prediction of Quantization-Induced Task Degradation for World Action Models"
+          - "Recovering Aggressively Pruned Vision-Language-Action Models with Offline Hidden-State Distillation"
+        note: >
+          Two independent robotics-EdgeAI papers in the same week, from
+          groups unrelated to each other and to the APEX-RBD authors.
+          PreDE (Xu, Guo, Chen, Du, Shi; arXiv:2609.19441) applies
+          post-training quantization to world action models for on-robot
+          deployment and validates an offline accept/reject/defer rule in
+          450 real Franka Research 3 trials (W4A4: 1.37x action-query
+          speedup, ~44% lower peak memory on the robot). The VLA pruning
+          paper (Kim, Choi, Lee; arXiv:2609.19579) width-prunes a VLA
+          language backbone by up to 87% and recovers it offline via
+          hidden-state distillation, with on-board measurements on a
+          6-DoF manipulator (2.23x faster, 62% less memory at 72%
+          reduction). Both use Algorithms-branch techniques
+          ([[Quantization]], [[Pruning]], [[Distillation]]) under an
+          explicit on-robot resource constraint. Note the hardware tier is
+          GPU-class onboard compute, above APEX-RBD's accelerator-design
+          framing and the Observatory's MCU core; the reviewer should
+          decide whether "Robotics" is one Applications concept spanning
+          tiers or whether large-model-on-robot work belongs closer to
+          Generative_EdgeAI / MoE_Edge_LLM_Serving.
+
       - source: 03_Digests/Weekly/2026-09-13_weekly_digest.md
         papers:
           - "APEX-RBD: Mixed-Precision Exploration Framework for Hardware-Efficient Robot Dynamics Accelerator Design"
@@ -256,11 +313,14 @@ candidates:
           than already-corroborated.
 
     rationale: >
-      A single paper so far, filling a gap the taxonomy has named for a
-      while but could not previously anchor. Consistent with the
-      Observatory's two-independent-anchor convention for new
-      Hardware/Applications taxonomy branches, kept at "watching" pending
-      a second, independent EdgeAI-robotics paper (any algorithmic or
-      hardware angle, not necessarily quantization or RBD specifically).
+      First anchored by a single paper (APEX-RBD, 2026-09-13) filling a
+      gap the taxonomy had named for a while. One week later two further
+      independent papers appeared (PreDE; pruned-VLA recovery), so the
+      Observatory's two-independent-anchor convention for a new
+      Applications-branch concept is now met across two weeks and three
+      unrelated groups. Promoted to ready_for_review on 2026-09-20. Open
+      question for the reviewer: the three anchors sit at different
+      hardware tiers (custom RBD accelerator vs. GPU-class onboard
+      compute), so the concept's scope needs an explicit decision.
 
-    action_hint: monitor for a second, independent EdgeAI robotics/autonomous-systems paper before review; if found, consider formalizing "Robotics" as an Applications-branch concept per taxonomy.md's known-gaps note
+    action_hint: review in the next Knowledge Base Consolidation cycle; consider formalizing "Robotics / Autonomous Systems" as an Applications-branch concept per taxonomy.md's known-gaps note, with an explicit statement of which hardware tiers it covers and cross-links to Quantization, Pruning, Distillation and Generative_EdgeAI
