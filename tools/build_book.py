@@ -216,7 +216,17 @@ def build():
         toc_html.append('</ul></div>')
 
     def render_appendix_md(text):
-        paras = [p.strip() for p in re.split(r"\n\s*\n", text.strip()) if p.strip()]
+        # Bullet lists in taxonomy.md are consecutive "- " lines with no blank
+        # line between them; split them so each bullet becomes its own block.
+        paras = []
+        for block in re.split(r"\n\s*\n", text.strip()):
+            block = block.strip()
+            if not block:
+                continue
+            if block.startswith("- "):
+                paras.extend(re.split(r"\n(?=- )", block))
+            else:
+                paras.append(block)
         out = []
         for p in paras:
             p = html.escape(p)
