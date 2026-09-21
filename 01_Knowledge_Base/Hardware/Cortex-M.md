@@ -4,9 +4,9 @@ Arm Cortex-M cores are the most widely used hardware target for TinyML: low-powe
 
 ## Evolution of the concept
 
-The entire software ecosystem for this target developed in response to its constraints: [[CMSIS-NN]] for optimized kernels, [[TensorFlow_Lite_Micro]] as a runtime with static memory allocation. MCUNet (Lin, Chen, Lin, Gan, and Han, 2020) jointly co-designs a Neural Architecture Search method (TinyNAS, which first fits the search space to the resource budget before searching within it) with a code-generation inference engine (TinyEngine), together demonstrating ImageNet-scale classification directly on microcontroller-class hardware — a capability previously assumed out of reach, and the direct architectural ancestor of this concept's own on-device-training work below (from the same MIT research lineage).
+The entire software ecosystem for this target developed in response to its constraints: [[CMSIS-NN]] for optimized kernels, [[TensorFlow_Lite_Micro]] as a runtime with static memory allocation. MCUNet ([[2020_Lin_MCUNet|Lin]], Chen, Lin, Gan, and Han, 2020) jointly co-designs a Neural Architecture Search method (TinyNAS, which first fits the search space to the resource budget before searching within it) with a code-generation inference engine (TinyEngine), together demonstrating ImageNet-scale classification directly on microcontroller-class hardware — a capability previously assumed out of reach, and the direct architectural ancestor of this concept's own on-device-training work below (from the same MIT research lineage).
 
-Deutel et al. (2024) push the Cortex-M envelope beyond inference-only deployment, showing that fully quantized *training* — not just inference — is feasible directly on Cortex-M0+/M4/M7 hardware via a dynamic partial-gradient-update scheme, extending what these cores can do in place without offloading to a server (see also [[On-device_Learning]]).
+[[2024_Deutel_OnDeviceTrainingQuantizedCortexM|Deutel]] et al. (2024) push the Cortex-M envelope beyond inference-only deployment, showing that fully quantized *training* — not just inference — is feasible directly on Cortex-M0+/M4/M7 hardware via a dynamic partial-gradient-update scheme, extending what these cores can do in place without offloading to a server (see also [[On-device_Learning]]).
 
 ## Key papers
 
@@ -27,6 +27,8 @@ Deutel et al. (2024) push the Cortex-M envelope beyond inference-only deployment
 [[2026_Garavagno_HWNASUltraLowPower]] — hardware-aware NAS measured on real STM32 L0/L1/L4 hardware (20–40 KiB RAM class), reporting measured inference latency on each target.
 
 [[2026_Sen_NVFP4QuantizationEdgeAI]] — quantization scheme whose ~7x activation-memory reduction is directly relevant to Cortex-M's tight SRAM budget, though evaluated algorithmically rather than on real Cortex-M hardware.
+
+[[2025_Neth_UnIT]] — input-dependent, inference-time unstructured pruning designed for microcontrollers without SIMD or parallel compute, showing that irregular sparsity can pay off on the lowest hardware tier when the skipping decision is made at run time rather than at compile time.
 
 ## Open problems
 

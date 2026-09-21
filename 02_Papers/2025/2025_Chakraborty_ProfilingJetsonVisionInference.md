@@ -4,7 +4,7 @@
 
 **PDF:** [arXiv PDF](https://arxiv.org/pdf/2508.08430)
 
-**Linked concepts:** [[Vision]] — no clean match in the Hardware branch (Cortex-M/A, RISC-V, DSP, FPGA, NPU); this targets edge-GPU-class hardware (NVIDIA Jetson), flagged as a taxonomy gap (see taxonomy Evolution notes).
+**Linked concepts:** [[Vision]] — no clean match in the Hardware branch (Cortex-M/A, RISC-V, DSP, FPGA, NPU); this targets edge-GPU-class hardware (NVIDIA Jetson), tracked as a taxonomy gap (see the "Known gaps" section of `00_Taxonomy/taxonomy.md` and `00_Config/consolidation_candidates.yaml`).
 
 ## Abstract summary
 

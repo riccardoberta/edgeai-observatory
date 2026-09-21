@@ -4,7 +4,7 @@ Edge Impulse is a commercial MLOps (machine-learning-operations) platform: it ha
 
 ## Evolution of the concept
 
-Edge Impulse's founding paper (Hymel et al., 2022) documents the platform's motivation and, as of October 2022, its real-world scale: 118,185 projects and 50,953 developers, making it one of the most widely adopted MLOps platforms in practical TinyML development.
+Edge Impulse's founding paper ([[2022_Hymel_EdgeImpulse|Hymel]] et al., 2022) documents the platform's motivation and, as of October 2022, its real-world scale: 118,185 projects and 50,953 developers, making it one of the most widely adopted MLOps platforms in practical TinyML development.
 
 ## Key papers
 

@@ -1,6 +1,6 @@
 # Knowledge Base Consolidation — 2026-09-02
 
-A cross-cutting synthesis pass over the accumulated Knowledge Base, connecting concepts and papers that individual weekly and monthly entries treated separately. Two new concepts were formalized from this review: [[MoE_Edge_LLM_Serving]] (Algorithms) and [[Hardware_Security_of_Edge_AI_Accelerators]] (Security) — both are documented in full on their own Knowledge Base pages; this note preserves the cross-concept questions the review surfaced.
+A cross-cutting synthesis pass over the accumulated Knowledge Base, connecting concepts and papers that individual weekly and monthly entries treated separately. Three new concepts were formalized from this review: [[MoE_Edge_LLM_Serving]] (Algorithms), [[Hardware_Security_of_Edge_AI_Accelerators]] (Security), and — once an independent second anchor ([[2026_Jeziorek_EventAudioGNNKWS]]) was located for the event-driven hardware signal first raised by [[2026_Kneip_ETHEREAL]] — [[Event-Driven_Neuromorphic_Accelerators]] (Hardware). All three are documented in full on their own Knowledge Base pages; this note preserves the cross-concept questions the review surfaced. The same review also added a Benchmarks & Datasets branch ([[MLPerf_Tiny]], [[TinyML_Reference_Datasets]]) and two Frameworks concepts ([[ExecuTorch]], [[Edge_Impulse]]) to close coverage gaps between the monitored sources and the concept graph.
 
 ## Emerging research questions
 

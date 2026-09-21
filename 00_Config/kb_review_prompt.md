@@ -1,6 +1,6 @@
 # KB Review Prompt (periodic, on-demand)
 
-Use this prompt whenever you want a research-analyst pass over the Knowledge Base, not tied to the weekly/monthly digest cycle.
+Use this prompt whenever you want a research-analyst pass over the Knowledge Base, not tied to the weekly/monthly digest cycle. A run of this prompt is a **manual editorial pass** in the sense of `README.md` ("Monitoring pipeline"): it is allowed to change `01_Knowledge_Base/`, `00_Taxonomy/taxonomy.md` and `02_Papers/`, and therefore carries the same closing duties as a Knowledge Base Consolidation cycle (steps 6–7 below).
 
 ## How to run it
 
@@ -15,7 +15,10 @@ Act as an expert EdgeAI researcher and review the Knowledge Base (01_Knowledge_B
 2. Check whether there are important foundational or highly-cited papers relevant to any concept that are not yet cited in its "Key papers" section, and add them where genuinely warranted (quality over quantity — don't pad).
 3. For every paper you newly cite in the KB, create its full deep-analysis record under 02_Papers/ (following the existing template) and link it from the KB via [[paper_id]] — never leave an inline citation without a corresponding record. Every record must include a **PDF:** field (a markdown link to the source paper, right after **Full citation:**) — prefer the arXiv PDF when an arXiv ID exists, else a DOI link, else the best official source link found while researching. Never fabricate this link; say so explicitly if none can be found.
 4. Do not hallucinate citations, dates, or results — every claim must be traceable to a real, verifiable source.
-5. At the end, give me a short summary of what changed: which concepts were updated, which new papers/records were added, and any new concept files created.
+5. Follow 00_Config/editorial_guidelines.md throughout: English, EliosLab attribution, no Observatory process narration, inline [[wikilinks]] on first mention of each paper in Evolution prose, reciprocity between records and Key papers.
+6. Record every concept created, merged or rejected in 00_Config/consolidation_history.yaml (decision.via: manual editorial pass), keep taxonomy.md's Known gaps in step with 00_Config/consolidation_candidates.yaml, then run python3 tools/check_consistency.py and fix anything it reports.
+7. Regenerate the derived surfaces: python3 tools/sync_db.py (write its output to the Ask database, including meta/stats), python3 tools/build_book.py and python3 tools/build_concepts_snapshot.py (republish the Textbook and the Ask page).
+8. At the end, give a short summary of what changed: which concepts were updated, which new papers/records were added, and any new concept files created.
 ```
 
 ## How to tweak it
@@ -24,4 +27,3 @@ Act as an expert EdgeAI researcher and review the Knowledge Base (01_Knowledge_B
 - To bias toward recent literature instead of foundational gaps, replace step 2 with: "Check whether any major paper from the last 12 months is missing from each concept's Key papers."
 - To make it more conservative (fewer additions, just a health check), add: "Only flag candidate additions for my approval — do not write any new files yet."
 - To also touch the taxonomy itself, add: "Also reconsider 00_Taxonomy/ — flag if any category needs restructuring."
-```

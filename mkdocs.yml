@@ -3,7 +3,9 @@ site_description: Long-term research knowledge system for the EdgeAI literature 
 site_url: https://riccardoberta.github.io/edgeai-observatory/
 repo_url: https://github.com/riccardoberta/edgeai-observatory
 repo_name: riccardoberta/edgeai-observatory
-edit_uri: edit/main/docs/
+# docs/ is generated and not committed; it mirrors the source paths, so edit links
+# must point at the source tree (index.md -> README.md is the one exception).
+edit_uri: edit/main/
 copyright: 'A research project of <a href="https://www.elios.unige.it/">EliosLab</a>, University of Genoa'
 
 theme:

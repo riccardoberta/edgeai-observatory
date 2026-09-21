@@ -2,7 +2,7 @@
 
 **Full citation:** Abdulkadhim, M., Repas, S. R. (2026). Introducing LEAF: LLM Edge Assessment Framework for Generative AI on the Edge. Machine Learning and Knowledge Extraction, 8(2), 48. DOI: 10.3390/make8020048. Published 2026-02-18. Open access, CC BY 3.0.
 
-**PDF/HTML:** [MDPI](https://www.mdpi.com/2504-4990/8/2/48)
+**PDF:** [MDPI (open-access HTML/PDF)](https://www.mdpi.com/2504-4990/8/2/48)
 
 **Linked concepts:** [[Generative_EdgeAI]] — founding anchor (alongside [[2026_Giorgetti_VQAEdge]]), created 2026-09-04. Also touches [[Quantization]] (all benchmarked models are 4-bit quantized via Ollama).
 

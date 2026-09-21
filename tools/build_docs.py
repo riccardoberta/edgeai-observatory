@@ -8,17 +8,23 @@ Why this exists instead of a wikilink MkDocs plugin: the most maintained
 candidate (mkdocs-ezlinks-plugin 0.1.14) resolves the *target* correctly but
 emits a broken, lowercased, extension-less href — every cross-link in the
 site ends up dead. Our linking scheme is simple (exact filename match, same
-logic already used by kb_build/parse.py for the KB Explorer artifact), so a
-~100-line preprocessing script is more reliable than a third-party plugin,
+logic used by tools/build_book.py and tools/sync_db.py), so a
+~150-line preprocessing script is more reliable than a third-party plugin,
 and avoids adding a dependency to an MkDocs plugin ecosystem that is
 currently in flux (MkDocs 2.0 dropping plugin support entirely).
 
 Run before `mkdocs build` / `mkdocs serve` (also wired into
 .github/workflows/docs.yml for the GitHub Pages deploy).
+
+Exit status: 0 on success. With --strict (used in CI), any unresolved
+[[wikilink]] is an error (exit 1) instead of a warning, so a broken link can
+never reach the published site silently; `mkdocs build --strict` cannot catch
+this by itself because an unresolved wikilink is rendered as plain text.
 """
 import os
 import re
 import shutil
+import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = os.path.join(ROOT, "docs")
@@ -113,16 +119,37 @@ def copy_static_site_files():
     return copied
 
 
-def main():
-    # Note: deliberately not removing an existing docs/ tree first. The
-    # rendered output is deterministic given the same sources (file set is
-    # stable run to run), so overwriting in place is sufficient and avoids
-    # rmtree/rmdir, which can fail with EPERM on some mounted filesystems.
+def purge_stale(files):
+    """Remove docs/ markdown files whose source no longer exists (renamed or
+    deleted concept/paper/digest), so a stale page cannot linger in a local
+    build. Deletion failures (e.g. EPERM on some mounted filesystems) are
+    reported but not fatal; CI always starts from a clean checkout anyway."""
+    expected = {os.path.join(DOCS, rel) for _, rel in files}
+    expected.add(os.path.join(DOCS, "index.md"))
+    removed = 0
+    for dirpath, _, filenames in os.walk(DOCS):
+        if os.path.relpath(dirpath, DOCS).split(os.sep)[0] not in SOURCE_DIRS:
+            continue
+        for fname in filenames:
+            if not fname.endswith(".md"):
+                continue
+            path = os.path.join(dirpath, fname)
+            if path not in expected:
+                try:
+                    os.remove(path)
+                    removed += 1
+                except OSError as exc:
+                    print(f"WARNING: could not remove stale {path}: {exc}")
+    return removed
+
+
+def main(strict=False):
     os.makedirs(DOCS, exist_ok=True)
 
     files = find_markdown_files()
     index = build_index(files)
     unresolved = []
+    stale = purge_stale(files)
 
     for abs_path, rel_path in files:
         with open(abs_path, encoding="utf-8") as f:
@@ -145,13 +172,18 @@ def main():
     static_count = copy_static_site_files()
 
     print(f"Rendered {len(files)} files into docs/.")
+    if stale:
+        print(f"Removed {stale} stale files from docs/.")
     if static_count:
         print(f"Copied {static_count} static site files into docs/.")
     if unresolved:
-        print(f"WARNING: {len(unresolved)} unresolved wikilinks:")
+        label = "ERROR" if strict else "WARNING"
+        print(f"{label}: {len(unresolved)} unresolved wikilinks:")
         for src, target in unresolved:
             print(f"  {src}: [[{target}]]")
+        if strict:
+            sys.exit(1)
 
 
 if __name__ == "__main__":
-    main()
+    main(strict="--strict" in sys.argv[1:])

@@ -4,13 +4,13 @@ RISC-V is an open, royalty-free instruction-set architecture (ISA) — as oppose
 
 ## Evolution of the concept
 
-RISC-V's case for existing at all predates any EdgeAI-specific use case: Asanović and Patterson's "Instruction Sets Should Be Free: The Case For RISC-V" (2014) lays out the foundational argument that proprietary, royalty-bearing instruction sets impose unnecessary licensing and fragmentation costs on hardware innovation, and that a free, modular, open ISA removes that barrier — the argument that, once accepted by chip designers, made an open alternative to Arm's Cortex-M/Cortex-A licensing model possible in the first place.
+RISC-V's case for existing at all predates any EdgeAI-specific use case: [[2014_Asanovic_RISCVCaseForFree|Asanović]] and Patterson's "Instruction Sets Should Be Free: The Case For RISC-V" (2014) lays out the foundational argument that proprietary, royalty-bearing instruction sets impose unnecessary licensing and fragmentation costs on hardware innovation, and that a free, modular, open ISA removes that barrier — the argument that, once accepted by chip designers, made an open alternative to Arm's Cortex-M/Cortex-A licensing model possible in the first place.
 
 The GAP-8 SoC was an early, commercially-oriented demonstration that a fully programmable RISC-V multi-core cluster could be paired with a dedicated CNN accelerator and an extremely low-power always-on domain, making it viable for battery-constrained IoT end-nodes. Since then, the direction has broadened toward RISC-V vector extensions and toolchain efforts — such as migrating existing Arm NEON-optimized code to RISC-V Vector Extensions — aimed at closing the software-maturity gap with the more established Arm ecosystem.
 
-Two more recent threads push this broadening further. Spatz (Perotti et al., 2023) shows that a compact, open-source RISC-V Vector Extension core can be clustered around a shared scratchpad memory to reach peak energy efficiency with a vector register file as small as 2 KiB — a general-purpose alternative to GAP-8's fixed-function CNN accelerator. MARVEL (Kumar M et al., 2025) automates the traditionally manual hardware/compiler co-design step itself, generating model-class-aware custom RISC-V ISA extensions directly from a high-level neural-network profile.
+Two more recent threads push this broadening further. Spatz ([[2023_Perotti_Spatz|Perotti]] et al., 2023) shows that a compact, open-source RISC-V Vector Extension core can be clustered around a shared scratchpad memory to reach peak energy efficiency with a vector register file as small as 2 KiB — a general-purpose alternative to GAP-8's fixed-function CNN accelerator. MARVEL ([[2025_KumarM_MARVEL|Kumar M]] et al., 2025) automates the traditionally manual hardware/compiler co-design step itself, generating model-class-aware custom RISC-V ISA extensions directly from a high-level neural-network profile.
 
-XpulpNN (Garofalo, Tagliavini, Conti, Benini, and Rossi, 2021), from the same Bologna research group behind GAP-8 and Spatz, extends the RISC-V ISA itself with 4-bit and 2-bit SIMD (single-instruction-multiple-data) instructions plus a fused dot-product/load execution paradigm, reporting near-linear (not sub-linear) speedup with reduced precision — directly answering the question of whether the ISA itself, not just the surrounding software stack, can support quantized-model deployment efficiently.
+XpulpNN ([[2021_Garofalo_XpulpNN|Garofalo]], Tagliavini, Conti, Benini, and Rossi, 2021), from the same Bologna research group behind GAP-8 and Spatz, extends the RISC-V ISA itself with 4-bit and 2-bit SIMD (single-instruction-multiple-data) instructions plus a fused dot-product/load execution paradigm, reporting near-linear (not sub-linear) speedup with reduced precision — directly answering the question of whether the ISA itself, not just the surrounding software stack, can support quantized-model deployment efficiently.
 
 ## Key papers
 
@@ -23,6 +23,8 @@ XpulpNN (Garofalo, Tagliavini, Conti, Benini, and Rossi, 2021), from the same Bo
 [[2025_KumarM_MARVEL]] — automated end-to-end framework generating model-class-aware custom RISC-V ISA extensions and compiler support directly from a neural-network model profile.
 
 [[2021_Garofalo_XpulpNN]] — RISC-V ISA extended with 4-bit/2-bit SIMD instructions and a fused dot-product/load execution paradigm, achieving near-linear speedup for quantized neural-network inference.
+
+[[2026_Hubinet_RISCVFloat16Training]] — hardware-software co-design showing that the standard `Zfh`/`Zvfh` float16 extensions make on-device *training* feasible on a resource-constrained single RISC-V core, with the ISA extension's area cost measured on an RV64GC out-of-order FPGA softcore (+1.15% LUT6).
 
 ## Open problems
 

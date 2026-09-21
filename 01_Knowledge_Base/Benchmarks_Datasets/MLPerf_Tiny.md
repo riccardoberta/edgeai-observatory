@@ -4,7 +4,7 @@ MLPerf Tiny is the MLCommons/MLPerf consortium's standardized benchmark suite fo
 
 ## Evolution of the concept
 
-Banbury, Reddi, et al. (NeurIPS 2021 Datasets and Benchmarks Track) introduce MLPerf Tiny to fill a specific gap: the general-purpose MLPerf Inference benchmark (Reddi et al., 2020), which established the field's governance model and scenario taxonomy (single-stream, multi-stream, server, offline), explicitly excludes microcontroller-class devices. MLPerf Tiny adapts that same governance template to the ultra-low-power regime, standardizing on the four tasks named above.
+[[2021_Banbury_MLPerfTiny|Banbury]], [[2020_Reddi_MLPerfInferenceBenchmark|Reddi]], et al. (NeurIPS 2021 Datasets and Benchmarks Track) introduce MLPerf Tiny to fill a specific gap: the general-purpose MLPerf Inference benchmark (Reddi et al., 2020), which established the field's governance model and scenario taxonomy (single-stream, multi-stream, server, offline), explicitly excludes microcontroller-class devices. MLPerf Tiny adapts that same governance template to the ultra-low-power regime, standardizing on the four tasks named above.
 
 ## Key papers
 

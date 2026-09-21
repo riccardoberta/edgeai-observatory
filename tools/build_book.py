@@ -10,16 +10,18 @@ an in-book chapter anchor or an external PDF/publisher link (via the matching
 Why generated rather than hand-edited: the book must always be traceable to
 source (no hallucinated content) and the KB grows/changes independently of
 the book, so re-running this script is the only way to keep the book in
-sync. Per Ricky's 2026-09-16 rule, this script should only be run as the
-final step of an EdgeAI Observatory Knowledge Base Consolidation cycle
-(see tools/README or the consolidation task's own SKILL.md) -- NOT after
-every Weekly/Monthly cycle, since only Consolidation is allowed to modify
-01_Knowledge_Base/ and 00_Taxonomy/taxonomy.md, the two things this book is
-built from.
+sync. Run it as the final step of every pass that changes
+01_Knowledge_Base/ or 00_Taxonomy/taxonomy.md (a Knowledge Base Consolidation
+cycle or a manual editorial pass -- see README.md, "Monitoring pipeline"),
+not after Weekly/Monthly cycles, which never touch those two inputs.
 
 Usage:
-    python3 tools/build_book.py > /path/to/book_body.html
-    # then publish that file with the Artifact tool to the book's URL.
+    python3 tools/build_book.py [output.html]   # default: ./book_final.html (gitignored)
+    # then publish the output file with the Artifact tool to the book's URL.
+
+The script fails loudly if a taxonomy bullet has no matching Knowledge Base
+page, and warns if a Knowledge Base page is not listed in the taxonomy (such a
+page would otherwise be silently missing from the book).
 
 The "knowledge current through" date shown on the book's cover is computed
 automatically as the most recent git commit date touching 00_Taxonomy/ or
@@ -105,7 +107,7 @@ def index_papers():
             text = open(full, encoding="utf-8").read()
             title_m = re.match(r"#\s+(.+)", text)
             title = title_m.group(1).strip() if title_m else pid
-            pdf_m = re.search(r"\*\*PDF:\*\*\s*\[.*?\]\((https?[^\)]+)\)", text)
+            pdf_m = re.search(r"\*\*PDF(?:/HTML)?:\*\*\s*\[.*?\]\((https?[^\)]+)\)", text)
             pdf = pdf_m.group(1) if pdf_m else None
             paper_index[pid] = {"title": title, "pdf": pdf}
     return paper_index
@@ -172,6 +174,16 @@ def build():
             name = section_split[i].strip()
             sections[name] = section_split[i + 1].strip() if i + 1 < len(section_split) else ""
         return title, intro, sections
+
+    listed = set()
+    for b in branches:
+        for cname in b["concepts"]:
+            if cname not in concept_files:
+                sys.exit(f"ERROR: taxonomy bullet '{cname}' has no matching 01_Knowledge_Base/ page")
+            listed.add(concept_files[cname])
+    for full, meta in sorted(concept_meta.items()):
+        if full not in listed:
+            print(f"WARNING: {os.path.relpath(full, ROOT)} is not listed in taxonomy.md and will be missing from the book", file=sys.stderr)
 
     chapter_html, toc_html, chapter_num = [], [], 0
     for b in branches:

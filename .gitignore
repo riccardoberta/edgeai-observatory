@@ -17,6 +17,11 @@ docs_old_symlinks/
 site_old_*/
 *.tmp.gone
 
+# Generated artifact page builds (tools/build_book.py, tools/build_concepts_snapshot.py, tools/sync_db.py)
+/book_final.html
+/ask_page.html
+/db_sync/
+
 # Generated PDF exports
 /output/pdf/
 /tmp/pdfs/

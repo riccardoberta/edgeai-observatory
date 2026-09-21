@@ -13,14 +13,15 @@
 # last_seen, evidence, rationale) exactly as it stood in the active queue,
 # plus a `decision` block recording what was decided, when, and why.
 #
-# This file is written to ONLY by the Knowledge Base Consolidation task.
-# The Weekly and Monthly tasks read consolidation_candidates.yaml but never
-# write to this file.
+# This file is written to ONLY by the Knowledge Base Consolidation task and by
+# explicit manual editorial passes (marked `via: manual editorial pass` in the
+# decision block). The Weekly and Monthly tasks read
+# consolidation_candidates.yaml but never write to this file.
 #
-# As of 2026-09-02 (bootstrap of the consolidation workflow): no Knowledge
-# Base Consolidation cycle has run yet, so this file is intentionally empty.
-# It will start accumulating entries the first time someone explicitly runs
-# the "EdgeAI Observatory Knowledge Base Consolidation" task.
+# First entries: the 2026-09-02 Knowledge Base Consolidation cycle. Entries
+# whose evidence cites "taxonomy.md evolution notes" refer to a dated log that
+# was part of 00_Taxonomy/taxonomy.md until 2026-09-04 (commit 92a2b3e); it is
+# recoverable from git history but no longer present in the file.
 
 history:
 
@@ -254,3 +255,122 @@ history:
         — the independent second group). The ETHEREAL record's prior-art
         discussion was corrected in the same pass to properly cite EvGNN
         instead of the unverified "T. Liu et al." attribution.
+
+  - id: benchmarks-datasets-branch
+    title: "Benchmarks & Datasets branch: MLPerf Tiny, TinyML Reference Datasets"
+
+    first_seen: 2026-09-02
+    last_seen: 2026-09-02
+
+    possible_existing_concept: null
+
+    evidence:
+      - source: 00_Config/sources.yaml
+        note: >
+          MLPerf Tiny, MLPerf Inference, Speech Commands and Visual Wake Words
+          had been listed as monitored benchmarks/datasets since the start,
+          but the taxonomy had no branch to hold what was learned about them.
+      - source: 02_Papers/2021/2021_Banbury_MLPerfTiny.md
+      - source: 02_Papers/2020/2020_Reddi_MLPerfInferenceBenchmark.md
+      - source: 02_Papers/2018/2018_Warden_SpeechCommands.md
+      - source: 02_Papers/2019/2019_Chowdhery_VisualWakeWordsDataset.md
+
+    rationale: >
+      Coverage-gap review of the taxonomy against the monitored-sources list:
+      a whole category of monitored sources had no home in the concept graph.
+
+    decision:
+      date: 2026-09-02
+      outcome: promoted
+      via: manual editorial pass (recorded retroactively on 2026-09-20; see commit c5f3c8a)
+      target: "[[MLPerf_Tiny]], [[TinyML_Reference_Datasets]]"
+      note: >
+        New top-level "Benchmarks & Datasets" taxonomy branch with two concept
+        pages, each anchored by independently-authored records already
+        verified in 02_Papers/.
+
+  - id: frameworks-executorch-edge-impulse
+    title: "Frameworks gap: ExecuTorch and Edge Impulse"
+
+    first_seen: 2026-09-02
+    last_seen: 2026-09-02
+
+    possible_existing_concept: null
+
+    evidence:
+      - source: 02_Papers/2026/2026_Nachin_ExecuTorch.md
+      - source: 02_Papers/2022/2022_Hymel_EdgeImpulse.md
+      - source: 00_Config/sources.yaml
+        note: Edge Impulse was a monitored software project with no concept page.
+
+    rationale: >
+      Two widely deployed toolchains absent from the Frameworks branch, each
+      with a canonical paper.
+
+    decision:
+      date: 2026-09-02
+      outcome: promoted
+      via: manual editorial pass (recorded retroactively on 2026-09-20; see commit c5f3c8a)
+      target: "[[ExecuTorch]], [[Edge_Impulse]]"
+      note: >
+        Single-anchor exception to the two-paper rule, justified because both
+        are established, widely used software projects rather than emerging
+        research topics; each page's Key papers should grow as further
+        independent evaluations appear.
+
+  - id: generative-edgeai-applications
+    title: "Generative EdgeAI (Gen EdgeAI) as an Applications concept"
+
+    first_seen: 2026-09-04
+    last_seen: 2026-09-04
+
+    possible_existing_concept: null
+
+    evidence:
+      - source: 02_Papers/2026/2026_Giorgetti_VQAEdge.md
+        note: Names "Generative EdgeAI (Gen EdgeAI)" explicitly; multimodal VQA pipeline on STM32MP2.
+      - source: 02_Papers/2026/2026_Abdulkadhim_LEAF.md
+        note: Independent second anchor (no author overlap); evaluation framework for generative AI at the edge.
+
+    rationale: >
+      A literal "EdgeAI" keyword search on Google Scholar surfaced a named
+      sub-field with two independent anchors and no home in the taxonomy;
+      distinct from MoE_Edge_LLM_Serving (serving infrastructure) because it
+      covers the end-user generative application.
+
+    decision:
+      date: 2026-09-04
+      outcome: promoted
+      via: manual editorial pass (recorded retroactively on 2026-09-20; see commit 221eb38)
+      target: "[[Generative_EdgeAI]]"
+      note: >
+        New Applications concept; the "how edge is edge" boundary question is
+        shared with MoE_Edge_LLM_Serving and cross-referenced from both pages.
+
+  - id: scholar-exhaustive-audit-2026-09-03
+    title: "Exhaustive Google Scholar audit of all taxonomy concepts (50 new paper records, no new concepts)"
+
+    first_seen: 2026-09-03
+    last_seen: 2026-09-03
+
+    possible_existing_concept: null
+
+    evidence:
+      - source: 02_Papers/
+        note: >
+          50 records added across all six branches (commits eb5cc3c through
+          f7f3123), each bibliographically verified before writing; Evolution
+          and Key papers sections of the affected concept pages updated.
+
+    rationale: >
+      Backfill of foundational and highly-cited work (roughly the last 15
+      years, focus 2020–2026) that topic-phrase monitoring alone had missed.
+
+    decision:
+      date: 2026-09-03
+      outcome: merged
+      via: manual editorial pass (recorded retroactively on 2026-09-20)
+      target: "existing concepts (all branches)"
+      note: >
+        No taxonomy change; recorded here so that the Knowledge Base's history
+        of substantive edits is complete in this file.

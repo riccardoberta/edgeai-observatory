@@ -4,11 +4,11 @@ This concept groups the standard, widely-reused reference datasets that underpin
 
 ## Evolution of the concept
 
-Warden's Speech Commands (2018) is the anchor dataset: a public, crowd-sourced collection of short spoken-word audio clips that became the de facto standard for keyword-spotting research (see [[Keyword_Spotting]]) and is also one of MLPerf Tiny's four representative tasks (see [[MLPerf_Tiny]]).
+[[2018_Warden_SpeechCommands|Warden]]'s Speech Commands (2018) is the anchor dataset: a public, crowd-sourced collection of short spoken-word audio clips that became the de facto standard for keyword-spotting research (see [[Keyword_Spotting]]) and is also one of MLPerf Tiny's four representative tasks (see [[MLPerf_Tiny]]).
 
-Chowdhery et al.'s Visual Wake Words (2019) is the field's other standard reference dataset: a binary "is a person present in this image" dataset derived from COCO, sized specifically to represent realistic always-on microcontroller vision — 85–90% accuracy is achievable within a 250 KB memory footprint using contemporary mobile architectures. It is MLPerf Tiny's vision-side representative task.
+[[2019_Chowdhery_VisualWakeWordsDataset|Chowdhery]] et al.'s Visual Wake Words (2019) is the field's other standard reference dataset: a binary "is a person present in this image" dataset derived from COCO, sized specifically to represent realistic always-on microcontroller vision — 85–90% accuracy is achievable within a 250 KB memory footprint using contemporary mobile architectures. It is MLPerf Tiny's vision-side representative task.
 
-Quadar, Chehri, and Debaque (2026) treat TinyML datasets as a research object in their own right, arguing that dataset scarcity and quality are a genuine constraint on TinyML's role in emerging, large-scale distributed edge intelligence (looking ahead to 6G-era networks), and identify specific coverage gaps in the current dataset landscape.
+[[2026_Quadar_TinyMLDatasets6GEdgeIntelligence|Quadar]], Chehri, and Debaque (2026) treat TinyML datasets as a research object in their own right, arguing that dataset scarcity and quality are a genuine constraint on TinyML's role in emerging, large-scale distributed edge intelligence (looking ahead to 6G-era networks), and identify specific coverage gaps in the current dataset landscape.
 
 ## Key papers
 

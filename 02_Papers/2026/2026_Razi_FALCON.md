@@ -4,7 +4,7 @@
 
 **PDF:** [arXiv PDF](https://arxiv.org/pdf/2609.00701)
 
-**Linked concepts:** [[NPU]], [[Quantization]] — no clean match in the Hardware branch (Cortex-M/A, RISC-V, DSP, FPGA, NPU); this is an in-memory-computing/emerging-NVM architecture, flagged as a taxonomy gap (see taxonomy Evolution notes).
+**Linked concepts:** [[NPU]], [[Quantization]] — no clean match in the Hardware branch (Cortex-M/A, RISC-V, DSP, FPGA, NPU); this is an in-memory-computing/emerging-NVM architecture, tracked as a taxonomy gap (see the "Known gaps" section of `00_Taxonomy/taxonomy.md` and `00_Config/consolidation_candidates.yaml`).
 
 ## Abstract summary
 

@@ -1,0 +1,525 @@
+<title>EdgeAI Observatory</title>
+<style>
+:root {
+  --bg: #f8f5ef;
+  --surface: #ffffff;
+  --surface-2: #f1ece1;
+  --ink: #211d17;
+  --ink-muted: #6f6656;
+  --ink-faint: #a89d87;
+  --accent: #a8461f;
+  --accent-ink: #ffffff;
+  --accent-soft: #f3e4da;
+  --rule: #ddd3bf;
+  --link: #a8461f;
+  --danger: #b3311a;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #19140f;
+    --surface: #221b15;
+    --surface-2: #2a221a;
+    --ink: #f1e9dd;
+    --ink-muted: #b7a993;
+    --ink-faint: #7c6f5c;
+    --accent: #e08a5f;
+    --accent-ink: #241207;
+    --accent-soft: #3a2418;
+    --rule: #3c3125;
+    --link: #e8a37b;
+    --danger: #e08a5f;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #19140f;
+  --surface: #221b15;
+  --surface-2: #2a221a;
+  --ink: #f1e9dd;
+  --ink-muted: #b7a993;
+  --ink-faint: #7c6f5c;
+  --accent: #e08a5f;
+  --accent-ink: #241207;
+  --accent-soft: #3a2418;
+  --rule: #3c3125;
+  --link: #e8a37b;
+  --danger: #e08a5f;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+}
+a { color: var(--link); }
+::selection { background: var(--accent-soft); }
+.mono { font-family: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace; }
+.eyebrow {
+  font-family: "IBM Plex Mono", monospace; text-transform: uppercase; letter-spacing: 0.1em;
+  font-size: 11.5px; color: var(--ink-muted);
+}
+h1, h2 { font-family: "Fraunces", Georgia, serif; font-weight: 600; text-wrap: balance; margin: 0; }
+
+.wrap { max-width: 760px; margin: 0 auto; padding: 48px 24px 80px; }
+.hero h1 { font-size: 34px; margin: 10px 0 6px; }
+.hero .sub { color: var(--ink-muted); font-size: 15.5px; margin: 0 0 24px; max-width: 56ch; }
+
+.stat-row { display: flex; gap: 34px; padding: 20px 0 14px; }
+.as-of { margin: 0 0 30px; padding-bottom: 24px; border-bottom: 1px solid var(--rule); color: var(--ink-faint); }
+.as-of a { color: var(--ink-faint); text-decoration-color: var(--ink-faint); }
+.as-of a:hover { color: var(--link); text-decoration-color: var(--link); }
+.stat a { text-decoration: none; display: block; }
+.stat b { font-family: "Fraunces", serif; font-size: 26px; color: var(--accent); display: block; font-variant-numeric: tabular-nums; }
+.stat span { font-size: 11px; letter-spacing: 0.07em; }
+.stat.skeleton b { color: var(--ink-faint); }
+.stat a:hover b, .stat a:hover span { color: var(--link); text-decoration: underline; text-underline-offset: 3px; }
+
+.panel {
+  background: var(--surface); border: 1px solid var(--rule); border-radius: 8px;
+  padding: 40px 32px; text-align: center;
+}
+.panel .mark { font-size: 30px; color: var(--accent-soft); margin-bottom: 14px; }
+.panel .prompt { color: var(--ink-muted); font-size: 15px; max-width: 44ch; margin: 0 auto 22px; }
+.panel .stat-footer { margin-top: 18px; font-size: 12px; color: var(--ink-faint); }
+.panel .stat-footer a { color: var(--ink-faint); text-decoration-color: var(--ink-faint); }
+.panel .stat-footer a:hover { color: var(--link); text-decoration-color: var(--link); }
+
+.ask-row { display: flex; gap: 8px; margin-top: 4px; }
+.ask-row input {
+  flex: 1; font-family: inherit; font-size: 15px; padding: 12px 14px;
+  border: 1px solid var(--rule); border-radius: 6px; background: var(--bg); color: var(--ink);
+}
+.ask-row input:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+.ask-row button {
+  font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: 0.06em; text-transform: uppercase;
+  background: var(--accent); color: var(--accent-ink); border: none; border-radius: 6px;
+  padding: 0 22px; cursor: pointer; font-weight: 600;
+}
+.ask-row button:disabled { opacity: 0.5; cursor: default; }
+.ask-row button:hover:not(:disabled) { filter: brightness(1.08); }
+.examples { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 16px; }
+.examples button {
+  font-family: "IBM Plex Mono", monospace; font-size: 11.5px; background: var(--surface-2); color: var(--ink-muted);
+  border: 1px solid var(--rule); border-radius: 100px; padding: 6px 12px; cursor: pointer;
+}
+.examples button:hover { color: var(--ink); border-color: var(--accent); }
+
+.answer { text-align: left; margin-top: 26px; padding-top: 24px; border-top: 1px solid var(--rule); }
+.answer .q { font-family: "Fraunces", serif; font-size: 18px; margin: 0 0 14px; }
+.answer .a { font-size: 15.5px; white-space: pre-wrap; }
+.answer .a p { margin: 0 0 14px; }
+.answer .a h4 { font-family: "IBM Plex Mono", monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin: 18px 0 8px; }
+.answer .a ul { margin: 0 0 14px; padding-left: 20px; }
+.answer .a li { margin-bottom: 6px; }
+.answer .a.thinking { color: var(--ink-muted); font-style: italic; white-space: normal; }
+.sources { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 8px; }
+.sources a {
+  font-family: "IBM Plex Mono", monospace; font-size: 11px; text-decoration: none;
+  background: var(--surface-2); border: 1px solid var(--rule); border-radius: 100px;
+  padding: 5px 11px; color: var(--ink);
+}
+.sources a:hover { border-color: var(--accent); color: var(--accent); }
+.error-box {
+  margin-top: 18px; padding: 12px 16px; border-radius: 6px; background: var(--accent-soft);
+  color: var(--danger); font-size: 13.5px; text-align: left;
+}
+.unavailable {
+  margin-top: 18px; padding: 14px 16px; border-radius: 6px; background: var(--surface-2);
+  color: var(--ink-muted); font-size: 13.5px;
+}
+.fallback-note {
+  margin-bottom: 16px; padding: 12px 16px; border-radius: 6px; background: var(--surface-2);
+  color: var(--ink-muted); font-size: 13px; line-height: 1.6;
+}
+.excerpt { margin: 0 0 18px; }
+.excerpt h4 { font-family: "IBM Plex Mono", monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin: 0 0 8px; }
+.excerpt p { font-size: 15px; margin: 0; }
+
+footer.colo {
+  margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--rule);
+  font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--ink-faint); line-height: 1.7;
+}
+footer.colo a { color: var(--ink-faint); }
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<div class="wrap">
+  <section class="hero">
+    <div class="eyebrow">EdgeAI Observatory</div>
+    <h1>EdgeAI Observatory</h1>
+    <p class="sub">Research knowledge system — query the EdgeAI literature. Ask about algorithms, frameworks, hardware, applications, specific papers, or trends emerging from the digests. Answers cite the concept pages and paper records they draw on.</p>
+    <div class="stat-row" id="statRow">
+      <div class="stat skeleton" data-stat="papers"><a href="https://github.com/riccardoberta/edgeai-observatory/tree/main/02_Papers" target="_blank" rel="noopener"><b>&mdash;</b><span class="eyebrow">papers</span></a></div>
+      <div class="stat skeleton" data-stat="concepts"><a href="https://github.com/riccardoberta/edgeai-observatory/tree/main/01_Knowledge_Base" target="_blank" rel="noopener"><b>&mdash;</b><span class="eyebrow">concepts</span></a></div>
+      <div class="stat skeleton" data-stat="digests"><a href="https://github.com/riccardoberta/edgeai-observatory/tree/main/03_Digests" target="_blank" rel="noopener"><b>&mdash;</b><span class="eyebrow">digests</span></a></div>
+    </div>
+    <p class="as-of eyebrow" id="asOfLine">knowledge current through &mdash;</p>
+  </section>
+
+  <section class="panel">
+    <div class="mark">?</div>
+    <p class="prompt">Ask a question about the indexed EdgeAI literature: algorithms, frameworks, hardware, applications, specific papers, or trends emerging from the digests.<br>Answers always cite the sources they draw on.</p>
+    <div class="ask-row">
+      <input id="qInput" type="text" placeholder="E.g. what do we know about on-device learning on Cortex-M?" />
+      <button id="askBtn">Ask</button>
+    </div>
+    <div class="examples">
+      <button data-q="What's the state of quantization for on-device LLMs?">Quantization for LLMs</button>
+      <button data-q="What do we know about Generative EdgeAI?">Generative EdgeAI</button>
+      <button data-q="Which open problems connect pruning and Cortex-M deployment?">Pruning + Cortex-M</button>
+    </div>
+    <div class="stat-footer" id="statFooter">loading index&hellip;</div>
+    <div id="answerArea"></div>
+  </section>
+
+  <footer class="colo">
+    <div>Companion volume: <a href="https://claude.ai/code/artifact/205a5250-397c-4073-b9fe-a23e28b4aca9" target="_blank" rel="noopener">Edge AI: Principles and Practice</a> &mdash; the same knowledge base as a graduate reference book.</div>
+    <div>A research project of <a href="https://www.elios.unige.it/" target="_blank" rel="noopener">EliosLab</a>, University of Genoa.</div>
+  </footer>
+</div>
+
+<script id="staticConceptsData" type="application/json">__STATIC_SNAPSHOT__</script>
+<script>
+(function () {
+  var db = null, sample = null;
+  var STATIC_CONCEPTS = [], STATIC_STATS = null;
+  try {
+    var snapshot = JSON.parse(document.getElementById('staticConceptsData').textContent || '[]');
+    if (Array.isArray(snapshot)) { STATIC_CONCEPTS = snapshot; }
+    else { STATIC_CONCEPTS = snapshot.concepts || []; STATIC_STATS = snapshot.stats || null; }
+  } catch (e) { STATIC_CONCEPTS = []; }
+  var conceptsCache = null, digestsCache = null, papersCache = null;
+  var statFooter = document.getElementById('statFooter');
+  var answerArea = document.getElementById('answerArea');
+  var qInput = document.getElementById('qInput');
+  var askBtn = document.getElementById('askBtn');
+
+  function formatAnswer(text) {
+    var lines = String(text || '').split('\n');
+    var html = [], para = [], inList = false;
+    function flushPara() {
+      if (para.length) { html.push('<p>' + inlineMd(para.join(' ')) + '</p>'); para = []; }
+    }
+    function closeList() { if (inList) { html.push('</ul>'); inList = false; } }
+    function inlineMd(s) {
+      s = esc(s);
+      s = s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+      s = s.replace(/(?<!\*)\*([^*]+?)\*(?!\*)/g, '<em>$1</em>');
+      return s;
+    }
+    lines.forEach(function (raw) {
+      var line = raw.trim();
+      if (!line) { flushPara(); closeList(); return; }
+      var h = line.match(/^(#{1,4})\s+(.*)$/);
+      if (h) { flushPara(); closeList(); html.push('<h4>' + inlineMd(h[2]) + '</h4>'); return; }
+      var li = line.match(/^(?:[-*]|\d+[.)])\s+(.*)$/);
+      if (li) {
+        flushPara();
+        if (!inList) { html.push('<ul>'); inList = true; }
+        html.push('<li>' + inlineMd(li[1]) + '</li>');
+        return;
+      }
+      closeList();
+      para.push(line);
+    });
+    flushPara(); closeList();
+    return html.join('\n');
+  }
+
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c];
+    });
+  }
+
+  function normalizeDoc(d) {
+    if (!d) return null;
+    var data = (typeof d.data === 'function') ? d.data() : (d.data !== undefined ? d.data : d);
+    return { id: d.id, data: data };
+  }
+  function normalizeList(res) {
+    var list = (res && res.docs) ? res.docs : (Array.isArray(res) ? res : (res && res.items) ? res.items : []);
+    return list.map(normalizeDoc).filter(Boolean);
+  }
+
+  // Counts come from the live meta/stats document (written by tools/sync_db.py).
+  // Without database access the page falls back to the snapshot's own stats,
+  // which are regenerated together with the snapshot — nothing is hardcoded here.
+  function setCachedStats() {
+    if (STATIC_STATS) {
+      setStats(STATIC_STATS.papers || '\u2014', STATIC_STATS.concepts || STATIC_CONCEPTS.length, STATIC_STATS.digests || '\u2014', true);
+      setAsOf(STATIC_STATS.asOf || null);
+    } else {
+      setStats('\u2014', STATIC_CONCEPTS.length || '\u2014', '\u2014', true);
+      setAsOf(null);
+    }
+  }
+
+  async function loadStats() {
+    try {
+      if (!db) db = await claude.use('db');
+      if (!db) { setCachedStats(); return; }
+      var snap = await db.doc('meta/stats').get();
+      var data = normalizeDoc(snap) ? normalizeDoc(snap).data : null;
+      if (data && data.papers) {
+        setStats(data.papers, data.concepts, data.digests, false);
+        setAsOf(data.asOf);
+      } else {
+        setCachedStats();
+      }
+    } catch (e) {
+      setCachedStats();
+    }
+  }
+
+  function setAsOf(asOf) {
+    var el = document.getElementById('asOfLine');
+    if (!asOf) { el.textContent = 'knowledge currency unavailable in this view'; return; }
+    var d = new Date(asOf + 'T00:00:00Z');
+    var formatted = isNaN(d.getTime()) ? asOf : d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+    el.innerHTML = 'knowledge current through ' + formatted + ' — see the <a href="' + GH.digests + '" target="_blank" rel="noopener">latest digests</a>';
+    el.title = 'Reflects the most recent weekly/monthly digest synced into this tool\'s database.';
+  }
+
+  var GH = {
+    papers: 'https://github.com/riccardoberta/edgeai-observatory/tree/main/02_Papers',
+    concepts: 'https://github.com/riccardoberta/edgeai-observatory/tree/main/01_Knowledge_Base',
+    digests: 'https://github.com/riccardoberta/edgeai-observatory/tree/main/03_Digests'
+  };
+
+  function setStats(papers, concepts, digests, isFallback) {
+    var row = document.getElementById('statRow');
+    row.querySelector('[data-stat="papers"] b').textContent = papers;
+    row.querySelector('[data-stat="concepts"] b').textContent = concepts;
+    row.querySelector('[data-stat="digests"] b').textContent = digests;
+    row.querySelectorAll('.stat').forEach(function (el) { el.classList.remove('skeleton'); });
+    statFooter.innerHTML =
+      '<a href="' + GH.papers + '" target="_blank" rel="noopener">' + papers + ' papers</a> · ' +
+      '<a href="' + GH.concepts + '" target="_blank" rel="noopener">' + concepts + ' concepts</a> · ' +
+      '<a href="' + GH.digests + '" target="_blank" rel="noopener">' + digests + ' digests</a> indexed' +
+      (isFallback ? ' (cached)' : '');
+  }
+
+  async function loadConcepts() {
+    if (conceptsCache) return conceptsCache;
+    if (!db) db = await claude.use('db');
+    if (!db) { conceptsCache = STATIC_CONCEPTS; return conceptsCache; }
+    try {
+      var res = await db.collection('concepts').get();
+      var live = normalizeList(res);
+      conceptsCache = live.length ? live : STATIC_CONCEPTS;
+    } catch (e) { conceptsCache = STATIC_CONCEPTS; }
+    return conceptsCache;
+  }
+
+  async function loadPapers() {
+    if (papersCache) return papersCache;
+    if (!db) db = await claude.use('db');
+    if (!db) return [];
+    try {
+      var res = await db.collection('papers').get();
+      papersCache = normalizeList(res);
+    } catch (e) { papersCache = []; }
+    return papersCache;
+  }
+
+  async function loadDigests() {
+    if (digestsCache) return digestsCache;
+    if (!db) db = await claude.use('db');
+    if (!db) return [];
+    try {
+      var res = await db.collection('digests').get();
+      digestsCache = normalizeList(res);
+    } catch (e) { digestsCache = []; }
+    return digestsCache;
+  }
+
+  var STOPWORDS = ('what how why when which who does do is are the a an of on for and to in at with about know we our this that ' +
+    'paper papers state edge ai between into from than more most some any there their they it its be been can could should would').split(' ');
+
+  function queryTerms(question) {
+    return question.toLowerCase().replace(/[^a-z0-9\s_-]/g, ' ').split(/\s+/).filter(function (w) {
+      return w.length > 2 && STOPWORDS.indexOf(w) === -1;
+    });
+  }
+
+  function scoreText(text, terms) {
+    if (!text) return 0;
+    var lower = text.toLowerCase();
+    var s = 0;
+    terms.forEach(function (t) { if (t.length > 2 && lower.indexOf(t) !== -1) s++; });
+    return s;
+  }
+
+  function topConcepts(question, concepts, n) {
+    var terms = queryTerms(question);
+    var scored = concepts.map(function (c) {
+      var d = c.data || {};
+      var hay = [c.id, d.title, d.category, (d.sections && d.sections['Overview']), (d.sections && d.sections['Evolution of the concept'])].join(' ');
+      return { c: c, score: scoreText(hay, terms) + (question.toLowerCase().indexOf((d.title || '').toLowerCase()) !== -1 ? 5 : 0) };
+    });
+    scored.sort(function (a, b) { return b.score - a.score; });
+    return scored.filter(function (s) { return s.score > 0; }).slice(0, n).map(function (s) { return s.c; });
+  }
+
+  function topPapers(question, papers, matchedConcepts, n) {
+    var terms = queryTerms(question);
+    var conceptIds = matchedConcepts.map(function (c) { return c.id; });
+    var scored = papers.map(function (p) {
+      var d = p.data || {};
+      var sec = d.sections || {};
+      var hay = [p.id, d.title, d.citation, sec['Abstract summary'], sec['Key idea'], sec['Relevance to our research']].join(' ');
+      var s = scoreText(hay, terms);
+      if (d.title && question.toLowerCase().indexOf(d.title.toLowerCase().slice(0, 30)) !== -1) s += 5;
+      (d.concepts || []).forEach(function (c) { if (conceptIds.indexOf(c) !== -1) s += 1; });
+      return { p: p, score: s };
+    });
+    scored.sort(function (a, b) { return b.score - a.score; });
+    return scored.filter(function (s) { return s.score >= 2; }).slice(0, n).map(function (s) { return s.p; });
+  }
+
+  function topDigests(question, digests, n) {
+    var terms = queryTerms(question);
+    var scored = (digests || []).map(function (dd) {
+      var d = dd.data || {};
+      return { d: dd, score: scoreText(d.content || '', terms) };
+    });
+    scored.sort(function (a, b) { return b.score - a.score; });
+    return scored.filter(function (s) { return s.score >= 2; }).slice(0, n).map(function (s) { return s.d; });
+  }
+
+  function clip(s, n) { s = String(s || ''); return s.length > n ? s.slice(0, n) + '\u2026' : s; }
+
+  function buildContext(matched, matchedPapers, relDigests, question) {
+    var parts = [];
+    matched.forEach(function (c) {
+      var d = c.data || {};
+      var sec = d.sections || {};
+      parts.push('### Concept: ' + (d.title || c.id) + ' (' + (d.category || '') + ')\n' +
+        (sec['Overview'] || '') + '\n\n' +
+        'Evolution: ' + (sec['Evolution of the concept'] || '') + '\n\n' +
+        'Key papers: ' + (sec['Key papers'] || '') + '\n\n' +
+        'Open problems: ' + (sec['Open problems'] || '') + '\n\n' +
+        'Research ideas: ' + (sec['Research ideas'] || '') + '\n\n' +
+        'Possible thesis topics: ' + (sec['Possible thesis topics'] || ''));
+    });
+    matchedPapers.forEach(function (p) {
+      var d = p.data || {};
+      var sec = d.sections || {};
+      parts.push('### Paper record: ' + (d.title || p.id) + '\n' +
+        'Citation: ' + (d.citation || '') + '\n' +
+        'Concepts: ' + (d.concepts || []).join(', ') + '\n\n' +
+        'Abstract summary: ' + clip(sec['Abstract summary'], 900) + '\n\n' +
+        'Key idea: ' + clip(sec['Key idea'], 600) + '\n\n' +
+        'Results: ' + clip(sec['Results'], 600) + '\n\n' +
+        'Weaknesses / limitations: ' + clip(sec['Weaknesses'], 400) + ' ' + clip(sec['Limitations'], 400) + '\n\n' +
+        'Relevance: ' + clip(sec['Relevance to our research'], 500));
+    });
+    relDigests.forEach(function (dd) {
+      var d = dd.data || {};
+      parts.push('### Digest: ' + (d.title || dd.id) + '\n' + clip(d.content, 2500));
+    });
+    return parts.join('\n\n---\n\n');
+  }
+
+  function renderSources(matched, matchedPapers) {
+    var items = matched.map(function (c) {
+      var d = c.data || {};
+      return '<a href="' + esc(d.url || '#') + '" target="_blank" rel="noopener" title="Concept page">' + esc(d.title || c.id) + '</a>';
+    }).concat((matchedPapers || []).map(function (p) {
+      var d = p.data || {};
+      return '<a href="' + esc(d.url || '#') + '" target="_blank" rel="noopener" title="' + esc(d.citation || 'Paper record') + '">' + esc(clip(d.title || p.id, 70)) + '</a>';
+    }));
+    if (!items.length) return '';
+    return '<div class="sources">' + items.join('') + '</div>';
+  }
+
+  function renderExtractiveFallback(aText, matched) {
+    aText.classList.remove('thinking');
+    var note = '<div class="fallback-note">Live AI-generated answers aren’t available to you in this view — ' +
+      'interactive AI queries on this page are limited to signed-in members of the Observatory’s own Claude workspace. ' +
+      'Everyone else (including this view) still gets the knowledge base itself: below are the concept records that best ' +
+      'match your question, drawn directly from our records with no AI editing, plus the ' +
+      '<a href="https://claude.ai/code/artifact/205a5250-397c-4073-b9fe-a23e28b4aca9" target="_blank" rel="noopener">full book</a> ' +
+      'and the <a href="' + (typeof GH !== 'undefined' ? GH.concepts : 'https://github.com/riccardoberta/edgeai-observatory/tree/main/01_Knowledge_Base') + '" target="_blank" rel="noopener">source repository</a> for everything else.</div>';
+    if (!matched.length) {
+      aText.innerHTML = note + '<p><em>No closely matching concept was found for this question. Try browsing the ' +
+        '<a href="' + GH.concepts + '" target="_blank" rel="noopener">knowledge base on GitHub</a> directly.</em></p>';
+      return;
+    }
+    var parts = [note];
+    matched.forEach(function (c) {
+      var d = c.data || {};
+      var sec = d.sections || {};
+      var body = sec['Evolution of the concept'] || sec['Overview'] || '';
+      parts.push('<div class="excerpt"><h4>' + esc(d.title || c.id) + '</h4>' +
+        (body ? '<p>' + esc(body).slice(0, 700) + (body.length > 700 ? '…' : '') + '</p>' : '<p><em>No summary text indexed for this concept.</em></p>') +
+        '</div>');
+    });
+    aText.innerHTML = parts.join('\n');
+  }
+
+  async function ask(question) {
+    question = (question || '').trim();
+    if (!question) return;
+    askBtn.disabled = true;
+    answerArea.innerHTML =
+      '<div class="answer"><p class="q">' + esc(question) + '</p><p class="a thinking" id="aText">Reading the knowledge base&hellip;</p></div>';
+    var aText = document.getElementById('aText');
+    var concepts = await loadConcepts();
+    var digests = await loadDigests();
+    var papers = await loadPapers();
+    var matched = topConcepts(question, concepts, 4);
+    if (!matched.length) matched = concepts.slice(0, 2);
+    var matchedPapers = topPapers(question, papers, matched, 5);
+    var relDigests = topDigests(question, digests, 2);
+
+    try {
+      if (!sample) sample = await claude.use('sample');
+      if (!sample) {
+        renderExtractiveFallback(aText, matched);
+        answerArea.querySelector('.answer').insertAdjacentHTML('beforeend', renderSources(matched, matchedPapers));
+        askBtn.disabled = false;
+        return;
+      }
+      var context = buildContext(matched, matchedPapers, relDigests, question);
+
+      var prompt = 'You are the query interface for the EdgeAI Observatory, a research knowledge base on edge AI (TinyML, embedded ML, on-device inference) maintained by EliosLab, University of Genoa. ' +
+        'Answer the question below using ONLY the context provided: concept pages, paper records and digests. Be specific and technical, write for a graduate researcher, and stay concise (roughly 150-300 words). ' +
+        'Name the papers you rely on by their title or first author and year exactly as they appear in the context. ' +
+        'Ground every claim in the context; do not invent papers, numbers, or results not present in it. If the context does not fully answer the question, say what is and is not covered.\n\n' +
+        'CONTEXT:\n' + context + '\n\nQUESTION: ' + question;
+
+      aText.classList.remove('thinking');
+      aText.textContent = '';
+      var result = await sample(prompt, {
+        modelTier: 'default',
+        onText: function (evt) { aText.textContent = evt.text; }
+      });
+      aText.innerHTML = formatAnswer(result.text);
+      answerArea.querySelector('.answer').insertAdjacentHTML('beforeend', renderSources(matched, matchedPapers));
+    } catch (err) {
+      var code = (err && err.code) || 'error';
+      if (code === 'not_granted') {
+        renderExtractiveFallback(aText, matched);
+        answerArea.querySelector('.answer').insertAdjacentHTML('beforeend', renderSources(matched, matchedPapers));
+      } else {
+        var msg = code === 'rate_limited' ? 'Rate limited — try again in a moment.' :
+          code === 'cancelled' ? 'Cancelled.' :
+          'Something went wrong answering this (' + code + ').';
+        answerArea.querySelector('.answer').insertAdjacentHTML('beforeend', '<div class="error-box">' + esc(msg) + '</div>');
+      }
+    } finally {
+      askBtn.disabled = false;
+    }
+  }
+
+  askBtn.addEventListener('click', function () { ask(qInput.value); });
+  qInput.addEventListener('keydown', function (e) { if (e.key === 'Enter') ask(qInput.value); });
+  document.querySelectorAll('.examples button').forEach(function (b) {
+    b.addEventListener('click', function () { qInput.value = b.getAttribute('data-q'); ask(qInput.value); });
+  });
+
+  loadStats();
+})();
+</script>

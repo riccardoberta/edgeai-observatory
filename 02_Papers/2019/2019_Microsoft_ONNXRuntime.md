@@ -1,5 +1,7 @@
 # ONNX Runtime: Cross-Platform, High-Performance ML Inferencing and Training Accelerator
 
+**Full citation:** Microsoft (2019–). *ONNX Runtime: cross-platform, high-performance ML inferencing and training accelerator* (open-source software project, first released 2019). https://github.com/microsoft/onnxruntime
+
 **Citation note:** Unlike most entries in this folder, ONNX Runtime does not have a single canonical peer-reviewed paper describing it — it is documented primarily as an open-source software project. Source: Microsoft. *ONNX Runtime* (open-source project, first released 2019). https://github.com/microsoft/onnxruntime — and the closely related academic paper on compiling ONNX models: Jin, T. et al. (2020). Compiling ONNX Neural Network Models Using MLIR. arXiv:2008.08272. https://arxiv.org/abs/2008.08272
 
 **PDF:** [Related paper — arXiv PDF](https://arxiv.org/pdf/2008.08272) (no canonical paper for the project itself; see the GitHub link above for the software source)

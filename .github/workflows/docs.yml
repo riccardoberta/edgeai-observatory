@@ -28,8 +28,11 @@ jobs:
       - name: Install MkDocs + Material
         run: pip install "mkdocs<2" mkdocs-material
 
+      - name: Check repository consistency
+        run: python3 tools/check_consistency.py
+
       - name: Render wikilinks into docs/
-        run: python3 tools/build_docs.py
+        run: python3 tools/build_docs.py --strict
 
       - name: Build site
         env:

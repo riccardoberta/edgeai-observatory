@@ -370,6 +370,8 @@ def classify_section(rel_path: str) -> tuple[str, tuple]:
             "Frameworks": 1,
             "Hardware": 2,
             "Applications": 3,
+            "Benchmarks_Datasets": 4,
+            "Security": 5,
         }
         subsection = parts[1] if len(parts) > 1 else "General"
         return (
@@ -380,7 +382,7 @@ def classify_section(rel_path: str) -> tuple[str, tuple]:
         year = parts[1] if len(parts) > 1 else "Unknown"
         return f"Paper Records - {year}", (3, year, rel_path.lower())
     if parts[0] == "03_Digests":
-        subsection_order = {"Monthly": 0, "Weekly": 1}
+        subsection_order = {"Consolidation": 0, "Monthly": 1, "Weekly": 2}
         subsection = parts[1] if len(parts) > 1 else "General"
         return (
             f"Digests - {subsection}",
