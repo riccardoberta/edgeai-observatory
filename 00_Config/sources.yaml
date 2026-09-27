@@ -19,7 +19,7 @@ digital_libraries:
     access: open
     status: active
     notes: "Primary source for preprints; check daily/weekly listings on relevant categories."
-    last_checked: 2026-09-20
+    last_checked: 2026-09-27
 
   - name: IEEE Xplore
     url: https://ieeexplore.ieee.org
@@ -93,7 +93,7 @@ digital_libraries:
       solves the "must be interactive" limitation above for topic-based
       coverage; extend the query list as the taxonomy grows.
     status: active
-    last_checked: 2026-09-20
+    last_checked: 2026-09-27
 
 conferences:
   # Checking method (added 2026-09-03): entries below previously had no actual

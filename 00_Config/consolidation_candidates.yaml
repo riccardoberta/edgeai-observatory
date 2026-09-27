@@ -48,11 +48,35 @@ candidates:
     status: ready_for_review
 
     first_seen: 2026-08-31
-    last_seen: 2026-09-20
+    last_seen: 2026-09-27
 
     possible_existing_concept: null
 
     evidence:
+      - source: 03_Digests/Weekly/2026-09-27_weekly_digest.md
+        papers:
+          - "RAMP: Robust Adaptive Mixed-Precision Quantization for Edge CPU Vision Models"
+          - "Same Bit Width, Different Outcomes: Post-Training Quantization of Text-to-Speech Across Architectures"
+        note: >
+          Two further independent corroborations that quantization outcomes
+          must be validated on the target runtime rather than predicted
+          from bit width or simulated cost. RAMP (Poblacion-Criado,
+          Garcia-Gasulla, Quinones; BSC; BMVC 2026; arXiv:2609.28262)
+          shows widely used layer-sensitivity proxies fail catastrophically
+          on 4-6 of 8 model/ARM64-hardware configurations and that
+          excluding low-speed-up layers can fragment the graph and disable
+          operator fusion -- a runtime effect no sensitivity metric can
+          see. The TTS PTQ study (Park, Kim, Park; arXiv:2609.28974) finds
+          the same bit width gives model-specific outcomes and that real
+          int8 kernels can be slower than a 4-bit weight kernel on the
+          same machine. Neither adds the missing MCU/NPU-tier
+          methodology; both strengthen the "benchmark realism /
+          validate-on-target" framing. A Scholar-only Elsevier Array SLR
+          (Mahfouz et al., 2026) reportedly quantifies up to 60% error of
+          digital-twin energy/latency estimates against real MCU
+          measurements, but was blocked by a bot check and is recorded at
+          snippet level only.
+
       - source: 03_Digests/Weekly/2026-09-20_weekly_digest.md
         papers:
           - "Is INT8 Portable? A Cross-Platform Measurement Study of Quantized Inference on Embedded and Automotive Accelerators"
@@ -192,11 +216,26 @@ candidates:
     status: watching
 
     first_seen: 2026-09-02
-    last_seen: 2026-09-02
+    last_seen: 2026-09-27
 
     possible_existing_concept: null
 
     evidence:
+      - source: 03_Digests/Weekly/2026-09-27_weekly_digest.md
+        papers:
+          - "Albireo: Adaptive, Energy-Efficient Inference Framework for Video Object Detection on the Edge"
+          - "FoldQuantVLA: Native Low-Bit Quantization of Vision-Language-Action Models via Consistent Folding"
+        note: >
+          Partial evidence only. Albireo (Taherin, Cano, Ren, Wang,
+          Kaeli; ACM/IEEE SEC 2026; arXiv:2609.29648) reports measured
+          energy on Jetson AGX Thor and AGX Orin for three detectors and
+          FoldQuantVLA (Ho et al.; arXiv:2609.24433) measures W4A4
+          TensorRT speed-ups on AGX Orin; both come from groups unrelated
+          to the Ghent/imec anchor, so Jetson-class hardware is clearly a
+          recurring deployment target. Neither is a characterization
+          study of the hardware itself, which is the bar this candidate
+          set, so status stays "watching".
+
       - source: 02_Papers/2025/2025_Chakraborty_ProfilingJetsonVisionInference.md
         papers:
           - "Profiling Concurrent Vision Inference Workloads on NVIDIA Jetson -- Extended"
@@ -266,11 +305,28 @@ candidates:
     status: ready_for_review
 
     first_seen: 2026-09-13
-    last_seen: 2026-09-20
+    last_seen: 2026-09-27
 
     possible_existing_concept: null
 
     evidence:
+      - source: 03_Digests/Weekly/2026-09-27_weekly_digest.md
+        papers:
+          - "FoldQuantVLA: Native Low-Bit Quantization of Vision-Language-Action Models via Consistent Folding"
+          - "VLAQuantBench: Closed-Loop Evaluation of Post-Training Quantization for Vision-Language-Action Models"
+        note: >
+          Third consecutive week. FoldQuantVLA (Ho, Nguyen, Nguyen,
+          Duong, Le, Guo, Ngo, Le; arXiv:2609.24433) is a fourth
+          independent group: native W4A4 TensorRT execution of GR00T and
+          pi0.5 on Jetson AGX Orin (1.20-1.33x) with 80-trial real-robot
+          validation per configuration. VLAQuantBench (arXiv:2609.25376)
+          is from the PreDE group (Xu, Chen, Shi) and is therefore NOT
+          independent, but its 409-run closed-loop benchmark reaches a
+          compatible conclusion: a few specific layers, not bit width,
+          decide whether a quantized VLA still works. Both again sit at
+          the GPU-class onboard tier, reinforcing the tier-scope question
+          already flagged for the reviewer.
+
       - source: 03_Digests/Weekly/2026-09-20_weekly_digest.md
         papers:
           - "Predict Before You Deploy: Offline Prediction of Quantization-Induced Task Degradation for World Action Models"
@@ -324,3 +380,61 @@ candidates:
       compute), so the concept's scope needs an explicit decision.
 
     action_hint: review in the next Knowledge Base Consolidation cycle; consider formalizing "Robotics / Autonomous Systems" as an Applications-branch concept per taxonomy.md's known-gaps note, with an explicit statement of which hardware tiers it covers and cross-links to Quantization, Pruning, Distillation and Generative_EdgeAI
+
+  - id: restricted-operator-set-codesign-mcu-npu
+    title: "Restricted Operator Sets as the Binding Deployment Constraint on Microcontroller-Class NPUs"
+
+    status: watching
+
+    first_seen: 2026-09-27
+    last_seen: 2026-09-27
+
+    possible_existing_concept: NPU
+
+    evidence:
+      - source: 03_Digests/Weekly/2026-09-27_weekly_digest.md
+        papers:
+          - "Beyond Model Size: Redesigning LiSenNet for embedded speech enhancement"
+          - "NPLSD: Accelerating Line-Segment Detection on NPU Microcontrollers"
+          - "NAVIR: Neuromorphic Audio-Visual Speech Recognition for Robust Human-Robot Interaction on Edge Hardware"
+        note: >
+          Three papers in one week from three unrelated groups and two
+          accelerator families, all making the same observation: on
+          microcontroller-class NPUs the property that decides whether a
+          model runs is not parameter count or MACs but whether every
+          operator is in the accelerator's static integer graph. LiSenNet
+          (Laroche, Olsson; arXiv:2609.29866) replaces a recurrent
+          bottleneck with convolutional mixers and bounds activations to
+          fit the STM32N6 Neural-ART, reaching a 0.30 real-time factor,
+          and finds stateless recomputation 10x slower despite higher
+          accelerator utilization. NPLSD (Panahi, Jalilvand, Najafi;
+          arXiv:2609.25022) characterizes, operator by operator, why
+          transformer line detectors cannot run on the same NPU
+          (attention, grid-sampling, normalization; a 39 MB attention
+          score tensor) and rebuilds them convolutionally. NAVIR
+          (Delimpasis et al.; arXiv:2609.24391) factorises an
+          audio-visual speech recognizer into 2D-conv-only modules
+          because BrainChip Akida supports nothing else. Supporting
+          context, same digest: the early-exit speech-enhancement study
+          (Laroche, Miccini; arXiv:2609.29867) must split a depth-varying
+          model into several static NPU graphs on STM32N6; Scholar
+          surfaced a fourth STM32N6 deployment (Abdalla, crowd counting,
+          openreview) and an earlier STM32N6 CubeSat study (Capogrosso,
+          Magno, 2026), neither read in full.
+
+    rationale: >
+      Created after a single digest, which is unusual, because the
+      two-independent-anchor convention is already exceeded (three
+      groups, two NPU families) and the signal is squarely at the
+      Observatory's core Cortex-M / MCU-NPU tier. Kept at "watching"
+      rather than "ready_for_review" to respect the multi-week rule; a
+      recurrence in any later digest should be enough to promote it. The
+      existing NPU concept page treats NPUs as throughput accelerators;
+      this signal argues the concept (or a Frameworks-side companion on
+      vendor NPU toolchains) needs an explicit "operator-set
+      compatibility and static-graph constraints" dimension, and it is
+      closely related to the measurement-infrastructure candidate: both
+      say MCU/NPU deployability is a runtime/toolchain property that
+      MACs and bare-metal benchmarks do not capture.
+
+    action_hint: watch for one more independent MCU-NPU paper (Ethos-U, Neural-ART, Akida or a RISC-V NPU) whose central difficulty is operator support rather than model size; then review jointly with mcu-npu-measurement-infrastructure and decide between extending Hardware/NPU.md with an operator-set/static-graph section or opening a Frameworks-branch concept on vendor NPU toolchains
