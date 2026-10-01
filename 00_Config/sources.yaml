@@ -26,35 +26,35 @@ digital_libraries:
     access: institutional (discovery via WebSearch needs no login; full text needs unige.it)
     access_notes: "Primary discovery method (2026-09-02, works unattended, no login needed): WebSearch with `site:ieeexplore.ieee.org <query>`. Confirmed to reliably surface titles, venues, dates, and often a synthesized abstract-level snippet without any institutional session — this is what makes IEEE coverage usable in the unattended Weekly/Monthly runs, where a live logged-in browser is never available. `web_fetch` on individual ieeexplore.ieee.org URLs returns an empty client-rendered shell (paywalled, no server-rendered abstract) — do not rely on it. For full text or a deeper read (e.g. before writing a `02_Papers/` deep-analysis record), use the Claude in Chrome extension on a browser signed in on the unige.it campus network/VPN/proxy; this stays an on-demand, human-present step, not part of the unattended pipeline. Note: search-result listing pages do not expose reliable per-item indexing/publication dates, so date-filter results by opening the individual record, not the listing page."
     status: active
-    last_checked: 2026-09-20
+    last_checked: 2026-10-01
 
   - name: ACM Digital Library
     url: https://dl.acm.org
     access: institutional (discovery via WebSearch needs no login; full text needs unige.it)
     access_notes: "Same pattern as IEEE Xplore: WebSearch with `site:dl.acm.org <query>` is the primary, unattended-safe discovery method (confirmed working 2026-09-02, also surfaces IEEE-co-published venues like IEEE/ACM Transactions on Networking). Claude in Chrome + unige.it institutional access remains the on-demand path for full text / deep-analysis records. Direct `web_fetch` has previously hit a bot/security-verification interstitial — don't rely on it either."
     status: active
-    last_checked: 2026-09-02
+    last_checked: 2026-10-01
 
   - name: MDPI
     url: https://www.mdpi.com
     access: open
     access_notes: "Fully open access — confirmed 2026-09-02 that `web_fetch` retrieves full article text directly, no login or Chrome needed, same as arXiv. Relevant journals for this Observatory: Sensors, Electronics, Information, Applied Sciences, Future Internet. Use WebSearch with `site:mdpi.com <query>` for discovery, then `web_fetch` the resulting article URL directly for full text (works even for 02_Papers/-grade deep analysis, not just title/abstract-level digest entries)."
     status: active
-    last_checked: 2026-09-20
+    last_checked: 2026-10-01
 
   - name: Elsevier (ScienceDirect)
     url: https://www.sciencedirect.com
     access: mostly institutional (discovery via WebSearch needs no login; some articles fully open access)
     access_notes: "WebSearch with `site:sciencedirect.com <query>` works unattended and no login needed (confirmed 2026-09-02) for discovery — titles, journal/venue, and often a synthesized snippet. Most articles are paywalled (`web_fetch` on the article page will likely return an empty or truncated shell); check each result for an open-access badge before assuming full text is reachable without unige.it access. For paywalled full text, same on-demand Claude in Chrome + unige.it pattern as IEEE/ACM."
     status: active
-    last_checked: 2026-09-02
+    last_checked: 2026-10-01
 
   - name: Springer (SpringerLink)
     url: https://link.springer.com
     access: mostly institutional (discovery via WebSearch needs no login; some articles/chapters fully open access)
     access_notes: "Same pattern as Elsevier: WebSearch with `site:link.springer.com <query>` works unattended for discovery (confirmed 2026-09-02); many results are book chapters (Springer's `/chapter/` URLs) rather than journal articles, worth noting when citing. Most content is paywalled; open-access articles/chapters exist and are worth a direct `web_fetch` attempt, but institutional access via Claude in Chrome + unige.it is the reliable fallback for full text."
     status: active
-    last_checked: 2026-09-02
+    last_checked: 2026-10-01
 
   - name: Google Scholar
     url: https://scholar.google.com
@@ -93,7 +93,7 @@ digital_libraries:
       solves the "must be interactive" limitation above for topic-based
       coverage; extend the query list as the taxonomy grows.
     status: active
-    last_checked: 2026-09-27
+    last_checked: 2026-10-01
 
 conferences:
   # Checking method (added 2026-09-03): entries below previously had no actual
@@ -154,33 +154,34 @@ conferences:
     url: https://www.tinyml.org/research-symposium
     frequency: annual
     status: active
-    last_checked: null
+    notes: "Renamed: now runs as the Edge AI Research Symposium under the Edge AI Foundation (formerly tinyML Foundation). The 2026 edition took place 24-26 March 2026 in San Diego (CFP via EasyChair 'EdgeAI2026'). Check proceedings via `site:dblp.org` / the Edge AI Foundation site rather than the old tinyml.org URL."
+    last_checked: 2026-10-01
 
 software_projects:
   - name: TensorFlow Lite Micro
     url: https://github.com/tensorflow/tflite-micro
     status: active
-    last_checked: null
+    last_checked: 2026-10-01
   - name: CMSIS-NN
     url: https://github.com/ARM-software/CMSIS-NN
     status: active
-    last_checked: null
+    last_checked: 2026-10-01
   - name: Apache TVM / microTVM
     url: https://github.com/apache/tvm
     status: active
-    last_checked: 2026-08-11
+    last_checked: 2026-10-01
   - name: MLIR
     url: https://mlir.llvm.org
     status: active
-    last_checked: null
+    last_checked: 2026-10-01
   - name: ONNX Runtime
     url: https://github.com/microsoft/onnxruntime
     status: active
-    last_checked: 2026-08-17
+    last_checked: 2026-10-01
   - name: Edge Impulse
     url: https://www.edgeimpulse.com
     status: active
-    last_checked: null
+    last_checked: 2026-10-01
 
 hardware_vendors:
   - name: Arm (Cortex-M / Ethos NPU)
@@ -194,11 +195,11 @@ hardware_vendors:
   - name: Qualcomm (edge AI chips)
     url: https://www.qualcomm.com
     status: active
-    last_checked: 2026-07-29
+    last_checked: 2026-10-01
   - name: NVIDIA (Jetson)
     url: https://developer.nvidia.com/embedded-computing
     status: active
-    last_checked: 2026-08-25
+    last_checked: 2026-10-01
   - name: Syntiant
     url: https://www.syntiant.com
     status: active
@@ -212,11 +213,11 @@ benchmarks:
   - name: MLPerf Tiny
     url: https://mlcommons.org/benchmarks/inference-tiny/
     status: active
-    last_checked: null
+    last_checked: 2026-10-01
   - name: MLPerf Inference
     url: https://mlcommons.org/benchmarks/inference-datacenter/
     status: active
-    last_checked: null
+    last_checked: 2026-10-01
 
 datasets:
   - name: Speech Commands

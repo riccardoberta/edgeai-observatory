@@ -48,11 +48,36 @@ candidates:
     status: ready_for_review
 
     first_seen: 2026-08-31
-    last_seen: 2026-09-27
+    last_seen: 2026-10-01
 
-    possible_existing_concept: null
+    possible_existing_concept: MLPerf_Tiny
 
     evidence:
+      - source: 03_Digests/Monthly/2026-09_monthly_report.md
+        papers:
+          - "Design-Space Exploration of TinyML Workloads on Heterogeneous Processing Targets for AI-Enabled Wearables"
+          - "A Memristor-Based In-Memory Computing System-on-Chip with Efficient Depthwise Convolution"
+        note: >
+          Monthly synthesis (2026-10-01). Cross-week reading of the
+          September digests shows the measurement gap and the
+          restricted-operator-set candidate are two faces of one
+          question: what a harness at the MCU/NPU tier must capture is
+          which operators fall back to the CPU and what that costs, not
+          MACs per second. Three independent papers in one month used
+          MLPerf Tiny workloads as a yardstick outside the official
+          submission process (EPIC's fine-tuning numbers; the smart-
+          glasses VWW variant; the memristor SoC's 80.36% VWW result,
+          Song et al., Advanced Intelligent Systems 2026, DOI
+          10.1002/aisy.202501225, Scholar-surfaced, snippet-level), which
+          supports option (b) of the action hint -- extending
+          MLPerf_Tiny.md with a realism/known-limitations section -- as
+          the lower-cost first step. A Scholar-surfaced wearables
+          design-space exploration (Penner, Wittenfeld, Voss, Hesse;
+          IEEE-EMBS 2026; OpenReview; not read in full) addresses the
+          same benchmark-realism question from the wearables side.
+          Recommend reviewing jointly with
+          restricted-operator-set-codesign-mcu-npu.
+
       - source: 03_Digests/Weekly/2026-09-27_weekly_digest.md
         papers:
           - "RAMP: Robust Adaptive Mixed-Precision Quantization for Edge CPU Vision Models"
@@ -165,19 +190,51 @@ candidates:
       as an explicit open sub-gap) or keep waiting for a tier-specific
       anchor.
 
-    action_hint: review in the next Knowledge Base Consolidation cycle; decide between (a) a new Benchmarks_Datasets-branch concept on measurement methodology / benchmark realism for edge inference, with the MCU/NPU tier flagged as open, or (b) extending MLPerf_Tiny.md with a "known limitations / realism" section and keeping the tier-specific gap in taxonomy.md
+    action_hint: review in the next Knowledge Base Consolidation cycle, jointly with restricted-operator-set-codesign-mcu-npu; decide between (a) a new Benchmarks_Datasets-branch concept on measurement methodology / benchmark realism for edge inference, with the MCU/NPU tier flagged as open, or (b) extending MLPerf_Tiny.md with a "known limitations / realism" section and keeping the tier-specific gap in taxonomy.md
 
   - id: in-memory-computing-emerging-nvm-hardware-gap
     title: "In-Memory Computing with Emerging Non-Volatile Memory (Hardware Taxonomy Gap)"
 
-    status: watching
+    status: ready_for_review
 
     first_seen: 2026-09-02
-    last_seen: 2026-09-02
+    last_seen: 2026-10-01
 
     possible_existing_concept: null
 
     evidence:
+      - source: 03_Digests/Monthly/2026-09_monthly_report.md
+        papers:
+          - "A Memristor-Based In-Memory Computing System-on-Chip with Efficient Depthwise Convolution"
+          - "Beyond Noise: Understanding and Overcoming Temperature Effects in Analog DNN Inference"
+        note: >
+          Monthly synthesis (2026-10-01). The Google Scholar keyword
+          sweep surfaced the independent second anchor the action hint
+          asked for: a fabricated 65nm memristor (ReRAM-class) in-memory-
+          computing system-on-chip with a zig-zag selection-line topology
+          for depthwise convolution, measured at 21.3 TOPS/W at 100 MHz
+          and reaching 80.36% on Visual Wake Words with a tailored
+          MobileNetV1 (Song, Cai, Park, Li, Lee et al.; Advanced
+          Intelligent Systems 2026; DOI 10.1002/aisy.202501225). No author
+          overlap with the Razi/Moghadam/Aygun/Najafi/Riedel program;
+          measured silicon rather than simulation; MLPerf-Tiny-grade
+          workload. Read at abstract/snippet level only -- the full text
+          must be verified before a 02_Papers/ record is created.
+          Cross-week context the weeklies did not connect: within the
+          same month the field attacked "imperfect physical compute" from
+          three independent angles -- tolerate it architecturally
+          (FALCON), calibrate or train it away (the ECML-PKDD 2026
+          workshop temperature study, arXiv:2609.15527, which finds
+          systematic non-idealities rather than stochastic noise dominate
+          temperature-induced degradation), or certify around it
+          statistically (RACE-AIMC, tracked under
+          certified-selective-inference-imperfect-edge-accelerators).
+          Digital IMC chips with no emerging-NVM element (EPIC, FlexSpIM)
+          appeared the same month and belong to NPU /
+          Event-Driven_Neuromorphic_Accelerators rather than here, but
+          they show in-memory computing is now the densest Hardware
+          thread overall.
+
       - source: 03_Digests/Weekly/2026-09-02_weekly_digest.md
         papers:
           - "FALCON: Fault-Tolerant Magnetic Tunnel Junction-Based In-Memory Stochastic Architecture for Reliability-Critical Edge AI Applications"
@@ -203,12 +260,25 @@ candidates:
           active, not as independent anchors.
 
     rationale: >
-      A single genuinely independent research program so far, though a
-      real and active one. Kept at "watching" pending a paper from an
-      unrelated group, consistent with the conservative bar applied to the
-      other hardware-taxonomy-gap candidates.
+      First anchored by a single active research program (FALCON and its
+      MTJ/ReRAM stochastic-computing predecessors). The monthly Scholar
+      sweep of 2026-10-01 found an independently-authored, fabricated,
+      measured memristor in-memory-computing SoC reporting a Visual Wake
+      Words result (Song et al., Advanced Intelligent Systems 2026), which
+      meets the two-independent-anchor convention for a Hardware-branch
+      concept. Promoted to ready_for_review on 2026-10-01. The reviewer
+      should (1) verify the memristor SoC from its full text before
+      creating a record, (2) decide whether the concept is "in-memory
+      computing with emerging NVM" narrowly or "in-memory / compute-in-
+      memory accelerators" broadly -- the broad reading would also absorb
+      EPIC-style digital IMC and overlap with NPU and
+      Event-Driven_Neuromorphic_Accelerators, so the narrow reading is the
+      safer first step -- and (3) consider whether
+      certified-selective-inference-imperfect-edge-accelerators should
+      become an "open problems" entry of the new concept rather than a
+      separate candidate.
 
-    action_hint: monitor for an in-memory-computing / emerging-NVM paper from a research group unrelated to Razi/Moghadam/Aygun/Najafi/Riedel/de Lima/Castrillon/Khan before review
+    action_hint: review in the next Knowledge Base Consolidation cycle; verify DOI 10.1002/aisy.202501225 in full text, then decide between a new Hardware-branch concept (emerging-NVM in-memory computing, anchored by FALCON and the memristor SoC) or deferring until a third anchor appears
 
   - id: mcu-npu-tier-edge-gpu-hardware-gap
     title: "Edge GPU / Jetson-Class Hardware (Hardware Taxonomy Gap)"
@@ -216,11 +286,30 @@ candidates:
     status: watching
 
     first_seen: 2026-09-02
-    last_seen: 2026-09-27
+    last_seen: 2026-10-01
 
     possible_existing_concept: null
 
     evidence:
+      - source: 03_Digests/Monthly/2026-09_monthly_report.md
+        note: >
+          Monthly synthesis (2026-10-01), context rather than a new
+          anchor. Six September papers measured or modeled on this tier
+          (Albireo; FoldQuantVLA; PreDE; the pruned-VLA recovery paper;
+          the block-diffusion LLM accelerator, arXiv:2609.01084; TierKV,
+          arXiv:2609.21172), and NVIDIA announced the Jetson Orin Nano 2
+          (25 Aug 2026, 78 TOPS, 2x Orin Nano Super, 40% less power at
+          equal performance, availability H1 2027) and the mid-range Thor
+          T3000/T2000 modules (Q1 2027), both positioned explicitly as
+          robotics computers. The characterization bar set for this
+          candidate is still unmet, but the deployment-target density and
+          the imminent hardware refresh make a second independent
+          characterization paper likely within the next two quarters.
+          Note the overlap with robotics-edge-ai-applications-gap: the
+          GPU-onboard anchors of that candidate are also the deployment
+          evidence here, so the two should be reviewed together when
+          deciding tier scope.
+
       - source: 03_Digests/Weekly/2026-09-27_weekly_digest.md
         papers:
           - "Albireo: Adaptive, Energy-Efficient Inference Framework for Video Object Detection on the Edge"
@@ -264,11 +353,30 @@ candidates:
     status: watching
 
     first_seen: 2026-09-06
-    last_seen: 2026-09-06
+    last_seen: 2026-10-01
 
     possible_existing_concept: null
 
     evidence:
+      - source: 03_Digests/Monthly/2026-09_monthly_report.md
+        papers:
+          - "Beyond Noise: Understanding and Overcoming Temperature Effects in Analog DNN Inference"
+        note: >
+          Monthly synthesis (2026-10-01), cross-paper context rather than
+          a second anchor. The temperature study (Summ, Wang, Borras,
+          Klein, Froening; ECML-PKDD 2026 IoT/Edge/Mobile workshop;
+          arXiv:2609.15527) addresses the same imperfect-accelerator
+          problem by calibration/training rather than per-unit
+          certification, so it was deliberately not counted as evidence
+          in the weekly; read across the month it completes a three-way
+          split (architectural tolerance: FALCON; calibration: this
+          paper; statistical certification: RACE-AIMC) that is the most
+          useful framing for the reviewer. Status stays "watching": no
+          second certified/selective-inference paper has appeared. If
+          in-memory-computing-emerging-nvm-hardware-gap is promoted, the
+          reviewer may prefer to fold this candidate into that concept's
+          "Open problems" section rather than keep it separate.
+
       - source: 03_Digests/Weekly/2026-09-06_weekly_digest.md
         papers:
           - "RACE-AIMC: Selective Inference for Heterogeneous Analog In-Memory Accelerators at the Edge"
@@ -305,11 +413,27 @@ candidates:
     status: ready_for_review
 
     first_seen: 2026-09-13
-    last_seen: 2026-09-27
+    last_seen: 2026-10-01
 
     possible_existing_concept: null
 
     evidence:
+      - source: 03_Digests/Monthly/2026-09_monthly_report.md
+        note: >
+          Monthly synthesis (2026-10-01). No new anchor; two cross-week
+          observations for the reviewer. (1) Industry context: NVIDIA's
+          Jetson Orin Nano 2 (25 Aug 2026) and Thor T3000/T2000 (Q1 2027)
+          are marketed explicitly as "robotics computers", i.e. the
+          GPU-onboard tier of three of the four anchors is where the
+          vendor expects this work to run -- which argues for defining
+          the concept across tiers but naming the Jetson tier as its
+          current center of gravity. (2) Two of the four anchors (PreDE,
+          VLAQuantBench; and FoldQuantVLA's layer-protection result)
+          are also evidence for the new
+          predeployment-quantization-degradation-prediction candidate;
+          the concept page, if created, should cross-link to Quantization
+          for that thread rather than re-describe it.
+
       - source: 03_Digests/Weekly/2026-09-27_weekly_digest.md
         papers:
           - "FoldQuantVLA: Native Low-Bit Quantization of Vision-Language-Action Models via Consistent Folding"
@@ -384,14 +508,44 @@ candidates:
   - id: restricted-operator-set-codesign-mcu-npu
     title: "Restricted Operator Sets as the Binding Deployment Constraint on Microcontroller-Class NPUs"
 
-    status: watching
+    status: ready_for_review
 
     first_seen: 2026-09-27
-    last_seen: 2026-09-27
+    last_seen: 2026-10-01
 
     possible_existing_concept: NPU
 
     evidence:
+      - source: 03_Digests/Monthly/2026-09_monthly_report.md
+        papers:
+          - "TinyML Enhances CubeSat Mission Capabilities"
+          - "QScheduler: Adaptive Gradient Sampling for Zeroth-Order On-Device Training on INT8 NPUs"
+          - "Is INT8 Portable? A Cross-Platform Measurement Study of Quantized Inference on Embedded and Automotive Accelerators"
+        note: >
+          Monthly synthesis (2026-10-01). The Google Scholar keyword sweep
+          and a cross-week reading add three independent corroborations
+          from groups unrelated to the three weekly anchors. (1)
+          Capogrosso and Magno (ETH Zurich; ACM/IEEE ICCPS 2026;
+          arXiv:2603.20174) frame their whole STM32N6 CubeSat deployment
+          pipeline as "hardware-aware operator mapping" that maximizes
+          Neural-ART operator coverage, with 0.68-6.45 mJ and 3.22-30.38
+          ms per inference -- the Scholar-only item of 2026-09-27 is now
+          confirmed from its arXiv abstract. (2) QScheduler (Amaral,
+          Demaj, Libessart, Folliot et al.; arXiv:2607.18802) extends the
+          constraint from inference to training: because the Neural-ART
+          has no backward-pass primitives, on-device training on it must
+          be zeroth-order (forward passes only), giving the first INT8
+          on-device training proof-of-concept on that NPU. (3) The
+          INT8-portability study (arXiv:2609.16085, already recorded
+          under mcu-npu-measurement-infrastructure) shows vendor NPUs
+          "own" quantization -- a bring-your-own QDQ graph fails silently
+          on one NPU (accuracy 0.75 -> 0.005 while compiling and running
+          without error) and loudly on the other -- which is the same
+          toolchain-decides-deployability fact at the Hexagon/DX-M1
+          tier. Evidence now spans five unrelated groups, three
+          accelerator families and both inference and training, which
+          exceeds the multi-week rule the weekly deferred to.
+
       - source: 03_Digests/Weekly/2026-09-27_weekly_digest.md
         papers:
           - "Beyond Model Size: Redesigning LiSenNet for embedded speech enhancement"
@@ -424,17 +578,182 @@ candidates:
 
     rationale: >
       Created after a single digest, which is unusual, because the
-      two-independent-anchor convention is already exceeded (three
+      two-independent-anchor convention was already exceeded (three
       groups, two NPU families) and the signal is squarely at the
-      Observatory's core Cortex-M / MCU-NPU tier. Kept at "watching"
-      rather than "ready_for_review" to respect the multi-week rule; a
-      recurrence in any later digest should be enough to promote it. The
-      existing NPU concept page treats NPUs as throughput accelerators;
-      this signal argues the concept (or a Frameworks-side companion on
-      vendor NPU toolchains) needs an explicit "operator-set
-      compatibility and static-graph constraints" dimension, and it is
-      closely related to the measurement-infrastructure candidate: both
-      say MCU/NPU deployability is a runtime/toolchain property that
-      MACs and bare-metal benchmarks do not capture.
+      Observatory's core Cortex-M / MCU-NPU tier; held at "watching" to
+      respect the multi-week rule. The monthly synthesis of 2026-10-01
+      supplied the recurrence that rule asked for, from two further
+      unrelated groups (Capogrosso/Magno; Amaral et al.) and with the
+      constraint shown to govern training as well as inference. Promoted
+      to ready_for_review on 2026-10-01. The existing NPU concept page
+      treats NPUs as throughput accelerators; this signal argues the
+      concept (or a Frameworks-side companion on vendor NPU toolchains)
+      needs an explicit "operator-set compatibility and static-graph
+      constraints" dimension. It is closely related to the measurement-
+      infrastructure candidate -- both say MCU/NPU deployability is a
+      runtime/toolchain property that MACs and bare-metal benchmarks do
+      not capture -- and the two should be decided together.
 
-    action_hint: watch for one more independent MCU-NPU paper (Ethos-U, Neural-ART, Akida or a RISC-V NPU) whose central difficulty is operator support rather than model size; then review jointly with mcu-npu-measurement-infrastructure and decide between extending Hardware/NPU.md with an operator-set/static-graph section or opening a Frameworks-branch concept on vendor NPU toolchains
+    action_hint: review in the next Knowledge Base Consolidation cycle, jointly with mcu-npu-measurement-infrastructure; decide between extending Hardware/NPU.md with an operator-set/static-graph section (lower cost, keeps the Hardware/Frameworks split intact) or opening a Frameworks-branch concept on vendor NPU toolchains (ST Edge AI / Neural-ART, Arm Vela / Ethos-U, BrainChip MetaTF, Qualcomm QNN) anchored by LiSenNet, NPLSD, NAVIR and the CubeSat pipeline
+
+  - id: predeployment-quantization-degradation-prediction
+    title: "Pre-Deployment Prediction of Quantization-Induced Degradation (Offline Proxies with Accept/Reject/Defer Decisions)"
+
+    status: watching
+
+    first_seen: 2026-10-01
+    last_seen: 2026-10-01
+
+    possible_existing_concept: Quantization
+
+    evidence:
+      - source: 03_Digests/Monthly/2026-09_monthly_report.md
+        papers:
+          - "Predict Before You Deploy: Offline Prediction of Quantization-Induced Task Degradation for World Action Models"
+          - "Predicting Quantization Price for Selecting PTQ Configurations Before Deployment"
+          - "RAMP: Robust Adaptive Mixed-Precision Quantization for Edge CPU Vision Models"
+          - "VLAQuantBench: Closed-Loop Evaluation of Post-Training Quantization for Vision-Language-Action Models"
+          - "Same Bit Width, Different Outcomes: Post-Training Quantization of Text-to-Speech Across Architectures"
+        note: >
+          Created by monthly synthesis (2026-10-01); the 2026-09-27 weekly
+          deliberately deferred this pattern to the monthly. Across the
+          2026-09-20 and 2026-09-27 digests, five papers from four
+          unrelated groups converge on one algorithmic question: can the
+          task-level damage of a post-training quantization configuration
+          be predicted cheaply, before any deployment or closed-loop
+          evaluation? PreDE (Xu, Guo, Chen, Du, Shi; arXiv:2609.19441)
+          calibrates two thresholds on offline action deviations and
+          issues accept/reject/defer decisions (21 of 28 held-out
+          configurations decided before any robot trial, all correct,
+          validated in 450 Franka trials). "Quantization Price" (Qiu, Mu,
+          Zhang, Shu; arXiv:2609.28270) prices each layer configuration's
+          output-error covariance by downstream curvature, 1/2 Tr(H Sigma),
+          so formats, granularities, codebooks and transformations become
+          comparable candidates in one table. RAMP (Poblacion-Criado,
+          Garcia-Gasulla, Quinones; BMVC 2026; arXiv:2609.28262) is the
+          negative result: gradient- and weight-based sensitivity proxies
+          fail catastrophically on 4 and 2 of 8 model/ARM64 configurations
+          while Jensen-Shannon divergence of layer outputs never does.
+          VLAQuantBench (same group as PreDE, so not independent of it;
+          arXiv:2609.25376) and the TTS PTQ study (Park, Kim, Park;
+          arXiv:2609.28974) supply the motivating evidence that outcomes
+          are architecture- and layer-specific and not predictable from
+          bit width or model class.
+
+      - source: 03_Digests/Weekly/2026-09-27_weekly_digest.md
+        note: >
+          Source digest for RAMP, "Quantization Price", VLAQuantBench and
+          the TTS PTQ study; its consolidation-queue note explicitly
+          flagged "predict quantization degradation before deploying" as
+          visible from four unrelated groups in two weeks and left the
+          decision to the monthly synthesis.
+
+      - source: 03_Digests/Weekly/2026-09-20_weekly_digest.md
+        note: >
+          Source digest for PreDE, whose thesis hook ("offline proxies for
+          compressed-model safety beyond robotics") first named the
+          pattern.
+
+    rationale: >
+      Visible only at month level: no single week contained more than
+      three of the five papers, and the weekly that saw four of them
+      chose to defer. The pattern is distinct from
+      mcu-npu-measurement-infrastructure (which asks what actually
+      happens on a given chip) in that it is an algorithmic direction --
+      calibrated offline predictors with explicit deferral -- that lives
+      inside Quantization rather than in Benchmarks_Datasets. Kept at
+      "watching" because the strongest anchors are preprints at the GPU
+      tier (PreDE, Quantization Price) and the only peer-reviewed one
+      (RAMP) is a negative result about proxies; a predictor validated
+      on MCU- or NPU-class hardware, or a second peer-reviewed positive
+      result from an unrelated group, would justify review.
+
+    action_hint: watch for a pre-deployment degradation predictor validated on Cortex-M/NPU-class hardware or a second peer-reviewed positive result from an unrelated group; then decide between a "Pre-deployment prediction" subsection in Algorithms/Quantization.md (preferred) and a separate concept
+
+  - id: integer-only-npu-constrained-on-device-training-mcu
+    title: "Resource-Accounted and NPU-Constrained On-Device Training on Microcontrollers"
+
+    status: watching
+
+    first_seen: 2026-10-01
+    last_seen: 2026-10-01
+
+    possible_existing_concept: On-device_Learning
+
+    evidence:
+      - source: 03_Digests/Monthly/2026-09_monthly_report.md
+        papers:
+          - "eODL: Energy-Aware On-Device Training on Microcontrollers"
+          - "SRAM budgeting for on-device training: Accounting, feasible suffix selection, and a configuration-dependent crossover analysis"
+          - "TinyMQT: A Memory-Efficient Mixed-Quantization Training Framework for Embedded Devices"
+          - "QScheduler: Adaptive Gradient Sampling for Zeroth-Order On-Device Training on INT8 NPUs"
+          - "Sparse-BP: Efficient On-Device Backpropagation for Resource-Constrained Systems"
+        note: >
+          Created by monthly synthesis (2026-10-01) from the Google
+          Scholar keyword sweep ("on-device training" microcontroller,
+          sorted by date), which surfaced a cluster no weekly had seen:
+          eODL (Liu, Suresh, Zuniga; EWSN 2026 WiP) measures actual STM32
+          training energy across back-propagation depths to test MACs as
+          an energy proxy; the SRAM-budgeting framework (Jeong, Oh;
+          Journal of Systems Architecture 2026, Elsevier) accounts for
+          peak training memory and selects feasible trainable suffixes
+          with a configuration-dependent crossover analysis; TinyMQT
+          (Tao, Jia, Deng, Wang; IEEE Embedded Systems Letters 2026)
+          bounds the peak SRAM footprint of back-propagation via
+          mixed-quantization training; QScheduler (Amaral et al.;
+          arXiv:2607.18802) does zeroth-order training on the STM32N6
+          Neural-ART because the NPU has no backward-pass primitives;
+          Sparse-BP (Nawaiseh, Catalfamo et al.; IEEE 2026) integrates
+          stochastic sparse back-propagation on MCU boards. All five
+          are from unrelated groups and all were read at Scholar
+          snippet level only; none has a 02_Papers/ record. Also noted:
+          an embedded on-device training framework with a PyTorch model
+          parser (Kargl, Muttenthaler, Eibensteiner et al., 2026) and a
+          trust-routing scheme for MCU-class on-device training under
+          adversarial contamination (Lazzaro, Merenda; IEEE 2026).
+
+      - source: 03_Digests/Weekly/2026-09-13_weekly_digest.md
+        papers:
+          - "EPIC: An 1.34-TOPS/W, 16-GOPS/mm2 Digital In-Memory-Computing-Based AI Microcontroller Unit Supporting On-Chip Model Fine-Tuning for a TinyML Device"
+        note: >
+          Silicon-side anchor: a fabricated 28nm AI MCU co-designed so
+          that 8-bit fine-tuning costs no more than inference, with
+          MLPerf Tiny results for both.
+
+      - source: 03_Digests/Weekly/2026-09-06_weekly_digest.md
+        papers:
+          - "FORGE: Forward-Only Test-Time Adaptation for Integer-Only Vision Models on Microcontrollers"
+        note: >
+          Forward-only adaptation on a BN-folded integer model (ESP32-S3,
+          8.3 mJ per adaptation step); like QScheduler, it drops the
+          backward pass because the deployed integer runtime has none.
+
+      - source: 03_Digests/Weekly/2026-09-27_weekly_digest.md
+        papers:
+          - "TinyUDE: Solver-Free Universal Differential Equations on Microcontrollers via Lie-Taylor Jet Matching"
+          - "Xronos: Heterogeneity-Aware Tensor Parallelism for Collaborative LLM Fine-Tuning on Edge CPUs"
+        note: >
+          Two further "also noted" items: solver-free on-MCU fitting
+          within 61.3 kB on an ESP32, and the finding that pipeline
+          parallelism is ineffective for fine-tuning on CPU-only edge
+          devices (5.75x higher compute-stall ratio than GPU devices).
+
+    rationale: >
+      Visible only at month level and only through the Scholar sweep:
+      the weeklies captured three papers (EPIC, FORGE, TinyUDE) that
+      looked like isolated items, while Scholar shows at least five more
+      from unrelated groups over the summer, all treating the *cost* of
+      training on an MCU (energy, peak SRAM, convergence under integer-
+      only or forward-only constraints) as the object of study rather
+      than its feasibility. The existing On-device_Learning page
+      describes the first-order, float-capable regime; this is a
+      distinct, well-populated sub-regime (integer-only runtimes, NPUs
+      without backward-pass primitives, explicit energy/SRAM budgets)
+      that the page does not yet describe. Not a new concept: the
+      natural outcome is an "Evolution of the concept" / "Variants"
+      extension of On-device_Learning.md plus 02_Papers/ records for
+      the two or three strongest anchors once read in full. Kept at
+      "watching" because every Scholar-surfaced paper is snippet-level
+      and unverified.
+
+    action_hint: before review, read eODL, the SRAM-budgeting paper and QScheduler in full (EWSN PDF is open; the JSA article needs unige.it access) and confirm they are independent; then extend Algorithms/On-device_Learning.md with an integer-only / NPU-constrained / resource-accounted training subsection rather than opening a new concept
