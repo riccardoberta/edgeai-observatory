@@ -18,8 +18,8 @@ digital_libraries:
     categories_note: "cs.CV, cs.ET, cs.NE, cs.RO, cs.SD and eess.AS added 2026-09-20: most digest picks since August were cross-listed there (efficient vision, emerging technologies / in-memory computing, spiking networks, on-robot deployment, keyword spotting) and would be missed by a listing check on the original four categories alone."
     access: open
     status: active
-    notes: "Primary source for preprints; check daily/weekly listings on relevant categories."
-    last_checked: 2026-09-27
+    notes: "Primary source for preprints; check daily/weekly listings on relevant categories. Note (2026-10-05): the export.arxiv.org API returns HTTP 403 from the sandbox shell and web_fetch of arxiv.org/search returns an empty page; the arXiv advanced-search page driven through Claude in Chrome (date-range + abstract-field terms, 200 results/page) works well and is the practical unattended-safe query path when Chrome is connected. Category listing pages (arxiv.org/list/<cat>/new and /recent) do work via web_fetch and are the fallback when Chrome is not available."
+    last_checked: 2026-10-05
 
   - name: IEEE Xplore
     url: https://ieeexplore.ieee.org
@@ -54,7 +54,7 @@ digital_libraries:
     access: mostly institutional (discovery via WebSearch needs no login; some articles/chapters fully open access)
     access_notes: "Same pattern as Elsevier: WebSearch with `site:link.springer.com <query>` works unattended for discovery (confirmed 2026-09-02); many results are book chapters (Springer's `/chapter/` URLs) rather than journal articles, worth noting when citing. Most content is paywalled; open-access articles/chapters exist and are worth a direct `web_fetch` attempt, but institutional access via Claude in Chrome + unige.it is the reliable fallback for full text."
     status: active
-    last_checked: 2026-10-01
+    last_checked: 2026-10-05
 
   - name: Google Scholar
     url: https://scholar.google.com
@@ -93,7 +93,7 @@ digital_libraries:
       solves the "must be interactive" limitation above for topic-based
       coverage; extend the query list as the taxonomy grows.
     status: active
-    last_checked: 2026-10-01
+    last_checked: 2026-10-05
 
 conferences:
   # Checking method (added 2026-09-03): entries below previously had no actual

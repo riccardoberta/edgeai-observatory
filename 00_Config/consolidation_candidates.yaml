@@ -48,11 +48,36 @@ candidates:
     status: ready_for_review
 
     first_seen: 2026-08-31
-    last_seen: 2026-10-01
+    last_seen: 2026-10-05
 
     possible_existing_concept: MLPerf_Tiny
 
     evidence:
+      - source: 03_Digests/Weekly/2026-10-05_weekly_digest.md
+        papers:
+          - "16-bit Precision of Convolutional Neural Networks on Microcontroller Units for 8-bit Costs"
+          - "Right In-Place (RiP) Convolution: A Simple, General, and Near-Optimal Strategy for Memory-Efficient CNN Inference"
+        note: >
+          Two further, independent, measured-on-Cortex-M corroborations
+          that cost on this tier is a runtime/microarchitecture property
+          rather than a function of bit width or an analytical bound.
+          Liu and Paassen (arXiv:2610.03402) measure layer- and
+          model-level time and energy on Armv7E-M and find W16A16 as
+          fast and as energy-efficient as 8-bit schemes with ca. 10x
+          lower quantization error -- the opposite of what a bit-width
+          proxy predicts (memory footprint not reported in the abstract).
+          Busoye, Busoye and Eigbe (arXiv:2610.00586) show the accepted
+          memory-optimal in-place convolution bound (Gural and Murmann)
+          under-allocates on real layers and overestimates by up to
+          2,432x in another regime, then validate a corrected scheme on
+          Raspberry Pi Pico 1/2 with cycle counts and bit-identical
+          outputs across eleven MCUNet models (12.5-33.3% lower peak
+          activation memory). Both are exactly the MCU-tier,
+          standard-model (MCUNet) measurements this candidate names as
+          missing; neither yet offers a reusable cross-chip harness, so
+          the methodology gap stays open. Both are preprints (the RiP
+          paper is a NeurIPS 2026 workshop extended version).
+
       - source: 03_Digests/Monthly/2026-09_monthly_report.md
         papers:
           - "Design-Space Exploration of TinyML Workloads on Heterogeneous Processing Targets for AI-Enabled Wearables"
@@ -198,11 +223,36 @@ candidates:
     status: ready_for_review
 
     first_seen: 2026-09-02
-    last_seen: 2026-10-01
+    last_seen: 2026-10-05
 
     possible_existing_concept: null
 
     evidence:
+      - source: 03_Digests/Weekly/2026-10-05_weekly_digest.md
+        papers:
+          - "MEGATRON: a 28nm Analog PCM CiM/Digital System-on-Chip for Edge GenAI at 57.5 TOPS/W and 1.52 Mparam/mm2"
+          - "IMC-CLINIC: Coupled Loss-Informed Newton Iterations for Clipping in Analog In-Memory Computing"
+        note: >
+          Third independent fabricated-silicon anchor, from a third
+          unrelated group: MEGATRON (Nadalini, Garofalo, ..., Rossi,
+          Conti; arXiv:2609.35254) is a 28nm FD-SOI SoC pairing a 4
+          Mi-cell phase-change-memory analog in-memory-computing engine
+          with a RISC-V cluster and a digital NPU, reporting 57.5 TOPS/W
+          on the PCiM engine and 1.52 Mparam/mm2 at 4-bit effective
+          weights, targeted at edge generative workloads. No author
+          overlap with the Razi/Moghadam/Aygun/Najafi MTJ program or with
+          Song et al.'s memristor SoC. The arXiv abstract is two
+          sentences (no workload, accuracy or end-to-end efficiency), so
+          the full text must be read before a 02_Papers/ record. The
+          device family is now MTJ + ReRAM/memristor + PCM, which argues
+          for the concept name to say "emerging non-volatile memory"
+          generically rather than a single device. Supporting context,
+          same digest: IMC-CLINIC (Chen, Chen, Verma; arXiv:2609.35586)
+          gives an analytical surrogate for analog-IMC MatMul output
+          error that jointly models operand quantization, clipping bias
+          and ADC quantization -- a natural "open problems / calibration"
+          entry for the concept page, not a hardware anchor.
+
       - source: 03_Digests/Monthly/2026-09_monthly_report.md
         papers:
           - "A Memristor-Based In-Memory Computing System-on-Chip with Efficient Depthwise Convolution"
@@ -413,11 +463,39 @@ candidates:
     status: ready_for_review
 
     first_seen: 2026-09-13
-    last_seen: 2026-10-01
+    last_seen: 2026-10-05
 
     possible_existing_concept: null
 
     evidence:
+      - source: 03_Digests/Weekly/2026-10-05_weekly_digest.md
+        papers:
+          - "EdgeDAE: Acceleration of Diffusion Action Experts for Real-Time Physical AI with Tiny VLAs on Edge FPGA-GPU Systems"
+          - "EdgeVLN: Runtime-Aware Deployment Ready Quantized Vision Language Navigation Model"
+        note: >
+          Fourth consecutive week with independent robotics-EdgeAI
+          papers, both "also noted" rather than selected. EdgeDAE
+          (Chen, Qiao, Al Faruque, Huang; ASP-DAC 2027;
+          arXiv:2610.00311) is a fifth unrelated group: it offloads the
+          memory-bound diffusion action expert of Octo-class VLAs to an
+          FPGA with full on-chip parameter storage while the vision
+          transformer stays on the edge GPU (52.5% / 38.7% lower
+          end-to-end latency for Octo-Small / Octo-Base, ~17x better
+          energy efficiency than an RTX 4090) -- a heterogeneous
+          FPGA-GPU tier not seen in the earlier anchors. EdgeVLN (Jonna,
+          Namgung, Gurram, Mohsenin; arXiv:2609.35570) characterizes a
+          StreamVLN backbone from 8 to 2 bits across runtimes on a
+          Jetson Orin NX 16 GB over 1,839 R2R VLN-CE episodes: 4-bit
+          formats give near-identical success but step energy varies
+          36.8x by execution path, only one runtime/format fits the
+          board, INT2 collapses. Shares a senior author with ShatterQuant
+          (same digest) but not with any earlier robotics anchor. Both
+          reinforce the already-flagged tier-scope question (custom
+          accelerator / FPGA-GPU / Jetson) for the reviewer; EdgeVLN is
+          also a further Jetson-tier deployment measurement relevant to
+          mcu-npu-tier-edge-gpu-hardware-gap, though not a hardware
+          characterization study.
+
       - source: 03_Digests/Monthly/2026-09_monthly_report.md
         note: >
           Monthly synthesis (2026-10-01). No new anchor; two cross-week
@@ -511,11 +589,41 @@ candidates:
     status: ready_for_review
 
     first_seen: 2026-09-27
-    last_seen: 2026-10-01
+    last_seen: 2026-10-05
 
     possible_existing_concept: NPU
 
     evidence:
+      - source: 03_Digests/Weekly/2026-10-05_weekly_digest.md
+        papers:
+          - "DCM-SAM: Defect-Conditioned Mixture of LoRA Experts for NPU-Deployed AM Defect Segmentation"
+          - "ZTA-Q: an Open-source RISC-V Platform for Accurate Quantized CNN Inference"
+        note: >
+          Two further unrelated groups and a fourth accelerator family.
+          DCM-SAM (Rahaman, Hasan, Ahmed, Das; NeurIPS 2026 ODI
+          workshop; arXiv:2609.38811) documents on a Qualcomm Hexagon
+          NPU that SAM ViT-H/ViT-L compile yet cannot allocate at
+          1024x1024 because activations (not weights) exceed the device
+          ceiling, that weight quantization does not help, and that the
+          LoRA-adapted ViT-B encoder fails to allocate where the stock
+          one succeeds until a numerically identical rewrite of the
+          attention lets it run in FP16 with no operator falling back to
+          the CPU. This extends the constraint from "operator in the
+          static integer graph" to "activation footprint and graph
+          shape under the vendor compiler", at the smartphone/gateway
+          tier rather than the MCU tier. ZTA-Q (Li, Kumar M, PS,
+          Nikolopoulos, Ji, Vandierendonck, John; IEEE ICECS 2026;
+          arXiv:2610.01867) is the Frameworks-side mirror image: open
+          accelerator platforms provide only partial support for the
+          TensorFlow Lite integer inference scheme, so it extends
+          operator support and exposes the requantization datapath
+          (multiplier precision, shared shifts, rounding) as a
+          configurable instrument for how circuit-level shortcuts cost
+          accuracy (within 0.25 pp on an Arty A7 FPGA). Both support the
+          "toolchain decides deployability" framing and the suggestion
+          that the measurement-infrastructure and operator-set
+          candidates be decided together.
+
       - source: 03_Digests/Monthly/2026-09_monthly_report.md
         papers:
           - "TinyML Enhances CubeSat Mission Capabilities"
@@ -676,11 +784,34 @@ candidates:
     status: watching
 
     first_seen: 2026-10-01
-    last_seen: 2026-10-01
+    last_seen: 2026-10-05
 
     possible_existing_concept: On-device_Learning
 
     evidence:
+      - source: 03_Digests/Weekly/2026-10-05_weekly_digest.md
+        papers:
+          - "HO-FL: Hybrid-Order Federated Learning for Heterogeneous Edge Devices"
+          - "Learning While Inferring: Local and Parallel Learning for Edge SNNs across Sensing Modalities"
+        note: >
+          Two "also noted" items from unrelated groups that treat the
+          memory/energy cost of the backward pass as the design
+          variable, consistent with this candidate's framing but not
+          at the MCU tier and not measured on hardware. HO-FL (Chen,
+          Wu, Ma, Chen; arXiv:2609.39074) lets each federated client
+          train the bottom segment of the model with zeroth-order and
+          the top segment with first-order optimization, choosing the
+          boundary from its memory budget (code released; language
+          tasks only). The edge-SNN paper (Zhang et al.;
+          arXiv:2610.03149) replaces surrogate-gradient
+          back-propagation with bidirectional spike-based distillation
+          so stage-wise updates run concurrently with inference,
+          reporting projected 0.72x training latency and 0.36x energy
+          versus BP. Weak evidence individually; recorded because the
+          memory-budget-selects-training-order idea (HO-FL) is the
+          federated analogue of the feasible-suffix selection already
+          in this candidate.
+
       - source: 03_Digests/Monthly/2026-09_monthly_report.md
         papers:
           - "eODL: Energy-Aware On-Device Training on Microcontrollers"
