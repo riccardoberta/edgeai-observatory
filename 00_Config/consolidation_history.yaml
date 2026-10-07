@@ -556,7 +556,7 @@ history:
       target: "[[MLPerf_Tiny]]"
       note: >
         Option (b) of the action hint: added a "Benchmark realism and
-        measurement methodology" section to MLPerf_Tiny.md and a persistent
+        measurement methodology" passage to MLPerf_Tiny.md and a persistent
         record for the one anchor that could be verified from its primary
         source this cycle (2026_Shin_INT8Portability, arXiv:2609.16085, read
         in full-text form). The remaining evidence (EPIC, smart-glasses
