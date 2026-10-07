@@ -42,181 +42,6 @@
 
 candidates:
 
-  - id: mcu-npu-measurement-infrastructure
-    title: "Standardized Measurement Infrastructure for MCU/NPU-Class Edge Inference"
-
-    status: ready_for_review
-
-    first_seen: 2026-08-31
-    last_seen: 2026-10-05
-
-    possible_existing_concept: MLPerf_Tiny
-
-    evidence:
-      - source: 03_Digests/Weekly/2026-10-05_weekly_digest.md
-        papers:
-          - "16-bit Precision of Convolutional Neural Networks on Microcontroller Units for 8-bit Costs"
-          - "Right In-Place (RiP) Convolution: A Simple, General, and Near-Optimal Strategy for Memory-Efficient CNN Inference"
-        note: >
-          Two further, independent, measured-on-Cortex-M corroborations
-          that cost on this tier is a runtime/microarchitecture property
-          rather than a function of bit width or an analytical bound.
-          Liu and Paassen (arXiv:2610.03402) measure layer- and
-          model-level time and energy on Armv7E-M and find W16A16 as
-          fast and as energy-efficient as 8-bit schemes with ca. 10x
-          lower quantization error -- the opposite of what a bit-width
-          proxy predicts (memory footprint not reported in the abstract).
-          Busoye, Busoye and Eigbe (arXiv:2610.00586) show the accepted
-          memory-optimal in-place convolution bound (Gural and Murmann)
-          under-allocates on real layers and overestimates by up to
-          2,432x in another regime, then validate a corrected scheme on
-          Raspberry Pi Pico 1/2 with cycle counts and bit-identical
-          outputs across eleven MCUNet models (12.5-33.3% lower peak
-          activation memory). Both are exactly the MCU-tier,
-          standard-model (MCUNet) measurements this candidate names as
-          missing; neither yet offers a reusable cross-chip harness, so
-          the methodology gap stays open. Both are preprints (the RiP
-          paper is a NeurIPS 2026 workshop extended version).
-
-      - source: 03_Digests/Monthly/2026-09_monthly_report.md
-        papers:
-          - "Design-Space Exploration of TinyML Workloads on Heterogeneous Processing Targets for AI-Enabled Wearables"
-          - "A Memristor-Based In-Memory Computing System-on-Chip with Efficient Depthwise Convolution"
-        note: >
-          Monthly synthesis (2026-10-01). Cross-week reading of the
-          September digests shows the measurement gap and the
-          restricted-operator-set candidate are two faces of one
-          question: what a harness at the MCU/NPU tier must capture is
-          which operators fall back to the CPU and what that costs, not
-          MACs per second. Three independent papers in one month used
-          MLPerf Tiny workloads as a yardstick outside the official
-          submission process (EPIC's fine-tuning numbers; the smart-
-          glasses VWW variant; the memristor SoC's 80.36% VWW result,
-          Song et al., Advanced Intelligent Systems 2026, DOI
-          10.1002/aisy.202501225, Scholar-surfaced, snippet-level), which
-          supports option (b) of the action hint -- extending
-          MLPerf_Tiny.md with a realism/known-limitations section -- as
-          the lower-cost first step. A Scholar-surfaced wearables
-          design-space exploration (Penner, Wittenfeld, Voss, Hesse;
-          IEEE-EMBS 2026; OpenReview; not read in full) addresses the
-          same benchmark-realism question from the wearables side.
-          Recommend reviewing jointly with
-          restricted-operator-set-codesign-mcu-npu.
-
-      - source: 03_Digests/Weekly/2026-09-27_weekly_digest.md
-        papers:
-          - "RAMP: Robust Adaptive Mixed-Precision Quantization for Edge CPU Vision Models"
-          - "Same Bit Width, Different Outcomes: Post-Training Quantization of Text-to-Speech Across Architectures"
-        note: >
-          Two further independent corroborations that quantization outcomes
-          must be validated on the target runtime rather than predicted
-          from bit width or simulated cost. RAMP (Poblacion-Criado,
-          Garcia-Gasulla, Quinones; BSC; BMVC 2026; arXiv:2609.28262)
-          shows widely used layer-sensitivity proxies fail catastrophically
-          on 4-6 of 8 model/ARM64-hardware configurations and that
-          excluding low-speed-up layers can fragment the graph and disable
-          operator fusion -- a runtime effect no sensitivity metric can
-          see. The TTS PTQ study (Park, Kim, Park; arXiv:2609.28974) finds
-          the same bit width gives model-specific outcomes and that real
-          int8 kernels can be slower than a 4-bit weight kernel on the
-          same machine. Neither adds the missing MCU/NPU-tier
-          methodology; both strengthen the "benchmark realism /
-          validate-on-target" framing. A Scholar-only Elsevier Array SLR
-          (Mahfouz et al., 2026) reportedly quantifies up to 60% error of
-          digital-twin energy/latency estimates against real MCU
-          measurements, but was blocked by a bot check and is recorded at
-          snippet level only.
-
-      - source: 03_Digests/Weekly/2026-09-20_weekly_digest.md
-        papers:
-          - "Is INT8 Portable? A Cross-Platform Measurement Study of Quantized Inference on Embedded and Automotive Accelerators"
-          - "Deploying TinyML on Commercial Smart Glasses"
-        note: >
-          Two independent papers in one week, from unrelated groups. The
-          INT8-portability study (Shin; arXiv:2609.16085) is the first
-          paper found that offers a reusable, open, artifact-fixed
-          cross-chip measurement *methodology* (scripts + 32 reports
-          released) rather than a single chip's self-report -- exactly
-          the kind of thing EPIC lacked -- covering ARM/x86 CPUs, Jetson
-          Orin iGPU + NVDLA, and two vendor NPUs (Qualcomm Hexagon HTP,
-          DEEPX DX-M1). It still stops above the Cortex-M / Ethos-U /
-          RISC-V-NPU tier. The smart-glasses paper (Krumpl, Corti, Wang,
-          Saukh; TU Graz; EWSN 2026 EMERGE workshop) adds a complementary
-          MCU-tier (nRF52840, Cortex-M4) observation: MLPerf Tiny-style
-          bare-metal numbers do not transfer to a real wearable because
-          firmware co-residency and the sensor/JPEG pipeline set the
-          effective budget and end-to-end latency. Together they suggest
-          the concept may be better framed as "edge inference measurement
-          methodology and benchmark realism" spanning tiers, with the
-          MCU/NPU tier as its still-open sub-gap.
-
-      - source: 03_Digests/Weekly/2026-09-13_weekly_digest.md
-        papers:
-          - "EPIC: An 1.34-TOPS/W, 16-GOPS/mm2 Digital In-Memory-Computing-Based AI Microcontroller Unit Supporting On-Chip Model Fine-Tuning for a TinyML Device"
-        note: >
-          Partial, not full, corroboration: EPIC (Lin, Moon, Huang, Seok;
-          Columbia; IEEE TCAS-I 2026) is a fabricated 28nm AI MCU reporting
-          rigorous, standard-benchmark (MLPerf Tiny) efficiency numbers for
-          both inference and on-chip fine-tuning, at exactly the MCU/NPU
-          tier this candidate names as missing. Kept short of promoting to
-          ready_for_review because EPIC is a single chip's own
-          self-reported benchmark result, not a reusable, open measurement
-          *methodology/framework* others can apply across different
-          MCU/NPU chips the way Hydra does for Jetson-class hardware --
-          the specific gap this candidate names. Still a meaningful signal
-          that MLPerf-Tiny-grounded rigor is starting to reach this tier.
-
-      - source: 03_Digests/Weekly/2026-08-31_weekly_digest.md
-        note: >
-          Source digest for Hydra (open, phase-aware Jetson AGX measurement
-          framework) and the Apple Neural Engine measurement study, both
-          cited by the August monthly report as the basis for this
-          direction.
-
-      - source: 03_Digests/Monthly/2026-08_monthly_report.md
-        note: >
-          Names "a standardized, open measurement methodology for MCU/NPU-
-          class inference, not just Jetson/Apple-silicon-class" as a ready-
-          for-deeper-investment research direction: Hydra and the ANE study
-          both build rigorous, open, reproducible characterization
-          infrastructure, but neither has an analogue at the Cortex-M /
-          microcontroller-NPU tier the Observatory's core taxonomy centers
-          on.
-
-      - source: 02_Papers/2026/2026_Taherin_Hydra.md
-        note: >
-          Full deep-analysis record created 2026-09-02 during a deliberate
-          coverage-gap-closing pass — confirms Hydra covers Jetson AGX
-          Xavier/Orin/Thor only (workstation/embedded-GPU tier), not
-          MCU/NPU-class hardware.
-
-      - source: 02_Papers/2026/2026_Bryngelson_AppleNeuralEngine.md
-        note: >
-          Full deep-analysis record also created 2026-09-02 — confirms the
-          ANE study covers the A11-A18/M1-M5 Apple-silicon family, again
-          not MCU/NPU-class hardware. Both papers are now rigorously
-          recorded, but the specific MCU/Ethos-U/RISC-V-NPU-tier gap this
-          candidate names remains genuinely unresolved — no paper at that
-          tier was found in this pass.
-
-    rationale: >
-      A genuine systems/benchmark-gap signal first identified through
-      monthly synthesis of two measurement-focused papers (Hydra, ANE
-      study), then partially corroborated at the MCU tier by EPIC
-      (2026-09-13), and now corroborated by two further independent
-      papers (2026-09-20): an open cross-platform INT8 measurement
-      methodology at the edge-accelerator tier and an MCU-tier
-      benchmark-realism study on a commercial wearable. Evidence now spans
-      three weekly digests, one monthly report, and five papers from five
-      unrelated groups. Promoted to ready_for_review on 2026-09-20. The
-      narrow "open methodology at the Cortex-M/Ethos-U/RISC-V-NPU tier"
-      gap is still not closed by any single paper; the reviewer should
-      decide whether to formalize the broader concept now (with that tier
-      as an explicit open sub-gap) or keep waiting for a tier-specific
-      anchor.
-
-    action_hint: review in the next Knowledge Base Consolidation cycle, jointly with restricted-operator-set-codesign-mcu-npu; decide between (a) a new Benchmarks_Datasets-branch concept on measurement methodology / benchmark realism for edge inference, with the MCU/NPU tier flagged as open, or (b) extending MLPerf_Tiny.md with a "known limitations / realism" section and keeping the tier-specific gap in taxonomy.md
-
   - id: in-memory-computing-emerging-nvm-hardware-gap
     title: "In-Memory Computing with Emerging Non-Volatile Memory (Hardware Taxonomy Gap)"
 
@@ -308,6 +133,13 @@ candidates:
           months) rather than independent corroboration. Not recorded as
           separate 02_Papers/ entries; noted here as evidence the space is
           active, not as independent anchors.
+
+      - source: 03_Digests/Consolidation/2026-10-07_kb_consolidation.md
+        note: >
+          Reviewed 2026-10-07 and deliberately left at ready_for_review,
+          not promoted. MEGATRON (arXiv:2609.35254) PDF returned no machine-readable text and the Song et al. DOI page was rate-limited (HTTP 429); neither anchor could be verified from its primary source, so no concept was created.
+          Re-attempt primary-source verification (arXiv PDF, official
+          proceedings) in the next cycle before deciding.
 
     rationale: >
       First anchored by a single active research program (FALCON and its
@@ -570,6 +402,13 @@ candidates:
           constrained framing. Treated as a first, single anchor rather
           than already-corroborated.
 
+      - source: 03_Digests/Consolidation/2026-10-07_kb_consolidation.md
+        note: >
+          Reviewed 2026-10-07 and deliberately left at ready_for_review,
+          not promoted. The arXiv PDFs for PreDE (2609.19441), FoldQuantVLA (2609.24433) and EdgeDAE (2610.00311) returned no machine-readable text; no anchor could be verified from its primary source, so no concept was created.
+          Re-attempt primary-source verification (arXiv PDF, official
+          proceedings) in the next cycle before deciding.
+
     rationale: >
       First anchored by a single paper (APEX-RBD, 2026-09-13) filling a
       gap the taxonomy had named for a while. One week later two further
@@ -683,6 +522,13 @@ candidates:
           surfaced a fourth STM32N6 deployment (Abdalla, crowd counting,
           openreview) and an earlier STM32N6 CubeSat study (Capogrosso,
           Magno, 2026), neither read in full.
+
+      - source: 03_Digests/Consolidation/2026-10-07_kb_consolidation.md
+        note: >
+          Reviewed 2026-10-07 and deliberately left at ready_for_review,
+          not promoted. The arXiv PDFs for NPLSD (2609.25022) and LiSenNet (2609.29866) returned no machine-readable text, so the operator-set claims could not be verified from primary sources.
+          Re-attempt primary-source verification (arXiv PDF, official
+          proceedings) in the next cycle before deciding.
 
     rationale: >
       Created after a single digest, which is unusual, because the
