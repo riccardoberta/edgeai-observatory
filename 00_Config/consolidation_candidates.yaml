@@ -627,14 +627,38 @@ candidates:
   - id: integer-only-npu-constrained-on-device-training-mcu
     title: "Resource-Accounted and NPU-Constrained On-Device Training on Microcontrollers"
 
-    status: watching
+    status: ready_for_review
 
     first_seen: 2026-10-01
-    last_seen: 2026-10-05
+    last_seen: 2026-10-11
 
     possible_existing_concept: On-device_Learning
 
     evidence:
+      - source: 03_Digests/Weekly/2026-10-11_weekly_digest.md
+        papers:
+          - "MemFLoRA: Memory-Floor LoRA for CNN Adaptation at the Edge"
+          - "TinyUDE: Solver-Free Universal Differential Equations on Microcontrollers via Lie-Taylor Jet Matching"
+        note: >
+          Two further independent observations that make an accounted
+          training-memory budget the design variable. MemFLoRA
+          (Akbulut, Geier, Schlichtmann; arXiv:2610.08669, ASP-DAC
+          2027, code released) defines an activation-memory-floor
+          criterion for CNN low-rank adapters -- no trainable backward
+          computation may depend on full-width layer inputs -- and
+          reports 98.5-98.7% less saved-activation memory and
+          94.9-97.3% less peak training-state memory than full
+          fine-tuning on three HAR datasets (framework-level; no MCU
+          deployment stated in the abstract). TinyUDE (Balamurali,
+          Kamireddy; arXiv:2609.26972) removes the ODE-solver tape by
+          derivative matching and trains on an ESP32 in 61.3 kB static
+          memory at 7.24 ms per update (toy pendulum systems). Both
+          read at arXiv abstract level only. Status moved to
+          ready_for_review: observations now span four cycles and
+          roughly ten unrelated groups; the open question for the
+          Consolidation cycle is whether this is a new concept or
+          belongs inside On-device_Learning.
+
       - source: 03_Digests/Weekly/2026-10-05_weekly_digest.md
         papers:
           - "HO-FL: Hybrid-Order Federated Learning for Heterogeneous Edge Devices"
