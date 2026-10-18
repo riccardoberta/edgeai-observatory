@@ -48,11 +48,20 @@ candidates:
     status: ready_for_review
 
     first_seen: 2026-09-02
-    last_seen: 2026-10-05
+    last_seen: 2026-10-18
 
     possible_existing_concept: null
 
     evidence:
+      - source: 03_Digests/Weekly/2026-10-18_weekly_digest.md
+        papers:
+          - "ABNAT: Attention-Based Noise-Aware Training for Robust Transformers on Analog Compute-in-Memory Systems"
+        note: >
+          Supporting context only, title-level (arXiv:2610.22065, Yao et
+          al.; abstract page was rate-limited): a training-side answer to
+          analog CiM non-idealities for transformers. Device family and
+          hardware validation unknown; not a hardware anchor.
+
       - source: 03_Digests/Weekly/2026-10-05_weekly_digest.md
         papers:
           - "MEGATRON: a 28nm Analog PCM CiM/Digital System-on-Chip for Edge GenAI at 57.5 TOPS/W and 1.52 Mparam/mm2"
@@ -630,11 +639,24 @@ candidates:
     status: ready_for_review
 
     first_seen: 2026-10-01
-    last_seen: 2026-10-11
+    last_seen: 2026-10-18
 
     possible_existing_concept: On-device_Learning
 
     evidence:
+      - source: 03_Digests/Weekly/2026-10-18_weekly_digest.md
+        papers:
+          - "LocalTrain: Integer-Only Local Learning for Energy-Efficient CNN Training on Edge FPGAs"
+        note: >
+          Measured-energy anchor from an unrelated group (Ding, Liang,
+          Liu, Li, Que, Hu, Li; arXiv:2610.17099): integer-only local
+          learning on a KV260 FPGA (76.57% CIFAR-10, 91.85% SVHN, about
+          4.2 W) uses 40.4-42.1% less measured training energy than the
+          same integer method on a Jetson Orin Nano but runs about 1.8x
+          longer. FPGA tier, not MCU; abstract-level only, no code
+          listed. Shows the sub-regime's trade-off is energy versus
+          latency.
+
       - source: 03_Digests/Weekly/2026-10-11_weekly_digest.md
         papers:
           - "MemFLoRA: Memory-Floor LoRA for CNN Adaptation at the Edge"
