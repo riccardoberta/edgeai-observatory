@@ -437,7 +437,7 @@ candidates:
     status: ready_for_review
 
     first_seen: 2026-09-27
-    last_seen: 2026-10-05
+    last_seen: 2026-10-25
 
     possible_existing_concept: NPU
 
@@ -531,6 +531,19 @@ candidates:
           surfaced a fourth STM32N6 deployment (Abdalla, crowd counting,
           openreview) and an earlier STM32N6 CubeSat study (Capogrosso,
           Magno, 2026), neither read in full.
+
+      - source: 03_Digests/Weekly/2026-10-25_weekly_digest.md
+        papers:
+          - "SpikeDuet: CPU-Accelerator Co-Execution of Sparse SNNs on Commodity MCUs"
+        note: >
+          Modest, looser-fit support (abstract level only; arXiv:2610.24677).
+          On the EFR32MG24 (Cortex-M33 plus matrix accelerator) the
+          accelerator beats optimized sparse CPU execution only for some
+          networks (1.27-1.87x, 11-34% less energy) and the smallest network
+          stays CPU-optimal, so deployability depends on workload-to-
+          accelerator mapping rather than the accelerator's presence. Different
+          vendor and workload class (spiking networks) from the operator-set
+          evidence above; status unchanged.
 
       - source: 03_Digests/Consolidation/2026-10-07_kb_consolidation.md
         note: >
