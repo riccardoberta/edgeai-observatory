@@ -143,6 +143,19 @@ candidates:
           separate 02_Papers/ entries; noted here as evidence the space is
           active, not as independent anchors.
 
+      - source: 03_Digests/Weekly/2026-11-08_weekly_digest.md
+        papers:
+          - "TinyML Hits the Memory Wall: A Benchmark of Ten Sub-Watt Edge Devices"
+        note: >
+          Independent cross-device support (abstract level only;
+          arXiv:2611.03392, Bonazzi, Capogrosso, Magno et al.). Ten
+          sub-watt devices (four MCU+NPU, five MCU without NPU, one
+          in-sensor DSP) with energy measured on a common basis: accelerator
+          latency tracks memory traffic, not MAC count, so MACs are a
+          misleading cost proxy; the NPU advantage over a 1 GHz Cortex-M85
+          ranges 1.4x to 8.2x depending on workload. Reinforces the
+          "toolchain/runtime decides deployability" framing; status unchanged.
+
       - source: 03_Digests/Consolidation/2026-10-07_kb_consolidation.md
         note: >
           Reviewed 2026-10-07 and deliberately left at ready_for_review,
@@ -304,7 +317,7 @@ candidates:
     status: ready_for_review
 
     first_seen: 2026-09-13
-    last_seen: 2026-10-05
+    last_seen: 2026-11-08
 
     possible_existing_concept: null
 
@@ -418,6 +431,16 @@ candidates:
           Re-attempt primary-source verification (arXiv PDF, official
           proceedings) in the next cycle before deciding.
 
+      - source: 03_Digests/Weekly/2026-11-08_weekly_digest.md
+        papers:
+          - "MCUFlowNet: Hardware-Aware Neural Architecture Search for Optical Flow on Microcontrollers"
+        note: >
+          Modest supporting observation (abstract level only;
+          arXiv:2611.08147, Lin and Beysens, KU Leuven; code open):
+          memory-aware NAS for optical flow on an Ethos-U55 board aimed at
+          small-drone obstacle avoidance, with simulated closed-loop forest
+          flights (51.5% vs 41.8% collision-free). Extends the robotics
+          evidence to the MCU-NPU tier; closed-loop results are simulated.
     rationale: >
       First anchored by a single paper (APEX-RBD, 2026-09-13) filling a
       gap the taxonomy had named for a while. One week later two further
@@ -437,7 +460,7 @@ candidates:
     status: ready_for_review
 
     first_seen: 2026-09-27
-    last_seen: 2026-10-25
+    last_seen: 2026-11-08
 
     possible_existing_concept: NPU
 
